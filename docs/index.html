@@ -15,8 +15,7 @@ th{min-width:max-content}
 td{min-width:max-content;padding:2px 5px;text-align:right}
 td:last-child{text-align: left}
 td:first-child{text-align: center}
-td:nth-child(2){text-align: left}
-td:nth-child(3){text-align: center}
+td:nth-child(2),td:nth-child(3){text-align: left}
 tr:hover{background:#041b22}
 thead tr:hover{background: #a3a9b2;color:#020611}
 pre{margin:0}
@@ -41,7 +40,7 @@ a{color:white}
 	<option>Ticker</option>
 	<option>Mkt. Cap</option>
 	<option>Price</option>
-	<option>Liquidity</option>
+	<option>Most Liquid</option>
 	<option>Supply</option>
 </select>
 <select id="topsel">
@@ -72,7 +71,7 @@ a{color:white}
 			<th>Asset</th>
 			<th>Market Cap</th>
 			<th>Price</th>
-			<th>Liquidity</th>
+			<th>Most Liquid</th>
 			<th>Supply</th>
 			<th>Links</th>
 			<th>Address</th>
@@ -434,6 +433,30 @@ a{color:white}
 			</tr>
 			<tr>
 				<td>⁕</td>
+				<td>LQDR</td>
+				<td>Liquid Driver</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
+				<td><pre>0x10b620b2dbac4faa7d7ffd71da486f5d44cd86f9</pre></td>
+				<td>DEX</td>
+			</tr>
+			<tr>
+				<td>⁕</td>
+				<td>ICE</td>
+				<td>Popsicle Finance</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
+				<td><pre>0xf6129f6705b826dbafaa26e03aad9dd20b9235c6</pre></td>
+				<td>DEX</td>
+			</tr>
+			<tr>
+				<td>⁕</td>
 				<td>FRANK</td>
 				<td>Frankenstein Finance</td>
 				<td>?</td>
@@ -442,7 +465,7 @@ a{color:white}
 				<td>?</td>
 				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
 				<td><pre>0xeb86b05cfee3e48db9a44275701ed099462c8ba0</pre></td>
-				<td>DEX</td>
+				<td>Farming</td>
 			</tr>
 		</tbody>
 	</table>
@@ -450,71 +473,672 @@ a{color:white}
 <div align="center"><br><b>1 2 3 4 5 … 6 7 8 9 10</b></div>
 <br>
 <div align="center"><b>Disclaimer & Notice</b><br>
-All information presented here is only for aesthetic uses and posesses no validity to settle any claims. It is also non-exhaustive and prone to error. Currently it does not update automatically. All presented numbers are denoted in FTM. Legend: 🔎Explorer🌐Website🎮Discord✈Telegram🐦Twitter😼SpookySwap👻SpiritSwap🍣SushiSwap🛩HyperJump🎨PaintSwap🦎Coingecko. We encourage you to report inconsistencies or request listing at one of our community channels: <a href="https://t.me/FTM1337" target="_blank">Telegram or Discord.</a></div>
+All information presented here is only for aesthetic uses and posesses no validity to settle any claims. It is also non-exhaustive and prone to error. <strike>Currently it does not update automatically.</strike> This dashboard is ultra-real time - It means that the data on this page has zero latency, unlike CMC or CG which have 1-10 minutees old data. FTM.guru and FMC.guru are trying to keep up with the <b>Fantom Fast</b> motto. <i>A much deserved shoutout to all developers on F.O., ftmscan.com and rpc.ftm.tools for their benign Services!</i> All presented numbers are denoted in FTM. Legend: 🔎Explorer🌐Website🎮Discord✈Telegram🐦Twitter😼SpookySwap👻SpiritSwap🍣SushiSwap🛩HyperJump🎨PaintSwap🦎Coingecko. "Most Liquid" collumn refers to the pair with highest WFTM-Liquidity. We encourage you to report inconsistencies or request listing at one of our community channels: <a href="https://t.me/FTM1337" target="_blank">Telegram or Discord.</a></div>
 </body>
 <script src="web3.min.js">
 </script>
 <script>
+o={}
+aa=$("maintable").getElementsByTagName("tbody")[0].getElementsByTagName("tr");
+for ( i = 0 ; i < aa.length ; i++ )
+{
+	AC=aa[i].getElementsByTagName("td")[8].getElementsByTagName("pre")[0].innerHTML;
+	o[AC]={"s":"","d":"","ts":"","mc":"","_r0":"","_r1":""}
+}
 window.addEventListener('load',function()
 {
-	if(window.ethereum){web3 = new Web3(web3.currentProvider);}
+	if(window.ethereum&&Number(window.ethereum.chainId==250)){web3 = new Web3(web3.currentProvider);}
 	else{web3 = new Web3("https://rpc.ftm.tools")}
 	basics();
 }, false);
 function $(_) {return document.getElementById(_);}
 function basics()
 {
+
 	fillLinks()
-	findTS();
+	//findTS();
+	//manpaint()
+	brr()
 }
 function fillLinks()
 {
 	aa=$("maintable").getElementsByTagName("tbody")[0].getElementsByTagName("tr");
 	CA=aa[0].getElementsByTagName("td")[8].getElementsByTagName("pre")[0].innerHTML;
 	aa[0].getElementsByTagName("td")[7].innerHTML=`
-			<a href="https://ftmscan.com/token/${CA}" targret="_blank">🔎</a>
-			<a href="https://ftm.guru" targret="_blank">🌐</a>
-			<a >🎮</a>
-			<a href="https://t.me/FTM1337" targret="_blank">✈</a>
-			<a >🐦</a>
-			<a href="https://info.spookyswap.finance/#/token/${CA}" targret="_blank">😼</a>
-			<a href="https://info.spiritswap.finance/#/token/${CA}" targret="_blank">👻</a>
-			<a href="https://analytics-ftm.sushi.com/token/${CA}" targret="_blank">🍣</a>
-			<a href="https://ftm-info.hyperjump.fi/#/token/${CA}" targret="_blank">🛩</a>
-			<a >🎨</a>
-			<a >🦎</a>
+<a href="https://ftmscan.com/token/${CA}" targret="_blank">🔎</a><a href="https://ftm.guru" targret="_blank">🌐</a><a >🎮</a><a href="https://t.me/FTM1337" targret="_blank">✈</a><a >🐦</a><a href="https://info.spookyswap.finance/#/token/${CA}" targret="_blank">😼</a><a href="https://info.spiritswap.finance/#/token/${CA}" targret="_blank">👻</a><a href="https://analytics-ftm.sushi.com/token/${CA}" targret="_blank">🍣</a><a href="https://ftm-info.hyperjump.fi/#/token/${CA}" targret="_blank">🛩</a><a >🎨</a><a >🦎</a>
 		`;
 	for ( i = 1 ; i < aa.length ; i++ )
 	{
 		CA=aa[i].getElementsByTagName("td")[8].getElementsByTagName("pre")[0].innerHTML;
 		aa[i].getElementsByTagName("td")[7].innerHTML=`
-			<a href="https://ftmscan.com/token/${CA}" targret="_blank">🔎</a>
-			<a >🌐</a>
-			<a ">🎮</a>
-			<a >✈</a>
-			<a >🐦</a>
-			<a href="https://info.spookyswap.finance/#/token/${CA}" targret="_blank">😼</a>
-			<a href="https://info.spiritswap.finance/#/token/${CA}" targret="_blank">👻</a>
-			<a href="https://analytics-ftm.sushi.com/token/${CA}" targret="_blank">🍣</a>
-			<a href="https://ftm-info.hyperjump.fi/#/token/${CA}" targret="_blank">🛩</a>
-			<a >🎨</a>
-			<a >🦎</a>
+<a href="https://ftmscan.com/token/${CA}" targret="_blank">🔎</a><a >🌐</a><a ">🎮</a><a >✈</a><a >🐦</a><a href="https://info.spookyswap.finance/#/token/${CA}" targret="_blank">😼</a><a href="https://info.spiritswap.finance/#/token/${CA}" targret="_blank">👻</a><a href="https://analytics-ftm.sushi.com/tokens/${CA}" targret="_blank">🍣</a><a href="https://ftm-info.hyperjump.fi/#/token/${CA}" targret="_blank">🛩</a><a >🎨</a><a >🦎</a>
 		`;
 	}
 }
-async function findTS()
+tokes=[
+  "0xf43Cc235E686d7BC513F53Fbffb61F760c3a1882",  //ELITE
+  "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83",  //WFTM
+  "0x04068da6c83afcfa0e13ba15a6696662335d5b75",  //USDC
+  "0x049d68029688eabf473097a2fc38ef61633a3c7a",  //USDT
+  "0x74b23882a30290451a17c44f4f05243b6b58c76d",  //FUSD
+  "0xaf319e5789945197e365e7f7fbfc56b130523b33",  //FRAX
+  "0x82f8cb20c14f134fe6ebf7ac3b903b2117aafa62",  //FXS
+  "0x321162cd933e2be498cd2267a90534a804051b11",  //WBTC
+  "0x841fad6eae12c286d1fd18d1d525dffa75c7effe",  //BOO
+  "0xd67de0e0a0fd7b15dc8348bb9be742f3c5850454",  //BNB
+  "0x29b0da86e484e1c0029b56e817912d778ac0ec69",  //YFI
+  "0xae75a438b2e0cb8bb01ec1e1e376de11d44477cc",  //SUSHI
+  "0x5cc61a78f164885776aa610fb0fe1257df78e59b",  //SPIRIT
+  "0xd0660cd418a64a1d44e9214ad8e459324d8157f1",  //WOOFY
+  "0x74b23882a30290451a17c44f4f05243b6b58c76d",  //WETH
+  "0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e",  //DAI
+  "0x09e145a1d53c0045f41aeef25d8ff982ae74dd56",  //ZOO
+  "0xddcb3ffd12750b45d32e084887fdf1aabab34239",  //ANY
+  "0x6a07a792ab2965c72a5b8088d3a069a7ac3a993b",  //AAVE
+  "0xb3654dc3d10ea7645f8319668e8f54d2574fbdc8",  //LINK
+  "0x56ee926bd8c72b2d5fa1af4d9e4cbb515a1e3adc",  //SNX
+  "0x1e4f97b9f9f913c46f1632781732927b9019c68b",  //CRV
+  "0x657a1861c15a3ded9af0b6799a195a249ebdcbc6",  //CREAM
+  "0x753fbc5800a8c8e3fb6dc6415810d627a387dfc9",  //BADGER
+  "0x46e7628e8b4350b2716ab470ee0ba1fa9e76c6c5",  //BAND
+  "0xb01e8419d842beebf1b70a7b5f7142abbaf7159d",  //COVER
+  "0xbc2451aad349b6b43fd05f4f0cc327f8a6bca2d4",  //AURORA
+  "0x10b620b2dbac4faa7d7ffd71da486f5d44cd86f9",  //LQDR
+  "0xf6129f6705b826dbafaa26e03aad9dd20b9235c6",  //ICE
+  "0xeb86b05cfee3e48db9a44275701ed099462c8ba0"  //FRANK
+]
+/*
+//GENERATION
+AC1=new web3.eth.Contract(ab1,tokes[9]);
+AC1.methods.decimals().call((e,r1)=>
 {
-	aa=$("maintable").getElementsByTagName("tbody")[0].getElementsByTagName("tr");
-	for ( i = 1 ; i < aa.length ; i++ )
-	{
-		AC=new web3.eth.Contract(ab1,aa[i].getElementsByTagName("td")[8].getElementsByTagName("pre")[0].innerHTML);
-		d=0;s=1;
-		d=await AC.methods.decimals().call((e,r)=>{return(r)})
-		s=await AC.methods.totalSupply().call((e,r)=>{return(r)})
-		ts=fornum(s,d)
-		aa[i].getElementsByTagName("td")[6].innerHTML=ts
-	}
+    o[tokes[9]]["d"]=Number(r1);
+    AC1.methods.totalSupply().call((e,r2)=>
+    {
+        o[tokes[9]]["s"]=Number(r2);
+		AC1R=new web3.eth.Contract(ab1,pairs[9])
+        AC1R.methods.getReserves().call((e,r3)=>
+        {
+            o[tokes[9]]["d"]=Number(r1);
+            o[tokes[9]]["s"]=Number(r2);
+            o[tokes[9]]["mc"]=Number(r3[0]);
+            o[tokes[9]]["ts"]=Number(r3[1]);
+			//console.log(o[tokes[9]])
+            rtd=$("maintable").getElementsByTagName("tbody")[0].getElementsByTagName("tr")[9].getElementsByTagName("td");
+			rtd[3].innerHTML=o[tokes[9]]["mc"]/o[tokes[9]]["ts"]*o[tokes[9]]["s"]/10**o[tokes[9]]["d"]///MC
+			rtd[3].innerHTML=o[tokes[9]]["mc"]/o[tokes[9]]["ts"]///AP
+			rtd[3].innerHTML=o[tokes[9]]["s"]/10**o[tokes[9]]["d"]//TS
+        })
+    })
+})
+
+//GENERATOR
+
+AC${i}=new web3.eth.Contract(ab1,tokes[i]);
+AC${i}.methods.decimals().call((e,r1)=>
+{
+    o[tokes[i]]["d"]=Number(r1);
+    AC1.methods.totalSupply().call((e,r2)=>
+    {
+        o[tokes[i]]["s"]=Number(r2);
+		AC1R=new web3.eth.Contract(ab1,pairs[i])
+        AC1R.methods.getReserves().call((e,r3)=>
+        {
+            painter(i,r1,r2,r3);
+        })
+    })
+})
+
+*/
+
+
+function painter(i,r1,r2,r3)
+{
+
+    o[tokes[i]]["d"]=Number(r1);
+    o[tokes[i]]["s"]=Number(r2);
+    o[tokes[i]]["_r0"]=Number(r3[0]);
+    o[tokes[i]]["_r1"]=Number(r3[1]);
+    o[tokes[i]]["ap"]=(Number(r3[0])/1e18)/(Number(r3[1])/10**Number(r1));
+    o[tokes[i]]["ts"]=o[tokes[i]]["s"]/10**o[tokes[i]]["d"]
+    o[tokes[i]]["mc"]=o[tokes[i]]["ts"]*o[tokes[i]]["ap"]
+
+	//console.log(o[tokes[i]])
+    rtd=$("maintable").getElementsByTagName("tbody")[0].getElementsByTagName("tr")[i].getElementsByTagName("td");
+	rtd[3].innerHTML=(Number((o[tokes[i]]["mc"]).toFixed(0))).toLocaleString()
+	rtd[4].innerHTML=(Number(o[tokes[i]]["ap"]).toFixed(8))
+	rtd[5].innerHTML=(Number((o[tokes[i]]["_r0"]/1e18).toFixed(0))).toLocaleString()
+	rtd[6].innerHTML=(Number((o[tokes[i]]["ts"]).toFixed(0))).toLocaleString()
+
 }
+
+/*
+
+//CHIEF GEN
+st="";
+for(i=2;i<31;i++){st+=(
+	`
+	AC${i}=new web3.eth.Contract(ab1,tokes[${i}]);
+	AC${i}.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[${i}]]["d"]=Number(r1);
+    	AC${i}.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[i]]["s"]=Number(r2);
+			AC${i}R=new web3.eth.Contract(ab1,pairs[${i}])
+        	AC${i}R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(${i},r1,r2,r3);
+        	})
+    	})
+	})
+	`
+)}
+*/
+pairs=[
+  "0x50576ed9d94cf934bc32abf76e08ec6ddcd54bf0",  //ELITE
+  "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83",  //WFTM
+  "0x2b4c76d0dc16be1c31d4c1dc53bf9b45987fc75c",  //USDC 2
+  "0x5965e53aa80a0bcf1cd6dbdd72e6a9b2aa047410",  //USDT 1
+  "0xbaf1b2fd16f7294ca158b3f1065e5f27f9c72b61",  //FUSD 2
+  "0x0ec0e1629e776272fa3e55548d4a656be0eedcf4",  //FRAX 2
+  "0x2789c73e03157d167bcabca1e09aa61b79196074",  //FXS 2
+  "0x279b2c897737a50405ed2091694f225d83f2d3ba",  //WBTC 2
+  "0xec7178f4c41f346b2721907f5cf7628e388a7a58",  //BOO 1
+  "0x74fe5ddc4c27f91a1898ccd5ac62dfeb2d3df726",  //BNB 2
+  "0x4fc38a2735c7da1d71ccabf6dec235a7da4ec52c",  //YFI 2
+  "0xf84e313b36e86315af7a06ff26c8b20e9eb443c3",  //SUSHI 1
+  "0x30748322b6e34545dbe0788c421886aeb5297789",  //SPIRIT 2
+  "0xfd0ab56b83130ce8f2b7a4f4d4532dee495c0794",  //WOOFY 1
+  "0x3d0bd54c48c2c433ea6fed609cc3d5fb7a77622b",  //WETH 3
+  "0xe120ffbda0d14f3bb6d6053e90e63c572a66a428",  //DAI 1
+  "0x3ac28d350c59ef9054b305dfe9078fadc3cecabe",  //ZOO 3
+  "0x5c021d9cfad40aafc57786b409a9ce571de375b4",  //ANY 1
+  "0xebf374bb21d83cf010cc7363918776adf6ff2bf6",  //AAVE 1
+  "0x89d9bc2f2d091cfbfc31e333d6dc555ddbc2fd29",  //LINK 1
+  "0x06d173628be105fe81f1c82c9979ba79ebcafcb7",  //SNX 1
+  "0x374c8acb146407ef0ae8f82baafcf8f4ec1708cf",  //CRV 2
+  "0xb77b223490e1f5951ec79a8d09db9eab2adcb934",  //CREAM 1
+  "0x1c94665fd3ecfa969feda7ed01e35522e6982022",  //BADGER 1
+  "0x91b39d5584e2a7dc829f696235742cc293f2e8cf",  //BAND 1
+  "0x5dc7848bf215f1d99f2af3d2bf78fcdf238ee34b",  //COVER 1
+  "0xfa7ca6e6d17368e0a1fa9c75f2ebe5a8d7be9fc6",  //AURORA 3
+  "0xfa7ca6e6d17368e0a1fa9c75f2ebe5a8d7be9fc6",  //LQDR 3
+  "0x84311ecc54d7553378c067282940b0fdfb913675",  //ICE 3
+  "0x20935601f940a4428a4271b85a46a8bf99158c2e"  //FRANK 2
+]
+function brr()
+{
+
+//ELITE
+	//AC0=new web3.eth.Contract(ab1,tokes[0]);
+	//AC0.methods.decimals().call((e,r1)=>
+	//{
+    //	o[tokes[0]]["d"]=Number(r1);
+    //	AC0.methods.totalSupply().call((e,r2)=>
+    //	{
+    //    	o[tokes[0]]["s"]=Number(r2);
+			AC0R=new web3.eth.Contract(ab1,pairs[0])
+        	AC0R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(0,"18","250000000000000000000",r3);
+        	})
+    //	})
+	//})
+//WFTM
+	AC1=new web3.eth.Contract(ab1,tokes[1]);
+	AC1.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[1]]["d"]=Number(r1);
+    	AC1.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[1]]["s"]=Number(r2);
+			//AC1R=new web3.eth.Contract(ab1,pairs[1])
+        	//AC1R.methods.getReserves().call((e,r3)=>
+        	//{
+            //	painter(1,r1,r2,r3);
+            painter(1,r1,r2,[r2,r2])
+        	//})
+    	})
+	})
+
+	AC2=new web3.eth.Contract(ab1,tokes[2]);
+	AC2.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[2]]["d"]=Number(r1);
+    	AC2.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[2]]["s"]=Number(r2);
+			AC2R=new web3.eth.Contract(ab1,pairs[2])
+        	AC2R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(2,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC3=new web3.eth.Contract(ab1,tokes[3]);
+	AC3.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[3]]["d"]=Number(r1);
+    	AC3.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[3]]["s"]=Number(r2);
+			AC3R=new web3.eth.Contract(ab1,pairs[3])
+        	AC3R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(3,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC4=new web3.eth.Contract(ab1,tokes[4]);
+	AC4.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[4]]["d"]=Number(r1);
+    	AC4.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[4]]["s"]=Number(r2);
+			AC4R=new web3.eth.Contract(ab1,pairs[4])
+        	AC4R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(4,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC5=new web3.eth.Contract(ab1,tokes[5]);
+	AC5.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[5]]["d"]=Number(r1);
+    	AC5.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[5]]["s"]=Number(r2);
+			AC5R=new web3.eth.Contract(ab1,pairs[5])
+        	AC5R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(5,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC6=new web3.eth.Contract(ab1,tokes[6]);
+	AC6.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[6]]["d"]=Number(r1);
+    	AC6.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[6]]["s"]=Number(r2);
+			AC6R=new web3.eth.Contract(ab1,pairs[6])
+        	AC6R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(6,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC7=new web3.eth.Contract(ab1,tokes[7]);
+	AC7.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[7]]["d"]=Number(r1);
+    	AC7.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[7]]["s"]=Number(r2);
+			AC7R=new web3.eth.Contract(ab1,pairs[7])
+        	AC7R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(7,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC8=new web3.eth.Contract(ab1,tokes[8]);
+	AC8.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[8]]["d"]=Number(r1);
+    	AC8.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[8]]["s"]=Number(r2);
+			AC8R=new web3.eth.Contract(ab1,pairs[8])
+        	AC8R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(8,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC9=new web3.eth.Contract(ab1,tokes[9]);
+	AC9.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[9]]["d"]=Number(r1);
+    	AC9.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[9]]["s"]=Number(r2);
+			AC9R=new web3.eth.Contract(ab1,pairs[9])
+        	AC9R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(9,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC10=new web3.eth.Contract(ab1,tokes[10]);
+	AC10.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[10]]["d"]=Number(r1);
+    	AC10.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[10]]["s"]=Number(r2);
+			AC10R=new web3.eth.Contract(ab1,pairs[10])
+        	AC10R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(10,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC11=new web3.eth.Contract(ab1,tokes[11]);
+	AC11.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[11]]["d"]=Number(r1);
+    	AC11.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[11]]["s"]=Number(r2);
+			AC11R=new web3.eth.Contract(ab1,pairs[11])
+        	AC11R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(11,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC12=new web3.eth.Contract(ab1,tokes[12]);
+	AC12.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[12]]["d"]=Number(r1);
+    	AC12.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[12]]["s"]=Number(r2);
+			AC12R=new web3.eth.Contract(ab1,pairs[12])
+        	AC12R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(12,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC13=new web3.eth.Contract(ab1,tokes[13]);
+	AC13.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[13]]["d"]=Number(r1);
+    	AC13.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[13]]["s"]=Number(r2);
+			AC13R=new web3.eth.Contract(ab1,pairs[13])
+        	AC13R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(13,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC14=new web3.eth.Contract(ab1,tokes[14]);
+	AC14.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[14]]["d"]=Number(r1);
+    	AC14.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[14]]["s"]=Number(r2);
+			AC14R=new web3.eth.Contract(ab1,pairs[14])
+        	AC14R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(14,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC15=new web3.eth.Contract(ab1,tokes[15]);
+	AC15.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[15]]["d"]=Number(r1);
+    	AC15.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[15]]["s"]=Number(r2);
+			AC15R=new web3.eth.Contract(ab1,pairs[15])
+        	AC15R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(15,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC16=new web3.eth.Contract(ab1,tokes[16]);
+	AC16.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[16]]["d"]=Number(r1);
+    	AC16.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[16]]["s"]=Number(r2);
+			AC16R=new web3.eth.Contract(ab1,pairs[16])
+        	AC16R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(16,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC17=new web3.eth.Contract(ab1,tokes[17]);
+	AC17.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[17]]["d"]=Number(r1);
+    	AC17.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[17]]["s"]=Number(r2);
+			AC17R=new web3.eth.Contract(ab1,pairs[17])
+        	AC17R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(17,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC18=new web3.eth.Contract(ab1,tokes[18]);
+	AC18.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[18]]["d"]=Number(r1);
+    	AC18.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[18]]["s"]=Number(r2);
+			AC18R=new web3.eth.Contract(ab1,pairs[18])
+        	AC18R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(18,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC19=new web3.eth.Contract(ab1,tokes[19]);
+	AC19.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[19]]["d"]=Number(r1);
+    	AC19.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[19]]["s"]=Number(r2);
+			AC19R=new web3.eth.Contract(ab1,pairs[19])
+        	AC19R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(19,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC20=new web3.eth.Contract(ab1,tokes[20]);
+	AC20.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[20]]["d"]=Number(r1);
+    	AC20.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[20]]["s"]=Number(r2);
+			AC20R=new web3.eth.Contract(ab1,pairs[20])
+        	AC20R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(20,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC21=new web3.eth.Contract(ab1,tokes[21]);
+	AC21.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[21]]["d"]=Number(r1);
+    	AC21.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[21]]["s"]=Number(r2);
+			AC21R=new web3.eth.Contract(ab1,pairs[21])
+        	AC21R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(21,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC22=new web3.eth.Contract(ab1,tokes[22]);
+	AC22.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[22]]["d"]=Number(r1);
+    	AC22.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[22]]["s"]=Number(r2);
+			AC22R=new web3.eth.Contract(ab1,pairs[22])
+        	AC22R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(22,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC23=new web3.eth.Contract(ab1,tokes[23]);
+	AC23.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[23]]["d"]=Number(r1);
+    	AC23.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[23]]["s"]=Number(r2);
+			AC23R=new web3.eth.Contract(ab1,pairs[23])
+        	AC23R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(23,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC24=new web3.eth.Contract(ab1,tokes[24]);
+	AC24.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[24]]["d"]=Number(r1);
+    	AC24.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[24]]["s"]=Number(r2);
+			AC24R=new web3.eth.Contract(ab1,pairs[24])
+        	AC24R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(24,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC25=new web3.eth.Contract(ab1,tokes[25]);
+	AC25.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[25]]["d"]=Number(r1);
+    	AC25.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[25]]["s"]=Number(r2);
+			AC25R=new web3.eth.Contract(ab1,pairs[25])
+        	AC25R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(25,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC26=new web3.eth.Contract(ab1,tokes[26]);
+	AC26.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[26]]["d"]=Number(r1);
+    	AC26.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[26]]["s"]=Number(r2);
+			AC26R=new web3.eth.Contract(ab1,pairs[26])
+        	AC26R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(26,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC27=new web3.eth.Contract(ab1,tokes[27]);
+	AC27.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[27]]["d"]=Number(r1);
+    	AC27.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[27]]["s"]=Number(r2);
+			AC27R=new web3.eth.Contract(ab1,pairs[27])
+        	AC27R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(27,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC28=new web3.eth.Contract(ab1,tokes[28]);
+	AC28.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[28]]["d"]=Number(r1);
+    	AC28.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[28]]["s"]=Number(r2);
+			AC28R=new web3.eth.Contract(ab1,pairs[28])
+        	AC28R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(28,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC29=new web3.eth.Contract(ab1,tokes[29]);
+	AC29.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[29]]["d"]=Number(r1);
+    	AC29.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[29]]["s"]=Number(r2);
+			AC29R=new web3.eth.Contract(ab1,pairs[29])
+        	AC29R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(29,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC30=new web3.eth.Contract(ab1,tokes[30]);
+	AC30.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[30]]["d"]=Number(r1);
+    	AC30.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[30]]["s"]=Number(r2);
+			AC30R=new web3.eth.Contract(ab1,pairs[30])
+        	AC30R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(30,r1,r2,r3);
+        	})
+    	})
+	})
+
+}
+
 ab1=[
 	{
 		"constant": true,
@@ -525,6 +1149,31 @@ ab1=[
 				"internalType": "uint8",
 				"name": "",
 				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getReserves",
+		"outputs": [
+			{
+				"internalType": "uint112",
+				"name": "_reserve0",
+				"type": "uint112"
+			},
+			{
+				"internalType": "uint112",
+				"name": "_reserve1",
+				"type": "uint112"
+			},
+			{
+				"internalType": "uint32",
+				"name": "_blockTimestampLast",
+				"type": "uint32"
 			}
 		],
 		"payable": false,
@@ -560,5 +1209,6 @@ function fornum(n,d)
 	else if(_n>1){n_=(_n/1e1).toFixed(2)+""}
 	return(n_);
 }
+brr()
 </script>
 </html>
