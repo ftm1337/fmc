@@ -1,6 +1,6 @@
 <!doctype html><html><meta charset="UTF-8">
 <head>
-<meta name="description" content="FMC.guru (FantomMarketCap) by FTM.guru : Fantom Opera blockchain tooken prices, markets, DEX listings, Market Cap, Live Trading Data">
+<meta name="description" content="FMC.guru (FantomMarketCap) by FTM.guru : Fantom Opera blockchain token prices, markets, DEX listings, Market Cap, Live Trading Data">
 <meta name="keywords" content="Fantom Opera, FTM, Decentralized Finance, ELITE, 1337, defi, farming, FTM1337">
 <title>FantomMarketCap | FMC.guru : Fantom Opera Cryptocurrency Tokens Price and Market Capitalization</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,8 +29,8 @@ a{color:white}
 	<div>By <a href="https://ftm.guru">FTM.guru</a></div>
 </div>
 </div>
-<h1 align="center">FMC.guru</h1>
-<div align="center" style="margin:0;padding:0">Bridged⁕ | ⁕Natives</div>
+<h1 align="center">FMC.guru<br><span id="tmc">0</span> FTM</h1>
+<div align="center" style="margin:0;padding:0">Bridged * | ⁕ Natives</div>
 <div align="center">
 <input class="topfind" placeholder="Find Gems"><br>
 <select id="topsel">
@@ -70,10 +70,10 @@ a{color:white}
 			<th>Rank</th>
 			<th>Ticker</th>
 			<th>Asset</th>
-			<th>Market Cap</th>
-			<th>Price</th>
-			<th>Most Liquid</th>
-			<th>Supply</th>
+			<th onclick="sortsortsort(3)">Market Cap ⇅</th>
+			<th onclick="sortsortsort(4)">Price ⇅</th>
+			<th onclick="sortsortsort(5)">Most Liquid ⇅</th>
+			<th onclick="sortsortsort(6)">Supply ⇅</th>
 			<th>Links</th>
 			<th>Address</th>
 			<th>Labels</th>
@@ -104,6 +104,66 @@ a{color:white}
 				<td><pre>0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83</pre></td>
 				<td>Yields</td>
 			</tr>
+			<tr id="tr_0x74b23882a30290451a17c44f4f05243b6b58c76d">
+				<td>*</td>
+				<td>WETH</td>
+				<td>Wrapped Ether</td>
+				<td>?</td>
+				<td>6,789</td>
+				<td>?</td>
+				<td>788</td>
+				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
+				<td><pre>0x74b23882a30290451a17c44f4f05243b6b58c76d</pre></td>
+				<td>Coins</td>
+			</tr>
+			<tr id="tr_0x09e145a1d53c0045f41aeef25d8ff982ae74dd56">
+				<td>⁕</td>
+				<td>ZOO</td>
+				<td>Zoocoin</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>69,788</td>
+				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
+				<td><pre>0x09e145a1d53c0045f41aeef25d8ff982ae74dd56</pre></td>
+				<td>Tools</td>
+			</tr>
+			<tr id="tr_0x29b0da86e484e1c0029b56e817912d778ac0ec69">
+				<td>*</td>
+				<td>YFI</td>
+				<td>yearn.finance</td>
+				<td>?</td>
+				<td>247,247</td>
+				<td>169,788</td>
+				<td>9.876</td>
+				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
+				<td><pre>0x29b0da86e484e1c0029b56e817912d778ac0ec69</pre></td>
+				<td>Yields</td>
+			</tr>
+			<tr id="tr_0xd0660cd418a64a1d44e9214ad8e459324d8157f1">
+				<td>*</td>
+				<td>WOOFY</td>
+				<td>Wrapped YFI</td>
+				<td>480,999</td>
+				<td>247,247</td>
+				<td>169,788</td>
+				<td>9876</td>
+				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
+				<td><pre>0xd0660cd418a64a1d44e9214ad8e459324d8157f1</pre></td>
+				<td>Yields</td>
+			</tr>
+			<tr id="tr_0x321162cd933e2be498cd2267a90534a804051b11">
+				<td>*</td>
+				<td>WBTC</td>
+				<td>Wrapped Bitcoin</td>
+				<td>?</td>
+				<td>43210</td>
+				<td>?</td>
+				<td>88</td>
+				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
+				<td><pre>0x321162cd933e2be498cd2267a90534a804051b11</pre></td>
+				<td>Coins</td>
+			</tr>
 			<tr id="tr_0x04068da6c83afcfa0e13ba15a6696662335d5b75">
 				<td>*</td>
 				<td>USDC</td>
@@ -114,6 +174,126 @@ a{color:white}
 				<td>?</td>
 				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
 				<td><pre>0x04068da6c83afcfa0e13ba15a6696662335d5b75</pre></td>
+				<td>Stablecoins</td>
+			</tr>
+			<tr id="tr_0x56ee926bd8c72b2d5fa1af4d9e4cbb515a1e3adc">
+				<td>*</td>
+				<td>SNX</td>
+				<td>Synthetix Token</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>69,788</td>
+				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
+				<td><pre>0x56ee926bd8c72b2d5fa1af4d9e4cbb515a1e3adc</pre></td>
+				<td>Synthetics</td>
+			</tr>
+			<tr id="tr_0xae75a438b2e0cb8bb01ec1e1e376de11d44477cc">
+				<td>*</td>
+				<td>SUSHI</td>
+				<td>Sushi</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
+				<td><pre>0xae75a438b2e0cb8bb01ec1e1e376de11d44477cc</pre></td>
+				<td>AMM DEX Farming Staking</td>
+			</tr>
+			<tr id="tr_0x841fad6eae12c286d1fd18d1d525dffa75c7effe">
+				<td>⁕</td>
+				<td>BOO</td>
+				<td>SpookySwap Token</td>
+				<td>?</td>
+				<td>6.789</td>
+				<td>?</td>
+				<td>69,788</td>
+				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
+				<td><pre>0x841fad6eae12c286d1fd18d1d525dffa75c7effe</pre></td>
+				<td>AMM DEX Farming Staking</td>
+			</tr>
+			<tr id="tr_0x5cc61a78f164885776aa610fb0fe1257df78e59b">
+				<td>⁕</td>
+				<td>SPIRIT</td>
+				<td>SpiritSwap Token</td>
+				<td>?</td>
+				<td>6.789</td>
+				<td>?</td>
+				<td>69,788</td>
+				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
+				<td><pre>0x5cc61a78f164885776aa610fb0fe1257df78e59b</pre></td>
+				<td>AMM DEX Farming Staking</td>
+			</tr>
+			<tr id="tr_0xf6129f6705b826dbafaa26e03aad9dd20b9235c6">
+				<td>⁕</td>
+				<td>ICE</td>
+				<td>Popsicle Finance</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
+				<td><pre>0xf6129f6705b826dbafaa26e03aad9dd20b9235c6</pre></td>
+				<td>DEX</td>
+			</tr>
+			<tr id="tr_0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e">
+				<td>*</td>
+				<td>DAI</td>
+				<td>Multi-Collateral Dai</td>
+				<td>?</td>
+				<td>0.2789</td>
+				<td>?</td>
+				<td>?</td>
+				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
+				<td><pre>0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e</pre></td>
+				<td>Stablecoins</td>
+			</tr>
+			<tr id="tr_0x10b620b2dbac4faa7d7ffd71da486f5d44cd86f9">
+				<td>⁕</td>
+				<td>LQDR</td>
+				<td>Liquid Driver</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
+				<td><pre>0x10b620b2dbac4faa7d7ffd71da486f5d44cd86f9</pre></td>
+				<td>DEX</td>
+			</tr>
+			<tr id="tr_0xbc2451aad349b6b43fd05f4f0cc327f8a6bca2d4">
+				<td>⁕</td>
+				<td>AURORA</td>
+				<td>HyperAurora</td>
+				<td>?</td>
+				<td>0.259</td>
+				<td>1,234,567</td>
+				<td>69,788</td>
+				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
+				<td><pre>0xbc2451aad349b6b43fd05f4f0cc327f8a6bca2d4</pre></td>
+				<td>AMM DEX</td>
+			</tr>
+			<tr id="tr_0x82f8cb20c14f134fe6ebf7ac3b903b2117aafa62">
+				<td>*</td>
+				<td>FXS</td>
+				<td>Frax Share</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
+				<td><pre>0x82f8cb20c14f134fe6ebf7ac3b903b2117aafa62</pre></td>
+				<td>Stablecoins</td>
+			</tr>
+			<tr id="tr_0xaf319e5789945197e365e7f7fbfc56b130523b33">
+				<td>*</td>
+				<td>FRAX</td>
+				<td>Frax</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
+				<td><pre>0xaf319e5789945197e365e7f7fbfc56b130523b33</pre></td>
 				<td>Stablecoins</td>
 			</tr>
 			<tr id="tr_0x049d68029688eabf473097a2fc38ef61633a3c7a">
@@ -140,211 +320,17 @@ a{color:white}
 				<td><pre>0xad84341756bf337f5a0164515b1f6f993d194e1f</pre></td>
 				<td>Stablecoins</td>
 			</tr>
-			<tr id="tr_0xaf319e5789945197e365e7f7fbfc56b130523b33">
-				<td>*</td>
-				<td>FRAX</td>
-				<td>Frax</td>
-				<td>?</td>
-				<td>?</td>
-				<td>?</td>
-				<td>?</td>
-				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
-				<td><pre>0xaf319e5789945197e365e7f7fbfc56b130523b33</pre></td>
-				<td>Stablecoins</td>
-			</tr>
-			<tr id="tr_0x82f8cb20c14f134fe6ebf7ac3b903b2117aafa62">
-				<td>*</td>
-				<td>FXS</td>
-				<td>Frax Share</td>
-				<td>?</td>
-				<td>?</td>
-				<td>?</td>
-				<td>?</td>
-				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
-				<td><pre>0x82f8cb20c14f134fe6ebf7ac3b903b2117aafa62</pre></td>
-				<td>Stablecoins</td>
-			</tr>
-			<tr id="tr_0x321162cd933e2be498cd2267a90534a804051b11">
-				<td>*</td>
-				<td>WBTC</td>
-				<td>Wrapped Bitcoin</td>
-				<td>?</td>
-				<td>43210</td>
-				<td>?</td>
-				<td>88</td>
-				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
-				<td><pre>0x321162cd933e2be498cd2267a90534a804051b11</pre></td>
-				<td>Coins</td>
-			</tr>
-			<tr id="tr_0x841fad6eae12c286d1fd18d1d525dffa75c7effe">
+			<tr id="tr_0xeb86b05cfee3e48db9a44275701ed099462c8ba0">
 				<td>⁕</td>
-				<td>BOO</td>
-				<td>SpookySwap Token</td>
-				<td>?</td>
-				<td>6.789</td>
-				<td>?</td>
-				<td>69,788</td>
-				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
-				<td><pre>0x841fad6eae12c286d1fd18d1d525dffa75c7effe</pre></td>
-				<td>AMM DEX Farming Staking</td>
-			</tr>
-			<tr id="tr_0xd67de0e0a0fd7b15dc8348bb9be742f3c5850454">
-				<td>*</td>
-				<td>BNB</td>
-				<td>Binance Coin</td>
-				<td>?</td>
-				<td>346.789</td>
-				<td>?</td>
-				<td>691,788</td>
-				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
-				<td><pre>0xd67de0e0a0fd7b15dc8348bb9be742f3c5850454</pre></td>
-				<td>CEX Coins</td>
-			</tr>
-			<tr id="tr_0x29b0da86e484e1c0029b56e817912d778ac0ec69">
-				<td>*</td>
-				<td>YFI</td>
-				<td>yearn.finance</td>
-				<td>?</td>
-				<td>247,247</td>
-				<td>169,788</td>
-				<td>9.876</td>
-				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
-				<td><pre>0x29b0da86e484e1c0029b56e817912d778ac0ec69</pre></td>
-				<td>Yields</td>
-			</tr>
-			<tr id="tr_0xae75a438b2e0cb8bb01ec1e1e376de11d44477cc">
-				<td>*</td>
-				<td>SUSHI</td>
-				<td>Sushi</td>
+				<td>FRANK</td>
+				<td>Frankenstein Finance</td>
 				<td>?</td>
 				<td>?</td>
 				<td>?</td>
 				<td>?</td>
 				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
-				<td><pre>0xae75a438b2e0cb8bb01ec1e1e376de11d44477cc</pre></td>
-				<td>AMM DEX Farming Staking</td>
-			</tr>
-			<tr id="tr_0x5cc61a78f164885776aa610fb0fe1257df78e59b">
-				<td>⁕</td>
-				<td>SPIRIT</td>
-				<td>SpiritSwap Token</td>
-				<td>?</td>
-				<td>6.789</td>
-				<td>?</td>
-				<td>69,788</td>
-				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
-				<td><pre>0x5cc61a78f164885776aa610fb0fe1257df78e59b</pre></td>
-				<td>AMM DEX Farming Staking</td>
-			</tr>
-			<tr id="tr_0xd0660cd418a64a1d44e9214ad8e459324d8157f1">
-				<td>*</td>
-				<td>WOOFY</td>
-				<td>Wrapped YFI</td>
-				<td>480,999</td>
-				<td>247,247</td>
-				<td>169,788</td>
-				<td>9876</td>
-				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
-				<td><pre>0xd0660cd418a64a1d44e9214ad8e459324d8157f1</pre></td>
-				<td>Yields</td>
-			</tr>
-			<tr id="tr_0x74b23882a30290451a17c44f4f05243b6b58c76d">
-				<td>*</td>
-				<td>WETH</td>
-				<td>Wrapped Ether</td>
-				<td>?</td>
-				<td>6,789</td>
-				<td>?</td>
-				<td>788</td>
-				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
-				<td><pre>0x74b23882a30290451a17c44f4f05243b6b58c76d</pre></td>
-				<td>Coins</td>
-			</tr>
-			<tr id="tr_0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e">
-				<td>*</td>
-				<td>DAI</td>
-				<td>Multi-Collateral Dai</td>
-				<td>?</td>
-				<td>0.2789</td>
-				<td>?</td>
-				<td>?</td>
-				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
-				<td><pre>0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e</pre></td>
-				<td>Stablecoins</td>
-			</tr>
-			<!--
-			<tr id="tr_0x04068da6c83afcfa0e13ba15a6696662335d5b75">
-				<td>⁕</td>
-				<td>BIFI</td>
-				<td>beefy.finance</td>
-				<td>?</td>
-				<td>8,999</td>
-				<td>?</td>
-				<td>69,788</td>
-				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
-				<td><pre>0x1234567890123456789012345678901234567890</pre></td>
-				<td>Farming Staking Vaults Yields</td>
-			</tr>
-			-->
-			<tr id="tr_0x09e145a1d53c0045f41aeef25d8ff982ae74dd56">
-				<td>⁕</td>
-				<td>ZOO</td>
-				<td>Zoocoin</td>
-				<td>?</td>
-				<td>?</td>
-				<td>?</td>
-				<td>69,788</td>
-				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
-				<td><pre>0x09e145a1d53c0045f41aeef25d8ff982ae74dd56</pre></td>
-				<td>Tools</td>
-			</tr>
-			<tr id="tr_0xddcb3ffd12750b45d32e084887fdf1aabab34239">
-				<td>*</td>
-				<td>ANY</td>
-				<td>Anycoin</td>
-				<td>?</td>
-				<td>?</td>
-				<td>?</td>
-				<td>69,788</td>
-				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
-				<td><pre>0xddcb3ffd12750b45d32e084887fdf1aabab34239</pre></td>
-				<td>Bridges</td>
-			</tr>
-			<tr id="tr_0x6a07a792ab2965c72a5b8088d3a069a7ac3a993b">
-				<td>*</td>
-				<td>AAVE</td>
-				<td>Aave</td>
-				<td>8,480,999</td>
-				<td>1,729</td>
-				<td>?</td>
-				<td>4,043</td>
-				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
-				<td><pre>0x6a07a792ab2965c72a5b8088d3a069a7ac3a993b</pre></td>
-				<td>Yields Lending</td>
-			</tr>
-			<tr id="tr_0xb3654dc3d10ea7645f8319668e8f54d2574fbdc8">
-				<td>*</td>
-				<td>LINK</td>
-				<td>Chainlink</td>
-				<td>?</td>
-				<td>?</td>
-				<td>?</td>
-				<td>69,788</td>
-				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
-				<td><pre>0xb3654dc3d10ea7645f8319668e8f54d2574fbdc8</pre></td>
-				<td>Oracles</td>
-			</tr>
-			<tr id="tr_0x56ee926bd8c72b2d5fa1af4d9e4cbb515a1e3adc">
-				<td>*</td>
-				<td>SNX</td>
-				<td>Synthetix Token</td>
-				<td>?</td>
-				<td>?</td>
-				<td>?</td>
-				<td>69,788</td>
-				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
-				<td><pre>0x56ee926bd8c72b2d5fa1af4d9e4cbb515a1e3adc</pre></td>
-				<td>Synthetics</td>
+				<td><pre>0xeb86b05cfee3e48db9a44275701ed099462c8ba0</pre></td>
+				<td>Farming</td>
 			</tr>
 			<tr id="tr_0x1e4f97b9f9f913c46f1632781732927b9019c68b">
 				<td>*</td>
@@ -370,17 +356,41 @@ a{color:white}
 				<td><pre>0x657a1861c15a3ded9af0b6799a195a249ebdcbc6</pre></td>
 				<td>Lending</td>
 			</tr>
-			<tr id="tr_0x753fbc5800a8c8e3fb6dc6415810d627a387dfc9">
+			<tr id="tr_0xb01e8419d842beebf1b70a7b5f7142abbaf7159d">
 				<td>*</td>
-				<td>BADGER</td>
-				<td>Badger DAO</td>
+				<td>COVER</td>
+				<td>Cover Protocol</td>
 				<td>?</td>
 				<td>?</td>
 				<td>?</td>
 				<td>69,788</td>
 				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
-				<td><pre>0x753fbc5800a8c8e3fb6dc6415810d627a387dfc9</pre></td>
-				<td>DAO</td>
+				<td><pre>0xb01e8419d842beebf1b70a7b5f7142abbaf7159d</pre></td>
+				<td>Oracles</td>
+			</tr>
+			<tr id="tr_0xb3654dc3d10ea7645f8319668e8f54d2574fbdc8">
+				<td>*</td>
+				<td>LINK</td>
+				<td>Chainlink</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>69,788</td>
+				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
+				<td><pre>0xb3654dc3d10ea7645f8319668e8f54d2574fbdc8</pre></td>
+				<td>Oracles</td>
+			</tr>
+			<tr id="tr_0xd67de0e0a0fd7b15dc8348bb9be742f3c5850454">
+				<td>*</td>
+				<td>BNB</td>
+				<td>Binance Coin</td>
+				<td>?</td>
+				<td>346.789</td>
+				<td>?</td>
+				<td>691,788</td>
+				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
+				<td><pre>0xd67de0e0a0fd7b15dc8348bb9be742f3c5850454</pre></td>
+				<td>CEX Coins</td>
 			</tr>
 			<tr id="tr_0x46e7628e8b4350b2716ab470ee0ba1fa9e76c6c5">
 				<td>*</td>
@@ -394,19 +404,55 @@ a{color:white}
 				<td><pre>0x46e7628e8b4350b2716ab470ee0ba1fa9e76c6c5</pre></td>
 				<td>Oracles</td>
 			</tr>
-			<tr id="tr_0xb01e8419d842beebf1b70a7b5f7142abbaf7159d">
+			<tr id="tr_0x753fbc5800a8c8e3fb6dc6415810d627a387dfc9">
 				<td>*</td>
-				<td>COVER</td>
-				<td>Cover Protocol</td>
+				<td>BADGER</td>
+				<td>Badger DAO</td>
 				<td>?</td>
 				<td>?</td>
 				<td>?</td>
 				<td>69,788</td>
 				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
-				<td><pre>0xb01e8419d842beebf1b70a7b5f7142abbaf7159d</pre></td>
-				<td>Oracles</td>
+				<td><pre>0x753fbc5800a8c8e3fb6dc6415810d627a387dfc9</pre></td>
+				<td>DAO</td>
 			</tr>
-			<!--
+			<tr id="tr_0xddcb3ffd12750b45d32e084887fdf1aabab34239">
+				<td>*</td>
+				<td>ANY</td>
+				<td>Anycoin</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>69,788</td>
+				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
+				<td><pre>0xddcb3ffd12750b45d32e084887fdf1aabab34239</pre></td>
+				<td>Bridges</td>
+			</tr>
+			<tr id="tr_0x6a07a792ab2965c72a5b8088d3a069a7ac3a993b">
+				<td>*</td>
+				<td>AAVE</td>
+				<td>Aave</td>
+				<td>8,480,999</td>
+				<td>1,729</td>
+				<td>?</td>
+				<td>4,043</td>
+				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
+				<td><pre>0x6a07a792ab2965c72a5b8088d3a069a7ac3a993b</pre></td>
+				<td>Yields Lending</td>
+			</tr><!--
+			<tr id="tr_0x04068da6c83afcfa0e13ba15a6696662335d5b75">
+				<td>⁕</td>
+				<td>BIFI</td>
+				<td>beefy.finance</td>
+				<td>?</td>
+				<td>8,999</td>
+				<td>?</td>
+				<td>69,788</td>
+				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
+				<td><pre>0x1234567890123456789012345678901234567890</pre></td>
+				<td>Farming Staking Vaults Yields</td>
+			</tr>
+			--><!--
 			<tr id="tr_0x04068da6c83afcfa0e13ba15a6696662335d5b75">
 				<td>⁕</td>
 				<td>ORI</td>
@@ -420,61 +466,13 @@ a{color:white}
 				<td>Farming</td>
 			</tr>
 			-->
-			<tr id="tr_0xbc2451aad349b6b43fd05f4f0cc327f8a6bca2d4">
-				<td>⁕</td>
-				<td>AURORA</td>
-				<td>HyperAurora</td>
-				<td>?</td>
-				<td>0.259</td>
-				<td>1,234,567</td>
-				<td>69,788</td>
-				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
-				<td><pre>0xbc2451aad349b6b43fd05f4f0cc327f8a6bca2d4</pre></td>
-				<td>AMM DEX</td>
-			</tr>
-			<tr id="tr_0x10b620b2dbac4faa7d7ffd71da486f5d44cd86f9">
-				<td>⁕</td>
-				<td>LQDR</td>
-				<td>Liquid Driver</td>
-				<td>?</td>
-				<td>?</td>
-				<td>?</td>
-				<td>?</td>
-				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
-				<td><pre>0x10b620b2dbac4faa7d7ffd71da486f5d44cd86f9</pre></td>
-				<td>DEX</td>
-			</tr>
-			<tr id="tr_0xf6129f6705b826dbafaa26e03aad9dd20b9235c6">
-				<td>⁕</td>
-				<td>ICE</td>
-				<td>Popsicle Finance</td>
-				<td>?</td>
-				<td>?</td>
-				<td>?</td>
-				<td>?</td>
-				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
-				<td><pre>0xf6129f6705b826dbafaa26e03aad9dd20b9235c6</pre></td>
-				<td>DEX</td>
-			</tr>
-			<tr id="tr_0xeb86b05cfee3e48db9a44275701ed099462c8ba0">
-				<td>⁕</td>
-				<td>FRANK</td>
-				<td>Frankenstein Finance</td>
-				<td>?</td>
-				<td>?</td>
-				<td>?</td>
-				<td>?</td>
-				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
-				<td><pre>0xeb86b05cfee3e48db9a44275701ed099462c8ba0</pre></td>
-				<td>Farming</td>
-			</tr>
 		</tbody>
 	</table>
 </div>
 <div align="center"><br><b>1 2 3 4 5 … 6 7 8 9 10</b></div>
 <br>
 <div align="center"><b>Disclaimer & Notice</b><br>
-All information presented here is only for aesthetic uses and posesses no validity to settle any claims. It is also non-exhaustive and prone to error. <strike>Currently it does not update automatically.</strike> This dashboard is ultra-real time - It means that the data on this page has zero latency, unlike CMC or CG which have 1-10 minutees old data. FTM.guru and FMC.guru are trying to keep up with the <b>Fantom Fast</b> motto. <i>A much deserved shoutout to all developers on F.O., ftmscan.com and rpc.ftm.tools for their benign Services!</i> All presented numbers are denoted in FTM. Legend: 🔎Explorer🌐Website🎮Discord✈Telegram🐦Twitter😼SpookySwap👻SpiritSwap🍣SushiSwap🛩HyperJump🎨PaintSwap🦎Coingecko. "Most Liquid" collumn refers to the pair with highest WFTM-Liquidity. We encourage you to report inconsistencies or request listing at one of our community channels: <b><a href="https://t.me/FTM1337" target="_blank">Telegram or Discord.</a></b> To advertise here, contact Sam at FTM1337@mailfence.com or via one of the social mediums.</div>
+All information presented here is only for aesthetic uses and posesses no validity to settle any claims. It is also non-exhaustive and prone to error. <strike>Currently it does not update automatically.</strike> This dashboard is ultra-real time - It means that the data on this page has zero latency, unlike CMC or CG which have 1-10 minutees old data. FTM.guru and FMC.guru are trying to keep up with the <b>Fantom Fast</b> motto. <i>A much deserved shoutout to all developers on F.O., ftmscan.com and rpc.ftm.tools for their benign Services!</i> All presented numbers are denoted in FTM. Legend: 🔎Explorer🌐Website🎮Discord✈Telegram🐦Twitter😼SpookySwap👻SpiritSwap🍣SushiSwap🛩HyperJump🎨PaintSwap🦎Coingecko. "Most Liquid" coloumn refers to the pair with highest WFTM-Liquidity. We encourage you to report inconsistencies or request listing at one of our community channels: <b><a href="https://t.me/FTM1337" target="_blank">Telegram or Discord.</a></b> To advertise here, contact Sam at FTM1337@mailfence.com or via one of the social mediums.</div>
 </body>
 <script src="web3.min.js">
 </script>
@@ -606,12 +604,14 @@ function painter(i,r1,r2,r3)
     o[tokes[i]]["mc"]=o[tokes[i]]["ts"]*o[tokes[i]]["ap"]
 
 	//console.log(o[tokes[i]])
-    //rtd=$("maintable").getElementsByTagName("tbody")[0].getElementsByTagName("tr")[i].getElementsByTagName("td");
+	//rtd=$("maintable").getElementsByTagName("tbody")[0].getElementsByTagName("tr")[i].getElementsByTagName("td");
 	rtd=$("tr_"+tokes[i]).getElementsByTagName("td");
 	rtd[3].innerHTML=(Number((o[tokes[i]]["mc"]).toFixed(0))).toLocaleString()
 	rtd[4].innerHTML=(Number(o[tokes[i]]["ap"]).toFixed(8))
 	rtd[5].innerHTML=(Number((o[tokes[i]]["_r0"]/1e18).toFixed(0))).toLocaleString()
 	rtd[6].innerHTML=(Number((o[tokes[i]]["ts"]).toFixed(0))).toLocaleString()
+
+	$("tmc").innerHTML=Number((Number(($("tmc").innerHTML).replace(/ |\$|,|%/g,''))+o[tokes[i]]["mc"]).toFixed(0)).toLocaleString();
 }
 
 /*
@@ -635,9 +635,7 @@ for(i=2;i< 31;i++){st+=(
     	})
 	})
 	`
-)}
-*/
-
+)}*/
 pairs=[
   "0x50576ed9d94cf934bc32abf76e08ec6ddcd54bf0",  //ELITE
   "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83",  //WFTM
@@ -677,10 +675,8 @@ function brr()
 	//AC0=new web3.eth.Contract(ab1,tokes[0]);
 	//AC0.methods.decimals().call((e,r1)=>
 	//{
-    //	o[tokes[0]]["d"]=Number(r1);
     //	AC0.methods.totalSupply().call((e,r2)=>
     //	{
-    //    	o[tokes[0]]["s"]=Number(r2);
 			AC0R=new web3.eth.Contract(ab1,pairs[0])
         	AC0R.methods.getReserves().call((e,r3)=>
         	{
@@ -692,10 +688,8 @@ function brr()
 	AC1=new web3.eth.Contract(ab1,tokes[1]);
 	AC1.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[1]]["d"]=Number(r1);
     	AC1.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[1]]["s"]=Number(r2);
 			//AC1R=new web3.eth.Contract(ab1,pairs[1])
         	//AC1R.methods.getReserves().call((e,r3)=>
         	//{
@@ -708,10 +702,8 @@ function brr()
 	AC2=new web3.eth.Contract(ab1,tokes[2]);
 	AC2.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[2]]["d"]=Number(r1);
     	AC2.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[2]]["s"]=Number(r2);
 			AC2R=new web3.eth.Contract(ab1,pairs[2])
         	AC2R.methods.getReserves().call((e,r3)=>
         	{
@@ -723,10 +715,8 @@ function brr()
 	AC3=new web3.eth.Contract(ab1,tokes[3]);
 	AC3.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[3]]["d"]=Number(r1);
     	AC3.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[3]]["s"]=Number(r2);
 			AC3R=new web3.eth.Contract(ab1,pairs[3])
         	AC3R.methods.getReserves().call((e,r3)=>
         	{
@@ -738,10 +728,8 @@ function brr()
 	AC4=new web3.eth.Contract(ab1,tokes[4]);
 	AC4.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[4]]["d"]=Number(r1);
     	AC4.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[4]]["s"]=Number(r2);
 			AC4R=new web3.eth.Contract(ab1,pairs[4])
         	AC4R.methods.getReserves().call((e,r3)=>
         	{
@@ -753,10 +741,8 @@ function brr()
 	AC5=new web3.eth.Contract(ab1,tokes[5]);
 	AC5.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[5]]["d"]=Number(r1);
     	AC5.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[5]]["s"]=Number(r2);
 			AC5R=new web3.eth.Contract(ab1,pairs[5])
         	AC5R.methods.getReserves().call((e,r3)=>
         	{
@@ -768,10 +754,8 @@ function brr()
 	AC6=new web3.eth.Contract(ab1,tokes[6]);
 	AC6.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[6]]["d"]=Number(r1);
     	AC6.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[6]]["s"]=Number(r2);
 			AC6R=new web3.eth.Contract(ab1,pairs[6])
         	AC6R.methods.getReserves().call((e,r3)=>
         	{
@@ -783,10 +767,8 @@ function brr()
 	AC7=new web3.eth.Contract(ab1,tokes[7]);
 	AC7.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[7]]["d"]=Number(r1);
     	AC7.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[7]]["s"]=Number(r2);
 			AC7R=new web3.eth.Contract(ab1,pairs[7])
         	AC7R.methods.getReserves().call((e,r3)=>
         	{
@@ -798,10 +780,8 @@ function brr()
 	AC8=new web3.eth.Contract(ab1,tokes[8]);
 	AC8.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[8]]["d"]=Number(r1);
     	AC8.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[8]]["s"]=Number(r2);
 			AC8R=new web3.eth.Contract(ab1,pairs[8])
         	AC8R.methods.getReserves().call((e,r3)=>
         	{
@@ -813,10 +793,8 @@ function brr()
 	AC9=new web3.eth.Contract(ab1,tokes[9]);
 	AC9.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[9]]["d"]=Number(r1);
     	AC9.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[9]]["s"]=Number(r2);
 			AC9R=new web3.eth.Contract(ab1,pairs[9])
         	AC9R.methods.getReserves().call((e,r3)=>
         	{
@@ -828,10 +806,8 @@ function brr()
 	AC10=new web3.eth.Contract(ab1,tokes[10]);
 	AC10.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[10]]["d"]=Number(r1);
     	AC10.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[10]]["s"]=Number(r2);
 			AC10R=new web3.eth.Contract(ab1,pairs[10])
         	AC10R.methods.getReserves().call((e,r3)=>
         	{
@@ -843,10 +819,8 @@ function brr()
 	AC11=new web3.eth.Contract(ab1,tokes[11]);
 	AC11.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[11]]["d"]=Number(r1);
     	AC11.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[11]]["s"]=Number(r2);
 			AC11R=new web3.eth.Contract(ab1,pairs[11])
         	AC11R.methods.getReserves().call((e,r3)=>
         	{
@@ -858,10 +832,8 @@ function brr()
 	AC12=new web3.eth.Contract(ab1,tokes[12]);
 	AC12.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[12]]["d"]=Number(r1);
     	AC12.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[12]]["s"]=Number(r2);
 			AC12R=new web3.eth.Contract(ab1,pairs[12])
         	AC12R.methods.getReserves().call((e,r3)=>
         	{
@@ -873,10 +845,8 @@ function brr()
 	AC13=new web3.eth.Contract(ab1,tokes[13]);
 	AC13.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[13]]["d"]=Number(r1);
     	AC13.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[13]]["s"]=Number(r2);
 			AC13R=new web3.eth.Contract(ab1,pairs[13])
         	AC13R.methods.getReserves().call((e,r3)=>
         	{
@@ -891,11 +861,10 @@ function brr()
     	o[tokes[14]]["d"]=Number(r1);
     	AC14.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[14]]["s"]=Number(r2);
 			AC14R=new web3.eth.Contract(ab1,pairs[14])
         	AC14R.methods.getReserves().call((e,r3)=>
         	{
-            	painter(14,r1,r2,(new Array(r3[1],r3[0])));
+            	painter(14,r1,r2,r3);
         	})
     	})
 	})
@@ -903,14 +872,11 @@ function brr()
 	AC15=new web3.eth.Contract(ab1,tokes[15]);
 	AC15.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[15]]["d"]=Number(r1);
     	AC15.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[15]]["s"]=Number(r2);
 			AC15R=new web3.eth.Contract(ab1,pairs[15])
         	AC15R.methods.getReserves().call((e,r3)=>
         	{
-            	console.log(tokes[15],r1,r2,r3);
             	painter(15,r1,r2,r3);
         	})
     	})
@@ -919,10 +885,8 @@ function brr()
 	AC16=new web3.eth.Contract(ab1,tokes[16]);
 	AC16.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[16]]["d"]=Number(r1);
     	AC16.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[16]]["s"]=Number(r2);
 			AC16R=new web3.eth.Contract(ab1,pairs[16])
         	AC16R.methods.getReserves().call((e,r3)=>
         	{
@@ -934,10 +898,8 @@ function brr()
 	AC17=new web3.eth.Contract(ab1,tokes[17]);
 	AC17.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[17]]["d"]=Number(r1);
     	AC17.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[17]]["s"]=Number(r2);
 			AC17R=new web3.eth.Contract(ab1,pairs[17])
         	AC17R.methods.getReserves().call((e,r3)=>
         	{
@@ -949,10 +911,8 @@ function brr()
 	AC18=new web3.eth.Contract(ab1,tokes[18]);
 	AC18.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[18]]["d"]=Number(r1);
     	AC18.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[18]]["s"]=Number(r2);
 			AC18R=new web3.eth.Contract(ab1,pairs[18])
         	AC18R.methods.getReserves().call((e,r3)=>
         	{
@@ -967,7 +927,6 @@ function brr()
     	o[tokes[19]]["d"]=Number(r1);
     	AC19.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[19]]["s"]=Number(r2);
 			AC19R=new web3.eth.Contract(ab1,pairs[19])
         	AC19R.methods.getReserves().call((e,r3)=>
         	{
@@ -979,10 +938,8 @@ function brr()
 	AC20=new web3.eth.Contract(ab1,tokes[20]);
 	AC20.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[20]]["d"]=Number(r1);
     	AC20.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[20]]["s"]=Number(r2);
 			AC20R=new web3.eth.Contract(ab1,pairs[20])
         	AC20R.methods.getReserves().call((e,r3)=>
         	{
@@ -994,10 +951,8 @@ function brr()
 	AC21=new web3.eth.Contract(ab1,tokes[21]);
 	AC21.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[21]]["d"]=Number(r1);
     	AC21.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[21]]["s"]=Number(r2);
 			AC21R=new web3.eth.Contract(ab1,pairs[21])
         	AC21R.methods.getReserves().call((e,r3)=>
         	{
@@ -1009,10 +964,8 @@ function brr()
 	AC22=new web3.eth.Contract(ab1,tokes[22]);
 	AC22.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[22]]["d"]=Number(r1);
     	AC22.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[22]]["s"]=Number(r2);
 			AC22R=new web3.eth.Contract(ab1,pairs[22])
         	AC22R.methods.getReserves().call((e,r3)=>
         	{
@@ -1024,10 +977,8 @@ function brr()
 	AC23=new web3.eth.Contract(ab1,tokes[23]);
 	AC23.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[23]]["d"]=Number(r1);
     	AC23.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[23]]["s"]=Number(r2);
 			AC23R=new web3.eth.Contract(ab1,pairs[23])
         	AC23R.methods.getReserves().call((e,r3)=>
         	{
@@ -1039,10 +990,8 @@ function brr()
 	AC24=new web3.eth.Contract(ab1,tokes[24]);
 	AC24.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[24]]["d"]=Number(r1);
     	AC24.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[24]]["s"]=Number(r2);
 			AC24R=new web3.eth.Contract(ab1,pairs[24])
         	AC24R.methods.getReserves().call((e,r3)=>
         	{
@@ -1054,10 +1003,8 @@ function brr()
 	AC25=new web3.eth.Contract(ab1,tokes[25]);
 	AC25.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[25]]["d"]=Number(r1);
     	AC25.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[25]]["s"]=Number(r2);
 			AC25R=new web3.eth.Contract(ab1,pairs[25])
         	AC25R.methods.getReserves().call((e,r3)=>
         	{
@@ -1069,10 +1016,8 @@ function brr()
 	AC26=new web3.eth.Contract(ab1,tokes[26]);
 	AC26.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[26]]["d"]=Number(r1);
     	AC26.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[26]]["s"]=Number(r2);
 			AC26R=new web3.eth.Contract(ab1,pairs[26])
         	AC26R.methods.getReserves().call((e,r3)=>
         	{
@@ -1084,10 +1029,8 @@ function brr()
 	AC27=new web3.eth.Contract(ab1,tokes[27]);
 	AC27.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[27]]["d"]=Number(r1);
     	AC27.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[27]]["s"]=Number(r2);
 			AC27R=new web3.eth.Contract(ab1,pairs[27])
         	AC27R.methods.getReserves().call((e,r3)=>
         	{
@@ -1099,10 +1042,8 @@ function brr()
 	AC28=new web3.eth.Contract(ab1,tokes[28]);
 	AC28.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[28]]["d"]=Number(r1);
     	AC28.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[28]]["s"]=Number(r2);
 			AC28R=new web3.eth.Contract(ab1,pairs[28])
         	AC28R.methods.getReserves().call((e,r3)=>
         	{
@@ -1114,10 +1055,8 @@ function brr()
 	AC29=new web3.eth.Contract(ab1,tokes[29]);
 	AC29.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[29]]["d"]=Number(r1);
     	AC29.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[29]]["s"]=Number(r2);
 			AC29R=new web3.eth.Contract(ab1,pairs[29])
         	AC29R.methods.getReserves().call((e,r3)=>
         	{
@@ -1129,10 +1068,8 @@ function brr()
 	AC30=new web3.eth.Contract(ab1,tokes[30]);
 	AC30.methods.decimals().call((e,r1)=>
 	{
-    	o[tokes[30]]["d"]=Number(r1);
     	AC30.methods.totalSupply().call((e,r2)=>
     	{
-        	o[tokes[30]]["s"]=Number(r2);
 			AC30R=new web3.eth.Contract(ab1,pairs[30])
         	AC30R.methods.getReserves().call((e,r3)=>
         	{
@@ -1213,6 +1150,42 @@ function fornum(n,d)
 	else if(_n>1){n_=(_n/1e1).toFixed(2)+""}
 	return(n_);
 }
-brr()
+brr();
+function sortsortsort(n) {
+  var t, r, z, i, x, y, v, b, c = 0;
+  t = document.getElementById("maintable");
+  z = true;
+  b = "a";
+  while (z) {
+    z = false;
+    r = t.rows;
+    for (i = 2; i < (r.length - 1); i++) {
+      v = false;
+      x = (r[i].getElementsByTagName("TD")[n].innerHTML).replace(/ |\$|,|%/g,'');
+      y = (r[i + 1].getElementsByTagName("TD")[n].innerHTML).replace(/ |\$|,|%/g,'');
+      if (b == "a") {
+        if (Number(x) > Number(y)) {
+          v= true;
+          break;
+        }
+      } else if (b == "d") {
+        if (Number(x) < Number(y)) {
+          v = true;
+          break;
+        }
+      }
+    }
+    if (v) {
+      r[i].parentNode.insertBefore(r[i + 1], r[i]);
+      z = true;
+      c ++;
+    } else {
+      if (c == 0 && b == "a") {
+        b = "d";
+        z = true;
+      }
+    }
+  }
+}
 </script>
 </html>
