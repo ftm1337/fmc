@@ -17,11 +17,13 @@ td:last-child{text-align: left}
 td:first-child{text-align: center}
 td:nth-child(2),td:nth-child(3){text-align: left}
 td:nth-child(4),td:nth-child(5),td:nth-child(6),td:nth-child(7){font-family: monospace;font-size:1.2em}
-tr:hover{background:#041b22}
+tr:hover{background:rgba(0,0,255,1)}
 thead tr:hover{background: #a3a9b2;color:#020611}
 pre{margin:0}
 a{color:white;text-decoration-line:none}
 table{border-collapse:collapse}
+td:nth-child(9):hover,h5 a{color: aqua}
+#spad img{width:100%}
 </style>
 <body>
 <div class="toprow">
@@ -39,7 +41,7 @@ table{border-collapse:collapse}
 	<option value="0" onclick="sortsortsort(this.value)">Nativity</option>
 	<option value="0" onclick="sortsortsort(this.value)">Rank</option>
 	<option value="1" onclick="sortsortsort(this.value)">Ticker</option>
-	<option value="2" onclick="sortsortsort(this.value)">Asset</option>
+	<option selected value="2" onclick="sortsortsort(this.value)">Asset</option>
 	<option value="3" onclick="sortsortsort(this.value)">Mkt. Cap</option>
 	<option value="4" onclick="sortsortsort(this.value)">Price</option>
 	<option value="5" onclick="sortsortsort(this.value)">Most Liquid</option>
@@ -47,7 +49,7 @@ table{border-collapse:collapse}
 	<option value="8" onclick="sortsortsort(this.value)">Address</option>
 </select>
 <select id="topsel_filter">
-	<option>Filter List</option>
+	<option disabled selected>Filter List</option>
 	<option>AMM</option>
 	<option>Bridges</option>
 	<option>CEX</option>
@@ -69,15 +71,15 @@ table{border-collapse:collapse}
 	<table id="maintable" class="centerstage">
 		<thead>
 			<tr>
-			<th>Rank⇅</th>
-			<th>Ticker⇅</th>
-			<th>Asset⇅</th>
+			<th onclick="sortsortsort(0)">Rank⇅</th>
+			<th onclick="sortsortsort(1)">Ticker⇅</th>
+			<th onclick="sortsortsort(2)">Asset⇅</th>
 			<th onclick="sortsortsort(3)">Market Cap⇅</th>
 			<th onclick="sortsortsort(4)">Price⇅</th>
 			<th onclick="sortsortsort(5)">Most Liquid⇅</th>
 			<th onclick="sortsortsort(6)">Supply⇅</th>
 			<th>Links</th>
-			<th>Address⇅</th>
+			<th onclick="sortsortsort(3)">Address⇅</th>
 			<th>Labels</th>
 			</tr>
 		</thead>
@@ -237,6 +239,18 @@ table{border-collapse:collapse}
 				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
 				<td><pre>0xf6129f6705b826dbafaa26e03aad9dd20b9235c6</pre></td>
 				<td>DEX</td>
+			</tr>
+			<tr class="sca" id="tr_0x85dec8c4b2680793661bca91a8f129607571863d">
+				<td>*</td>
+				<td>BRUSH</td>
+				<td>PaintSwap</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>></td>
+				<td>🔎🌐🎮✈🐦😼👻🍣🛩🎨🦎</td>
+				<td><pre>0x85dec8c4b2680793661bca91a8f129607571863d</pre></td>
+				<td>AMM DEX Farming</td>
 			</tr>
 			<tr class="sca" id="tr_0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e">
 				<td>*</td>
@@ -473,8 +487,10 @@ table{border-collapse:collapse}
 </div>
 <div align="center"><br><b>1 2 3 4 5 … 6 7 8 9 10</b></div>
 <br>
-<div align="center"><b>Disclaimer & Notice</b><br>
-All information presented here is only for aesthetic uses and posesses no validity to settle any claims. It is also non-exhaustive and prone to error. <strike>Currently it does not update automatically.</strike> This dashboard is ultra-real time - It means that the data on this page has zero latency, unlike CMC or CG which have 1-10 minutes old data. FTM.guru and FMC.guru are trying to keep up with the <b>Fantom Fast</b> motto. <i>A much deserved shoutout to all developers on F.O., ftmscan.com and rpc.ftm.tools for their benign Services!</i> All presented numbers are denoted in FTM. Legend: 🔎Explorer🌐Website🎮Discord✈Telegram🐦Twitter😼SpookySwap👻SpiritSwap🍣SushiSwap🛩HyperJump🎨PaintSwap🦎Coingecko. "Most Liquid" coloumn refers to the pair with highest WFTM-Liquidity. We encourage you to report inconsistencies or request listing at one of our community channels: <b><a href="https://t.me/FTM1337" target="_blank">Telegram or Discord.</a></b><br>To advertise here, contact Sam at via one of our social mediums.</div>
+<div align="center" id="spad"><a href="https://shibafantom.com" target="_blank"><img src="img/ad-0001.png"></a></div>
+<h5 align="center" id="disclaimer"><b><u>Disclaimer & Notice</u></b><br>
+All information presented here is only for aesthetic uses and posesses no validity to settle any claims. It is also non-exhaustive and prone to error. Advertisements are not endorsements.	 <strike>Currently it does not update automatically.</strike> This dashboard is ultra-real time - It means that the data on this page has zero latency, unlike CMC or CG which have 1-10 minutes old data. FTM.guru and FMC.guru are trying to keep up with the <b>Fantom Fast</b> motto. <i>A much deserved shoutout to all developers on F.O., ftmscan.com and rpc.ftm.tools for their benign Services!</i> All presented numbers are denoted in FTM. Legend: 🔎Explorer🌐Website🎮Discord✈Telegram🐦Twitter😼SpookySwap👻SpiritSwap🍣SushiSwap🛩HyperJump🎨PaintSwap🦎ZooDEX. "Most Liquid" coloumn refers to the pair with highest WFTM-Liquidity.<br>We encourage you to report inconsistencies, ask business queries or request listing at one of our community channels:<br>
+<b><a href="https://t.me/FTM1337" target="_blank">Telegram</a> or <a href="https://discord.gg/EvyDPxPb" target="_blank">Discord.</a></b></h5>
 </body>
 <script src="web3.min.js">
 </script>
@@ -548,7 +564,8 @@ tokes=[
   "0xbc2451aad349b6b43fd05f4f0cc327f8a6bca2d4",  //AURORA
   "0x10b620b2dbac4faa7d7ffd71da486f5d44cd86f9",  //LQDR
   "0xf6129f6705b826dbafaa26e03aad9dd20b9235c6",  //ICE
-  "0xeb86b05cfee3e48db9a44275701ed099462c8ba0"  //FRANK
+  "0xeb86b05cfee3e48db9a44275701ed099462c8ba0",  //FRANK
+  "0x85dec8c4b2680793661bca91a8f129607571863d"	//BRUSH
 ]
 /*
 //GENERATION
@@ -669,7 +686,8 @@ pairs=[
   "0x483d07bc99cdd1df66f64ae0a769a70725c46fa4",  //AURORA 4
   "0xfa7ca6e6d17368e0a1fa9c75f2ebe5a8d7be9fc6",  //LQDR 3
   "0x84311ecc54d7553378c067282940b0fdfb913675",  //ICE 3
-  "0x20935601f940a4428a4271b85a46a8bf99158c2e"  //FRANK 2
+  "0x20935601f940a4428a4271b85a46a8bf99158c2e",  //FRANK 2
+  "0x452590b8aa292b963a9d0f2b5e71bc7c927859b3"	//BRUSH
 ]
 function brr()
 {
@@ -1067,7 +1085,7 @@ function brr()
         	})
     	})
 	})
-/*
+
 	AC30=new web3.eth.Contract(ab1,tokes[30]);
 	AC30.methods.decimals().call((e,r1)=>
 	{
@@ -1080,7 +1098,7 @@ function brr()
         	})
     	})
 	})
-*/
+
 }
 
 ab1=[
