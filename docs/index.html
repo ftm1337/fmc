@@ -16,15 +16,18 @@ td:last-child{text-align: left}
 td:first-child{text-align: center}
 td:nth-child(2),td:nth-child(3){text-align: left}
 td:nth-child(4),td:nth-child(5),td:nth-child(6),td:nth-child(7){font-family: monospace;font-size:1.2em}
-tr:hover{background: aqua;color:#020611}
+tr:hover{background: aqua;color:#020611;}
 thead tr:hover{background: aqua;color:#020611}
 pre{margin:0}
 a{color:white;text-decoration-line:none}
 table{border-collapse:collapse}
-td:nth-child(9):hover,h5 a{color: aqua}
+h5 a{color: aqua}
+td:nth-child(9):hover{color: blue}
 #spadi{width:100%}
 option{cursor:pointer}
-</style>
+#tags div{border: 4px #e3e9f2 dotted;color:aqua;width: max-content;float: right;background: rgba(0,255,255,.25);border-radius: 10px;padding:0 2px;margin:4px;padding:4px}
+#usdftm2{border: 4px dashed;color:#020611;background: rgba(255,255,255,1);border-radius: 10px;padding:0 2px;margin:4px;padding:4px}
+#usdftm2:hover{border: 4px dotted;font-weight:bolder}</style>
 <body>
 <div class="toprow">
 	<div>FantomMarketCap</div>
@@ -35,60 +38,40 @@ option{cursor:pointer}
 <div align="center">
 <!--<input class="topfind" placeholder="Find Gems">-->
 <br>
-<select id="topsel_sort">
-	<option disabled selected></a>Sort List</a></option>
-	<option value="0" onclick="sortsortsort(this.value)"><button>Nativity</button></option>
-	<option value="1" onclick="sortsortsort(this.value)"><button>Ticker</button></option>
-	<option value="2" onclick="sortsortsort(this.value)"><button>Asset</button></option>
-	<option value="3" onclick="sortsortsort(this.value)"><button>Mkt. Cap</button></option>
-	<option value="4" onclick="sortsortsort(this.value)"><button>Price</button></option>
-	<option value="5" onclick="sortsortsort(this.value)"><button>Most Liquid</button></option>
-	<option value="6" onclick="sortsortsort(this.value)"><button>Supply</button></option>
-	<option value="8" onclick="sortsortsort(this.value)">Address</button></option>
-</select>
-<select id="topsel_filter">
-	<option disabled selected></button>Filter List</button></option>
-	<option onclick="togfil('sca')"><button>Show All</button></option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())"><button>AMM</button></option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())"><button>Borrowing</button></option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())"><button>Bridges</button></option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())"><button>CEX</button></option>
-	<!--<option onclick="togfil((this.innerHTML).toLowerCase())"><button>Charts</button></option>-->
-	<option onclick="togfil((this.innerHTML).toLowerCase())"><button>DAO</button></option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())"><button>DEX</button></option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())"><button>Farming</button></option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())"><button>Lending</button></option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())"><button>Oracles</button></option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())"><button>Stablecoins</button></option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())"><button>StableSwap</button></option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())"><button>Staking</button></option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())"><button>Tools</button></option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())"><button>Vaults</button></option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())"><button>Yields</button></option>
-</select>
-<select id="topsel_usdftm">
-	<option disabled selected></button>Currency</button></option>
-	<option onclick="usdftm(0)"><button>FTM</button></option>
-	<option onclick="usdftm(1)"><button>USD</button></option>
-	<option disabled><button>BTC</button></option>
-	<option disabled><button>ELITE</button></option>
-	<option disabled><button>ETH</button></option>
-</select>
-<button id="usdftm2" onclick="usdftm2()">USD</button>
+<div id="tags">
+	<div onclick="togfil('sca')">Show All</div>
+	<div onclick="togfil(this.innerHTML)">AMM</div>
+	<div onclick="togfil(this.innerHTML)">Borrowing</div>
+	<div onclick="togfil(this.innerHTML)">Bridges</div>
+	<div onclick="togfil(this.innerHTML)">CEX</div>
+	<!--<div onclick="togfil(this.innerHTML)">Charts</div>-->
+	<div onclick="togfil(this.innerHTML)">DAO</div>
+	<div onclick="togfil(this.innerHTML)">DEX</div>
+	<div onclick="togfil(this.innerHTML)">Farming</div>
+	<div onclick="togfil(this.innerHTML)">Lending</div>
+	<div onclick="togfil(this.innerHTML)">Oracles</div>
+	<div onclick="togfil(this.innerHTML)">Stablecoins</div>
+	<div onclick="togfil(this.innerHTML)">StableSwap</div>
+	<div onclick="togfil(this.innerHTML)">Staking</div>
+	<div onclick="togfil(this.innerHTML)">Tools</div>
+	<div onclick="togfil(this.innerHTML)">Vaults</div>
+	<div onclick="togfil(this.innerHTML)">Yields</div>
+</div>
+<button id="usdftm2" onclick="usdftm2()">Currency : FTM</button>
 </div>
 <br>
 <div class="stage" align="center"><table id="maintable" class="centerstage">
 		<thead>
 			<tr>
-			<th onclick="sortsortsort(0)">N⇅</th>
-			<th onclick="sortsortsort(1)">Ticker⇅</th>
-			<th onclick="sortsortsort(2)">Asset⇅</th>
-			<th onclick="sortsortsort(3)">Market Cap⇅</th>
-			<th onclick="sortsortsort(4)">Price⇅</th>
-			<th onclick="sortsortsort(5)">Most Liquid⇅</th>
-			<th onclick="sortsortsort(6)">Supply⇅</th>
+			<th onclick="sortit(0)">N⇅</th>
+			<th onclick="sortit(1)">Ticker⇅</th>
+			<th onclick="sortit(2)">Asset⇅</th>
+			<th onclick="sortit(3)">Market Cap⇅</th>
+			<th onclick="sortit(4)">Price⇅</th>
+			<th onclick="sortit(5)">Most Liquid⇅</th>
+			<th onclick="sortit(6)">Supply⇅</th>
 			<th>Links</th>
-			<th onclick="sortsortsort(3)">Address⇅</th>
+			<th onclick="sortit(3)">Address⇅</th>
 			<th>Labels</th>
 			</tr>
 		</thead>
@@ -1234,28 +1217,28 @@ function fornum(n,d)
 	return(n_);
 }
 brr();
-function sortsortsort(n) {
+
+function sortit(n) {
   var t, r, z, i, x, y, v, b, c = 0;
-  t = document.getElementById("maintable");
+  t = document.getElementById("ct");
   z = true;
   b = "a";
   while (z) {
     z = false;
     r = t.rows;
-    for (i = 2; i < (r.length - 1); i++) {
+    for (i = 1; i < (r.length - 1); i++) {
       v = false;
-      x = (r[i].getElementsByTagName("TD")[n].innerHTML).replace(/ |\$|,|%/g,'');
-      y = (r[i + 1].getElementsByTagName("TD")[n].innerHTML).replace(/ |\$|,|%/g,'');
+      x = (r[i].getElementsByTagName("TD")[n].innerHTML).replace(/,| |\.|\$|%/g,'');
+      if(isFinite(x)){x=Number(x)}else{x=x.toLowerCase()}
+      y = (r[i + 1].getElementsByTagName("TD")[n].innerHTML).replace(/,| |\.|\$|%/g,'');
+      if(isFinite(y)){y=Number(y)}else{y=y.toLowerCase()}
       if (b == "a") {
-        if (Number(x) > Number(y)) {
+        if ((x) > (y)) {
           v= true;
           break;
         }
       } else if (b == "d") {
-        if (isFinite(x)&&isFinite(y)){if(Number(x) < Number(y)) {
-          v = true;
-          break;
-        }}else if((x).toUpperCase() < (y).toUpperCase()) {
+        if ((x) < (y)) {
           v = true;
           break;
         }
@@ -1296,38 +1279,19 @@ function copsc(el)
 }
 function togfil(e)
 {
+	e=e.replace(/ |\$|,|%/g,'').toLowerCase();
 	ae=document.getElementsByClassName(e);
 	ee=document.getElementsByClassName("sca");
 	for(i=0;i< ee.length;i++){ee[i].id=="tr_0xf43Cc235E686d7BC513F53Fbffb61F760c3a1882"?1337:ee[i].hidden=true}
 	for(i=0;i< ae.length;i++){ae[i].hidden=false}
-}
-function usdftm(c)
-{
-	if(!(fiu==1))
+	se=$("tags").children;
+	for(i=0;i< se.length;i++)
 	{
-		ee=document.getElementsByClassName("sca");
-		if(c==1)
-		{
-			for(i=0;i< ee.length;i++)
-			{
-				ee[i].children[3].innerHTML=Number((Number((ee[i].children[3].innerHTML).replace(/ |\$|,|%/g,''))*fiu).toFixed(0)).toLocaleString()
-				ee[i].children[4].innerHTML=Number((Number((ee[i].children[4].innerHTML).replace(/ |\$|,|%/g,''))*fiu).toFixed(4))
-				ee[i].children[5].innerHTML=Number((Number((ee[i].children[5].innerHTML).replace(/ |\$|,|%/g,''))*fiu).toFixed(0)).toLocaleString()
-			}
-		$("tmc").innerHTML=Number((Number(($("tmc").innerHTML).replace(/ |\$|,|%/g,''))*fiu).toFixed(0)).toLocaleString()
-		$("tmcunit").innerHTML="USD";
-		}
-		else if(c==0)
-		{
-			for(i=0;i< ee.length;i++)
-			{
-				ee[i].children[3].innerHTML=Number((Number((ee[i].children[3].innerHTML).replace(/ |\$|,|%/g,''))/fiu).toFixed(0)).toLocaleString()
-				ee[i].children[4].innerHTML=Number((Number((ee[i].children[4].innerHTML).replace(/ |\$|,|%/g,''))/fiu).toFixed(4))
-				ee[i].children[5].innerHTML=Number((Number((ee[i].children[5].innerHTML).replace(/ |\$|,|%/g,''))/fiu).toFixed(0)).toLocaleString()
-			}
-		$("tmc").innerHTML=Number((Number(($("tmc").innerHTML).replace(/ |\$|,|%/g,''))/fiu).toFixed(0)).toLocaleString()
-		$("tmcunit").innerHTML="FTM";
-		}
+		s=se[i].style;
+		if(!(se[i].innerHTML.replace(/ |\$|,|%/g,'').toLowerCase()==e)&&!(se[i].innerHTML=="Show All"))
+			{s.color="aqua";s.background="rgba(0,255,255,0.25)";s.border="4px #e3e9f2 dotted"}
+		else
+			{s.color="#020611";s.background="aqua";s.border="4px #e3e9f2 ridge"}
 	}
 }
 function usdftm2()
@@ -1335,29 +1299,29 @@ function usdftm2()
 	if(!(fiu==1))
 	{
 		ee=document.getElementsByClassName("sca");
-		if($("usdftm2").innerHTML=="FTM")
+		if($("usdftm2").innerHTML=="Currency : FTM")
 		{
 			for(i=0;i< ee.length;i++)
 			{
 				ee[i].children[3].innerHTML=Number((Number((ee[i].children[3].innerHTML).replace(/ |\$|,|%/g,''))*fiu).toFixed(0)).toLocaleString()
-				ee[i].children[4].innerHTML=Number((Number((ee[i].children[4].innerHTML).replace(/ |\$|,|%/g,''))*fiu).toFixed(4))
+				ee[i].children[4].innerHTML=((Number((ee[i].children[4].innerHTML).replace(/ |\$|,|%/g,''))*fiu).toFixed(4))
 				ee[i].children[5].innerHTML=Number((Number((ee[i].children[5].innerHTML).replace(/ |\$|,|%/g,''))*fiu).toFixed(0)).toLocaleString()
 			}
 		$("tmc").innerHTML=Number((Number(($("tmc").innerHTML).replace(/ |\$|,|%/g,''))*fiu).toFixed(0)).toLocaleString()
 		$("tmcunit").innerHTML="USD";
-		$("usdftm2").innerHTML="USD";
+		$("usdftm2").innerHTML="Currency : USD";
 		}
-		else if($("usdftm2").innerHTML=="USD")
+		else if($("usdftm2").innerHTML=="Currency : USD")
 		{
 			for(i=0;i< ee.length;i++)
 			{
 				ee[i].children[3].innerHTML=Number((Number((ee[i].children[3].innerHTML).replace(/ |\$|,|%/g,''))/fiu).toFixed(0)).toLocaleString()
-				ee[i].children[4].innerHTML=Number((Number((ee[i].children[4].innerHTML).replace(/ |\$|,|%/g,''))/fiu).toFixed(4))
+				ee[i].children[4].innerHTML=((Number((ee[i].children[4].innerHTML).replace(/ |\$|,|%/g,''))/fiu).toFixed(4))
 				ee[i].children[5].innerHTML=Number((Number((ee[i].children[5].innerHTML).replace(/ |\$|,|%/g,''))/fiu).toFixed(0)).toLocaleString()
 			}
 		$("tmc").innerHTML=Number((Number(($("tmc").innerHTML).replace(/ |\$|,|%/g,''))/fiu).toFixed(0)).toLocaleString()
 		$("tmcunit").innerHTML="FTM";
-		$("usdftm2").innerHTML="FTM";
+		$("usdftm2").innerHTML="Currency : FTM";
 		}
 	}
 }
