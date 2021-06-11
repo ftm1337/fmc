@@ -6,24 +6,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
 <link rel="shortcut icon" href="../img/ftm1337.jpg" />
-<style>
-html{background:#020611;color:#e3e9f2;font-family:helvetica nueve, helvetica, robotica, ubuntu, roboto, sans-serif}
+<style>html{background:#020611;color:#e3e9f2;font-family:helvetica nueve, helvetica, robotica, ubuntu, roboto, sans-serif}
 .toprow{display:grid;grid-template-columns:max-content auto max-content}
 .topfind{text-align:center;min-width:80%}
 .stage{overflow-x:auto}
-th{min-width:max-content}
-td{min-width:max-content;padding:2px 5px;text-align:right}
+th{min-width:max-content;min-width: -moz-max-content}
+td{min-width:max-content;min-width: -moz-max-content;padding:2px 5px;text-align:right}
 td:last-child{text-align: left}
 td:first-child{text-align: center}
 td:nth-child(2),td:nth-child(3){text-align: left}
 td:nth-child(4),td:nth-child(5),td:nth-child(6),td:nth-child(7){font-family: monospace;font-size:1.2em}
-tr:hover{background:rgba(0,0,255,1)}
-thead tr:hover{background: #a3a9b2;color:#020611}
+tr:hover{background: aqua;color:#020611}
+thead tr:hover{background: aqua;color:#020611}
 pre{margin:0}
 a{color:white;text-decoration-line:none}
 table{border-collapse:collapse}
 td:nth-child(9):hover,h5 a{color: aqua}
-#spad img{width:100%}
+#spadi{width:100%}
 </style>
 <body>
 <div class="toprow">
@@ -31,17 +30,15 @@ td:nth-child(9):hover,h5 a{color: aqua}
 	<div></div>
 	<div>By <a href="https://ftm.guru">FTM.guru</a></div>
 </div>
-</div>
-<h1 align="center">FMC.guru<br><span id="tmc">0</span> FTM</h1>
-<div align="center" style="margin:0;padding:0">Bridged * | ⁕ Natives</div>
+<h1 align="center">FMC.guru<br><span id="tmc">0</span> <span id="tmcunit">FTM</span></h1>
 <div align="center">
-<input class="topfind" placeholder="Find Gems"><br>
+<!--<input class="topfind" placeholder="Find Gems">-->
+<br>
 <select id="topsel_sort">
-	<option disabled>Sort List</option>
+	<option disabled selected>Sort List</option>
 	<option value="0" onclick="sortsortsort(this.value)">Nativity</option>
-	<option value="0" onclick="sortsortsort(this.value)">Rank</option>
 	<option value="1" onclick="sortsortsort(this.value)">Ticker</option>
-	<option selected value="2" onclick="sortsortsort(this.value)">Asset</option>
+	<option value="2" onclick="sortsortsort(this.value)">Asset</option>
 	<option value="3" onclick="sortsortsort(this.value)">Mkt. Cap</option>
 	<option value="4" onclick="sortsortsort(this.value)">Price</option>
 	<option value="5" onclick="sortsortsort(this.value)">Most Liquid</option>
@@ -50,11 +47,12 @@ td:nth-child(9):hover,h5 a{color: aqua}
 </select>
 <select id="topsel_filter">
 	<option disabled selected>Filter List</option>
-	<option onclick="togfil('sc')">Show All</option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())"">AMM</option>
+	<option onclick="togfil('sca')">Show All</option>
+	<option onclick="togfil((this.innerHTML).toLowerCase())">AMM</option>
+	<option onclick="togfil((this.innerHTML).toLowerCase())">Borrowing</option>
 	<option onclick="togfil((this.innerHTML).toLowerCase())">Bridges</option>
 	<option onclick="togfil((this.innerHTML).toLowerCase())">CEX</option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())">Charts</option>
+	<!--<option onclick="togfil((this.innerHTML).toLowerCase())">Charts</option>-->
 	<option onclick="togfil((this.innerHTML).toLowerCase())">DAO</option>
 	<option onclick="togfil((this.innerHTML).toLowerCase())">DEX</option>
 	<option onclick="togfil((this.innerHTML).toLowerCase())">Farming</option>
@@ -67,13 +65,21 @@ td:nth-child(9):hover,h5 a{color: aqua}
 	<option onclick="togfil((this.innerHTML).toLowerCase())">Vaults</option>
 	<option onclick="togfil((this.innerHTML).toLowerCase())">Yields</option>
 </select>
+<select id="topsel_usdftm">
+	<option disabled selected>Currency</option>
+	<option onclick="usdftm(0)">FTM</option>
+	<option onclick="usdftm(1)">USD</option>
+	<option disabled>BTC</option>
+	<option disabled>ELITE</option>
+	<option disabled>ETH</option>
+</select>
 </div>
 <br>
 <div class="stage" align="center">
 	<table id="maintable" class="centerstage">
 		<thead>
 			<tr>
-			<th onclick="sortsortsort(0)">Rank⇅</th>
+			<th onclick="sortsortsort(0)">N⇅</th>
 			<th onclick="sortsortsort(1)">Ticker⇅</th>
 			<th onclick="sortsortsort(2)">Asset⇅</th>
 			<th onclick="sortsortsort(3)">Market Cap⇅</th>
@@ -106,9 +112,9 @@ td:nth-child(9):hover,h5 a{color: aqua}
 				<td>1</td>
 				<td>249,788</td>
 				<td>?</td>
-				<td><span>🌐🎮✈🐦🐙</span> <span>😼👻🍣🛩🎨🦎 🔎</span></td>
+				<td><span><a href="https://fantom.foundation" target="_blank">🌐</a>🎮✈🐦🐙</span> <span>😼👻🍣🛩🎨🦎 🔎</span></td>
 				<td><pre>0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83</pre></td>
-				<td>Yields</td>
+				<td>Coins</td>
 			</tr>
 			<tr class="sca coins" id="tr_0x74b23882a30290451a17c44f4f05243b6b58c76d">
 				<td>*</td>
@@ -249,8 +255,8 @@ td:nth-child(9):hover,h5 a{color: aqua}
 				<td>?</td>
 				<td>?</td>
 				<td>?</td>
-				<td>></td>
-				<td><span><a href="https://paintswap.finance" target="_blank">🌐</a><a href="https://discord.gg/3fVYdk9ugv" target="_blank">🎮</a>><a href="https://t.me/PaintSwapFinance" target="_blank">✈</a><a href="https://twitter.com/paint_swap" target="_blank">🐦</a><a href="https://github.com/paintswap" target="_blank">🐙</a></span> <span>😼👻🍣🛩🎨🦎 🔎</span></td>
+				<td>?</td>
+				<td><span><a href="https://paintswap.finance" target="_blank">🌐</a><a href="https://discord.gg/3fVYdk9ugv" target="_blank">🎮</a><a href="https://t.me/PaintSwapFinance" target="_blank">✈</a><a href="https://twitter.com/paint_swap" target="_blank">🐦</a><a href="https://github.com/paintswap" target="_blank">🐙</a></span> <span>😼👻🍣🛩🎨🦎 🔎</span></td>
 				<td><pre>0x85dec8c4b2680793661bca91a8f129607571863d</pre></td>
 				<td>AMM DEX Farming</td>
 			</tr>
@@ -398,7 +404,7 @@ td:nth-child(9):hover,h5 a{color: aqua}
 				<td><pre>0xb3654dc3d10ea7645f8319668e8f54d2574fbdc8</pre></td>
 				<td>Oracles</td>
 			</tr>
-			<tr class="sca coins" id="tr_0xd67de0e0a0fd7b15dc8348bb9be742f3c5850454">
+			<tr class="sca cex coins" id="tr_0xd67de0e0a0fd7b15dc8348bb9be742f3c5850454">
 				<td>*</td>
 				<td>BNB</td>
 				<td>Binance Coin</td>
@@ -433,6 +439,30 @@ td:nth-child(9):hover,h5 a{color: aqua}
 				<td><span>🌐🎮✈🐦🐙</span> <span>😼👻🍣🛩🎨🦎 🔎</span></td>
 				<td><pre>0x753fbc5800a8c8e3fb6dc6415810d627a387dfc9</pre></td>
 				<td>DAO</td>
+			</tr>
+			<tr class="sca borrowing farming stablecoins yields" id="tr_0x41e3df7f716ab5af28c1497b354d79342923196a">
+				<td>⁕</td>
+				<td>aUSD</td>
+				<td>Aquarius USD</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>69,788</td>
+				<td><span><a href="https://aquarius.fi" target="_blank">🌐</a>🎮<a href="https://t.me/aquariusfi" target="_blank">✈</a><a href="https://twitter.com/Aquarius_Fi" target="_blank">🐦</a>🐙</span> <span>😼👻🍣🛩🎨🦎 🔎</span></td>
+				<td><pre>0x41e3df7f716ab5af28c1497b354d79342923196a</pre></td>
+				<td>Borrowing Farming Stablecoins Yields</td>
+			</tr>
+			<tr class="sca borrowing farming yields" id="tr_0x0f7adb77b6334b9b5a3c4f78aaa073ea1d915bf6">
+				<td>⁕</td>
+				<td>AQU</td>
+				<td>Aquarius</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>69,788</td>
+				<td><span><a href="https://aquarius.fi" target="_blank">🌐</a>🎮<a href="https://t.me/aquariusfi" target="_blank">✈</a><a href="https://twitter.com/Aquarius_Fi" target="_blank">🐦</a>🐙</span> <span>😼👻🍣🛩🎨🦎 🔎</span></td>
+				<td><pre>0x0f7adb77b6334b9b5a3c4f78aaa073ea1d915bf6</pre></td>
+				<td>Borrowing Farming Yields</td>
 			</tr>
 			<tr class="sca bridges" id="tr_0xddcb3ffd12750b45d32e084887fdf1aabab34239">
 				<td>*</td>
@@ -487,11 +517,12 @@ td:nth-child(9):hover,h5 a{color: aqua}
 		</tbody>
 	</table>
 </div>
-<div align="center"><br><b>1 2 3 4 5 … 6 7 8 9 10</b></div>
+<!--<div align="center"><br><b>1 2 3 4 5 … 6 7 8 9 10</b></div>-->
 <br>
 <div align="center" id="spadd"><font id="spadf" size="1">(Sponsored Ad)</font><a href="https://shibafantom.com" target="_blank" id="spada"><img id="spadi" src=""></a></div>
+<div align="center" style="margin:0;padding:0">Legend: 🌐Website 🎮Discord ✈Telegram 🐦Twitter 😼SpookySwap 👻SpiritSwap 🍣SushiSwap 🛩HyperJump 🎨PaintSwap 🦎ZooDEX 🔎Explorer 🐙Github *Bridged-Asset ⁕Native-Asset ★Featured-Asset</div>
 <h5 align="center" id="disclaimer"><b><u>Disclaimer & Notice</u></b><br>
-All information presented here is only for aesthetic uses and posesses no validity to settle any claims. It is also non-exhaustive and prone to error. Advertisements are not endorsements.	 <strike>Currently it does not update automatically.</strike> This dashboard is ultra-real time - It means that the data on this page has zero latency, unlike CMC or CG which have 1-10 minutes old data. FTM.guru and FMC.guru are trying to keep up with the <b>Fantom Fast</b> motto. <i>A much deserved shoutout to all developers on F.O., ftmscan.com and rpc.ftm.tools for their benign Services!</i> All presented numbers are denoted in FTM. Legend: 🌐Website🎮Discord✈Telegram🐦🐙Twitter😼SpookySwap👻SpiritSwap🍣SushiSwap🛩HyperJump🎨PaintSwap🦎ZooDEX🔎ExplorerGithub. "Most Liquid" coloumn refers to the pair with highest WFTM-Liquidity.<br>We encourage you to report inconsistencies, ask business queries or request listing at one of our community channels:<br>
+All information presented here is only for aesthetic uses and posesses no validity to settle any claims. It is also non-exhaustive and prone to error. Advertisements are not endorsements.	 <strike>Currently it does not update automatically.</strike> This dashboard is ultra-real time - It means that the data on this page has zero latency, unlike CMC or CG which have 1-10 minutes old data. FTM.guru and FMC.guru are trying to keep up with the <b>Fantom Fast</b> motto. <i>A much deserved shoutout to all developers on F.O., ftmscan.com and rpc.ftm.tools for their benign Services!</i> All presented numbers are denoted in FTM by default."Most Liquid" coloumn refers to the pair with highest WFTM-Liquidity.<br>We encourage you to report inconsistencies, ask business queries, request listing or start an ad campaign at one of our community channels:<br>
 <b><a href="https://t.me/FTM1337" target="_blank">Telegram</a> or <a href="https://discord.gg/EvyDPxPb" target="_blank">Discord.</a></b></h5>
 </body>
 <script src="web3.min.js">
@@ -519,7 +550,7 @@ function basics()
 	//manpaint()
 	brr()
 	chopsca()
-	$("spadi").href="img/ad-0001.png"
+	$("spadi").src="img/ad-0001.png"
 }
 function fillLinks()
 {
@@ -527,12 +558,11 @@ function fillLinks()
 	for ( i = 1 ; i < aa.length ; i++ )
 	{
 		CA=aa[i].getElementsByTagName("td")[8].getElementsByTagName("pre")[0].innerHTML;
-		aa[i].getElementsByTagName("td")[7].children[1].innerHTML=`
-<a >🌐</a><a ">🎮</a><a >✈</a><a >🐦🐙</a><a href="https://info.spookyswap.finance/#/token/${CA}" target="_blank">😼</a><a href="https://info.spiritswap.finance/#/token/${CA}" target="_blank">👻</a><a href="https://analytics-ftm.sushi.com/tokens/${CA}" target="_blank">🍣</a><a href="https://ftm-info.hyperjump.fi/#/token/${CA}" target="_blank">🛩</a><a >🎨</a><a >🦎</a> <a href="https://ftmscan.com/token/${CA}" target="_blank">🔎</a>
+		aa[i].getElementsByTagName("td")[7].children[1].innerHTML=`<a href="https://info.spookyswap.finance/#/token/${CA}" target="_blank">😼</a><a href="https://info.spiritswap.finance/#/token/${CA}" target="_blank">👻</a><a href="https://analytics-ftm.sushi.com/tokens/${CA}" target="_blank">🍣</a><a href="https://ftm-info.hyperjump.fi/#/token/${CA}" target="_blank">🛩</a><a >🎨</a><a >🦎</a> <a href="https://ftmscan.com/token/${CA}" target="_blank">🔎</a>
 		`;
 	}
 }
-
+fiu=1;
 tokes=[
   "0xf43Cc235E686d7BC513F53Fbffb61F760c3a1882",  //ELITE
   "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83",  //WFTM
@@ -564,7 +594,10 @@ tokes=[
   "0x10b620b2dbac4faa7d7ffd71da486f5d44cd86f9",  //LQDR
   "0xf6129f6705b826dbafaa26e03aad9dd20b9235c6",  //ICE
   "0xeb86b05cfee3e48db9a44275701ed099462c8ba0",  //FRANK
-  "0x85dec8c4b2680793661bca91a8f129607571863d"	//BRUSH
+  "0x85dec8c4b2680793661bca91a8f129607571863d",	//BRUSH
+  "0x0f7adb77b6334b9b5a3c4f78aaa073ea1d915bf6",	//AQU
+  "0x41e3df7f716ab5af28c1497b354d79342923196a"	//aUSD
+
 ]
 /*
 //GENERATION
@@ -686,7 +719,10 @@ pairs=[
   "0xfa7ca6e6d17368e0a1fa9c75f2ebe5a8d7be9fc6",  //LQDR 3
   "0x84311ecc54d7553378c067282940b0fdfb913675",  //ICE 3
   "0x20935601f940a4428a4271b85a46a8bf99158c2e",  //FRANK 2
-  "0x452590b8aa292b963a9d0f2b5e71bc7c927859b3"	//BRUSH
+  "0x452590b8aa292b963a9d0f2b5e71bc7c927859b3",	//BRUSH
+  "0x7b63e44749884f33cb688f4870dd44dec1195a9b",	//AQU
+  "0x97bc7fb4f3d3f7749a7a3a0953974dcd1af89713"	//aUSD
+
 ]
 function brr()
 {
@@ -718,7 +754,7 @@ function brr()
         	//})
     	})
 	})
-
+//USDC
 	AC2=new web3.eth.Contract(ab1,tokes[2]);
 	AC2.methods.decimals().call((e,r1)=>
 	{
@@ -728,6 +764,8 @@ function brr()
         	AC2R.methods.getReserves().call((e,r3)=>
         	{
             	painter(2,r1,r2,(new Array(r3[1],r3[0])));
+            	fiu=r3[0]*1e12/r3[1];
+            	console.log(fiu,r3,"fiu")
         	})
     	})
 	})
@@ -1098,6 +1136,32 @@ function brr()
     	})
 	})
 
+	AC31=new web3.eth.Contract(ab1,tokes[31]);
+	AC31.methods.decimals().call((e,r1)=>
+	{
+    	AC31.methods.totalSupply().call((e,r2)=>
+    	{
+			AC31R=new web3.eth.Contract(ab1,pairs[31])
+        	AC31R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(31,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC32=new web3.eth.Contract(ab1,tokes[32]);
+	AC32.methods.decimals().call((e,r1)=>
+	{
+    	AC32.methods.totalSupply().call((e,r2)=>
+    	{
+			AC32R=new web3.eth.Contract(ab1,pairs[32])
+        	AC32R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(32,r1,r2,r3);
+        	})
+    	})
+	})
+
 }
 
 ab1=[
@@ -1235,8 +1299,37 @@ function togfil(e)
 {
 	ae=document.getElementsByClassName(e);
 	ee=document.getElementsByClassName("sca");
-	for(i=0;i< ae.length;i++){ee[i].style=display="none"}
-	for(i=0;i< ae.length;i++){ae[i].style=display="block"}
+	for(i=0;i< ee.length;i++){ee[i].id=="tr_0xf43Cc235E686d7BC513F53Fbffb61F760c3a1882"?1337:ee[i].hidden=true}
+	for(i=0;i< ae.length;i++){ae[i].hidden=false}
+}
+function usdftm(c)
+{
+	if(!(fiu==1))
+	{
+		ee=document.getElementsByClassName("sca");
+		if(c==1)
+		{
+			for(i=0;i< ee.length;i++)
+			{
+				ee[i].children[3].innerHTML=Number((Number((ee[i].children[3].innerHTML).replace(/ |\$|,|%/g,''))*fiu).toFixed(0)).toLocaleString()
+				ee[i].children[4].innerHTML=Number((Number((ee[i].children[4].innerHTML).replace(/ |\$|,|%/g,''))*fiu).toFixed(4))
+				ee[i].children[5].innerHTML=Number((Number((ee[i].children[5].innerHTML).replace(/ |\$|,|%/g,''))*fiu).toFixed(0)).toLocaleString()
+			}
+		$("tmc").innerHTML=Number((Number(($("tmc").innerHTML).replace(/ |\$|,|%/g,''))*fiu).toFixed(0)).toLocaleString()
+		$("tmcunit").innerHTML="USD";
+		}
+		else if(c==0)
+		{
+			for(i=0;i< ee.length;i++)
+			{
+				ee[i].children[3].innerHTML=Number((Number((ee[i].children[3].innerHTML).replace(/ |\$|,|%/g,''))/fiu).toFixed(0)).toLocaleString()
+				ee[i].children[4].innerHTML=Number((Number((ee[i].children[4].innerHTML).replace(/ |\$|,|%/g,''))/fiu).toFixed(4))
+				ee[i].children[5].innerHTML=Number((Number((ee[i].children[5].innerHTML).replace(/ |\$|,|%/g,''))/fiu).toFixed(0)).toLocaleString()
+			}
+		$("tmc").innerHTML=Number((Number(($("tmc").innerHTML).replace(/ |\$|,|%/g,''))/fiu).toFixed(0)).toLocaleString()
+		$("tmcunit").innerHTML="FTM";
+		}
+	}
 }
 </script>
 </html>
