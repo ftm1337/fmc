@@ -74,6 +74,7 @@ option{cursor:pointer}
 	<option disabled><a>ELITE</a></option>
 	<option disabled><a>ETH</a></option>
 </select>
+<button id="usdftm2" onclick="usdftm2()">USD</button>
 </div>
 <br>
 <div class="stage" align="center"><table id="maintable" class="centerstage">
@@ -558,8 +559,7 @@ function fillLinks()
 	for ( i = 1 ; i < aa.length ; i++ )
 	{
 		CA=aa[i].getElementsByTagName("td")[8].getElementsByTagName("pre")[0].innerHTML;
-		aa[i].getElementsByTagName("td")[7].children[1].innerHTML=`<a href="https://info.spookyswap.finance/#/token/${CA}" target="_blank">😼</a><a href="https://info.spiritswap.finance/#/token/${CA}" target="_blank">👻</a><a href="https://analytics-ftm.sushi.com/tokens/${CA}" target="_blank">🍣</a><a href="https://ftm-info.hyperjump.fi/#/token/${CA}" target="_blank">🛩</a><a >🎨</a><a >🦎</a> <a href="https://ftmscan.com/token/${CA}" target="_blank">🔎</a>
-		`;
+		aa[i].getElementsByTagName("td")[7].children[1].innerHTML=`<a href="https://info.spookyswap.finance/#/token/${CA}" target="_blank">😼</a><a href="https://info.spiritswap.finance/#/token/${CA}" target="_blank">👻</a><a href="https://analytics-ftm.sushi.com/tokens/${CA}" target="_blank">🍣</a><a href="https://ftm-info.hyperjump.fi/#/token/${CA}" target="_blank">🛩</a><a >🎨</a><a >🦎</a> <a href="https://ftmscan.com/token/${CA}" target="_blank">🔎</a>`;
 	}
 }
 fiu=1;
@@ -1327,6 +1327,37 @@ function usdftm(c)
 			}
 		$("tmc").innerHTML=Number((Number(($("tmc").innerHTML).replace(/ |\$|,|%/g,''))/fiu).toFixed(0)).toLocaleString()
 		$("tmcunit").innerHTML="FTM";
+		}
+	}
+}
+function usdftm2()
+{
+	if(!(fiu==1))
+	{
+		ee=document.getElementsByClassName("sca");
+		if($("usdftm2").innerHTML=="FTM";)
+		{
+			for(i=0;i< ee.length;i++)
+			{
+				ee[i].children[3].innerHTML=Number((Number((ee[i].children[3].innerHTML).replace(/ |\$|,|%/g,''))*fiu).toFixed(0)).toLocaleString()
+				ee[i].children[4].innerHTML=Number((Number((ee[i].children[4].innerHTML).replace(/ |\$|,|%/g,''))*fiu).toFixed(4))
+				ee[i].children[5].innerHTML=Number((Number((ee[i].children[5].innerHTML).replace(/ |\$|,|%/g,''))*fiu).toFixed(0)).toLocaleString()
+			}
+		$("tmc").innerHTML=Number((Number(($("tmc").innerHTML).replace(/ |\$|,|%/g,''))*fiu).toFixed(0)).toLocaleString()
+		$("tmcunit").innerHTML="USD";
+		$("usdftm2").innerHTML="USD";
+		}
+		else if($("usdftm2").innerHTML=="USD";)
+		{
+			for(i=0;i< ee.length;i++)
+			{
+				ee[i].children[3].innerHTML=Number((Number((ee[i].children[3].innerHTML).replace(/ |\$|,|%/g,''))/fiu).toFixed(0)).toLocaleString()
+				ee[i].children[4].innerHTML=Number((Number((ee[i].children[4].innerHTML).replace(/ |\$|,|%/g,''))/fiu).toFixed(4))
+				ee[i].children[5].innerHTML=Number((Number((ee[i].children[5].innerHTML).replace(/ |\$|,|%/g,''))/fiu).toFixed(0)).toLocaleString()
+			}
+		$("tmc").innerHTML=Number((Number(($("tmc").innerHTML).replace(/ |\$|,|%/g,''))/fiu).toFixed(0)).toLocaleString()
+		$("tmcunit").innerHTML="FTM";
+		$("usdftm2").innerHTML="FTM";
 		}
 	}
 }
