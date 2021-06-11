@@ -34,41 +34,42 @@ td:nth-child(9):hover,h5 a{color: aqua}
 <div align="center">
 <!--<input class="topfind" placeholder="Find Gems">-->
 <br>
+<!--
 <select id="topsel_sort">
 	<option disabled selected>Sort List</option>
 	<option value="0" onclick="sortsortsort(this.value)">Nativity</option>
 	<option value="1" onclick="sortsortsort(this.value)">Ticker</option>
-	<option value="2" onclick="sortsortsort(this.value)">Asset</option>
-	<option value="3" onclick="sortsortsort(this.value)">Mkt. Cap</option>
-	<option value="4" onclick="sortsortsort(this.value)">Price</option>
-	<option value="5" onclick="sortsortsort(this.value)">Most Liquid</option>
-	<option value="6" onclick="sortsortsort(this.value)">Supply</option>
-	<option value="8" onclick="sortsortsort(this.value)">Address</option>
-</select>
+	<option value="2" onchange="sortsortsort(this.value)">Asset</option>
+	<option value="3" onchange="sortsortsort(this.value)">Mkt. Cap</option>
+	<option value="4" onchange="sortsortsort(this.value)">Price</option>
+	<option value="5" onchange="sortsortsort(this.value)">Most Liquid</option>
+	<option value="6" onchange="sortsortsort(this.value)">Supply</option>
+	<option value="8" onchange="sortsortsort(this.value)">Address</option>
+</select>-->
 <select id="topsel_filter">
 	<option disabled selected>Filter List</option>
-	<option onclick="togfil('sca')">Show All</option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())">AMM</option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())">Borrowing</option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())">Bridges</option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())">CEX</option>
-	<!--<option onclick="togfil((this.innerHTML).toLowerCase())">Charts</option>-->
-	<option onclick="togfil((this.innerHTML).toLowerCase())">DAO</option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())">DEX</option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())">Farming</option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())">Lending</option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())">Oracles</option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())">Stablecoins</option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())">StableSwap</option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())">Staking</option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())">Tools</option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())">Vaults</option>
-	<option onclick="togfil((this.innerHTML).toLowerCase())">Yields</option>
+	<option onchange="togfil('sca')">Show All</option>
+	<option onchange="togfil((this.innerHTML).toLowerCase())">AMM</option>
+	<option onchange="togfil((this.innerHTML).toLowerCase())">Borrowing</option>
+	<option onchange="togfil((this.innerHTML).toLowerCase())">Bridges</option>
+	<option onchange="togfil((this.innerHTML).toLowerCase())">CEX</option>
+	<!--<option onchange="togfil((this.innerHTML).toLowerCase())">Charts</option>-->
+	<option onchange="togfil((this.innerHTML).toLowerCase())">DAO</option>
+	<option onchange="togfil((this.innerHTML).toLowerCase())">DEX</option>
+	<option onchange="togfil((this.innerHTML).toLowerCase())">Farming</option>
+	<option onchange="togfil((this.innerHTML).toLowerCase())">Lending</option>
+	<option onchange="togfil((this.innerHTML).toLowerCase())">Oracles</option>
+	<option onchange="togfil((this.innerHTML).toLowerCase())">Stablecoins</option>
+	<option onchange="togfil((this.innerHTML).toLowerCase())">StableSwap</option>
+	<option onchange="togfil((this.innerHTML).toLowerCase())">Staking</option>
+	<option onchange="togfil((this.innerHTML).toLowerCase())">Tools</option>
+	<option onchange="togfil((this.innerHTML).toLowerCase())">Vaults</option>
+	<option onchange="togfil((this.innerHTML).toLowerCase())">Yields</option>
 </select>
 <select id="topsel_usdftm">
 	<option disabled selected>Currency</option>
-	<option onclick="usdftm(0)">FTM</option>
-	<option onclick="usdftm(1)">USD</option>
+	<option onchange="usdftm(0)">FTM</option>
+	<option onchange="usdftm(1)">USD</option>
 	<option disabled>BTC</option>
 	<option disabled>ELITE</option>
 	<option disabled>ETH</option>
