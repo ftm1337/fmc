@@ -1320,9 +1320,9 @@ function brr()
 			AC36R=new web3.eth.Contract(ab1,pairs[36])
         	AC36R.methods.getReserves().call((e,r3)=>
         	{
-            	AC36.methods.balanceOf("0x4cdf39285d7ca8eb3f090fda0c069ba5f4145b37").call((e,r3cs)=>
+            	AC36.methods.balanceOf("0x4cdf39285d7ca8eb3f090fda0c069ba5f4145b37").call((e,r2cs)=>
             	{
-            		painter(36,r1,r2,Number(r2)-Number(r3cs));
+            		painter(36,r1,Number(r2)-Number(r2cs),r3);
             	})
         	})
     	})
@@ -1336,9 +1336,9 @@ function brr()
 			AC37R=new web3.eth.Contract(ab1,pairs[37])
         	AC37R.methods.getReserves().call((e,r3)=>
         	{
-            	AC37.methods.balanceOf("0xa7b16703470055881e7ee093e9b0bf537f29cd4d").call((e,r3cs)=>
+            	AC37.methods.balanceOf("0xa7b16703470055881e7ee093e9b0bf537f29cd4d").call((e,r2cs)=>
             	{
-            		painter(37,r1,r2,Number(r2)-Number(r3cs));
+            		            		painter(36,r1,Number(r2)-Number(r2cs),r3);
             	})
         	})
     	})
