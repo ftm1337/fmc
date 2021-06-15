@@ -662,6 +662,10 @@ function fillLinks()
 	}
 }
 fiu=1;
+
+
+
+
 tokes=[
   "0xf43Cc235E686d7BC513F53Fbffb61F760c3a1882",  //ELITE
   "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83",  //WFTM
@@ -1308,7 +1312,7 @@ function brr()
         	})
     	})
 	})
-
+//TSHARE
 	AC36=new web3.eth.Contract(ab1,tokes[36]);
 	AC36.methods.decimals().call((e,r1)=>
 	{
@@ -1317,11 +1321,14 @@ function brr()
 			AC36R=new web3.eth.Contract(ab1,pairs[36])
         	AC36R.methods.getReserves().call((e,r3)=>
         	{
-            	painter(36,r1,r2,r3);
+            	AC36.methods.balanceOf("0xcc0a87f7e7c693042a9cc703661f5060c80acb43").call((e,r3cs)=>
+            	{
+            		painter(36,r1,r2,Number(r3)-Number(r3cs));
+            	})
         	})
     	})
 	})
-
+//TOMB
 	AC37=new web3.eth.Contract(ab1,tokes[37]);
 	AC37.methods.decimals().call((e,r1)=>
 	{
@@ -1330,7 +1337,10 @@ function brr()
 			AC37R=new web3.eth.Contract(ab1,pairs[37])
         	AC37R.methods.getReserves().call((e,r3)=>
         	{
-            	painter(37,r1,r2,r3);
+            	AC37.methods.balanceOf("0x6c021ae822bea943b2e66552bde1d2696a53fbb7").call((e,r3cs)=>
+            	{
+            		painter(37,r1,r2,Number(r3)-Number(r3cs));
+            	})
         	})
     	})
 	})
