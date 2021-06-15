@@ -20,14 +20,19 @@ tr:hover{background: aqua;color:#020611;}
 thead tr:hover{background: aqua;color:#020611}
 pre{margin:0}
 a{color:white;text-decoration-line:none}
-table{border-collapse:collapse}
+table{border-collapse:collapse;overflow:hidden}
+tr{line-height:1.2em}
 h5 a{color: aqua}
 td:nth-child(9):hover{color: blue}
 #spadi{width:100%}
 option{cursor:pointer}
 #tags div{border: 4px #e3e9f2 dotted;color:aqua;width: max-content;float: right;background: rgba(0,255,255,.25);border-radius: 10px;padding:0 2px;margin:4px;padding:4px}
 #usdftm2{border: 4px dashed;color:#020611;background: rgba(255,255,255,1);border-radius: 10px;padding:0 2px;margin:4px;padding:4px}
-#usdftm2:hover{border: 4px dotted;font-weight:bolder}</style>
+#tags div:hover{border: 4px dashed;font-weight:;color:aliceblue}
+#usdftm2:hover{border: 4px dotted;font-weight:bolder}
+tr td:nth-child(9) span a:nth-last-child(1){-moz-transform: rotate(90deg);-ms-transform: rotate(90deg);-o-transform: rotate(90deg);-webkit-transform: rotate(90deg);transform: rotate(90deg);display:inline-block}
+tr td:nth-child(9):hover{font-weight: bolder;text-decoration: 3px red wavy underline blink;}
+</style>
 <body>
 <div class="toprow">
 	<div>FantomMarketCap</div>
@@ -40,8 +45,10 @@ option{cursor:pointer}
 <br>
 <div id="tags">
 	<div onclick="togfil('sca')">Show All</div>
+	<div onclick="togfil(this.innerHTML)">Algorithmic</div>
 	<div onclick="togfil(this.innerHTML)">AMM</div>
 	<div onclick="togfil(this.innerHTML)">Borrowing</div>
+	<div onclick="togfil(this.innerHTML)">Bridged</div>
 	<div onclick="togfil(this.innerHTML)">Bridges</div>
 	<div onclick="togfil(this.innerHTML)">CEX</div>
 	<!--<div onclick="togfil(this.innerHTML)">Charts</div>-->
@@ -49,8 +56,10 @@ option{cursor:pointer}
 	<div onclick="togfil(this.innerHTML)">DEX</div>
 	<div onclick="togfil(this.innerHTML)">Farming</div>
 	<div onclick="togfil(this.innerHTML)">Lending</div>
+	<div onclick="togfil(this.innerHTML)">Natives</div>
 	<div onclick="togfil(this.innerHTML)">NFTs</div>
 	<div onclick="togfil(this.innerHTML)">Oracles</div>
+	<div onclick="togfil(this.innerHTML)">Seigniorage</div>
 	<div onclick="togfil(this.innerHTML)">Stablecoins</div>
 	<div onclick="togfil(this.innerHTML)">StableSwap</div>
 	<div onclick="togfil(this.innerHTML)">Staking</div>
@@ -73,6 +82,7 @@ option{cursor:pointer}
 			<th onclick="sortit(6)">Supply⇅</th>
 			<th>Links</th>
 			<th onclick="sortit(3)">Address⇅</th>
+			<th>Analytics</th>
 			<th>Labels</th>
 			</tr>
 		</thead>
@@ -85,9 +95,10 @@ option{cursor:pointer}
 				<td>420</td>
 				<td>8,888</td>
 				<td>251</td>
-				<td><span><a href="https://ftm.guru" target="_blank">🌐</a><a href="https://discord.gg/EvyDPxPb" target="_blank">🎮</a><a href="https://t.me/FTM1337" target="_blank">✈</a>🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span><a href="https://ftm.guru" target="_blank">🌐</a><a href="https://discord.gg/EvyDPxPb" target="_blank">🎮</a><a href="https://t.me/FTM1337" target="_blank">✈</a>🐦🐙</span></td>
 				<td><pre>0xf43Cc235E686d7BC513F53Fbffb61F760c3a1882</pre></td>
-				<td>Tools</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Natives Tools</td>
 			</tr>
 			<tr class="sca yields" id="tr_0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83">
 				<td>★</td>
@@ -97,9 +108,10 @@ option{cursor:pointer}
 				<td>1</td>
 				<td>249,788</td>
 				<td>?</td>
-				<td><span><a href="https://fantom.foundation" target="_blank">🌐</a>🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span><a href="https://fantom.foundation" target="_blank">🌐</a>🎮✈🐦🐙</span></td>
 				<td><pre>0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83</pre></td>
-				<td>Coins</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Coins Natives</td>
 			</tr>
 			<tr class="sca amm dex nfts tools" id="tr_0x09e145a1d53c0045f41aeef25d8ff982ae74dd56">
 				<td>⁕</td>
@@ -109,9 +121,49 @@ option{cursor:pointer}
 				<td>?</td>
 				<td>?</td>
 				<td>69,788</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0x09e145a1d53c0045f41aeef25d8ff982ae74dd56</pre></td>
-				<td>AMM DEX NFTs Tools</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>AMM DEX Natives NFTs Tools</td>
+			</tr>
+			<tr class="sca amm dex farming staking" id="tr_0xf61ccde1d4bb76ced1daa9d4c429cca83022b08b">
+				<td>⁕</td>
+				<td>WAKA</td>
+				<td>Waka Finance</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td><span><a href="https://waka.finance" target="_blank">🌐</a><a href="" target="_blank">🎮</a><a >✈</a><a >🐦</a><a >🐙</a></span></td>
+				<td><pre>0xf61ccde1d4bb76ced1daa9d4c429cca83022b08b</pre></td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Algorithmic Farming Natives Seigniorage Stablecoins Staking</td>
+			</tr>
+			<tr class="sca algorithmic farming seigniorage stablecoins staking" id="tr_0x4cdf39285d7ca8eb3f090fda0c069ba5f4145b37">
+				<td>⁕</td>
+				<td>TSHARE</td>
+				<td>Tomb Shares</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
+				<td><pre>0x4cdf39285d7ca8eb3f090fda0c069ba5f4145b37</pre></td>
+				<td><span><a href="https://tomb.finance" target="_blank">🌐</a><a href="https://discord.com/invite/E3sekCDCdq" target="_blank">🎮</a><a href="https://t.me/tombFinance" target="_blank">✈</a><a href="https://twitter.com/tombFinance" target="_blank">🐦</a><a target="_blank">🐙</a></span></td><
+				<td>Algorithmic Farming Natives Seigniorage Stablecoins Staking</td>
+			</tr>
+			<tr class="sca algorithmic farming seigniorage stablecoins staking" id="tr_0x6c021ae822bea943b2e66552bde1d2696a53fbb7">
+				<td>⁕</td>
+				<td>TOMB</td>
+				<td>Tomb Finance</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td><span><a href="https://tomb.finance" target="_blank">🌐</a><a href="https://discord.com/invite/E3sekCDCdq" target="_blank">🎮</a><a href="https://t.me/tombFinance" target="_blank">✈</a><a href="https://twitter.com/tombFinance" target="_blank">🐦</a><a target="_blank">🐙</a></span></td><
+				<td><pre>0x6c021ae822bea943b2e66552bde1d2696a53fbb7</pre></td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>AMM DEX Farming Natives Staking</td>
 			</tr>
 			<tr class="sca amm dex farming staking" id="tr_0x841fad6eae12c286d1fd18d1d525dffa75c7effe">
 				<td>⁕</td>
@@ -121,9 +173,10 @@ option{cursor:pointer}
 				<td>6.789</td>
 				<td>?</td>
 				<td>69,788</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0x841fad6eae12c286d1fd18d1d525dffa75c7effe</pre></td>
-				<td>AMM DEX Farming Staking</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>AMM DEX Farming Natives Staking</td>
 			</tr>
 			<tr class="sca amm dex farming staking" id="tr_0x5cc61a78f164885776aa610fb0fe1257df78e59b">
 				<td>⁕</td>
@@ -133,9 +186,10 @@ option{cursor:pointer}
 				<td>6.789</td>
 				<td>?</td>
 				<td>69,788</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0x5cc61a78f164885776aa610fb0fe1257df78e59b</pre></td>
-				<td>AMM DEX Farming Staking</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>AMM DEX Farming Natives Staking</td>
 			</tr>
 			<tr class="sca amm dex farming staking" id="tr_0x85dec8c4b2680793661bca91a8f129607571863d">
 				<td>⁕</td>
@@ -145,9 +199,23 @@ option{cursor:pointer}
 				<td>?</td>
 				<td>?</td>
 				<td>?</td>
-				<td><span><a href="https://paintswap.finance" target="_blank">🌐</a><a href="https://discord.gg/3fVYdk9ugv" target="_blank">🎮</a><a href="https://t.me/PaintSwapFinance" target="_blank">✈</a><a href="https://twitter.com/paint_swap" target="_blank">🐦</a><a href="https://github.com/paintswap" target="_blank">🐙</a></span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span><a href="https://paintswap.finance" target="_blank">🌐</a><a href="https://discord.gg/3fVYdk9ugv" target="_blank">🎮</a><a href="https://t.me/PaintSwapFinance" target="_blank">✈</a><a href="https://twitter.com/paint_swap" target="_blank">🐦</a><a href="https://github.com/paintswap" target="_blank">🐙</a></span></td>
 				<td><pre>0x85dec8c4b2680793661bca91a8f129607571863d</pre></td>
-				<td>AMM DEX Farming</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>AMM DEX Farming Natives Staking</td>
+			</tr>
+			<tr class="sca amm dex farming staking" id="tr_0xed940c1db02a8e7dc2e6748aff3aab165b59c7e3">
+				<td>⁕</td>
+				<td>OPERA</td>
+				<td>OperaSwap</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td><span><a href="https://operaswap.finance" target="_blank">🌐</a><a >🎮</a><a href="https://t.me/operaswapfinance" target="_blank">✈</a><a href="https://twitter.com/operaswap" target="_blank">🐦</a><a>🐙</a></span></td>
+				<td><pre>0xed940c1db02a8e7dc2e6748aff3aab165b59c7e3</pre></td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>AMM DEX Farming Natives Staking</td>
 			</tr>
 			<tr class="sca farming yields" id="tr_0xf6129f6705b826dbafaa26e03aad9dd20b9235c6">
 				<td>⁕</td>
@@ -157,9 +225,10 @@ option{cursor:pointer}
 				<td>?</td>
 				<td>?</td>
 				<td>?</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0xf6129f6705b826dbafaa26e03aad9dd20b9235c6</pre></td>
-				<td>Farming Yields</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Farming Natives Yields</td>
 			</tr>
 			<tr class="sca farming yields" id="tr_0x10b620b2dbac4faa7d7ffd71da486f5d44cd86f9">
 				<td>⁕</td>
@@ -169,9 +238,10 @@ option{cursor:pointer}
 				<td>?</td>
 				<td>?</td>
 				<td>?</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0x10b620b2dbac4faa7d7ffd71da486f5d44cd86f9</pre></td>
-				<td>Farming Yields</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Farming Natives Yields</td>
 			</tr>
 			<tr class="sca amm dex farming staking" id="tr_0xbc2451aad349b6b43fd05f4f0cc327f8a6bca2d4">
 				<td>⁕</td>
@@ -181,9 +251,10 @@ option{cursor:pointer}
 				<td>0.259</td>
 				<td>1,234,567</td>
 				<td>69,788</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0xbc2451aad349b6b43fd05f4f0cc327f8a6bca2d4</pre></td>
-				<td>AMM DEX Farming Staking</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>AMM DEX Farming Natives Staking</td>
 			</tr>
 			<tr class="sca stablecoins" id="tr_0xad84341756bf337f5a0164515b1f6f993d194e1f">
 				<td>⁕</td>
@@ -193,9 +264,10 @@ option{cursor:pointer}
 				<td>?</td>
 				<td>?</td>
 				<td>?</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0xad84341756bf337f5a0164515b1f6f993d194e1f</pre></td>
-				<td>Stablecoins</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Natives Stablecoins</td>
 			</tr>
 			<tr class="sca farming" id="tr_0xeb86b05cfee3e48db9a44275701ed099462c8ba0">
 				<td>⁕</td>
@@ -205,9 +277,23 @@ option{cursor:pointer}
 				<td>?</td>
 				<td>?</td>
 				<td>?</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0xeb86b05cfee3e48db9a44275701ed099462c8ba0</pre></td>
-				<td>Farming</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Farming Natives</td>
+			</tr>
+			<tr class="sca amm dex farming staking" id="tr_0xe1c8f3d529bea8e3fa1fac5b416335a2f998ee1c">
+				<td>⁕</td>
+				<td>ELK</td>
+				<td>Elk Finance</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td><span><a href="https://elk.finance" target="_blank">🌐</a><a href="" target="_blank">🎮</a><a href="https://t.me/ElkFinance" target="_blank">✈</a><a href="" target="_blank">🐦</a><a href="" target="_blank">🐙</a></span></td>
+				<td><pre>0xe1c8f3d529bea8e3fa1fac5b416335a2f998ee1c</pre></td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>AMM DEX Natives Farming</td>
 			</tr>
 			<tr class="sca borrowing farming stablecoins yields" id="tr_0x41e3df7f716ab5af28c1497b354d79342923196a">
 				<td>⁕</td>
@@ -217,9 +303,10 @@ option{cursor:pointer}
 				<td>?</td>
 				<td>?</td>
 				<td>69,788</td>
-				<td><span><a href="https://aquarius.fi" target="_blank">🌐</a>🎮<a href="https://t.me/aquariusfi" target="_blank">✈</a><a href="https://twitter.com/Aquarius_Fi" target="_blank">🐦</a>🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span><a href="https://aquarius.fi" target="_blank">🌐</a>🎮<a href="https://t.me/aquariusfi" target="_blank">✈</a><a href="https://twitter.com/Aquarius_Fi" target="_blank">🐦</a>🐙</span></td>
 				<td><pre>0x41e3df7f716ab5af28c1497b354d79342923196a</pre></td>
-				<td>Borrowing Farming Stablecoins Yields</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Borrowing Farming Natives Stablecoins Yields</td>
 			</tr>
 			<tr class="sca borrowing farming yields" id="tr_0x0f7adb77b6334b9b5a3c4f78aaa073ea1d915bf6">
 				<td>⁕</td>
@@ -229,9 +316,10 @@ option{cursor:pointer}
 				<td>?</td>
 				<td>?</td>
 				<td>69,788</td>
-				<td><span><a href="https://aquarius.fi" target="_blank">🌐</a>🎮<a href="https://t.me/aquariusfi" target="_blank">✈</a><a href="https://twitter.com/Aquarius_Fi" target="_blank">🐦</a>🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span><a href="https://aquarius.fi" target="_blank">🌐</a>🎮<a href="https://t.me/aquariusfi" target="_blank">✈</a><a href="https://twitter.com/Aquarius_Fi" target="_blank">🐦</a>🐙</span></td>
 				<td><pre>0x0f7adb77b6334b9b5a3c4f78aaa073ea1d915bf6</pre></td>
-				<td>Borrowing Farming Yields</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Borrowing Farming Natives Yields</td>
 			</tr>
 			<tr class="sca yields" id="tr_0x29b0da86e484e1c0029b56e817912d778ac0ec69">
 				<td>*</td>
@@ -241,9 +329,10 @@ option{cursor:pointer}
 				<td>247,247</td>
 				<td>169,788</td>
 				<td>9.876</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0x29b0da86e484e1c0029b56e817912d778ac0ec69</pre></td>
-				<td>Yields</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Bridged Yields</td>
 			</tr>
 			<tr class="sca coins" id="tr_0x74b23882a30290451a17c44f4f05243b6b58c76d">
 				<td>*</td>
@@ -253,9 +342,10 @@ option{cursor:pointer}
 				<td>6,789</td>
 				<td>?</td>
 				<td>788</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0x74b23882a30290451a17c44f4f05243b6b58c76d</pre></td>
-				<td>Coins</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Bridged Coins</td>
 			</tr>
 			<tr class="sca yields" id="tr_0xd0660cd418a64a1d44e9214ad8e459324d8157f1">
 				<td>*</td>
@@ -265,9 +355,10 @@ option{cursor:pointer}
 				<td>247,247</td>
 				<td>169,788</td>
 				<td>9876</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0xd0660cd418a64a1d44e9214ad8e459324d8157f1</pre></td>
-				<td>Yields</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Bridged Yields</td>
 			</tr>
 			<tr class="sca coins" id="tr_0x321162cd933e2be498cd2267a90534a804051b11">
 				<td>*</td>
@@ -277,9 +368,10 @@ option{cursor:pointer}
 				<td>43210</td>
 				<td>?</td>
 				<td>88</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0x321162cd933e2be498cd2267a90534a804051b11</pre></td>
-				<td>Coins</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Bridged Coins</td>
 			</tr>
 			<tr class="sca stablecoins" id="tr_0x04068da6c83afcfa0e13ba15a6696662335d5b75">
 				<td>*</td>
@@ -289,9 +381,10 @@ option{cursor:pointer}
 				<td>0.2789</td>
 				<td>?</td>
 				<td>?</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0x04068da6c83afcfa0e13ba15a6696662335d5b75</pre></td>
-				<td>Stablecoins</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Bridged Stablecoins</td>
 			</tr>
 			<tr class="sca synthetics" id="tr_0x56ee926bd8c72b2d5fa1af4d9e4cbb515a1e3adc">
 				<td>*</td>
@@ -301,9 +394,10 @@ option{cursor:pointer}
 				<td>?</td>
 				<td>?</td>
 				<td>69,788</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0x56ee926bd8c72b2d5fa1af4d9e4cbb515a1e3adc</pre></td>
-				<td>Synthetics</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Bridged Synthetics</td>
 			</tr>
 			<tr class="sca amm dex farming staking" id="tr_0xae75a438b2e0cb8bb01ec1e1e376de11d44477cc">
 				<td>*</td>
@@ -313,9 +407,10 @@ option{cursor:pointer}
 				<td>?</td>
 				<td>?</td>
 				<td>?</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0xae75a438b2e0cb8bb01ec1e1e376de11d44477cc</pre></td>
-				<td>AMM DEX Farming Staking</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Bridged AMM DEX Farming Staking</td>
 			</tr>
 			<tr class="sca stablecoins" id="tr_0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e">
 				<td>*</td>
@@ -325,9 +420,10 @@ option{cursor:pointer}
 				<td>0.2789</td>
 				<td>?</td>
 				<td>?</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e</pre></td>
-				<td>Stablecoins</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Bridged Stablecoins</td>
 			</tr>
 			<tr class="sca stablecoins" id="tr_0x82f8cb20c14f134fe6ebf7ac3b903b2117aafa62">
 				<td>*</td>
@@ -337,9 +433,10 @@ option{cursor:pointer}
 				<td>?</td>
 				<td>?</td>
 				<td>?</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0x82f8cb20c14f134fe6ebf7ac3b903b2117aafa62</pre></td>
-				<td>Stablecoins</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Bridged Stablecoins</td>
 			</tr>
 			<tr class="sca stablecoins" id="tr_0xaf319e5789945197e365e7f7fbfc56b130523b33">
 				<td>*</td>
@@ -349,9 +446,10 @@ option{cursor:pointer}
 				<td>?</td>
 				<td>?</td>
 				<td>?</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0xaf319e5789945197e365e7f7fbfc56b130523b33</pre></td>
-				<td>Stablecoins</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Bridged Stablecoins</td>
 			</tr>
 			<tr class="sca stablecoins" id="tr_0x049d68029688eabf473097a2fc38ef61633a3c7a">
 				<td>*</td>
@@ -361,9 +459,10 @@ option{cursor:pointer}
 				<td>2.7</td>
 				<td>?</td>
 				<td>?</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0x049d68029688eabf473097a2fc38ef61633a3c7a</pre></td>
-				<td>Stablecoins</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Bridged Stablecoins</td>
 			</tr>
 			<tr class="sca amm dex farming stableswap yields" id="tr_0x1e4f97b9f9f913c46f1632781732927b9019c68b">
 				<td>*</td>
@@ -373,9 +472,10 @@ option{cursor:pointer}
 				<td>?</td>
 				<td>?</td>
 				<td>?</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0x1e4f97b9f9f913c46f1632781732927b9019c68b</pre></td>
-				<td>AMM DEX Farming StableSwap Yields</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>AMM Bridged DEX Farming StableSwap Yields</td>
 			</tr>
 			<tr class="sca lending" id="tr_0x657a1861c15a3ded9af0b6799a195a249ebdcbc6">
 				<td>*</td>
@@ -385,9 +485,10 @@ option{cursor:pointer}
 				<td>369</td>
 				<td>1,024,666</td>
 				<td>10,324</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0x657a1861c15a3ded9af0b6799a195a249ebdcbc6</pre></td>
-				<td>Lending</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Bridged Lending</td>
 			</tr>
 			<tr class="sca oracles" id="tr_0xb01e8419d842beebf1b70a7b5f7142abbaf7159d">
 				<td>*</td>
@@ -397,9 +498,10 @@ option{cursor:pointer}
 				<td>?</td>
 				<td>?</td>
 				<td>69,788</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0xb01e8419d842beebf1b70a7b5f7142abbaf7159d</pre></td>
-				<td>Oracles</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Bridged Oracles</td>
 			</tr>
 			<tr class="sca oracles" id="tr_0xb3654dc3d10ea7645f8319668e8f54d2574fbdc8">
 				<td>*</td>
@@ -409,9 +511,10 @@ option{cursor:pointer}
 				<td>?</td>
 				<td>?</td>
 				<td>69,788</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0xb3654dc3d10ea7645f8319668e8f54d2574fbdc8</pre></td>
-				<td>Oracles</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Bridged Oracles</td>
 			</tr>
 			<tr class="sca cex coins" id="tr_0xd67de0e0a0fd7b15dc8348bb9be742f3c5850454">
 				<td>*</td>
@@ -421,9 +524,10 @@ option{cursor:pointer}
 				<td>346.789</td>
 				<td>?</td>
 				<td>691,788</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0xd67de0e0a0fd7b15dc8348bb9be742f3c5850454</pre></td>
-				<td>CEX Coins</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Bridged CEX Coins</td>
 			</tr>
 			<tr class="sca oracles" id="tr_0x46e7628e8b4350b2716ab470ee0ba1fa9e76c6c5">
 				<td>*</td>
@@ -433,9 +537,10 @@ option{cursor:pointer}
 				<td>?</td>
 				<td>?</td>
 				<td>69,788</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0x46e7628e8b4350b2716ab470ee0ba1fa9e76c6c5</pre></td>
-				<td>Oracles</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Bridged Oracles</td>
 			</tr>
 			<tr class="sca dao" id="tr_0x753fbc5800a8c8e3fb6dc6415810d627a387dfc9">
 				<td>*</td>
@@ -445,9 +550,10 @@ option{cursor:pointer}
 				<td>?</td>
 				<td>?</td>
 				<td>69,788</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0x753fbc5800a8c8e3fb6dc6415810d627a387dfc9</pre></td>
-				<td>DAO</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Bridged DAO</td>
 			</tr>
 			<tr class="sca bridges" id="tr_0xddcb3ffd12750b45d32e084887fdf1aabab34239">
 				<td>*</td>
@@ -457,9 +563,10 @@ option{cursor:pointer}
 				<td>?</td>
 				<td>?</td>
 				<td>69,788</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0xddcb3ffd12750b45d32e084887fdf1aabab34239</pre></td>
-				<td>Bridges</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Bridged Bridges</td>
 			</tr>
 			<tr class="sca yields lending" id="tr_0x6a07a792ab2965c72a5b8088d3a069a7ac3a993b">
 				<td>*</td>
@@ -469,9 +576,10 @@ option{cursor:pointer}
 				<td>1,729</td>
 				<td>?</td>
 				<td>4,043</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0x6a07a792ab2965c72a5b8088d3a069a7ac3a993b</pre></td>
-				<td>Yields Lending</td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
+				<td>Bridged Lending Yields</td>
 			</tr><!--
 			<tr class="sca" id="tr_0x04068da6c83afcfa0e13ba15a6696662335d5b75">
 				<td>⁕</td>
@@ -481,8 +589,9 @@ option{cursor:pointer}
 				<td>8,999</td>
 				<td>?</td>
 				<td>69,788</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0x1234567890123456789012345678901234567890</pre></td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
 				<td>Farming Staking Vaults Yields</td>
 			</tr>
 			--><!--
@@ -494,8 +603,9 @@ option{cursor:pointer}
 				<td>0.279</td>
 				<td>?</td>
 				<td>69,788</td>
-				<td><span>🌐🎮✈🐦🐙</span><span>😼👻🍣🛩🎨🦎🔎</span></td>
+				<td><span>🌐🎮✈🐦🐙</span></td>
 				<td><pre>0x1234567890123456789012345678901234567890</pre></td>
+				<td><span>😼👻🍣🛩🎨🦎ᗦ🦌ᗦ🔎</span></td>
 				<td>Farming</td>
 			</tr>
 			-->
@@ -506,21 +616,14 @@ option{cursor:pointer}
 <br>
 <div align="center" style="margin:0;padding:0"><u>Legend:</u> 🌐Website 🎮Discord ✈Telegram 🐦Twitter 😼SpookySwap 👻SpiritSwap 🍣SushiSwap 🛩HyperJump 🎨PaintSwap 🦎ZooDEX 🔎Explorer 🐙Github *Bridged-Asset ⁕Native-Asset ★Featured-Asset</div>
 <div align="center" id="spadd"><font id="spadf" size="2">(Sponsored Ad)</font><a href="https://shibafantom.com" target="_blank" id="spada"><img id="spadi" src=""></a></div>
-<script type="text/javascript">
-var sc_project=12548358;
-var sc_invisible=0;
-var sc_security="da086e3e";
-var sc_remove_link=1;
-var scJsHost = "https://";
-document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
+
 <a href="https://statcounter.com/p12548358/?guest=1"><noscript><div><img
 src="https://c.statcounter.com/12548358/0/da086e3e/0/"></div></noscript>
 </a>
 <h5 align="center" id="disclaimer"><b><u>Disclaimer & Notice</u></b><br>
 All information presented here is only for aesthetic uses and posesses no validity to settle any claims. It is also non-exhaustive and prone to error. Advertisements are not endorsements.	 <strike>Currently it does not update automatically.</strike> This dashboard is ultra-real time - It means that the data on this page has zero latency, unlike CMC or CG which have 1-10 minutes old data. FTM.guru and FMC.guru are trying to keep up with the <b>Fantom Fast</b> motto. <i>A much deserved shoutout to all developers on F.O., ftmscan.com and rpc.ftm.tools for their benign Services!</i> All presented numbers are denoted in FTM by default."Most Liquid" coloumn refers to the pair with highest WFTM-Liquidity.<br>We encourage you to report inconsistencies, ask business queries, request listing or start an ad campaign at one of our community channels:<br>
-<b><a href="https://t.me/FTM1337" target="_blank">Telegram</a> or <a href="https://discord.gg/EvyDPxPb" target="_blank">Discord.</a></b></h5>
+<b><a href="https://t.me/FTM1337" target="_blank">Telegram</a> or <a href="https://discord.gg/EvyDPxPb" target="_blank">Discord.</a></b><!--
+Our Address: 0x921Ed37f62CBe4d86D38b720EF4a4a44B24a1C5D--></h5>
 </body>
 <script src="web3.min.js">
 </script>
@@ -552,10 +655,10 @@ function basics()
 function fillLinks()
 {
 	aa=$("maintable").getElementsByTagName("tbody")[0].getElementsByTagName("tr");
-	for ( i = 1 ; i < aa.length ; i++ )
+	for ( i = 0 ; i < aa.length ; i++ )
 	{
 		CA=aa[i].getElementsByTagName("td")[8].getElementsByTagName("pre")[0].innerHTML;
-		aa[i].getElementsByTagName("td")[7].children[1].innerHTML=`<a href="https://info.spookyswap.finance/#/token/${CA}" target="_blank">😼</a><a href="https://info.spiritswap.finance/#/token/${CA}" target="_blank">👻</a><a href="https://analytics-ftm.sushi.com/tokens/${CA}" target="_blank">🍣</a><a href="https://ftm-info.hyperjump.fi/#/token/${CA}" target="_blank">🛩</a><a href="https://info.paintswap.finance/#/token/${CA}" target="_blank">🎨</a><a >🦎</a><a href="https://ftmscan.com/token/${CA}" target="_blank">🔎</a>`;
+		aa[i].getElementsByTagName("td")[9].children[0].innerHTML=`<a href="https://ftmscan.com/token/${CA}" target="_blank">🔎</a><a href="https://info.spookyswap.finance/#/token/${CA}" target="_blank">😼</a><a href="https://info.spiritswap.finance/#/token/${CA}" target="_blank">👻</a><a href="https://analytics-ftm.sushi.com/tokens/${CA}" target="_blank">🍣</a><a href="https://ftm-info.hyperjump.fi/#/token/${CA}" target="_blank">🛩</a><a href="https://info.paintswap.finance/#/token/${CA}" target="_blank">🎨</a><a >🦎</a><a href="https://info.waka.finance/#/token/${CA}"style="" target="_blank">ᗦ</a><a href="https://ftm-info.elk.finance/#/token/${CA}"style="" target="_blank">🦌</a>`;
 	}
 }
 fiu=1;
@@ -592,7 +695,12 @@ tokes=[
   "0xeb86b05cfee3e48db9a44275701ed099462c8ba0",  //FRANK
   "0x85dec8c4b2680793661bca91a8f129607571863d",	//BRUSH
   "0x0f7adb77b6334b9b5a3c4f78aaa073ea1d915bf6",	//AQU
-  "0x41e3df7f716ab5af28c1497b354d79342923196a"	//aUSD
+  "0x41e3df7f716ab5af28c1497b354d79342923196a",	//aUSD
+  "0xf61ccde1d4bb76ced1daa9d4c429cca83022b08b",	//WAKA
+  "0xe1c8f3d529bea8e3fa1fac5b416335a2f998ee1c",	//ELK
+  "0x4cdf39285d7ca8eb3f090fda0c069ba5f4145b37",	//TSHARE
+  "0x6c021ae822bea943b2e66552bde1d2696a53fbb7",	//TOMB
+  "0xed940c1db02a8e7dc2e6748aff3aab165b59c7e3"	//OPERA
 
 ]
 /*
@@ -715,9 +823,14 @@ pairs=[
   "0xfa7ca6e6d17368e0a1fa9c75f2ebe5a8d7be9fc6",  //LQDR 3
   "0x84311ecc54d7553378c067282940b0fdfb913675",  //ICE 3
   "0x20935601f940a4428a4271b85a46a8bf99158c2e",  //FRANK 2
-  "0x452590b8aa292b963a9d0f2b5e71bc7c927859b3",	//BRUSH
-  "0x7b63e44749884f33cb688f4870dd44dec1195a9b",	//AQU
-  "0x97bc7fb4f3d3f7749a7a3a0953974dcd1af89713"	//aUSD
+  "0x452590b8aa292b963a9d0f2b5e71bc7c927859b3",	 //BRUSH 5
+  "0x7b63e44749884f33cb688f4870dd44dec1195a9b",	 //AQU 3
+  "0x97bc7fb4f3d3f7749a7a3a0953974dcd1af89713",	 //aUSD 3
+  "0x696885e9581bd33ee9877bd8750ddda65381ff01",	 //WAKA 7
+  "0xe8000e8156c71683e2a8108b500141cbc4785edd",	 //ELK 8
+  "0x4733bc45ef91cf7ccecaeedb794727075fb209f2",	 //TSHARE 1
+  "0x2a651563c9d3af67ae0388a5c8f89b867038089e",	 //TOMB 1
+  "0x31c782f4f7bdabc2f1ac02da1782ea6107c4cfcf"	 //OPERA 9
 
 ]
 function brr()
@@ -1157,6 +1270,71 @@ function brr()
     	})
 	})
 
+	AC33=new web3.eth.Contract(ab1,tokes[33]);
+	AC33.methods.decimals().call((e,r1)=>
+	{
+    	AC33.methods.totalSupply().call((e,r2)=>
+    	{
+			AC33R=new web3.eth.Contract(ab1,pairs[33])
+        	AC33R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(33,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC34=new web3.eth.Contract(ab1,tokes[34]);
+	AC34.methods.decimals().call((e,r1)=>
+	{
+    	AC34.methods.totalSupply().call((e,r2)=>
+    	{
+			AC34R=new web3.eth.Contract(ab1,pairs[34])
+        	AC34R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(34,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC35=new web3.eth.Contract(ab1,tokes[35]);
+	AC35.methods.decimals().call((e,r1)=>
+	{
+    	AC35.methods.totalSupply().call((e,r2)=>
+    	{
+			AC35R=new web3.eth.Contract(ab1,pairs[35])
+        	AC35R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(35,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC36=new web3.eth.Contract(ab1,tokes[36]);
+	AC36.methods.decimals().call((e,r1)=>
+	{
+    	AC36.methods.totalSupply().call((e,r2)=>
+    	{
+			AC36R=new web3.eth.Contract(ab1,pairs[36])
+        	AC36R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(36,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC37=new web3.eth.Contract(ab1,tokes[37]);
+	AC37.methods.decimals().call((e,r1)=>
+	{
+    	AC37.methods.totalSupply().call((e,r2)=>
+    	{
+			AC37R=new web3.eth.Contract(ab1,pairs[37])
+        	AC37R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(37,r1,r2,r3);
+        	})
+    	})
+	})
+
 }
 
 ab1=[
@@ -1338,5 +1516,13 @@ function usdftm2()
 		}
 	}
 }
+</script><script type="text/javascript" async="true">
+var sc_project=12548358;
+var sc_invisible=0;
+var sc_security="da086e3e";
+var sc_remove_link=1;
+var scJsHost = "https://";
+document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
 </script>
 </html>
