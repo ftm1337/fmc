@@ -1269,7 +1269,7 @@ function brr()
 			AC31R=new web3.eth.Contract(ab1,pairs[31])
         	AC31R.methods.getReserves().call((e,r3)=>
         	{
-            	painter(31,r1,r2,r3);
+            	painter(31,r1,r2,(new Array(r3[1],r3[0])));
         	})
     	})
 	})
