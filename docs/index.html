@@ -31,10 +31,10 @@ option{cursor:pointer}
 #usdftm2:hover{border: 4px dotted;cursor: alias }
 #degmod{border: 4px dashed;color:#020611;background: rgba(255,127,127,1);border-radius: 10px;padding:0 2px;margin:4px;padding:4px}
 #degmod:hover{border: 4px dotted;cursor: alias ;}
-tr td:nth-child(10) span a:nth-child(8){-moz-transform: rotate(90deg);-ms-transform: rotate(90deg);-o-transform: rotate(90deg);-webkit-transform: rotate(90deg);transform: rotate(90deg);display:inline-block}
 tr td:nth-child(9):hover{font-weight: bolder;text-decoration: 3px blue wavy underline blink;}
 .statcounter{font-size: 0}
 #spadfi{width:100%}
+#maintable{width:max-content}
 @media(min-width:641px){#spadi{width:80%}}
 </style>
 </head>
@@ -81,7 +81,8 @@ Browse tokens by Category and Sort using metrics such as price, supply or market
 <button id="usdftm2" onclick="usdftm2()">Currency : FTM</button>
 </div>
 <br>
-<div class="stage" align="center"><table id="maintable" class="centerstage">
+<div class="stage" align="center">
+	<table id="maintable" class="centerstage">
 		<thead>
 			<tr>
 			<th onclick="sortit(0)">N⇅</th>
