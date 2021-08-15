@@ -1,0 +1,858 @@
+<!doctype html><html><meta charset="UTF-8">
+<head>
+<meta name="description" content="The X DAO : CyberSwap on Fantom Market Cap - FMC.guru (FantomMarketCap) is a data aggregator for Fantom Opera blockchain token prices, markets, DEX listings, Market Cap, Live Trading Data and much more">
+<meta name="keywords" content="Fantom Opera, FTM, Decentralized Finance, ELITE, 1337, defi, farming, FTM1337">
+<title>Cyberswap Analytics at FMC.guru | FantomMarketCap : Fantom Opera Cryptocurrency Tokens Price and Market Capitalization</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="../img/ftm1337.jpg" />
+<style>html{background:#020611;color:#e3e9f2;font-family:helvetica nueve, helvetica, robotica, ubuntu, roboto, sans-serif}
+.toprow{display:grid;grid-template-columns:max-content auto max-content}
+.topfind{text-align:center;min-width:80%}
+.stage{overflow-x:auto}
+th{min-width:max-content;min-width: -moz-max-content;padding:2px 10px}
+td{min-width:max-content;min-width: -moz-max-content;padding:2px 10px;text-align:right}
+td:nth-child(3),td:nth-child(5),td:nth-child(7),td:nth-child(10),
+th:nth-child(3),th:nth-child(5),th:nth-child(7),th:nth-child(10)
+{padding-right:25px;}
+thead:nth-child(1) th,thead:nth-child(2) th,
+td:nth-child(3),td:nth-child(5),td:nth-child(7),td:nth-child(10)
+{border-right:1px double rgba(255,0,255,0.2)}
+thead th:last-child{border: none;text-align: center;padding-right: 0px}
+td:last-child{text-align: left}
+td:first-child{text-align: center}
+td:nth-child(2),td:nth-child(3){text-align: left}
+td:nth-child(4),td:nth-child(5),td:nth-child(6),td:nth-child(7),td:nth-child(8),
+td:nth-child(9),td:nth-child(10){font-family: monospace;font-size:1.2em}
+tr:hover{background: aqua;color:#020611;}
+thead tr:hover{background: aqua;color:#020611}
+pre{margin:0}
+a{color:white;text-decoration-line:none}
+table{border-collapse:collapse;overflow:hidden}
+tr{line-height:1.2em}
+h5 a{color: aqua}
+#spadi{width:100%}
+option{cursor:pointer}
+#tags div{border: 4px #e3e9f2 dotted;color:aqua;width: max-content;float: right;background: rgba(0,255,255,.25);border-radius: 10px;padding:0 2px;margin:4px;padding:4px}
+#tags div:hover{border: 4px dashed;cursor: alias ;color:aliceblue}
+#usdftm2{border: 4px dashed;color:#020611;background: rgba(255,255,255,1);border-radius: 10px;padding:0 2px;margin:4px;padding:4px}
+#usdftm2:hover{border: 4px dotted;cursor: alias }
+#degmod{border: 4px dashed;color:#020611;background: rgba(255,127,127,1);border-radius: 10px;padding:0 2px;margin:4px;padding:4px}
+#degmod:hover{border: 4px dotted;cursor: alias ;}
+.statcounter{font-size: 0}
+#spadfi{width:100%}
+#maintable{width:max-content}
+td:nth-child(8),td:nth-child(9),td:nth-child(10),td:nth-child(11),
+th:nth-last-child(1),th:nth-last-child(2),
+thead:nth-child(2) th:nth-last-child(3),
+thead:nth-child(2) th:nth-last-child(4){display:none}
+.advert{background: linear-gradient(45deg, rgba(255,0,0,0.25), rgba(0,0,255,0.25));padding:15px}
+.lowercat {text-align: left;padding:10px}
+.lowercat a{text-decoration-line: none}
+.lowercat span{font-size: 1.25em; font-weight:bold}
+.lowerbar{display: grid;grid-template-columns: auto;text-align:center}
+pre{overflow-x:auto;max-width:80%}
+input,button{border-radius:25px;background:black;text-align:center;color:white}
+button:hover{  box-shadow: 0 0px 10px 5px rgba(255,255,255,.2), 0px 0px 10px 5px rgba(255,255,255,0.1);transition: 0.2s}
+hr{box-shadow: rgba(0,255,255,0.2) 0px 0px 10px 10px;background: #090919;border-radius: 15px;border:aqua 2px solid;}
+@media(min-width:641px){
+	#spadi{width:80%}
+	.hhr{width:555px}
+	.lowerbar{display: grid;grid-template-columns: auto auto auto auto;text-align:center}}
+</style>
+</head>
+<body>
+<div class="toprow">
+	<div>FantomMarketCap</div>
+	<div></div>
+	<div>By <a href="https://ftm.guru">FTM.guru</a></div>
+</div>
+	<h2 align="center">CyberSwap Analytics</h2>
+<h1 align="center">FMC.guru<br><!--<span id="tmc">0</span> <span id="tmcunit">FTM</span>--></h1>
+<div align="center">
+<h4>Discover the best of Fantom Opera with FantomMarketCap on FMC.guru!</h4>
+Browse tokens by Category and Sort using metrics such as prices!<br>
+</div>
+<div align="center">
+<!--<input class="topfind" placeholder="Find Gems">-->
+<br><!--
+<div id="tags">
+	<div onclick="togfil('sca')">Show All</div>
+	<div onclick="togfil(this.innerHTML)">Algorithmic</div>
+	<div onclick="togfil(this.innerHTML)">AMM</div>
+	<div onclick="togfil(this.innerHTML)">Borrowing</div>
+	<div onclick="togfil(this.innerHTML)">Bridged</div>
+	<div onclick="togfil(this.innerHTML)">Bridges</div>
+	<div onclick="togfil(this.innerHTML)">CEX</div>
+	<div onclick="togfil(this.innerHTML)">Charts</div>
+	<div onclick="togfil(this.innerHTML)">DAO</div>
+	<div onclick="togfil(this.innerHTML)">DEX</div>
+	<div onclick="togfil(this.innerHTML)">Farming</div>
+	<div onclick="togfil(this.innerHTML)">Launchpad</div>
+	<div onclick="togfil(this.innerHTML)">Lending</div>
+	<div onclick="togfil(this.innerHTML)">Natives</div>
+	<div onclick="togfil(this.innerHTML)">Memes</div>
+	<div onclick="togfil(this.innerHTML)">NEW</div>
+	<div onclick="togfil(this.innerHTML)">NFTs</div>
+	<div onclick="togfil(this.innerHTML)">Oracles</div>
+	<div onclick="togfil(this.innerHTML)">Seigniorage</div>
+	<div onclick="togfil(this.innerHTML)">Stablecoins</div>
+	<div onclick="togfil(this.innerHTML)">StableSwap</div>
+	<div onclick="togfil(this.innerHTML)">Staking</div>
+	<div onclick="togfil(this.innerHTML)">Tools</div>
+	<div onclick="togfil(this.innerHTML)">Vaults</div>
+	<div onclick="togfil(this.innerHTML)">Yields</div>
+</div>
+<button id="degmod" onclick="">Degen-Zone : Off</button>
+<button id="usdftm2" onclick="usdftm2()">Currency : FTM</button>
+</div>-->
+<br>
+<div class="stage" align="center">
+	<table id="maintable" class="centerstage">
+		<thead>
+			<th colspan="3">Pair Information</th>
+			<th colspan="2">Spot Markets</th>
+			<th colspan="2">Pool Size</th>
+			<th colspan="3">Constituent Tokens</th>
+			<th onclick="">Further</th>
+		</thead>
+		<thead>
+			<tr>
+			<th onclick="sortit(0)">N⇅</th>
+			<th onclick="sortit(1)">Asset</th>
+			<th onclick="sortit(2)">Base</th>
+			<th onclick="sortit(3)">Price⇅</th>
+			<th onclick="sortit(4)">Rate</th>
+			<th onclick="sortit(5)">Assets⇅</th>
+			<th onclick="sortit(6)">Bases</th>
+			<th onclick="sortit(7)">LPT Supply</th>
+			<th onclick="sortit(8)">A/LPT</th>
+			<th onclick="sortit(9)">B/LPT</th>
+			<th colspan="1">Links</th>
+			</tr>
+		</thead>
+		<tbody><!--
+			<tr class="sca farming yields natives tools" id="tr_0xf43Cc235E686d7BC513F53Fbffb61F760c3a1882">
+				<td>★</td>
+				<td>ELITE</td>
+				<td>ftm.guru</td>
+				<td>98,765</td>
+				<td>420</td>
+				<td>8,888</td>
+				<td>251</td>
+				<td></td>
+				<td><pre></pre></td>
+				<td><span></span></td>
+				<td></td>
+			</tr>
+			<tr class="sca farming yields natives tools" id="tr_0xf43Cc235E686d7BC513F53Fbffb61F760c3a1882">
+				<td>1</td>
+				<td>ELITE</td>
+				<td>ftm.guru</td>
+				<td>98,765</td>
+				<td>420</td>
+				<td>8,888</td>
+				<td>251</td>
+				<td></td>
+				<td><pre></pre></td>
+				<td><span></span></td>
+				<td></td>
+			</tr>-->
+		</tbody>
+	</table>
+</div>
+<!--<div align="center"><br><b>1 2 3 4 5 … 6 7 8 9 10</b></div>-->
+<br>
+<!--<div align="center" style="margin:0;padding:0"><u>Legend:</u>*Bridged ⁕Native ★Featured 🌐Website 🎮Discord ✈Telegram 🐦Twitter 🐙Github 🔎Explorer 😼SpookySwap 👻SpiritSwap 🍣SushiSwap 🛩HyperJump 🎨PaintSwap 🦎ZooDEX <span class="wakka">👾</span>Waka 🦌Elk</div>
+-->
+<br>
+<div align="center" class="advert">
+<div align="center" id="spadd">
+	<font id="spadf" size="2">(Sponsored Ad)</font><br>
+	<a id="spada" href="https://swap.thexdao.com/#/swap?outputCurrency=0xf43Cc235E686d7BC513F53Fbffb61F760c3a1882" target="_blank">Buy ELITE at CyberSwap!</a>
+</div>
+
+<br>
+<a href="https://ftmscan.com/token/0xf43cc235e686d7bc513f53fbffb61f760c3a1882" target="_blank"><button>ftmScan</button></a>
+<a href="https://app.sushi.com/swap?outputCurrency=0xf43cc235e686d7bc513f53fbffb61f760c3a1882" target="_blank"><button>Sushi</button></a>
+<pre>0xf43Cc235E686d7BC513F53Fbffb61F760c3a1882</pre><br><br>
+<a href="https://t.me/Sam4x" target="_blank">To Advertise Here, Contact @Sam4x✈</a>
+
+<br>
+
+<div id="lowarea" style="padding:15px; font-size:0.9em">
+Did you just launch a Token Pair on your favorite DEX and are looking to set up a farm for free? Head over to our telegram and type /newFarm to begin the adventure!</div>
+<div id="disclaimer" style="padding:15px; font-size:0.8em">
+Anyone can request a farm for free. FTM.guru merely provides a platform to host your farm under its Farm-Maker program. Listings are in no manner an endorsement. We do not run background checks and the onus of due dilligence lies on the end-user, you. 99.7% of all projects are scams, rugs, slow-rugs, honeypots or outright lies. Please exercise extreme caution while dealing with smart contracts and crypto assets. We do not take any listing fees for this program and never DM you for personal information or keys.
+</div>
+</div>
+<br>
+<br>
+<div  class="topbar">
+	<div align="center">
+			<a href="index.html"><b style="font-size:2em">FTM.guru</b></a><br><br><!--
+			<a href="farmlands.html">LITE Farmlands👽</a>
+			<a href="index.html">FTM-Gems</a>
+			<a href="pair.html">DEX-Explorer</a>
+			<a href="fantomscan.html">FantomScan</a>
+			<a href="elite.html">ELITE</a>
+			<a href="fmc" target="_blank">FantomMarketCap</a>
+			<a href="yieldstate.html">YieldState</a>
+			<a href="vfat.tools/fantom/guru">vfat</a>
+			<a href="airdrop.html">Airdrop-Tool</a>
+			<a href="apelist.html">Ape-List</a>
+			<a href="approver.html">Approver</a>
+			<a href="degam.html">CASINO✨</a>-->
+			<hr><br>
+	<h3><a href="https://t.me/FTM1337">✈t.me/FTM1337<br>Come, Join us!</a></h3>
+	<i>Shoutout to ftmscan.com and rpc.ftm.tools for their benign Services!</i>
+	</div>
+</div>
+<br><br>
+<div class="lowerbar" align="center">
+	<div align="left" class="lowercat">
+		<span>Ecosystem</span><br>
+		<a href="https://fmc.guru" target="_blank">FantomMarketCap</a><br>
+		<a href="https://ftm.guru" target="_blank">FTM1337</a><br>
+		<a href="https://kcc.guru" target="_blank">Kucino Casino</a><br>
+	</div>
+	<div align="left" class="lowercat">
+		<span>Farming</span><br>
+		<a href="https://ftm.guru/yieldstate.html">YieldState</a><br>
+		<a href="https://ftm.guru/LF">LITE Farmlands👽</a><br>
+		<a href="https://vfat.tools/fantom/guru">vfat.tools</a>
+	</div>
+	<div align="left" class="lowercat">
+		<span>Our Dapps</span><br>
+		<a href="https://ftm.guru/degam.html">CASINO✨</a><br>
+		<a href="https://ftm.guru/approver.html">Approver</a><br>
+		<a href="https://ftm.guru/airdrop.html">Airdrop-Tool</a><br>
+	</div>
+	<div class="lowercat">
+		<span>Casino & Games</span><br>
+		<a href="https://kcc.guru/jackpot_1.html">2-player Jackpot</a><br>
+		<a href="https://kcc.guru/instalotto.html">instaLOTTO</a><br>
+		<a href="https://kcc.guru/21hrlotto.html">21-hour LOTTO</a>
+	</div>
+	<div class="lowercat">
+		<span>Dashboard</span><br>
+		<a href="https://kcc.guru/claimkcs.html">Claim KCS Earnings</a><br>
+		<a href="https://kcc.guru/markets.html">Market Statistics</a><br>
+		<a href="https://kcc.guru/balancesheet.html">Balance Sheet</a><br>
+		<a href="https://kcc.guru/claimkcs.html">$KUCINO Specs</a>
+	</div>
+	<div align="left" class="lowercat">
+		<span>Chain Tools</span><br>
+		<a href="https://ftm.guru/pair.html">DEX-Explorer</a><br>
+		<a href="https://ftm.guru/fantomscan.html">FantomScan</a><br>
+		<a href="https://kcc.guru/kscan" target="_blank">kscan</a><br>
+		<a href="https://ftm.guru/apelist.html">Ape-List</a><br>
+	</div>
+	<div align="left" class="lowercat">
+		<span>Opera Utilities</span><br>
+		<a href="https://ftm.guru/elite.html">ELITE Analytics</a><br>
+		<a href="https://t.me/FTM1337/12497" target="_blank">GambleBot (Tg)</a><br>
+		<a href="https://ftm.guru/index.html">Elite-Gems Voting</a>
+	</div>
+	<div class="lowercat">
+		<span>Resources</span><br>
+		<a target="_blank" href="docs">Documentation</a><br>
+		<a target="_blank" href="https://ftmscan.com/address/0x74bfb7e94bef5767f5f6ace2d0df73a224adb689">ELITE Timelock</a><br>
+		<a target="_blank" href="mailto:ftm1337@protonmail.com">Official Mail</a>
+	</div>
+	<div class="lowercat">
+		<span>$KUCINO</span><br>
+		<a target="_blank" href="https://kcc.guru/tokenomics">Tokenomics🎰</a><br>
+		<a target="_blank" href="https://swap.kudex.finance/#/swap?outputCurrency=0x4c9fa6297d3413fbbe7ba935e14022d0e5a39dc7">Trade at Kudex</a><br>
+		<a target="_blank" href="https://explorer.kcc.io/token/0x4c9fa6297d3413fbbe7ba935e14022d0e5a39dc7">KCC Explorer</a><br>
+		<a target="_blank" href="https://t.me/kccguru">Chart at Poocoin</a><br>
+		<a target="_blank" href="https://testnet.bscscan.com/address/0x4c9fa6297d3413fbbe7ba935e14022d0e5a39dc7#code">View Source</a>
+	</div>
+	<div class="lowercat">
+		<span>Telegrams</span><br>
+		<a target="_blank" href="https://t.me/ftm1337">FantomOpera#1337</a><br>
+		<a target="_blank" href="https://t.me/ftmguru">Announcements</a><br>
+		<a target="_blank" href="https://t.me/kucino">Kucino Group</a><br>
+		<a target="_blank" href="https://t.me/kccguru">KCC.guru Channel</a><br>
+		<a target="_blank" href="https://t.me/kccguru">FMC New Listings</a><br>
+	</div>
+	<div class="lowercat">
+		<span>Social Media</span><br>
+		<a target="_blank" href="https://medium.com/@ftm1337">Medium Journal</a><br>
+		<a target="_blank" href="https://discord.gg/QpyfMarNrV">Discord Server</a><br>
+		<a target="_blank" href="https://twitter.com/kccGuru">Kucino Twitter</a>
+	</div>
+	<div class="lowercat">
+		<a href="https://ftm.guru/index.html"><b style="font-size:2em"><code>FTM.guru</code></b></a><br>
+		<a href="https://fmc.guru/index.html"><b style="font-size:2em"><code>FMC.guru</code></b></a><br>
+		<a href="https://kcc.guru/index.html"><b style="font-size:2em"><code>KCC.guru</code></b></a>
+	</div>
+	<div class="lowercat">
+	</div>
+</div>
+
+<h5 align="center" id="disclaimer"><b><u>Disclaimer & Notice</u></b><br>
+All information presented here is only for aesthetic uses and posesses no validity to settle any claims. It is also non-exhaustive and prone to error. Advertisements are not endorsements.	 <strike>Currently it does not update automatically.</strike> This dashboard is ultra-real time - It means that the data on this page has zero latency, unlike CMC or CG which have 1-10 minutes old data. FTM.guru and FMC.guru are trying to keep up with the <b>Fantom Fast</b> motto. <i>A much deserved shoutout to all developers on F.O., ftmscan.com and rpc.ftm.tools for their benign Services!</i> All presented numbers are denoted in FTM by default."Most Liquid" coloumn refers to the pair with highest WFTM-Liquidity.<br>We encourage you to report inconsistencies, ask business queries, request listing or start an ad campaign at one of our community channels:<br>
+<b><a href="https://t.me/FTM1337" target="_blank">Telegram</a> or <a href="https://discord.gg/EvyDPxPb" target="_blank">Discord.</a></b><!--
+Our Address: 0x921Ed37f62CBe4d86D38b720EF4a4a44B24a1C5D--></h5>
+</body>
+<script src="web3.min.js">
+</script>
+<script>
+window.addEventListener('load',function()
+{
+	if(window.ethereum&&Number(window.ethereum.chainId==250)){web3 = new Web3(web3.currentProvider);}
+	else{web3 = new Web3("https://rpc.ftm.tools")}
+	mkskl()
+	gd()
+
+}, false);
+function $(_) {return document.getElementById(_);}
+o={}
+cp = [
+  "0x5551a831074685a0A1989E8faECdBC5D2a7ce7Af",
+  "0xE271bC2D5146f296BD2a97561aD956a8c493bF52",
+  "0xe7D6971b2e041D736c7aDdcAf2B9d57D376bE5c7",
+  "0xdD1C2969Bf45049700953F16f3bD930485Eda79C",
+  "0x0710a6547A99e6688AEDFA798bCF030E44f306aC",
+  "0xe33bC14c102AB296c40dc1E356732864FFc2cd3E",
+  "0x4d981FF6B90757c465E942975292A265Ce0A2D35",
+  "0xa1ef54f9CB592497c4e65aC048fC5d71dEE6E7b0",
+  "0xd47BDB5831D6b2594602794d1E76a8274Ed58490",
+  "0x58caB6FA93546e408e59556AEc7754d2b29BE14D",
+  "0x239194E016BA0121513E86A317cb86B63fB0DCDA",
+  "0xbFa8fecDCD1B5844055e68b852766c8E249eb4aE",
+  "0x122B29b8F34232646E5b0c88a52c66251683E08F",
+  "0xF0F5779701b16e289a37043Efd87cDb679bD7E6b",
+  "0xc4fc931d40f66C22A35CA642028145eB8AD20049",
+  "0x5FEDe446FbDf49EeFA4D85458b7A57CE0C35b665",
+  "0x1a7aE5deF06f688c5070fC32984178B001d1E7C8",
+  "0x2668141243eCbFEb1b7556D5F08c11Bd94d9b6db"
+]
+aa=$("maintable").getElementsByTagName("tbody")[0].getElementsByTagName("tr");
+tb=$("maintable").getElementsByTagName("tbody")[0];
+
+async function gd()
+{
+	PC=[];
+	ni=0;
+	for (i=0;i< cp.length;i++)
+	{
+		PC[i] = new web3.eth.Contract(pabi,cp[i]);
+		await PC[i].methods.getReserves().call((e,r)=>{ress.push(r);paint(r,ress.length-1)})
+		//cached
+		//await PC[i].methods.token0().call((e,r)=>{t0.push(r);tdet(r)})
+		//await PC[i].methods.token1().call((e,r)=>{t1.push(r);tdet(r)})
+		console.log("getting",++ni)
+	}
+		console.log("done with",ni)
+}
+allt=[]
+atd={}
+ress=[]
+t0=[]
+t1=[]
+async function tdet(ta)
+{
+	if(allt.indexOf(ta)< 0)
+	{
+		allt.push(ta);
+		TD = new web3.eth.Contract(pabi,ta);
+		atd[ta]={"s":"","d":""}
+		await TD.methods.symbol().call((e,r)=>{atd[ta]["s"]=r})
+		await TD.methods.decimals().call((e,r)=>{atd[ta]["d"]=Number(r)})
+	}
+}
+
+aaa=[{"inputs":[{"internalType":"address","name":"_feeToSetter","type":"address"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"token0","type":"address"},{"indexed":true,"internalType":"address","name":"token1","type":"address"},{"indexed":false,"internalType":"address","name":"pair","type":"address"},{"indexed":false,"internalType":"uint256","name":"","type":"uint256"}],"name":"PairCreated","type":"event"},{"constant":true,"inputs":[],"name":"INIT_CODE_PAIR_HASH","outputs":[{"internalType":"bytes32","name":"","type":"bytes32"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"allPairs","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"allPairsLength","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"tokenA","type":"address"},{"internalType":"address","name":"tokenB","type":"address"}],"name":"createPair","outputs":[{"internalType":"address","name":"pair","type":"address"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"feeTo","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"feeToSetter","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"address","name":"","type":"address"},{"internalType":"address","name":"","type":"address"}],"name":"getPair","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"_feeTo","type":"address"}],"name":"setFeeTo","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"_feeToSetter","type":"address"}],"name":"setFeeToSetter","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}]
+
+function mkskl()
+{
+	for(i=0;i < cp.length; i++)
+	{
+		r = document.createElement("tr");
+		d0 = document.createElement("td"); d0.innerHTML= i+1;
+		d1 = document.createElement("td"); d1.innerHTML= _atd[_t0[i]].s;
+		d2 = document.createElement("td"); d2.innerHTML= _atd[_t1[i]].s;
+		d3 = document.createElement("td"); d3.innerHTML= "?";
+		d4 = document.createElement("td"); d4.innerHTML= "?";
+		d5 = document.createElement("td"); d5.innerHTML= "?";
+		d6 = document.createElement("td"); d6.innerHTML= "?";
+		d7 = document.createElement("td"); d7.innerHTML= "?";
+		d8 = document.createElement("td"); d8.innerHTML= "?";
+		d9 = document.createElement("td"); d9.innerHTML= "?";
+		d10= document.createElement("td"); d10.innerHTML= "<a>Trade</a> <a>Pool</a> <a>Farm</a>";
+		r.appendChild(d0)
+		r.appendChild(d1)
+		r.appendChild(d2)
+		r.appendChild(d3)
+		r.appendChild(d4)
+		r.appendChild(d5)
+		r.appendChild(d6)
+		r.appendChild(d7)
+		r.appendChild(d8)
+		r.appendChild(d9)
+		r.appendChild(d10)
+		tb.appendChild(r)
+	}
+}
+
+
+function paint(d,n)
+{
+	r0=d[0]/10**_atd[_t0[n]].d
+	r1=d[1]/10**_atd[_t1[n]].d
+	tb.getElementsByTagName("tr")[n].getElementsByTagName("td")[3].innerHTML=(r1/r0).toFixed(8);
+	tb.getElementsByTagName("tr")[n].getElementsByTagName("td")[4].innerHTML=(r0/r1).toFixed(8);
+	tb.getElementsByTagName("tr")[n].getElementsByTagName("td")[5].innerHTML=(r0).toFixed(8);
+	tb.getElementsByTagName("tr")[n].getElementsByTagName("td")[6].innerHTML=(r1).toFixed(8);
+}
+pabi=[{"inputs":[],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"spender","type":"address"},{"indexed":false,"internalType":"uint256","name":"value","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"sender","type":"address"},{"indexed":false,"internalType":"uint256","name":"amount0","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"amount1","type":"uint256"},{"indexed":true,"internalType":"address","name":"to","type":"address"}],"name":"Burn","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"sender","type":"address"},{"indexed":false,"internalType":"uint256","name":"amount0","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"amount1","type":"uint256"}],"name":"Mint","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"sender","type":"address"},{"indexed":false,"internalType":"uint256","name":"amount0In","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"amount1In","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"amount0Out","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"amount1Out","type":"uint256"},{"indexed":true,"internalType":"address","name":"to","type":"address"}],"name":"Swap","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint112","name":"reserve0","type":"uint112"},{"indexed":false,"internalType":"uint112","name":"reserve1","type":"uint112"}],"name":"Sync","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":false,"internalType":"uint256","name":"value","type":"uint256"}],"name":"Transfer","type":"event"},{"inputs":[],"name":"DOMAIN_SEPARATOR","outputs":[{"internalType":"bytes32","name":"","type":"bytes32"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"MINIMUM_LIQUIDITY","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"PERMIT_TYPEHASH","outputs":[{"internalType":"bytes32","name":"","type":"bytes32"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"},{"internalType":"address","name":"","type":"address"}],"name":"allowance","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"value","type":"uint256"}],"name":"approve","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"to","type":"address"}],"name":"burn","outputs":[{"internalType":"uint256","name":"amount0","type":"uint256"},{"internalType":"uint256","name":"amount1","type":"uint256"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"decimals","outputs":[{"internalType":"uint8","name":"","type":"uint8"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"factory","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"getReserves","outputs":[{"internalType":"uint112","name":"_reserve0","type":"uint112"},{"internalType":"uint112","name":"_reserve1","type":"uint112"},{"internalType":"uint32","name":"_blockTimestampLast","type":"uint32"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_token0","type":"address"},{"internalType":"address","name":"_token1","type":"address"}],"name":"initialize","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"kLast","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"to","type":"address"}],"name":"mint","outputs":[{"internalType":"uint256","name":"liquidity","type":"uint256"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"nonces","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"value","type":"uint256"},{"internalType":"uint256","name":"deadline","type":"uint256"},{"internalType":"uint8","name":"v","type":"uint8"},{"internalType":"bytes32","name":"r","type":"bytes32"},{"internalType":"bytes32","name":"s","type":"bytes32"}],"name":"permit","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"price0CumulativeLast","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"price1CumulativeLast","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"to","type":"address"}],"name":"skim","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"amount0Out","type":"uint256"},{"internalType":"uint256","name":"amount1Out","type":"uint256"},{"internalType":"address","name":"to","type":"address"},{"internalType":"bytes","name":"data","type":"bytes"}],"name":"swap","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"sync","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"token0","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"token1","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"value","type":"uint256"}],"name":"transfer","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"value","type":"uint256"}],"name":"transferFrom","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"}];
+
+ab1=[
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "decimals",
+		"outputs": [
+			{
+				"internalType": "uint8",
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getReserves",
+		"outputs": [
+			{
+				"internalType": "uint112",
+				"name": "_reserve0",
+				"type": "uint112"
+			},
+			{
+				"internalType": "uint112",
+				"name": "_reserve1",
+				"type": "uint112"
+			},
+			{
+				"internalType": "uint32",
+				"name": "_blockTimestampLast",
+				"type": "uint32"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "balanceOf",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "totalSupply",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}]
+
+function fornum(n,d)
+{
+	_n=(Number(n)/10**Number(d));
+	n_=_n;
+	if(_n>1e18){n_=(_n/1e18).toFixed(2)+" QN"}
+	else if(_n>1e15){n_=(_n/1e15).toFixed(2)+" QD"}
+	else if(_n>1e12){n_=(_n/1e12).toFixed(2)+" TN"}
+	else if(_n>1e9){n_=(_n/1e9).toFixed(2)+" BN"}
+	else if(_n>1e6){n_=(_n/1e6).toFixed(2)+" MN"}
+	else if(_n>1e3){n_=(_n/1e3).toFixed(2)+" TH"}
+	else if(_n>1){n_=(_n/1e1).toFixed(2)+""}
+	return(n_);
+}
+
+function sortit(n) {
+  var t, r, z, i, x, y, v, b, c = 0;
+  t = document.getElementById("maintable");
+  z = true;
+  b = "a";
+  while (z) {
+    z = false;
+    r = t.rows;
+    for (i = 2; i < (r.length - 1); i++) {
+      v = false;
+      x = (r[i].getElementsByTagName("TD")[n].innerHTML).replace(/,| |\.|\$|%/g,'');
+      if(isFinite(x)){x=Number(x)}else{x=x.toLowerCase()}
+      y = (r[i + 1].getElementsByTagName("TD")[n].innerHTML).replace(/,| |\.|\$|%/g,'');
+      if(isFinite(y)){y=Number(y)}else{y=y.toLowerCase()}
+      if (b == "a") {
+        if ((x) > (y)) {
+          v= true;
+          break;
+        }
+      } else if (b == "d") {
+        if ((x) < (y)) {
+          v = true;
+          break;
+        }
+      }
+    }
+    if (v) {
+      r[i].parentNode.insertBefore(r[i + 1], r[i]);
+      z = true;
+      c ++;
+    } else {
+      if (c == 0 && b == "a") {
+        b = "d";
+        z = true;
+      }
+    }
+  }
+}
+
+function chopsca()
+{
+	rs=$("maintable").getElementsByTagName("tbody")[0].getElementsByTagName("tr");
+	for(i=0;i< rs.length;i++)
+	{
+		sc=rs[i].getElementsByTagName("td")[8].getElementsByTagName("pre")[0];
+		sc.setAttribute("onClick","copsc(this)");
+		sc.innerHTML=(sc.innerHTML).substr(0,6)+"…"+(sc.innerHTML).substr(38);
+		sc.style.cursor="copy";
+	}
+}
+function copsc(el)
+{
+	var inp =document.createElement('input');
+	document.body.appendChild(inp)
+	inp.value =el.parentElement.parentElement.id.substr(3)
+	inp.select();
+	document.execCommand('copy',false);
+	inp.remove();
+}
+var adi=1;
+function advertise()
+{
+	var x = setInterval(function(){ads()},10000);
+}
+function ads()
+{
+	if(adi==2)
+	{
+		$("spadi").src="img/ad-0001.png";
+		$("spada").href="https://shibafantom.com";
+		adi=1;
+	}
+	else
+	{
+		$("spadi").src="img/ad-0002.gif";
+		$("spada").href="https://spoon.finance";
+		adi=2;
+	}
+	console.log(Date.now())
+}
+
+
+
+
+
+_allt=[
+  "0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83",
+  "0x68F7880F7af43a81bEf25E2aE83802Eb6c2DdBFD",
+  "0xAd84341756Bf337f5a0164515b1f6F993D194E1f",
+  "0x04068DA6C83AFCFA0e13ba15A6696662335D5B75",
+  "0x74b23882a30290451A17c44f4F05243b6b58C76d",
+  "0xb3654dc3D10Ea7645f8319668E8F54d2574FBdC8",
+  "0x1E4F97b9f9F913c46F1632781732927B9019C68b",
+  "0x8D11eC38a3EB5E956B052f67Da8Bdc9bef8Abf3E",
+  "0x321162Cd933E2Be498Cd2267a90534A804051b11",
+  "0xf16e81dce15B08F326220742020379B855B87DF9",
+  "0x9fC071cE771c7B27b7d9A57C32c0a84c18200F8a",
+  "0x46E7628E8b4350b2716ab470eE0bA1fa9e76c6C5",
+  "0xf43Cc235E686d7BC513F53Fbffb61F760c3a1882"
+]
+
+_t0=[
+  "0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83",
+  "0x68F7880F7af43a81bEf25E2aE83802Eb6c2DdBFD",
+  "0x04068DA6C83AFCFA0e13ba15A6696662335D5B75",
+  "0x68F7880F7af43a81bEf25E2aE83802Eb6c2DdBFD",
+  "0x68F7880F7af43a81bEf25E2aE83802Eb6c2DdBFD",
+  "0x1E4F97b9f9F913c46F1632781732927B9019C68b",
+  "0x04068DA6C83AFCFA0e13ba15A6696662335D5B75",
+  "0x74b23882a30290451A17c44f4F05243b6b58C76d",
+  "0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83",
+  "0x321162Cd933E2Be498Cd2267a90534A804051b11",
+  "0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83",
+  "0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83",
+  "0x68F7880F7af43a81bEf25E2aE83802Eb6c2DdBFD",
+  "0x68F7880F7af43a81bEf25E2aE83802Eb6c2DdBFD",
+  "0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83",
+  "0x46E7628E8b4350b2716ab470eE0bA1fa9e76c6C5",
+  "0x68F7880F7af43a81bEf25E2aE83802Eb6c2DdBFD",
+  "0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83"
+]
+
+_t1=[
+  "0x68F7880F7af43a81bEf25E2aE83802Eb6c2DdBFD",
+  "0xAd84341756Bf337f5a0164515b1f6F993D194E1f",
+  "0x68F7880F7af43a81bEf25E2aE83802Eb6c2DdBFD",
+  "0x74b23882a30290451A17c44f4F05243b6b58C76d",
+  "0xb3654dc3D10Ea7645f8319668E8F54d2574FBdC8",
+  "0x68F7880F7af43a81bEf25E2aE83802Eb6c2DdBFD",
+  "0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83",
+  "0x8D11eC38a3EB5E956B052f67Da8Bdc9bef8Abf3E",
+  "0x74b23882a30290451A17c44f4F05243b6b58C76d",
+  "0x74b23882a30290451A17c44f4F05243b6b58C76d",
+  "0xAd84341756Bf337f5a0164515b1f6F993D194E1f",
+  "0x321162Cd933E2Be498Cd2267a90534A804051b11",
+  "0xf16e81dce15B08F326220742020379B855B87DF9",
+  "0x9fC071cE771c7B27b7d9A57C32c0a84c18200F8a",
+  "0x46E7628E8b4350b2716ab470eE0bA1fa9e76c6C5",
+  "0x68F7880F7af43a81bEf25E2aE83802Eb6c2DdBFD",
+  "0x8D11eC38a3EB5E956B052f67Da8Bdc9bef8Abf3E",
+  "0xf43Cc235E686d7BC513F53Fbffb61F760c3a1882"
+]
+
+_atd={
+  "0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83": {
+    "s": "WFTM",
+    "d": 18
+  },
+  "0x68F7880F7af43a81bEf25E2aE83802Eb6c2DdBFD": {
+    "s": "HTZ",
+    "d": 18
+  },
+  "0xAd84341756Bf337f5a0164515b1f6F993D194E1f": {
+    "s": "FUSD",
+    "d": 18
+  },
+  "0x04068DA6C83AFCFA0e13ba15A6696662335D5B75": {
+    "s": "USDC",
+    "d": 6
+  },
+  "0x74b23882a30290451A17c44f4F05243b6b58C76d": {
+    "s": "ETH",
+    "d": 18
+  },
+  "0xb3654dc3D10Ea7645f8319668E8F54d2574FBdC8": {
+    "s": "LINK",
+    "d": 18
+  },
+  "0x1E4F97b9f9F913c46F1632781732927B9019C68b": {
+    "s": "CRV",
+    "d": 18
+  },
+  "0x8D11eC38a3EB5E956B052f67Da8Bdc9bef8Abf3E": {
+    "s": "DAI",
+    "d": 18
+  },
+  "0x321162Cd933E2Be498Cd2267a90534A804051b11": {
+    "s": "BTC",
+    "d": 8
+  },
+  "0xf16e81dce15B08F326220742020379B855B87DF9": {
+    "s": "ICE",
+    "d": 18
+  },
+  "0x9fC071cE771c7B27b7d9A57C32c0a84c18200F8a": {
+    "s": "iFUSD",
+    "d": 18
+  },
+  "0x46E7628E8b4350b2716ab470eE0bA1fa9e76c6C5": {
+    "s": "BAND",
+    "d": 18
+  },
+  "0xf43Cc235E686d7BC513F53Fbffb61F760c3a1882": {
+    "s": "ELITE",
+    "d": 18
+  }
+}
+
+_ress=[
+  {
+    "0": "67660435830287311084538",
+    "1": "784614605144968972711172",
+    "2": "1629016296",
+    "_reserve0": "67660435830287311084538",
+    "_reserve1": "784614605144968972711172",
+    "_blockTimestampLast": "1629016296"
+  },
+  {
+    "0": "1",
+    "1": "406480490591136",
+    "2": "1628021991",
+    "_reserve0": "1",
+    "_reserve1": "406480490591136",
+    "_blockTimestampLast": "1628021991"
+  },
+  {
+    "0": "701720083",
+    "1": "25056151559240708801290",
+    "2": "1629014046",
+    "_reserve0": "701720083",
+    "_reserve1": "25056151559240708801290",
+    "_blockTimestampLast": "1629014046"
+  },
+  {
+    "0": "30256714855902594577269",
+    "1": "266255830050711551",
+    "2": "1629012982",
+    "_reserve0": "30256714855902594577269",
+    "_reserve1": "266255830050711551",
+    "_blockTimestampLast": "1629012982"
+  },
+  {
+    "0": "13010182481169939710808",
+    "1": "13918043625584455858",
+    "2": "1629011025",
+    "_reserve0": "13010182481169939710808",
+    "_reserve1": "13918043625584455858",
+    "_blockTimestampLast": "1629011025"
+  },
+  {
+    "0": "150163909811724614033",
+    "1": "11420301627231971507202",
+    "2": "1629016296",
+    "_reserve0": "150163909811724614033",
+    "_reserve1": "11420301627231971507202",
+    "_blockTimestampLast": "1629016296"
+  },
+  {
+    "0": "3160",
+    "1": "9840582612808611",
+    "2": "1628712768",
+    "_reserve0": "3160",
+    "_reserve1": "9840582612808611",
+    "_blockTimestampLast": "1628712768"
+  },
+  {
+    "0": "23",
+    "1": "45258",
+    "2": "1627033272",
+    "_reserve0": "23",
+    "_reserve1": "45258",
+    "_blockTimestampLast": "1627033272"
+  },
+  {
+    "0": "4183930206429731958063",
+    "1": "425813023452853507",
+    "2": "1629011404",
+    "_reserve0": "4183930206429731958063",
+    "_reserve1": "425813023452853507",
+    "_blockTimestampLast": "1629011404"
+  },
+  {
+    "0": "6694154",
+    "1": "966615318457698930",
+    "2": "1629001190",
+    "_reserve0": "6694154",
+    "_reserve1": "966615318457698930",
+    "_blockTimestampLast": "1629001190"
+  },
+  {
+    "0": "2948097278919733133976",
+    "1": "1795416909126421144151",
+    "2": "1629000977",
+    "_reserve0": "2948097278919733133976",
+    "_reserve1": "1795416909126421144151",
+    "_blockTimestampLast": "1629000977"
+  },
+  {
+    "0": "3599029552012045234381",
+    "1": "2552725",
+    "2": "1629000872",
+    "_reserve0": "3599029552012045234381",
+    "_reserve1": "2552725",
+    "_blockTimestampLast": "1629000872"
+  },
+  {
+    "0": "5452394023445146391468",
+    "1": "122102553782819019533",
+    "2": "1629016296",
+    "_reserve0": "5452394023445146391468",
+    "_reserve1": "122102553782819019533",
+    "_blockTimestampLast": "1629016296"
+  },
+  {
+    "0": "25154170477472892592459",
+    "1": "1288038374446536724770",
+    "2": "1629013692",
+    "_reserve0": "25154170477472892592459",
+    "_reserve1": "1288038374446536724770",
+    "_blockTimestampLast": "1629013692"
+  },
+  {
+    "0": "5185",
+    "1": "193",
+    "2": "1628083312",
+    "_reserve0": "5185",
+    "_reserve1": "193",
+    "_blockTimestampLast": "1628083312"
+  },
+  {
+    "0": "46274990674831054383",
+    "1": "13082914191848417413189",
+    "2": "1629012980",
+    "_reserve0": "46274990674831054383",
+    "_reserve1": "13082914191848417413189",
+    "_blockTimestampLast": "1629012980"
+  },
+  {
+    "0": "1873294996624176859",
+    "1": "53508505651275352",
+    "2": "1628704048",
+    "_reserve0": "1873294996624176859",
+    "_reserve1": "53508505651275352",
+    "_blockTimestampLast": "1628704048"
+  },
+  {
+    "0": "200000000000000000000",
+    "1": "314734970000000000",
+    "2": "1629011830",
+    "_reserve0": "200000000000000000000",
+    "_reserve1": "314734970000000000",
+    "_blockTimestampLast": "1629011830"
+  }
+]
+
+</script><!--
+<script defer type="text/javascript" async="true">
+var sc_project=12548358;
+var sc_invisible=0;
+var sc_security="da086e3e";
+var sc_remove_link=1;
+var scJsHost = "https://";
+document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>-->
+</html>
