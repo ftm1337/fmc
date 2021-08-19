@@ -19,6 +19,7 @@ tr:hover{background: aqua;color:#020611;}
 thead tr:hover{background: aqua;color:#020611}
 pre{margin:0}
 a{color:white;text-decoration-line:none}
+hr{box-shadow: rgba(0,255,255,0.2) 0px 0px 10px 10px;background: #090919;border-radius: 15px;border:aqua 2px solid;}
 table{border-collapse:collapse;overflow:hidden}
 tr{line-height:1.2em}
 h5 a{color: aqua}
@@ -35,7 +36,15 @@ tr td:nth-child(9):hover{font-weight: bolder;text-decoration: 3px blue wavy unde
 .statcounter{font-size: 0}
 #spadfi{width:100%}
 #maintable{width:max-content}
-@media(min-width:641px){#spadi{width:80%}}
+.lowercat {text-align: left;padding:10px}
+.lowercat a{text-decoration-line: none}
+.lowercat span{font-size: 1.25em; font-weight:bold}
+.lowerbar{display: grid;grid-template-columns: auto;text-align:center}
+@media(min-width:641px){
+	#spadi{width:80%}
+	.lowerbar{display: grid;grid-template-columns: auto auto auto auto;text-align:center}
+	.hhr{width: 555px}
+}
 </style>
 </head>
 <body>
@@ -64,6 +73,7 @@ Browse tokens by Category and Sort using metrics such as price, supply or market
 	<div onclick="togfil(this.innerHTML)">DAO</div>
 	<div onclick="togfil(this.innerHTML)">DEX</div>
 	<div onclick="togfil(this.innerHTML)">Farming</div>
+	<div onclick="togfil(this.innerHTML)">Gambling</div>
 	<div onclick="togfil(this.innerHTML)">Launchpad</div>
 	<div onclick="togfil(this.innerHTML)">Lending</div>
 	<div onclick="togfil(this.innerHTML)">Natives</div>
@@ -101,7 +111,7 @@ Browse tokens by Category and Sort using metrics such as price, supply or market
 			</tr>
 		</thead>
 		<tbody>
-			<tr class="sca farming yields natives tools" id="tr_0xf43Cc235E686d7BC513F53Fbffb61F760c3a1882">
+			<tr class="sca farming gambling natives staking yields tools" id="tr_0xf43Cc235E686d7BC513F53Fbffb61F760c3a1882">
 				<td>★</td>
 				<td>ELITE</td>
 				<td>ftm.guru</td>
@@ -204,6 +214,32 @@ Browse tokens by Category and Sort using metrics such as price, supply or market
 				<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
 				<td>AMM DEX Farming Natives Staking</td>
 			</tr>
+			<tr class="new sca amm dex farming natives staking" id="tr_0xbf4906762C38F50bC7Be0A11BB452C944f6C72E1">
+				<td>⁕</td>
+				<td>SHRAP</td>
+				<td>Shrapnel</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td><span><a href="https://fbomb.finance" target="_blank">🌐</a><a href="" target="_blank">🎮</a><a href="https://t.me/operafbomb" target="_blank">✈</a><a href="" target="_blank">🐦</a><a href="" target="_blank">🐙</a></span></td>
+				<td><pre>0xbf4906762C38F50bC7Be0A11BB452C944f6C72E1</pre></td>
+				<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+				<td>AMM DEX Natives Staking Farming</td>
+			</tr>
+			<tr class="new sca amm dex farming memes natives staking" id="tr_0x9Ba3e4F84a34DF4e08C112e1a0FF148b81655615">
+				<td>⁕</td>
+				<td>Shiba</td>
+				<td>Shiba</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td><span><a href="https://shibafantom.finance" target="_blank">🌐</a><a href="" target="_blank">🎮</a><a href="https://t.me/shibafantom" target="_blank">✈</a><a href="https://twitter.com/shibafantom" target="_blank">🐦</a><a href="" target="_blank">🐙</a></span></td>
+				<td><pre>0x9Ba3e4F84a34DF4e08C112e1a0FF148b81655615</pre></td>
+				<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+				<td>AMM DEX Natives Farming</td>
+			</tr>
 			<tr class="new sca launchpad staking" id="tr_0x34d33dc8ac6f1650d94a7e9a972b47044217600b">
 				<td>⁕</td>
 				<td>SMART</td>
@@ -217,7 +253,7 @@ Browse tokens by Category and Sort using metrics such as price, supply or market
 				<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
 				<td>Launchpad Staking</td>
 			</tr>
-			<tr class="sca amm dex farming natives staking" id="tr_0x85dec8c4b2680793661bca91a8f129607571863d">
+			<tr class="new sca amm dex farming natives staking" id="tr_0x85dec8c4b2680793661bca91a8f129607571863d">
 				<td>⁕</td>
 				<td>BRUSH</td>
 				<td>PaintSwap</td>
@@ -320,6 +356,19 @@ Browse tokens by Category and Sort using metrics such as price, supply or market
 				<td><pre>0xe1c8f3d529bea8e3fa1fac5b416335a2f998ee1c</pre></td>
 				<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
 				<td>AMM DEX Natives Farming</td>
+			</tr>
+			<tr class="new sca amm dex farming gambling natives staking" id="tr_0x8503eb4A136bDBeB323E37Aa6e0FA0C772228378">
+				<td>⁕</td>
+				<td>BOMB</td>
+				<td>Bomb</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td>?</td>
+				<td><span><a href="https://fbomb.finance" target="_blank">🌐</a><a href="" target="_blank">🎮</a><a href="https://t.me/operafbomb" target="_blank">✈</a><a href="" target="_blank">🐦</a><a href="" target="_blank">🐙</a></span></td>
+				<td><pre>0x8503eb4A136bDBeB323E37Aa6e0FA0C772228378</pre></td>
+				<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+				<td>AMM DEX Farming Gambling Natives Staking</td>
 			</tr>
 			<tr class="sca borrowing farming natives stablecoins yields" id="tr_0x41e3df7f716ab5af28c1497b354d79342923196a">
 				<td>⁕</td>
@@ -643,7 +692,8 @@ Browse tokens by Category and Sort using metrics such as price, supply or market
 <div align="center" style="margin:0;padding:0"><u>Legend:</u>*Bridged ⁕Native ★Featured 🌐Website 🎮Discord ✈Telegram 🐦Twitter 🐙Github 🔎Explorer 😼SpookySwap 👻SpiritSwap 🍣SushiSwap 🛩HyperJump 🎨PaintSwap 🦎ZooDEX <span class="wakka">👾</span>Waka 🦌Elk</div>
 
 <br>
-<div align="center" id="spadd" style="display:none"><font id="spadf" size="2">(Sponsored Ad)</font><br>
+<div align="center" id="spadd" style="display:"><font id="spadf" size="2">(Sponsored Ad)</font><br>
+<i><a href="https://t.me/FTM1337">Please Telegram us for queries.</a></i>
 <a id="spada" href="" target="_blank">
 <img id="spadi" src="" width="80%"><br>
 </a>
@@ -652,8 +702,95 @@ Browse tokens by Category and Sort using metrics such as price, supply or market
 
 <h5 align="center" id="disclaimer"><b><u>Disclaimer & Notice</u></b><br>
 All information presented here is only for aesthetic uses and posesses no validity to settle any claims. It is also non-exhaustive and prone to error. Advertisements are not endorsements.	 <strike>Currently it does not update automatically.</strike> This dashboard is ultra-real time - It means that the data on this page has zero latency, unlike CMC or CG which have 1-10 minutes old data. FTM.guru and FMC.guru are trying to keep up with the <b>Fantom Fast</b> motto. <i>A much deserved shoutout to all developers on F.O., ftmscan.com and rpc.ftm.tools for their benign Services!</i> All presented numbers are denoted in FTM by default."Most Liquid" coloumn refers to the pair with highest WFTM-Liquidity.<br>We encourage you to report inconsistencies, ask business queries, request listing or start an ad campaign at one of our community channels:<br>
-<b><a href="https://t.me/FTM1337" target="_blank">Telegram</a> or <a href="https://discord.gg/EvyDPxPb" target="_blank">Discord.</a></b><!--
+<b><a href="https://t.me/FTM1337" target="_blank">Telegram</a> or <a href="https://discord.gg/QpyfMarNrV" target="_blank">Discord.</a></b><!--
 Our Address: 0x921Ed37f62CBe4d86D38b720EF4a4a44B24a1C5D--></h5>
+<br><br>
+<hr class="hhr">
+<br><br>
+<div class="lowerbar" align="center">
+	<div align="left" class="lowercat">
+		<span>Ecosystem</span><br>
+		<a href="https://fmc.guru" target="_blank">FantomMarketCap</a><br>
+		<a href="https://ftm.guru" target="_blank">FTM1337</a><br>
+		<a href="https://kcc.guru" target="_blank">Kucino Casino</a><br>
+	</div>
+	<div align="left" class="lowercat">
+		<span>Farming</span><br>
+		<a href="https://ftm.guru/yieldstate.html">🔱 YieldState</a><br>
+		<a href="https://ftm.guru/LF">👽 LITE Farmlands</a><br>
+		<a href="https://vfat.tools/fantom/guru">🧑‍🌾 vfat.tools</a>
+	</div>
+	<div class="lowercat">
+		<span><a href="https://kcc.guru/casino.html">Casino & Games</a></span><br>
+		<a href="https://kcc.guru/jackpot_1.html">2-player Jackpot</a><br>
+		<a href="https://kcc.guru/instalotto.html">instaLOTTO</a><br>
+		<a href="https://kcc.guru/21hrlotto.html">🎟 21-hour LOTTO</a>
+	</div>
+	<div class="lowercat">
+		<span><a href="https://kcc.guru/dashboard.html">Dashboard</a></span><br>
+		<a href="https://kcc.guru/claimkcs.html">Claim KCS Earnings</a><br>
+		<a href="https://kcc.guru/markets.html">Market Statistics</a><br>
+		<a href="https://kcc.guru/balancesheet.html">Balance Sheet</a><br>
+	</div>
+	<div align="left" class="lowercat">
+		<span>Our Dapps</span><br>
+		<a href="https://ftm.guru/degam.html">✨ FTM CASINO</a><br>
+		<a href="https://ftm.guru/degam.html">🎰 KCS Kucino</a><br>
+		<a href="https://ftm.guru/approver.html">✅ Approver</a><br>
+		<a href="https://ftm.guru/airdrop.html">Airdrop-Tool</a><br>
+	</div>
+	<div align="left" class="lowercat">
+		<span>Chain Tools</span><br>
+		<a href="https://ftm.guru/pair.html">DEX-Explorer</a><br>
+		<a href="https://ftm.guru/fantomscan.html">🔍 FantomScan</a><br>
+		<a href="https://kcc.guru/kscan" target="_blank">🔎 kscan</a><br>
+		<a href="https://ftm.guru/apelist.html">Ape-List</a><br>
+	</div>
+	<div align="left" class="lowercat">
+		<span>Opera Utilities</span><br>
+		<a href="https://ftm.guru/elite.html">ELITE Analytics</a><br>
+		<a href="https://t.me/FTM1337/12497" target="_blank">🤖 GambleBot Telegram</a><br>
+		<a href="https://ftm.guru/index.html">🗳 Elite-Gems Voting</a>
+	</div>
+	<div class="lowercat">
+		<span>$KUCINO</span><br>
+		<a target="_blank" href="https://swap.kudex.finance/#/swap?outputCurrency=0x4c9fa6297d3413fbbe7ba935e14022d0e5a39dc7">Trade at Kudex</a><br>
+		<a target="_blank" href="https://explorer.kcc.io/token/0x4c9fa6297d3413fbbe7ba935e14022d0e5a39dc7">KCC Explorer</a><br>
+		<a target="_blank" href="https://t.me/kccguru">Chart at Poocoin</a><br>
+		<a target="_blank" href="https://testnet.bscscan.com/address/0x4c9fa6297d3413fbbe7ba935e14022d0e5a39dc7#code">View Source</a>
+	</div>
+	<div class="lowercat">
+		<span>Resources</span><br>
+		<a target="_blank" href="https://kcc.guru/roadmap">Kucino Roadmap</a><br>
+		<a target="_blank" href="https://kcc.guru/roadmap">KUCINO Tokenimcs</a><br>
+		<a target="_blank" href="https://ftmscan.com/address/0x74bfb7e94bef5767f5f6ace2d0df73a224adb689">385 ELITE ETL</a><br>
+		<a target="_blank" href="https://kudex.finance/locker">KCS Liquidity Lock</a><br>
+		<a target="_blank" href="https://kudex.finance/locker">70% KUCINO ETL</a><br>
+		<a target="_blank" href="docs">📚 Documentation</a><br>
+	</div>
+	<div class="lowercat">
+		<span>Telegrams</span><br>
+		<a target="_blank" href="https://t.me/ftm1337">FantomOpera#1337</a><br>
+		<a target="_blank" href="https://t.me/ftmguru">Announcements</a><br>
+		<a target="_blank" href="https://t.me/kucino">Kucino Group</a><br>
+		<a target="_blank" href="https://t.me/kccguru">KCC.guru Channel</a><br>
+		<a target="_blank" href="https://t.me/kccguru">FMC New Listings</a><br>
+	</div>
+	<div class="lowercat">
+		<span>Social & Media</span><br>
+		<a target="_blank" href="https://medium.com/@ftm1337">Medium Journal</a><br>
+		<a target="_blank" href="https://discord.gg/QpyfMarNrV">Discord Server</a><br>
+		<a target="_blank" href="https://twitter.com/kccGuru">Kucino Twitter</a><br>
+		<a target="_blank" href="mailto:ftm1337@protonmail.com">Official Mail</a><br>
+	</div>
+	<div class="lowercat">
+		<a href="https://ftm.guru/index.html"><b style="font-size:2em"><code>FTM.guru</code></b></a><br>
+		<a href="https://fmc.guru/index.html"><b style="font-size:2em"><code>FMC.guru</code></b></a><br>
+		<a href="https://kcc.guru/index.html"><b style="font-size:2em"><code>KCC.guru</code></b></a>
+	</div>
+	<div class="lowercat">
+	</div>
+</div>
 </body>
 <script src="web3.min.js">
 </script>
@@ -727,16 +864,18 @@ tokes=[
   "0x10b620b2dbac4faa7d7ffd71da486f5d44cd86f9",  //LQDR
   "0xf6129f6705b826dbafaa26e03aad9dd20b9235c6",  //ICE
   "0xeb86b05cfee3e48db9a44275701ed099462c8ba0",  //FRANK
-  "0x85dec8c4b2680793661bca91a8f129607571863d",	//BRUSH
-  "0x0f7adb77b6334b9b5a3c4f78aaa073ea1d915bf6",	//AQU
-  "0x41e3df7f716ab5af28c1497b354d79342923196a",	//aUSD
-  "0xf61ccde1d4bb76ced1daa9d4c429cca83022b08b",	//WAKA
-  "0xe1c8f3d529bea8e3fa1fac5b416335a2f998ee1c",	//ELK
-  "0xed940c1db02a8e7dc2e6748aff3aab165b59c7e3",	//OPERA
-  "0x4cdf39285d7ca8eb3f090fda0c069ba5f4145b37",	//TSHARE
-  "0x6c021ae822bea943b2e66552bde1d2696a53fbb7",	//TOMB
+  "0x85dec8c4b2680793661bca91a8f129607571863d",  //BRUSH
+  "0x0f7adb77b6334b9b5a3c4f78aaa073ea1d915bf6",  //AQU
+  "0x41e3df7f716ab5af28c1497b354d79342923196a",  //aUSD
+  "0xf61ccde1d4bb76ced1daa9d4c429cca83022b08b",  //WAKA
+  "0xe1c8f3d529bea8e3fa1fac5b416335a2f998ee1c",  //ELK
+  "0xed940c1db02a8e7dc2e6748aff3aab165b59c7e3",  //OPERA
+  "0x4cdf39285d7ca8eb3f090fda0c069ba5f4145b37",  //TSHARE
+  "0x6c021ae822bea943b2e66552bde1d2696a53fbb7",  //TOMB
   "0x34d33dc8ac6f1650d94a7e9a972b47044217600b",  //SMART
-
+  "0x8503eb4A136bDBeB323E37Aa6e0FA0C772228378",  //BOMB
+  "0xbf4906762C38F50bC7Be0A11BB452C944f6C72E1",  //SHRAP
+  "0x9Ba3e4F84a34DF4e08C112e1a0FF148b81655615",  //SHIBA
 
 ]
 /*
@@ -828,6 +967,27 @@ for(i=2;i< 31;i++){st+=(
 	})
 	`
 )}*/
+
+
+/*
+
+dexid=
+[
+	{1:"Spooky"},
+	{2:"Spirit"},
+	{3:"Sushi"},
+	{4:"Hyper"},
+	{5:"Paint"},
+	{6:"Zoo"},
+	{7:"Waka"},
+	{8:"Elk"},
+	{9:"Opera"},
+	{10:"Bomb"},
+	{11:"Shiba"},
+]
+
+*/
+
 pairs=[
   "0x50576ed9d94cf934bc32abf76e08ec6ddcd54bf0",  //ELITE
   "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83",  //WFTM
@@ -867,7 +1027,10 @@ pairs=[
   "0x31c782f4f7bdabc2f1ac02da1782ea6107c4cfcf",	 //OPERA 9
   "0x4733bc45ef91cf7ccecaeedb794727075fb209f2",	 //TSHARE 1
   "0x2a651563c9d3af67ae0388a5c8f89b867038089e",	 //TOMB 1
-  "0x2fad3fcfc99b9d25b182b3ed5a8e30ef70ba7da5",  //SMART	2
+  "0x2fad3fcfc99b9d25b182b3ed5a8e30ef70ba7da5",  //SMART 1
+  "0x8264f247E4571e2879A05D5d2115C26406c0bC2b",  //BOMB 10
+  "0xE69b45BE6260634de4e432F66179ce47EE846800",  //SHRAP 10
+  "0xD7199dc9F406444808930F72701E8ed9F18c4767",  //SHIBA 11
 
 ]
 function brr()
@@ -1390,6 +1553,54 @@ function brr()
         	})
     	})
 	})
+
+	AC39=new web3.eth.Contract(ab1,tokes[39]);
+	AC39.methods.decimals().call((e,r1)=>
+	{
+    	AC39.methods.totalSupply().call((e,r2)=>
+    	{
+			AC39R=new web3.eth.Contract(ab1,pairs[39])
+        	AC39R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(39,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC40=new web3.eth.Contract(ab1,tokes[40]);
+	AC40.methods.decimals().call((e,r1)=>
+	{
+    	AC40.methods.totalSupply().call((e,r2)=>
+    	{
+			AC40R=new web3.eth.Contract(ab1,pairs[40])
+        	AC40R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(40,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC41=new web3.eth.Contract(ab1,tokes[41]);
+	AC41.methods.decimals().call((e,r1)=>
+	{
+    	AC41.methods.totalSupply().call((e,r2)=>
+    	{
+			AC41R=new web3.eth.Contract(ab1,pairs[41])
+        	AC41R.methods.getReserves().call((e,r3)=>
+        	{
+            	AC41.methods.balanceOf("0x000000000000000000000000000000000000dEaD").call((e,r2cse1)=>
+            	{
+            		AC41.methods.balanceOf("0x8e02CbB65C929778E88020Afe44ae7454154f484").call((e,r2cse2)=>
+            		{
+            			painter(41,r1,Number(r2)-Number(r2cse1)-Number(r2cse2),r3);
+            		})
+            	})
+        	})
+    	})
+	})
+
+
+
 
 }
 
