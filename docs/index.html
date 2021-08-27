@@ -35,16 +35,30 @@ option{cursor:pointer}
 #degmod:hover{border: 4px dotted;cursor: alias ;}
 tr td:nth-child(9):hover{font-weight: bolder;text-decoration: 3px blue wavy underline blink;}
 .statcounter{font-size: 0}
-#spadfi{width:100%}
+#spadi{width:100%}
 #maintable{width:max-content}
 .lowercat {text-align: left;padding:10px}
 .lowercat a{text-decoration-line: none}
 .lowercat span{font-size: 1.25em; font-weight:bold}
 .lowerbar{display: grid;grid-template-columns: auto;text-align:center}
+.pgb{display: grid;grid-template-columns: auto}
+.pgbs{
+	min-width: 200px;
+	margin: auto;
+	background: rgba(0,255,255,0.1);
+	border: 2px double aqua;
+	border-right: none;
+	border-top: none;
+	border-bottom: none;
+	padding: 10px 15px 10px 0px;
+	clip-path: polygon(calc(100% - 40px) 0%, 0 0, 0 100%, 95% 100%, 95% 50%);
+	margin-top:15px
+}
 @media(min-width:641px){
 	#spadi{width:80%}
 	.lowerbar{display: grid;grid-template-columns: auto auto auto auto;text-align:center}
 	.hhr{width: 555px}
+	.pgb{display: grid;grid-template-columns: auto auto auto}
 }
 </style>
 </head>
@@ -693,14 +707,26 @@ Browse tokens by Category and Sort using metrics such as price, supply or market
 <div align="center" style="margin:0;padding:0"><u>Legend:</u>*Bridged ⁕Native ★Featured 🌐Website 🎮Discord ✈Telegram 🐦Twitter 🐙Github 🔎Explorer 😼SpookySwap 👻SpiritSwap 🍣SushiSwap 🛩HyperJump 🎨PaintSwap 🦎ZooDEX <span class="wakka">👾</span>Waka 🦌Elk</div>
 
 <br>
-<div align="center" id="spadd" style="display:"><font id="spadf" size="2">(Sponsored Ad)</font><br>
+<div align="center" id="spadd" style="">
+<font id="spadf" size="2" style="text-align:center">(Sponsored Ad)</font>
+<br>
 <i><a href="https://t.me/FTM1337">Please Telegram us for queries.</a></i>
+<br>
 <a id="spada" href="" target="_blank">
-<img id="spadi" src="" width="80%"><br>
+<img id="spadi" src="" width="80%"></img><br>
 </a>
 </div>
 
+<br>
+<br>
+<div align="center" class="pgb">
+	<div align="center" class="pgbs"><a href="index.html">FantomMarketCap Index</a></div>
+	<div align="center" class="pgbs"><a href="dex.html">List of All DEX on Fantom</a></div>
+	<div align="center" class="pgbs"><a href="xdao.html">CyberSwap Analytics</a></div>
+</div>
 
+<br>
+<br>
 <h5 align="center" id="disclaimer"><b><u>Disclaimer & Notice</u></b><br>
 All information presented here is only for aesthetic uses and posesses no validity to settle any claims. It is also non-exhaustive and prone to error. Advertisements are not endorsements.	 <strike>Currently it does not update automatically.</strike> This dashboard is ultra-real time - It means that the data on this page has zero latency, unlike CMC or CG which have 1-10 minutes old data. FTM.guru and FMC.guru are trying to keep up with the <b>Fantom Fast</b> motto. <i>A much deserved shoutout to all developers on F.O., ftmscan.com and rpc.ftm.tools for their benign Services!</i> All presented numbers are denoted in FTM by default."Most Liquid" coloumn refers to the pair with highest WFTM-Liquidity.<br>We encourage you to report inconsistencies, ask business queries, request listing or start an ad campaign at one of our community channels:<br>
 <b><a href="https://t.me/FTM1337" target="_blank">Telegram</a> or <a href="https://discord.gg/QpyfMarNrV" target="_blank">Discord.</a></b><!--
