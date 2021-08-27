@@ -54,7 +54,6 @@ tr td:nth-child(9):hover{font-weight: bolder;text-decoration: 3px blue wavy unde
 	clip-path: polygon(calc(100% - 40px) 0%, 0 0, 0 100%, 95% 100%, 95% 50%);
 	margin-top:15px
 }
-td:nth-child(3),th:nth-child(3){display: none}
 @media(min-width:641px){
 	#spadi{width:80%}
 	.lowerbar{display: grid;grid-template-columns: auto auto auto auto;text-align:center}
@@ -69,7 +68,7 @@ td:nth-child(3),th:nth-child(3){display: none}
 	<div></div>
 	<div>By <a href="https://ftm.guru">FTM.guru</a></div>
 </div>
-<h1 align="center">FMC.guru<br><span id="tmc">14</span> <span id="tmcunit">DEXes</span></h1>
+<h1 align="center">FMC.guru<br><span id="tmc"></span> <span id="tmcunit"></span></h1>
 <div align="center">
 <h2>List of All Top DEX on Fantom</h2>
 <h4>Discover the best DEXes of Fantom Opera with FantomMarketCap on FMC.guru!</h4>
@@ -81,8 +80,8 @@ td:nth-child(3),th:nth-child(3){display: none}
 		<thead>
 			<tr>
 			<th onclick="sortit(0)">Name⇅</th>
-			<th onclick="sortit(1)">Pairs⇅</th>
-			<th onclick="sortit(2)">Trades⇅</th>
+			<th onclick="sortit(1)">Pools⇅</th>
+			<th onclick="sortit(2)">T.V.L. (USD)</th>
 			<th onclick="sortit(3)">Trading Interface</th>
 			<th>Links</th>
 			</tr>
@@ -90,99 +89,99 @@ td:nth-child(3),th:nth-child(3){display: none}
 		<tbody>
 			<tr class="" id="d_curve">
 				<td>Curve</td>
-				<td>?</td>
-				<td>100</td>
+				<td>3</td>
+				<td>0</td>
 				<td>curve.finance</td>
-				<td><span><a href="https://dex.zoocoin.cash" target="_blank">💱</a><a href="https://ftm.guru" target="_blank">🌐</a><a href="https://ftm.guru" target="_blank">🚜</a><a href="https://discord.gg/EvyDPxPb" target="_blank">🎮</a><a href="https://t.me/FTM1337" target="_blank">✈</a>🐦🐙</span></td>
+				<td><span><a href="https://ftm.curve.fi" target="_blank">💱</a><a href="https://ftm.curve.fi" target="_blank">🌐</a><a href="https://ftm.curve.fi" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_spooky">
 				<td>Spooky</td>
-				<td>?</td>
-				<td>100</td>
+				<td>0</td>
+				<td>0</td>
 				<td>spookyswap.finance</td>
 				<td><span><a href="https://dex.zoocoin.cash" target="_blank">💱</a><a href="https://ftm.guru" target="_blank">🌐</a><a href="https://ftm.guru" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_spirit">
 				<td>Spirit</td>
-				<td>?</td>
-				<td>100</td>
+				<td>0</td>
+				<td>0</td>
 				<td>spiritswap.finance</td>
 				<td><span><a href="https://dex.zoocoin.cash" target="_blank">💱</a><a href="https://ftm.guru" target="_blank">🌐</a><a href="https://ftm.guru" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_sushi">
 				<td>Sushi</td>
-				<td>?</td>
-				<td>100</td>
+				<td>0</td>
+				<td>0</td>
 				<td>app.sushi.com</td>
 				<td><span><a href="https://app.sushi.com" target="_blank">💱</a><a href="https://analytics-ftm.sushi.com" target="_blank">📊</a><a href="https://sushi.com" target="_blank">🌐</a><a href="https://ftm.guru" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_hyper">
 				<td>Hyper</td>
-				<td>?</td>
-				<td>100</td>
+				<td>0</td>
+				<td>0</td>
 				<td>ftm.hyperjump.app</td>
 				<td><span><a href="https://ftm.hyperjump.app/" target="_blank">💱</a><a href="https://ftm-info.hyperjump.app/" target="_blank">📊</a><a href="https://ftm.hyperjump.app/" target="_blank">🌐</a><a href="https://hyperjump.fi" target="_blank">🚜</a><a href="" target="_blank">🎮</a>🐦🐙</span></td>
 			</tr>
 			<tr class="" id="d_zoo">
 				<td>Zoo</td>
-				<td>?</td>
-				<td>100</td>
+				<td>0</td>
+				<td>0</td>
 				<td>dex.zoocoin.cash</td>
 				<td><span><a href="https://dex.zoocoin.cash" target="_blank">💱</a><a href="https://chart.zoocoin.cash" target="_blank">📊</a><a href="https://zoocoin.cash" target="_blank">🌐</a><a href="https://dex.zoocoin.cash/farms" target="_blank">🚜</a><a href="" target="_blank">🎮</a><a href="https://t.me/jointhezoo" target="_blank">✈</a>🐦🐙</span></td>
 			</tr>
 			<tr class="" id="d_paint">
 				<td>Paint</td>
-				<td>?</td>
-				<td>100</td>
+				<td>0</td>
+				<td>0</td>
 				<td>paintswap.finance</td>
 				<td><span><a href="https://paintswap.finance" target="_blank">💱</a><a href="https://info.paintswap.finance" target="_blank">📊</a><a href="https://paintswap.finance" target="_blank">🌐</a><a href="https://paintswap.finance" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_waka">
 				<td>Waka</td>
-				<td>?</td>
-				<td>100</td>
+				<td>0</td>
+				<td>0</td>
 				<td>waka.finance</td>
 				<td><span><a href="https://waka.finance" target="_blank">💱</a><a href="https://info.waka.finance" target="_blank">📊</a><a href="https://waka.finance" target="_blank">🌐</a><a href="https://waka.finance" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_elk">
 				<td>Elk</td>
-				<td>?</td>
-				<td>100</td>
+				<td>0</td>
+				<td>0</td>
 				<td>app.elk.finance</td>
 				<td><span><a href="https://app.elk.finance" target="_blank">💱</a><a href="https://ftm-info.elk.finance" target="_blank">📊</a><a href="https://elk.finance" target="_blank">🌐</a><a href="https://app.elk.finance" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_opera">
 				<td>Opera</td>
-				<td>?</td>
-				<td>100</td>
+				<td>0</td>
+				<td>0</td>
 				<td>operaswap.finance</td>
 				<td><span><a href="https://operaswap.finance" target="_blank">💱</a><a href="https://operaswap.finance" target="_blank">🌐</a><a href="https://operaswap.finance" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_fbomb">
 				<td>fBomb</td>
-				<td>?</td>
-				<td>100</td>
+				<td>0</td>
+				<td>0</td>
 				<td>swap.fbomb.finance</td>
 				<td><span><a href="https://swap.fbomb.finance" target="_blank">💱</a><a href="https://fbomb.finance" target="_blank">📊</a><a href="https://fbomb.finance" target="_blank">🌐</a><a href="https://fbomb.finance" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_shiba">
 				<td>Shiba</td>
-				<td>?</td>
-				<td>100</td>
-				<td>swap.shibafantom.finance</td>
+				<td>0</td>
+				<td>0</td>
+				<td>shibafantom.finance</td>
 				<td><span><a href="https://swap.shibafantom.finance" target="_blank">💱</a><a href="https://info.shibafantom.finance" target="_blank">📊</a><a href="https://shibafantom.com" target="_blank">🌐</a><a href="https://swap.shibafantom.finance" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_cyber">
 				<td>Cyber</td>
-				<td>?</td>
-				<td>100</td>
+				<td>0</td>
+				<td>0</td>
 				<td>swap.thexdao.com</td>
 				<td><span><a href="https://swap.thexdao.com" target="_blank">💱</a><a href="https://fmc.guru/xdao" target="_blank">📊</a><a href="https://thexdao.org" target="_blank">🌐</a><a href="https://thexdao.com/#/farms" target="_blank">🚜</a><a href="https://t.me/thexfoundationdiscussion" target="_blank">✈</a></span></td>
 			</tr>
 			<tr class="" id="d_totem">
 				<td>Totem</td>
-				<td>?</td>
-				<td>100</td>
+				<td>0</td>
+				<td>0</td>
 				<td>totemfinance.app</td>
 				<td><span><a href="https://totemswap.me" target="_blank">💱</a><a href="https://totemfinance.app" target="_blank">🌐</a><a href="https://totemfinance.app/pools" target="_blank">🚜</a><a href="https://discord.gg/Kaim0zoKH1" target="_blank">🎮</a><a href="https://t.me/totemfinance" target="_blank">✈</a></span></td>
 			</tr>
@@ -194,17 +193,6 @@ td:nth-child(3),th:nth-child(3){display: none}
 <br>
 <br>
 <div align="center" style="margin:0;padding:0"><u>Legend:</u><br>*Bridged ⁕Native ★Featured<br>💱DEX-UI 🌐Website 🚜Farm<br>🎮Discord ✈Telegram 🐦Twitter<br>🐙Github 🔎Explorer</div>
-<br>
-<div align="center" id="spadd" style="">
-<font id="spadf" size="2" style="text-align:center">(Sponsored Ad)</font>
-<br>
-<i><a href="https://t.me/FTM1337">Please Telegram us for queries.</a></i>
-<br>
-<a id="spada" href="" target="_blank">
-<img id="spadi" src="" width="80%"></img><br>
-</a>
-</div>
-
 <br>
 <br>
 <div align="center" class="pgb">
@@ -219,6 +207,18 @@ td:nth-child(3),th:nth-child(3){display: none}
 All information presented here is only for aesthetic uses and posesses no validity to settle any claims. It is also non-exhaustive and prone to error. Advertisements are not endorsements.	 <strike>Currently it does not update automatically.</strike> This dashboard is ultra-real time - It means that the data on this page has zero latency, unlike CMC or CG which have 1-10 minutes old data. FTM.guru and FMC.guru are trying to keep up with the <b>Fantom Fast</b> motto. <i>A much deserved shoutout to all developers on F.O., ftmscan.com and rpc.ftm.tools for their benign Services!</i> All presented numbers are denoted in FTM by default."Most Liquid" coloumn refers to the pair with highest WFTM-Liquidity.<br>We encourage you to report inconsistencies, ask business queries, request listing or start an ad campaign at one of our community channels:<br>
 <b><a href="https://t.me/FTM1337" target="_blank">Telegram</a> or <a href="https://discord.gg/QpyfMarNrV" target="_blank">Discord.</a></b><!--
 Our Address: 0x921Ed37f62CBe4d86D38b720EF4a4a44B24a1C5D--></h5>
+<br>
+<br>
+<div align="center" id="spadd" style="">
+<font id="spadf" size="2" style="text-align:center">(Sponsored Ad)</font>
+<br>
+<i><a href="https://t.me/FTM1337">Please Telegram us for queries.</a></i>
+<br>
+<a id="spada" href="" target="_blank">
+<img id="spadi" src="" width="80%"></img><br>
+</a>
+</div>
+
 <br><br>
 <hr class="hhr">
 <br><br>
@@ -325,6 +325,7 @@ function basics()
 	//advertise()
 	copsca()
 	gp()
+	tc()
 }
 
 
@@ -449,6 +450,52 @@ function ads()
 		adi=2;
 	}
 	console.log(Date.now())
+}
+
+async function tc()
+{
+	fetch("https://api.llama.fi/protocols").then(d1=>{return d1.json()}).then(d2d=>{pt(d2d)})
+}
+function pt(d)
+{
+	//console.log(d);
+	for(j=0;j< d.length;j++)
+		{
+			if(d[j].chains.indexOf("Fantom")>=0){po(d[j])}
+		}
+}
+function $v(_){return $(_).getElementsByTagName("td")[2]}
+function po (di)
+{
+	v=typeof di.chainTvls.Fantom == "undefined"?
+		Number(di.tvl.toFixed(0)).toLocaleString():
+		Number(di.chainTvls.Fantom.toFixed(0)).toLocaleString();
+	V=typeof di.chainTvls.Fantom == "undefined"?
+		Number((di.tvl).toFixed(0)) :
+		Number((di.chainTvls.Fantom).toFixed(0));
+	switch(di.slug)
+	{
+		case "curve" :
+			$v("d_curve").innerHTML=v;
+		case "sushiswap" :
+			$v("d_sushi").innerHTML=v;
+		case "spookyswap" :
+			$v("d_spooky").innerHTML=v;
+		case "spiritswap" :
+			$v("d_spirit").innerHTML=v;
+		case "hyperswap" :
+			$v("d_hyper").innerHTML=v;
+		case "waka-finance" :
+			$v("d_waka").innerHTML=v;
+		case "elk" :
+			$v("d_elk").innerHTML=v;
+		case "paint-swap" :
+			$v("d_paint").innerHTML=v;
+		case "zoocoin" :
+			$v("d_zoo").innerHTML=v;
+		case "shiba-fantom" :
+			$v("d_shiba").innerHTML=v;
+	}
 }
 </script><!--
 <script defer type="text/javascript" async="true">
