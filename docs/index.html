@@ -63,14 +63,21 @@ tr td:nth-child(9):hover{font-weight: bolder;text-decoration: 3px blue wavy unde
 </style>
 </head>
 <body>
-<div class="toprow">
-	<div>FantomMarketCap</div>
+<div class="toprow" style="font-weight:bolder">
+	<div><a href="index.html"><img style="position:relative;top:2px" src="img/FMC.svg" width="16px"> FantomMarketCap</a></div>
 	<div></div>
 	<div>By <a href="https://ftm.guru">FTM.guru</a></div>
 </div>
-<h1 align="center">FMC.guru<br><span id="tmc">0</span> <span id="tmcunit">FTM</span></h1>
+<h1 align="center"><img style="position:relative;top:16px" src="img/FMC.svg" width="64px"> FMC.guru</h1>
+<h4 align="center">Discover the best of Fantom Opera with FantomMarketCap on FMC.guru!</h4>
+<br>
+<div align="center" style="font-size:2em">
+	Global Market Cap<br><span id="tmc">0</span>
+	<span id="tmcunit">FTM</span>
+</div>
+<br>
+<br>
 <div align="center">
-<h4>Discover the best of Fantom Opera with FantomMarketCap on FMC.guru!</h4>
 Browse tokens by Category and Sort using metrics such as price, supply or market capitalization even within categories!<br>
 </div>
 <div align="center">
@@ -104,7 +111,7 @@ Browse tokens by Category and Sort using metrics such as price, supply or market
 	<div onclick="togfil(this.innerHTML)">Vaults</div>
 	<div onclick="togfil(this.innerHTML)">Yields</div>
 </div>
-<button id="degmod" onclick="">Degen-Zone : Off</button>
+<!--<button id="degmod" onclick="">Degen-Zone : Off</button>-->
 <button id="usdftm2" onclick="usdftm2()">Currency : FTM</button>
 </div>
 <br>
