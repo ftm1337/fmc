@@ -310,6 +310,8 @@ Our Address: 0x921Ed37f62CBe4d86D38b720EF4a4a44B24a1C5D--></h5>
 	</div>
 </div>
 </body>
+<!--<script src="d1.js">
+</script>-->
 <script src="web3.min.js">
 </script>
 <script>
@@ -457,6 +459,7 @@ function ads()
 
 async function tc()
 {
+//	pt(d1)
 	fetch("https://api.llama.fi/protocols").then(d1=>{return d1.json()}).then(d2d=>{pt(d2d)})
 }
 function pt(d)
@@ -476,30 +479,21 @@ function po (di)
 	V=typeof di.chainTvls.Fantom == "undefined"?
 		Number((di.tvl).toFixed(0)) :
 		Number((di.chainTvls.Fantom).toFixed(0));
-	switch(di.slug)
-	{
-		case "curve" :
-			$v("d_curve").innerHTML=v;
-		case "sushiswap" :
-			$v("d_sushi").innerHTML=v;
-		case "spookyswap" :
-			$v("d_spooky").innerHTML=v;
-		case "spiritswap" :
-			$v("d_spirit").innerHTML=v;
-		case "hyperswap" :
-			$v("d_hyper").innerHTML=v;
-		case "waka-finance" :
-			$v("d_waka").innerHTML=v;
-		case "elk" :
-			$v("d_elk").innerHTML=v;
-		case "paint-swap" :
-			$v("d_paint").innerHTML=v;
-		case "zoocoin" :
-			$v("d_zoo").innerHTML=v;
-		case "shiba-fantom" :
-			$v("d_shiba").innerHTML=v;
-	}
+
+//		console.log(di.slug)
+
+		if (di.slug ==  "curve" ){				$v("d_curve").innerHTML=v;}
+		if (di.slug ==  "sushiswap" ){			$v("d_sushi").innerHTML=v;}
+		if (di.slug ==  "spookyswap" ){			$v("d_spooky").innerHTML=v;}
+		if (di.slug ==  "spiritswap" ){			$v("d_spirit").innerHTML=v;}
+		if (di.slug ==  "hyperswap" ){			$v("d_hyper").innerHTML=v;}
+		if (di.slug ==  "waka-finance" ){		$v("d_waka").innerHTML=v;}
+		if (di.slug ==  "elk" ){				$v("d_elk").innerHTML=v;}
+		if (di.slug ==  "paint-swap" ){			$v("d_paint").innerHTML=v;}
+		if (di.slug ==  "zoocoin" ){			$v("d_zoo").innerHTML=v;}
+		if (di.slug ==  "shiba-fantom" ){		$v("d_shiba").innerHTML=v;}
 }
+
 </script><!--
 <script defer type="text/javascript" async="true">
 var sc_project=12548358;
