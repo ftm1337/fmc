@@ -6,17 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" href="../img/ftm1337.jpg" />
 <style>
-
 html{background:radial-gradient(circle at center, #127, #122, #100);color:#e3e9f2;font-family:helvetica nueve, helvetica, robotica, ubuntu, roboto, sans-serif;background-attachment: fixed;}
 .toprow{display:grid;grid-template-columns:max-content auto max-content}
 .topfind{text-align:center;min-width:80%}
 .stage{overflow-x:auto}
 th{min-width:max-content;min-width: -moz-max-content}
 td{min-width:max-content;min-width: -moz-max-content;padding:2px 5px;text-align:right}
-td:last-child{text-align: left}
 td:first-child{text-align: left}
 td:nth-child(2),td:nth-child(3){text-align: left}
-td:nth-child(4),td:nth-child(5),td:nth-child(6),td:nth-child(7){font-family: monospace;font-size:1.2em}
+td:nth-child(4),td:nth-child(5),td:nth-child(6){font-family: monospace;font-size:1.2em}
 tr:hover{background: aqua;color:#020611;}
 thead tr:hover{background: aqua;color:#020611}
 pre{margin:0}
@@ -25,7 +23,6 @@ hr{box-shadow: rgba(0,255,255,0.2) 0px 0px 10px 10px;background: #090919;border-
 table{border-collapse:collapse;overflow:hidden}
 tr{line-height:1.2em}
 h5 a{color: aqua}
-td:nth-child(9):hover{color: blue}
 #spadi{width:100%}
 option{cursor:pointer}
 #tags div{border: 4px #e3e9f2 dotted;color:aqua;width: max-content;float: right;background: rgba(0,255,255,.25);border-radius: 10px;padding:0 2px;margin:4px;padding:4px}
@@ -34,7 +31,6 @@ option{cursor:pointer}
 #usdftm2:hover{border: 4px dotted;cursor: alias }
 #degmod{border: 4px dashed;color:#020611;background: rgba(255,127,127,1);border-radius: 10px;padding:0 2px;margin:4px;padding:4px}
 #degmod:hover{border: 4px dotted;cursor: alias ;}
-tr td:nth-child(9):hover{font-weight: bolder;text-decoration: 3px blue wavy underline blink;}
 .statcounter{font-size: 0}
 #spadfi{width:100%}
 #maintable{width:max-content}
@@ -55,7 +51,8 @@ tr td:nth-child(9):hover{font-weight: bolder;text-decoration: 3px blue wavy unde
 	clip-path: polygon(calc(100% - 40px) 0%, 0 0, 0 100%, 95% 100%, 95% 50%);
 	margin-top:15px
 }
-td:nth-child(2),td:nth-child(3){font-family: mono;text-align: right}
+td:nth-child(2),td:nth-child(3),td:nth-child(3),td:nth-child(4),td:nth-child(6){font-family: mono;text-align: right}
+td:last-child{text-align:center}
 @media(min-width:641px){
 	#spadi{width:80%}
 	.lowerbar{display: grid;grid-template-columns: auto auto auto auto;text-align:center}
@@ -63,6 +60,7 @@ td:nth-child(2),td:nth-child(3){font-family: mono;text-align: right}
 	.pgb{display: grid;grid-template-columns: auto auto auto}
   td{font-size: 1.5em;padding: 10px}
 }
+
 </style>
 </head>
 <body>
@@ -75,18 +73,26 @@ td:nth-child(2),td:nth-child(3){font-family: mono;text-align: right}
 <h1 align="center"><img style="position:relative;top:16px" src="img/FMC.svg" width="64px"> FMC.guru<br><span id="tmc"></span> <span id="tmcunit"></span></h1>
 <div align="center">
 <h4>Discover the best DEXes of Fantom Opera with FantomMarketCap on FMC.guru!</h4>
-
-
 </div>
 <br>
+<br>
+<div align="center" class="pgb">
+	<div align="center" class="pgbs"><a href="index.html">FantomMarketCap Index</a></div>
+	<div align="center" class="pgbs"><a href="dex.html">List of All DEX on Fantom</a></div>
+	<div align="center" class="pgbs"><a href="xdao.html">CyberSwap Analytics</a></div>
+</div>
+<br>
+<br>
 <h2 align="center">List of All Top DEX on Fantom</h2>
+<br>
 <div class="stage" align="center">
 	<table id="maintable" class="centerstage">
 		<thead>
 			<tr>
-			<th onclick="sortit(0)">Name⇅</th>
+			<th onclick="sortit(0)">D. Exchange⇅</th>
 			<th onclick="sortit(1)">Pools⇅</th>
-			<th onclick="sortit(2)">T.V.L. (USD)</th>
+			<th onclick="sortit(2)">Locked ASsets ($)</th>
+			<th onclick="sortit(2)">Total Liquidity ($)</th>
 			<th onclick="sortit(3)">Trading Interface</th>
 			<th>Links</th>
 			</tr>
@@ -96,11 +102,13 @@ td:nth-child(2),td:nth-child(3){font-family: mono;text-align: right}
 				<td>Curve</td>
 				<td>3</td>
 				<td>0</td>
+				<td>0</td>
 				<td>curve.finance</td>
 				<td><span><a href="https://ftm.curve.fi" target="_blank">💱</a><a href="https://ftm.curve.fi" target="_blank">🌐</a><a href="https://ftm.curve.fi" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_spooky">
 				<td>Spooky</td>
+				<td>0</td>
 				<td>0</td>
 				<td>0</td>
 				<td>spookyswap.finance</td>
@@ -110,11 +118,13 @@ td:nth-child(2),td:nth-child(3){font-family: mono;text-align: right}
 				<td>Spirit</td>
 				<td>0</td>
 				<td>0</td>
+				<td>0</td>
 				<td>spiritswap.finance</td>
 				<td><span><a href="https://dex.zoocoin.cash" target="_blank">💱</a><a href="https://ftm.guru" target="_blank">🌐</a><a href="https://ftm.guru" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_sushi">
 				<td>Sushi</td>
+				<td>0</td>
 				<td>0</td>
 				<td>0</td>
 				<td>app.sushi.com</td>
@@ -124,11 +134,13 @@ td:nth-child(2),td:nth-child(3){font-family: mono;text-align: right}
 				<td>Hyper</td>
 				<td>0</td>
 				<td>0</td>
+				<td>0</td>
 				<td>ftm.hyperjump.app</td>
 				<td><span><a href="https://ftm.hyperjump.app/" target="_blank">💱</a><a href="https://ftm-info.hyperjump.app/" target="_blank">📊</a><a href="https://ftm.hyperjump.app/" target="_blank">🌐</a><a href="https://hyperjump.fi" target="_blank">🚜</a><a href="" target="_blank">🎮</a>🐦🐙</span></td>
 			</tr>
 			<tr class="" id="d_zoo">
 				<td>Zoo</td>
+				<td>0</td>
 				<td>0</td>
 				<td>0</td>
 				<td>dex.zoocoin.cash</td>
@@ -138,11 +150,13 @@ td:nth-child(2),td:nth-child(3){font-family: mono;text-align: right}
 				<td>Paint</td>
 				<td>0</td>
 				<td>0</td>
+				<td>0</td>
 				<td>paintswap.finance</td>
 				<td><span><a href="https://paintswap.finance" target="_blank">💱</a><a href="https://info.paintswap.finance" target="_blank">📊</a><a href="https://paintswap.finance" target="_blank">🌐</a><a href="https://paintswap.finance" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_waka">
 				<td>Waka</td>
+				<td>0</td>
 				<td>0</td>
 				<td>0</td>
 				<td>waka.finance</td>
@@ -152,11 +166,13 @@ td:nth-child(2),td:nth-child(3){font-family: mono;text-align: right}
 				<td>Elk</td>
 				<td>0</td>
 				<td>0</td>
+				<td>0</td>
 				<td>app.elk.finance</td>
 				<td><span><a href="https://app.elk.finance" target="_blank">💱</a><a href="https://ftm-info.elk.finance" target="_blank">📊</a><a href="https://elk.finance" target="_blank">🌐</a><a href="https://app.elk.finance" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_opera">
 				<td>Opera</td>
+				<td>0</td>
 				<td>0</td>
 				<td>0</td>
 				<td>operaswap.finance</td>
@@ -166,11 +182,13 @@ td:nth-child(2),td:nth-child(3){font-family: mono;text-align: right}
 				<td>fBomb</td>
 				<td>0</td>
 				<td>0</td>
+				<td>0</td>
 				<td>swap.fbomb.finance</td>
 				<td><span><a href="https://swap.fbomb.finance" target="_blank">💱</a><a href="https://fbomb.finance" target="_blank">📊</a><a href="https://fbomb.finance" target="_blank">🌐</a><a href="https://fbomb.finance" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_shiba">
 				<td>Shiba</td>
+				<td>0</td>
 				<td>0</td>
 				<td>0</td>
 				<td>shibafantom.finance</td>
@@ -180,6 +198,7 @@ td:nth-child(2),td:nth-child(3){font-family: mono;text-align: right}
 				<td>Cyber</td>
 				<td>0</td>
 				<td>0</td>
+				<td>0</td>
 				<td>swap.thexdao.com</td>
 				<td><span><a href="https://swap.thexdao.com" target="_blank">💱</a><a href="https://fmc.guru/xdao" target="_blank">📊</a><a href="https://thexdao.org" target="_blank">🌐</a><a href="https://thexdao.com/#/farms" target="_blank">🚜</a><a href="https://t.me/thexfoundationdiscussion" target="_blank">✈</a></span></td>
 			</tr>
@@ -187,8 +206,17 @@ td:nth-child(2),td:nth-child(3){font-family: mono;text-align: right}
 				<td>Totem</td>
 				<td>0</td>
 				<td>0</td>
+				<td>0</td>
 				<td>totemfinance.app</td>
 				<td><span><a href="https://totemswap.me" target="_blank">💱</a><a href="https://totemfinance.app" target="_blank">🌐</a><a href="https://totemfinance.app/pools" target="_blank">🚜</a><a href="https://discord.gg/Kaim0zoKH1" target="_blank">🎮</a><a href="https://t.me/totemfinance" target="_blank">✈</a></span></td>
+			</tr>
+			<tr class="" id="d_nipple">
+				<td>NipdEx</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>nipplelabs.finance</td>
+				<td><span><a href="https://exchange.nipplelabs.finance" target="_blank">💱</a><a href="https://nipplelabs.com" target="_blank">🌐</a><a href="https://discord.com/invite/6ChQmPb3as" target="_blank">🎮</a><a href="https://t.me/nipplelabs" target="_blank">✈</a><a href="https://twitter.com/nipplelabs" target="_blank">🐦</a><a href="https://nipplelabs.finance/farms" target="_blank">🚜</a></span></td>
 			</tr>
 		</tbody>
 	</table>
@@ -198,18 +226,11 @@ td:nth-child(2),td:nth-child(3){font-family: mono;text-align: right}
 <br>
 <br>
 <div align="center" style="margin:0;padding:0"><u>Legend:</u><br>*Bridged ⁕Native ★Featured<br>💱DEX-UI 🌐Website 🚜Farm<br>🎮Discord ✈Telegram 🐦Twitter<br>🐙Github 🔎Explorer</div>
-<br>
-<br>
-<div align="center" class="pgb">
-	<div align="center" class="pgbs"><a href="index.html">FantomMarketCap Index</a></div>
-	<div align="center" class="pgbs"><a href="dex.html">List of All DEX on Fantom</a></div>
-	<div align="center" class="pgbs"><a href="xdao.html">CyberSwap Analytics</a></div>
-</div>
 
 <br>
 <br>
 <h5 align="center" id="disclaimer"><b><u>Disclaimer & Notice</u></b><br>
-All information presented here is only for aesthetic uses and posesses no validity to settle any claims. It is also non-exhaustive and prone to error. Advertisements are not endorsements.	 <strike>Currently it does not update automatically.</strike> This dashboard is ultra-real time - It means that the data on this page has zero latency, unlike CMC or CG which have 1-10 minutes old data. FTM.guru and FMC.guru are trying to keep up with the <b>Fantom Fast</b> motto. <i>A much deserved shoutout to all developers on F.O., ftmscan.com and rpc.ftm.tools for their benign Services!</i> All presented numbers are denoted in FTM by default."Most Liquid" coloumn refers to the pair with highest WFTM-Liquidity.<br>We encourage you to report inconsistencies, ask business queries, request listing or start an ad campaign at one of our community channels:<br>
+All information presented here is only for aesthetic uses and posesses no validity to settle any claims. It is also non-exhaustive and prone to error. Advertisements are not endorsements.	 <strike>Currently it does not update automatically.</strike> This dashboard is ultra-real time - It means that the data on this page has zero latency, unlike CMC or CG which have 1-10 minutes old data. FTM.guru and FMC.guru are trying to keep up with the <b>Fantom Fast</b> motto. <i>A much deserved shoutout to all developers on F.O., ftmscan.com, defiLllama and rpc.ftm.tools for their benign Services!</i> All presented numbers are denoted in FTM by default."Most Liquid" coloumn refers to the pair with highest WFTM-Liquidity.<br>We encourage you to report inconsistencies, ask business queries, request listing or start an ad campaign at one of our community channels:<br>
 <b><a href="https://t.me/FTM1337" target="_blank">Telegram</a> or <a href="https://discord.gg/QpyfMarNrV" target="_blank">Discord.</a></b><!--
 Our Address: 0x921Ed37f62CBe4d86D38b720EF4a4a44B24a1C5D--></h5>
 <br>
@@ -352,6 +373,7 @@ di=
 	["Shiba",	"0xB6f7b3d8CD9dBf30805C0dd79809dace5603Ce6A",	"0xeAcC845E4db0aB59A326513347a37ed4E999aBD8"],
 	["Cyber",	"0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506",	"0xcB9eA67A5eB76D22688BF21D6689c435D4e25077"],
 	["Totem",	"0xE1D3c87EA897B9AA03FA49332e398c4e95a9A769",	"0xd60FaDE08c25b76b2DbdeaF42f0C4D68236A1079"],
+	["Nipple",	"0xB5ab49A8127FFf2Fc3084D5323b1Ad83890E5Bb4",	"0x41A75C3d6CDe54170e6a67d8D61752cc8Abb0275"],
 ]
 
 async function gp()
@@ -423,7 +445,7 @@ function copsca()
 	rs=$("maintable").getElementsByTagName("tbody")[0].getElementsByTagName("tr");
 	for(i=0;i< rs.length;i++)
 	{
-		sc=rs[i].getElementsByTagName("td")[3];
+		sc=rs[i].getElementsByTagName("td")[4];
 		sc.setAttribute("onClick","copsc(this)");
 		sc.style.cursor="copy";
 	}
@@ -432,7 +454,7 @@ function copsc(el)
 {
 	var inp =document.createElement('input');
 	document.body.appendChild(inp)
-	inp.value =el.parentElement.parentElement.id.substr(3)
+	inp.value ="https://"+el.innerText;
 	inp.select();
 	document.execCommand('copy',false);
 	inp.remove();
