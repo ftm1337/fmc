@@ -226,15 +226,7 @@ td:last-child{text-align:center}
 				<td>soulswap.finance</td>
 				<td><span><a href="https://exchange.soulswap.finance" target="_blank">💱</a><a href="https://soulswap.finance" target="_blank">🌐</a><a href="https://discord.gg/SkHxPyHy" target="_blank">🎮</a><a href="https://t.me/soulswapdefi" target="_blank">✈</a><a href="https://twitter.com/soulswapfinance" target="_blank">🐦</a><!--<a href="https://soulswap.finance/farms" target="_blank">🚜</a>--></span></td>
 			</tr>
-			<tr class="" id="d_nipple">
-				<td>NipdEx</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>nipplelabs.finance</td>
-				<td><span><a href="https://exchange.nipplelabs.finance" target="_blank">💱</a><a href="https://nipplelabs.com" target="_blank">🌐</a><a href="https://discord.com/invite/6ChQmPb3as" target="_blank">🎮</a><a href="https://t.me/nipplelabs" target="_blank">✈</a><a href="https://twitter.com/nipplelabs" target="_blank">🐦</a><a href="https://nipplelabs.finance/farms" target="_blank">🚜</a></span></td>
-			</tr>
-			<tr class="" id="d_nipple">
+			<tr class="" id="d_wraith">
 				<td>Wraith</td>
 				<td>0</td>
 				<td>0</td>
@@ -408,12 +400,13 @@ async function gp()
 	{
 		if(i==0){continue}
 		F=new web3.eth.Contract(ab,di[i][2]);
-		await F.methods.allPairsLength().call((e,r)=>{$("d_"+di[i][0].toLowerCase()).getElementsByTagName("td")[1].innerHTML=r})
+		if(di[i][0]=="Soul"){await F.methods.totalPairs().call((e,r)=>{$("d_"+di[i][0].toLowerCase()).getElementsByTagName("td")[1].innerHTML=r})}
+		else{await F.methods.allPairsLength().call((e,r)=>{$("d_"+di[i][0].toLowerCase()).getElementsByTagName("td")[1].innerHTML=r})}
 	}
 }
 
 ab=
-[{"inputs":[],"name":"allPairsLength","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}]
+[{"inputs":[],"name":"allPairsLength","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalPairs","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}]
 function fornum(n,d)
 {
 	_n=(Number(n)/10**Number(d));
