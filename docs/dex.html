@@ -14,7 +14,8 @@ th{min-width:max-content;min-width: -moz-max-content}
 td{min-width:max-content;min-width: -moz-max-content;padding:2px 5px;text-align:right}
 td:first-child{text-align: left}
 td:nth-child(2),td:nth-child(3){text-align: left}
-td:nth-child(4),td:nth-child(5),td:nth-child(6){font-family: monospace;font-size:1.2em}
+td:not(td:first-child){font-family: monospace;font-size:1em}
+td:nth-child(1),td:nth-child(2){font-size: 1.25em}
 tr:hover{background: aqua;color:#020611;}
 thead tr:hover{background: aqua;color:#020611}
 pre{margin:0}
@@ -51,6 +52,7 @@ option{cursor:pointer}
 	clip-path: polygon(calc(100% - 40px) 0%, 0 0, 0 100%, 95% 100%, 95% 50%);
 	margin-top:15px
 }
+td:nth-child(4),td:nth-child(5),th:nth-child(4),th:nth-child(5){display:none}
 td:nth-child(2),td:nth-child(3),td:nth-child(3),td:nth-child(4),td:nth-child(6){font-family: mono;text-align: right}
 td:last-child{text-align:center}
 @media(min-width:641px){
@@ -60,7 +62,6 @@ td:last-child{text-align:center}
 	.pgb{display: grid;grid-template-columns: auto auto auto}
   td{font-size: 1.5em;padding: 10px}
 }
-
 </style>
 </head>
 <body>
@@ -78,8 +79,11 @@ td:last-child{text-align:center}
 <br>
 <div align="center" class="pgb">
 	<div align="center" class="pgbs"><a href="index.html">FantomMarketCap Index</a></div>
-	<div align="center" class="pgbs"><a href="dex.html">List of All DEX on Fantom</a></div>
+	<div align="center" class="pgbs"><a href="dex.html">List of All DEX at Fantom</a></div>
 	<div align="center" class="pgbs"><a href="xdao.html">CyberSwap Analytics</a></div>
+	<div align="center" class="pgbs"><a hre f="index.html">Liquidity Explorer</a></div>
+	<div align="center" class="pgbs"><a hre f="dex.html">List of Top Protocols</a></div>
+	<div align="center" class="pgbs"><a hre f="xdao.html">List of Top Farms</a></div>
 </div>
 <br>
 <br>
@@ -89,11 +93,12 @@ td:last-child{text-align:center}
 	<table id="maintable" class="centerstage">
 		<thead>
 			<tr>
-			<th onclick="sortit(0)">D. Exchange⇅</th>
+			<th onclick="sortit(0)">D.E.X.⇅</th>
 			<th onclick="sortit(1)">Pools⇅</th>
 			<th onclick="sortit(2)">Locked ASsets ($)</th>
-			<th onclick="sortit(2)">Total Liquidity ($)</th>
-			<th onclick="sortit(3)">Trading Interface</th>
+			<th onclick="sortit(3)">Total Liquidity ($)</th>
+			<th onclick="sortit(4)">Age</th>
+			<th onclick="sortit(5)">Trading Interface</th>
 			<th>Links</th>
 			</tr>
 		</thead>
@@ -103,11 +108,13 @@ td:last-child{text-align:center}
 				<td>3</td>
 				<td>0</td>
 				<td>0</td>
+				<td>0</td>
 				<td>curve.finance</td>
 				<td><span><a href="https://ftm.curve.fi" target="_blank">💱</a><a href="https://ftm.curve.fi" target="_blank">🌐</a><a href="https://ftm.curve.fi" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_spooky">
 				<td>Spooky</td>
+				<td>0</td>
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
@@ -119,11 +126,13 @@ td:last-child{text-align:center}
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
+				<td>0</td>
 				<td>spiritswap.finance</td>
 				<td><span><a href="https://dex.zoocoin.cash" target="_blank">💱</a><a href="https://ftm.guru" target="_blank">🌐</a><a href="https://ftm.guru" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_sushi">
 				<td>Sushi</td>
+				<td>0</td>
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
@@ -135,11 +144,13 @@ td:last-child{text-align:center}
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
+				<td>0</td>
 				<td>ftm.hyperjump.app</td>
 				<td><span><a href="https://ftm.hyperjump.app/" target="_blank">💱</a><a href="https://ftm-info.hyperjump.app/" target="_blank">📊</a><a href="https://ftm.hyperjump.app/" target="_blank">🌐</a><a href="https://hyperjump.fi" target="_blank">🚜</a><a href="" target="_blank">🎮</a>🐦🐙</span></td>
 			</tr>
 			<tr class="" id="d_zoo">
 				<td>Zoo</td>
+				<td>0</td>
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
@@ -151,11 +162,13 @@ td:last-child{text-align:center}
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
+				<td>0</td>
 				<td>paintswap.finance</td>
 				<td><span><a href="https://paintswap.finance" target="_blank">💱</a><a href="https://info.paintswap.finance" target="_blank">📊</a><a href="https://paintswap.finance" target="_blank">🌐</a><a href="https://paintswap.finance" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_waka">
 				<td>Waka</td>
+				<td>0</td>
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
@@ -167,11 +180,13 @@ td:last-child{text-align:center}
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
+				<td>0</td>
 				<td>app.elk.finance</td>
 				<td><span><a href="https://app.elk.finance" target="_blank">💱</a><a href="https://ftm-info.elk.finance" target="_blank">📊</a><a href="https://elk.finance" target="_blank">🌐</a><a href="https://app.elk.finance" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_opera">
 				<td>Opera</td>
+				<td>0</td>
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
@@ -183,11 +198,13 @@ td:last-child{text-align:center}
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
+				<td>0</td>
 				<td>swap.fbomb.finance</td>
 				<td><span><a href="https://swap.fbomb.finance" target="_blank">💱</a><a href="https://fbomb.finance" target="_blank">📊</a><a href="https://fbomb.finance" target="_blank">🌐</a><a href="https://fbomb.finance" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_shiba">
 				<td>Shiba</td>
+				<td>0</td>
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
@@ -199,11 +216,13 @@ td:last-child{text-align:center}
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
+				<td>0</td>
 				<td>swap.thexdao.com</td>
 				<td><span><a href="https://swap.thexdao.com" target="_blank">💱</a><a href="https://fmc.guru/xdao" target="_blank">📊</a><a href="https://thexdao.org" target="_blank">🌐</a><a href="https://thexdao.com/#/farms" target="_blank">🚜</a><a href="https://t.me/thexfoundationdiscussion" target="_blank">✈</a></span></td>
 			</tr>
 			<tr class="" id="d_totem">
 				<td>Totem</td>
+				<td>0</td>
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
@@ -215,11 +234,13 @@ td:last-child{text-align:center}
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
+				<td>0</td>
 				<td>nipplelabs.finance</td>
 				<td><span><a href="https://exchange.nipplelabs.finance" target="_blank">💱</a><a href="https://nipplelabs.com" target="_blank">🌐</a><a href="https://discord.com/invite/6ChQmPb3as" target="_blank">🎮</a><a href="https://t.me/nipplelabs" target="_blank">✈</a><a href="https://twitter.com/nipplelabs" target="_blank">🐦</a><a href="https://nipplelabs.finance/farms" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_soul">
 				<td>Soul</td>
+				<td>0</td>
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
@@ -231,8 +252,18 @@ td:last-child{text-align:center}
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
+				<td>0</td>
 				<td>wraithswap.finance</td>
 				<td><span><a href="https://wraithswap.finance" target="_blank">💱</a><a href="https://wraithswap.finance" target="_blank">🌐</a><a href="https://discord.com/invite/" target="_blank">🎮</a><a href="https://t.me/fantomsyf" target="_blank">✈</a><a href="https://twitter.com/" target="_blank">🐦</a><a href="https://fields.wraithswap.finance" target="_blank">🚜</a></span></td>
+			</tr>
+			<tr class="" id="d_empire">
+				<td>Empire</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>ftm.empiredex.org</td>
+				<td><span><a href="https://ftm.empiredex.org" target="_blank">💱</a><a href="https://ftm.empiredex.org" target="_blank">🌐</a><a href="https://discord.com/invite/" target="_blank">🎮</a><a href="https://t.me/" target="_blank">✈</a><a href="https://twitter.com/" target="_blank">🐦</a><a href="https://ftm.empiredex.org" target="_blank">🚜</a></span></td>
 			</tr>
 		</tbody>
 	</table>
@@ -375,23 +406,24 @@ function basics()
 
 di=
 [
-	["Curve",	"0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506",	"0xc35DADB65012eC5796536bD9864eD8773aBc74C4"],
-	["Spooky",	"0xF491e7B69E4244ad4002BC14e878a34207E38c29",	"0x152eE697f2E276fA89E96742e9bB9aB1F2E61bE3"],
-	["Spirit",	"0x16327E3FbDaCA3bcF7E38F5Af2599D2DDc33aE52",	"0xEF45d134b73241eDa7703fa787148D9C9F4950b0"],
-	["Sushi",	"0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506",	"0xc35DADB65012eC5796536bD9864eD8773aBc74C4"],
-	["Hyper",	"0x53c153a0df7E050BbEFbb70eE9632061f12795fB",	"0x991152411A7B5A14A8CF0cDDE8439435328070dF"],
-	["Paint",	"0xfD000ddCEa75a2E23059881c3589F6425bFf1AbB",	"0x733A9D1585f2d14c77b49d39BC7d7dd14CdA4aa5"],
-	["Zoo", 	"0x40b12a3E261416fF0035586ff96e23c2894560f2",	"0x6178C3B21F7cA1adD84c16AD35452c85a85F5df4"],
-	["Waka",	"0x7b17021fcb7bc888641dc3bedfed3734fcaf2c87",	"0xB2435253C71FcA27bE41206EB2793E44e1Df6b6D"],
-	["Elk", 	"0x4D2cf285a519261F30b4d9c2c344Baf260d65Fa2",	"0x7Ba73c99e6f01a37f3e33854c8F544BbbadD3420"],
-	["Opera",	"0xe372753f66644a1197ab85ff529ed02995ed2d6c",	"0x8ebB6B4eD61b6b2eA663569D0Be3F7b33a481178"],
-	["fBomb",	"0xb9799De71100e20aC1cdbCc63C69ddA2D0D81710",	"0xD9473A05b2edf4f614593bA5D1dBd3021d8e0Ebe"],
-	["Shiba",	"0xB6f7b3d8CD9dBf30805C0dd79809dace5603Ce6A",	"0xeAcC845E4db0aB59A326513347a37ed4E999aBD8"],
-	["Cyber",	"0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506",	"0xcB9eA67A5eB76D22688BF21D6689c435D4e25077"],
-	["Totem",	"0xE1D3c87EA897B9AA03FA49332e398c4e95a9A769",	"0xd60FaDE08c25b76b2DbdeaF42f0C4D68236A1079"],
-	["Nipple",	"0xB5ab49A8127FFf2Fc3084D5323b1Ad83890E5Bb4",	"0x41A75C3d6CDe54170e6a67d8D61752cc8Abb0275"],
-	["Soul",	"0x6b3d631B87FE27aF29efeC61d2ab8CE4d621cCBF",	"0x1120e150dA9def6Fe930f4fEDeD18ef57c0CA7eF"],
-	["Wraith",	"0x8C9E059a729C17fB294cd782eB66Df3871D29173",	"0xCC738D2fDE18fe66773b84c8E6C869aB233766D1"],
+	["Curve",	"0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506",	"0xc35DADB65012eC5796536bD9864eD8773aBc74C4",	1616111666],
+	["Spooky",	"0xF491e7B69E4244ad4002BC14e878a34207E38c29",	"0x152eE697f2E276fA89E96742e9bB9aB1F2E61bE3",	1616111666],
+	["Spirit",	"0x16327E3FbDaCA3bcF7E38F5Af2599D2DDc33aE52",	"0xEF45d134b73241eDa7703fa787148D9C9F4950b0",	1616111666],
+	["Sushi",	"0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506",	"0xc35DADB65012eC5796536bD9864eD8773aBc74C4",	1616111666],
+	["Hyper",	"0x53c153a0df7E050BbEFbb70eE9632061f12795fB",	"0x991152411A7B5A14A8CF0cDDE8439435328070dF",	1616111666],
+	["Paint",	"0xfD000ddCEa75a2E23059881c3589F6425bFf1AbB",	"0x733A9D1585f2d14c77b49d39BC7d7dd14CdA4aa5",	1616111666],
+	["Zoo", 	"0x40b12a3E261416fF0035586ff96e23c2894560f2",	"0x6178C3B21F7cA1adD84c16AD35452c85a85F5df4",	1616111666],
+	["Waka",	"0x7b17021fcb7bc888641dc3bedfed3734fcaf2c87",	"0xB2435253C71FcA27bE41206EB2793E44e1Df6b6D",	1616111666],
+	["Elk", 	"0x4D2cf285a519261F30b4d9c2c344Baf260d65Fa2",	"0x7Ba73c99e6f01a37f3e33854c8F544BbbadD3420",	1616111666],
+	["Opera",	"0xe372753f66644a1197ab85ff529ed02995ed2d6c",	"0x8ebB6B4eD61b6b2eA663569D0Be3F7b33a481178",	1616111666],
+	["fBomb",	"0xb9799De71100e20aC1cdbCc63C69ddA2D0D81710",	"0xD9473A05b2edf4f614593bA5D1dBd3021d8e0Ebe",	1616111666],
+	["Shiba",	"0xB6f7b3d8CD9dBf30805C0dd79809dace5603Ce6A",	"0xeAcC845E4db0aB59A326513347a37ed4E999aBD8",	1616111666],
+	["Cyber",	"0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506",	"0xcB9eA67A5eB76D22688BF21D6689c435D4e25077",	1616111666],
+	["Totem",	"0xE1D3c87EA897B9AA03FA49332e398c4e95a9A769",	"0xd60FaDE08c25b76b2DbdeaF42f0C4D68236A1079",	1616111666],
+	["Nipple",	"0xB5ab49A8127FFf2Fc3084D5323b1Ad83890E5Bb4",	"0x41A75C3d6CDe54170e6a67d8D61752cc8Abb0275",	1616111666],
+	["Soul",	"0x6b3d631B87FE27aF29efeC61d2ab8CE4d621cCBF",	"0x1120e150dA9def6Fe930f4fEDeD18ef57c0CA7eF",	1616111666],
+	["Wraith",	"0x8C9E059a729C17fB294cd782eB66Df3871D29173",	"0xCC738D2fDE18fe66773b84c8E6C869aB233766D1",	1616111666],
+	["Empire",	"0xdADaae6cDFE4FA3c35d54811087b3bC3Cd60F348",	"0x06530550A48F990360DFD642d2132354A144F31d",	1616111666],
 ]
 
 async function gp()
