@@ -30,9 +30,9 @@ option{cursor:pointer}
 #tags div{border: 1px #e3e9f2 dashed;color:aqua;width: max-content;float: left;background: rgba(0,255,255,.25);border-radius: 10px;padding:0 2px;margin:4px;padding:4px}
 #tags div:hover{border: 1px solid;cursor: alias ;color:aliceblue}
 #usdftm2{border: 1px dashed #000;color:#020611;background: rgba(255,255,255,1);border-radius: 10px;padding:0 2px;margin:4px;padding:4px}
-#usdftm2:hover{border: 1px solid white;cursor: alias ;background: #72f;color:white}
-#degmod{border: 1px dashed;color:#020611;background: rgba(255,127,127,1);border-radius: 10px;padding:0 2px;margin:4px;padding:4px}
-#degmod:hover{border: 1px solid;cursor: alias ;}
+#usdftm2:hover{border: 1px solid white;cursor: alias ;background: #9f9;color:white}
+#degmod{border: 1px dashed white;color:#020611;background: rgba(255,127,127,1);border-radius: 10px;padding:0 2px;margin:4px;padding:4px}
+#degmod:hover{border: 1px solid white;background: rgba(255,0,0,0.8);color: white;cursor: alias ;}
 tr td:nth-child(9):hover{font-weight: bolder;text-decoration: 3px blue wavy underline blink;}
 .statcounter{font-size: 0}
 #spadi{width:100%}
@@ -54,6 +54,7 @@ tr td:nth-child(9):hover{font-weight: bolder;text-decoration: 3px blue wavy unde
 	clip-path: polygon(calc(100% - 40px) 0%, 0 0, 0 100%, 95% 100%, 95% 50%);
 	margin-top:15px
 }
+.dega{font-size:0}
 @media(min-width:641px){
 	#spadi{width:80%}
 	.lowerbar{display: grid;grid-template-columns: auto auto auto auto;text-align:center}
@@ -112,6 +113,7 @@ tr td:nth-child(9):hover{font-weight: bolder;text-decoration: 3px blue wavy unde
 			<div onclick="togfil(this.innerHTML)">Yields</div>
 		</div>
 	<!--<button id="degmod" onclick="">Degen-Zone : Off</button>-->
+	<button id="degmod" onclick="degmod()">High Risk : OFF</button>
 	<button id="usdftm2" onclick="usdftm2()">Currency : FTM</button>
 	</div>
 	<br>
@@ -301,7 +303,7 @@ tr td:nth-child(9):hover{font-weight: bolder;text-decoration: 3px blue wavy unde
 					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
 					<td>AMM DEX Farming Natives Staking</td>
 				</tr>
-				<tr class="sca amm dex farming natives staking" id="tr_0xed940c1db02a8e7dc2e6748aff3aab165b59c7e3">
+				<tr class="sca dega amm dex farming natives staking" id="tr_0xed940c1db02a8e7dc2e6748aff3aab165b59c7e3">
 					<td>⁕</td>
 					<td>OPERA</td>
 					<td>OperaSwap</td>
@@ -366,7 +368,7 @@ tr td:nth-child(9):hover{font-weight: bolder;text-decoration: 3px blue wavy unde
 					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
 					<td>Natives Stablecoins</td>
 				</tr>
-				<tr class="sca natives farming" id="tr_0xeb86b05cfee3e48db9a44275701ed099462c8ba0">
+				<tr class="sca dega natives farming" id="tr_0xeb86b05cfee3e48db9a44275701ed099462c8ba0">
 					<td>⁕</td>
 					<td>FRANK</td>
 					<td>Frankenstein Finance</td>
@@ -938,6 +940,8 @@ function fillLinks()
 }
 fiu=1;
 
+degdismod="0";
+degdismodbg="rgba(255,127,63,0)";
 
 
 
@@ -1941,7 +1945,22 @@ function sortit(n) {
     }
   }
 }
+function degmod()
+{
+	console.log("ini",degdismod,degdismodbg);
+	degdismod=degdismod=="0"?"1em":"0";
+	degdismodbg=degdismodbg=="rgba(255,127,63,0)"?"rgba(255,127,63,0.25)":"rgba(255,127,63,0)";
+	$("degmod").innerHTML=$("degmod").innerHTML=="Hi-Risk : OFF"?"Hi-Risk : ON":"Hi-Risk : OFF";
+	console.log("ini2",degdismod,degdismodbg);
+	alldeg = document.getElementsByClassName("dega");
+	for(i=0;i< alldeg.length;i++)
+	{
+		alldeg[i].style.fontSize=degdismod;
+		alldeg[i].style.background=degdismodbg;
+	}
+	console.log("ini3",degdismod,degdismodbg);
 
+}
 function chopsca()
 {
 	rs=$("maintable").getElementsByTagName("tbody")[0].getElementsByTagName("tr");
