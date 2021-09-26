@@ -111,25 +111,27 @@ tr td:nth-child(9):hover{font-weight: bolder;text-decoration: 3px blue wavy unde
 			<div onclick="togfil(this.innerHTML)">Vaults</div>
 			<div onclick="togfil(this.innerHTML)">Yields</div>
 		</div>
-		<!--<button id="degmod" onclick="">Degen-Zone : Off</button>-->
-		<button id="usdftm2" onclick="usdftm2()">Display Currency : FTM</button>
+	<!--<button id="degmod" onclick="">Degen-Zone : Off</button>-->
+	<button id="usdftm2" onclick="usdftm2()">Currency : FTM</button>
 	</div>
 	<br>
-		<div id="t2">
-			<span onclick="sortit(0)">N⇅</span>
-			<span onclick="sortit(1)">Ticker⇅</span>
-			<span onclick="sortit(2)">Asset⇅</span>
-			<span onclick="sortit(3)">Market Cap⇅</span>
-			<span onclick="sortit(4)">Price⇅</span>
-			<span onclick="sortit(5)">Most Liquid⇅</span>
-			<span onclick="sortit(6)">Supply⇅</span>
-			<span>Links</span>
-			<span onclick="sortit(8)">Address⇅</span>
-			<span>Analytics</span>
-			<span>Labels</span>
-		</div>
 	<div class="stage" align="center">
 		<table id="maintable" class="centerstage">
+			<thead>
+				<tr>
+				<th onclick="sortit(0)">N⇅</th>
+				<th onclick="sortit(1)">Ticker⇅</th>
+				<th onclick="sortit(2)">Asset⇅</th>
+				<th onclick="sortit(3)">Market Cap⇅</th>
+				<th onclick="sortit(4)">Price⇅</th>
+				<th onclick="sortit(5)">Most Liquid⇅</th>
+				<th onclick="sortit(6)">Supply⇅</th>
+				<th>Links</th>
+				<th onclick="sortit(8)">Address⇅</th>
+				<th>Analytics</th>
+				<th>Labels</th>
+				</tr>
+			</thead>
 			<tbody>
 				<tr class="sca farming gambling natives staking yields tools" id="tr_0xf43Cc235E686d7BC513F53Fbffb61F760c3a1882">
 					<td>★</td>
