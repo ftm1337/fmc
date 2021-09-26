@@ -30,7 +30,7 @@ option{cursor:pointer}
 #tags div{border: 1px #e3e9f2 dashed;color:aqua;width: max-content;float: left;background: rgba(0,255,255,.25);border-radius: 10px;padding:0 2px;margin:4px;padding:4px}
 #tags div:hover{border: 1px solid;cursor: alias ;color:aliceblue}
 #usdftm2{border: 1px dashed #000;color:#020611;background: rgba(255,255,255,1);border-radius: 10px;padding:0 2px;margin:4px;padding:4px}
-#usdftm2:hover{border: 1px solid white;cursor: alias ;background: #9f9;color:white}
+#usdftm2:hover{border: 1px solid white;cursor: alias ;background: #9f9;}
 #degmod{border: 1px dashed white;color:#020611;background: rgba(255,127,127,1);border-radius: 10px;padding:0 2px;margin:4px;padding:4px}
 #degmod:hover{border: 1px solid white;background: rgba(255,0,0,0.8);color: white;cursor: alias ;}
 tr td:nth-child(9):hover{font-weight: bolder;text-decoration: 3px blue wavy underline blink;}
@@ -1950,7 +1950,7 @@ function degmod()
 	console.log("ini",degdismod,degdismodbg);
 	degdismod=degdismod=="0"?"1em":"0";
 	degdismodbg=degdismodbg=="rgba(255,127,63,0)"?"rgba(255,127,63,0.25)":"rgba(255,127,63,0)";
-	$("degmod").innerHTML=$("degmod").innerHTML=="Hi-Risk : OFF"?"Hi-Risk : ON":"Hi-Risk : OFF";
+	$("degmod").innerHTML=$("degmod").innerHTML=="High Risk : OFF"?"High Risk : ON":"High Risk : OFF";
 	console.log("ini2",degdismod,degdismodbg);
 	alldeg = document.getElementsByClassName("dega");
 	for(i=0;i< alldeg.length;i++)
