@@ -2003,7 +2003,7 @@ function usdftm2()
 	if(!(fiu==1))
 	{
 		ee=document.getElementsByClassName("sca");
-		if($("usdftm2").innerHTML=="Display Currency : FTM")
+		if($("usdftm2").innerHTML=="Currency : FTM")
 		{
 			for(i=0;i< ee.length;i++)
 			{
@@ -2013,9 +2013,9 @@ function usdftm2()
 			}
 		$("tmc").innerHTML=Number((Number(($("tmc").innerHTML).replace(/ |\$|,|%/g,''))*fiu).toFixed(0)).toLocaleString()
 		$("tmcunit").innerHTML="USD";
-		$("usdftm2").innerHTML="Display Currency : USD";
+		$("usdftm2").innerHTML="Currency : USD";
 		}
-		else if($("usdftm2").innerHTML=="Display Currency : USD")
+		else if($("usdftm2").innerHTML=="Currency : USD")
 		{
 			for(i=0;i< ee.length;i++)
 			{
@@ -2025,7 +2025,7 @@ function usdftm2()
 			}
 		$("tmc").innerHTML=Number((Number(($("tmc").innerHTML).replace(/ |\$|,|%/g,''))/fiu).toFixed(0)).toLocaleString()
 		$("tmcunit").innerHTML="FTM";
-		$("usdftm2").innerHTML="Display Currency : FTM";
+		$("usdftm2").innerHTML="Currency : FTM";
 		}
 	}
 }
