@@ -113,15 +113,12 @@ td:nth-child(5),td:nth-child(9),th:nth-child(5),th:nth-child(9){display:none}</s
 <h4>Discover the best DEXes of Fantom Opera with FantomMarketCap on FMC.guru!</h4>
 </div>
 <br>
-<br>
-<br>
 <div align="center" class="pgb2">
 	<div align="center" class="pgb2s">Overall DEX Liquidity<br>$<span id="os_l" style="font-size:2em">0</span></div>
 	<div align="center" class="pgb2s">Today's USD Velocity<br>$<span id="os_v" style="font-size:2em">0</span></div>
 	<div align="center" class="pgb2s">Net Money Exchanged<br>$<span id="os_e" style="font-size:2em">0</span></div>
 	<div align="center" class="pgb2s">Total No. of Trades<br>$<span id="os_t" style="font-size:2em">0</span></div>
 </div>
-<br>
 <br>
 <h2 align="center">List of All Top DEX on Fantom</h2>
 <br>
@@ -930,7 +927,7 @@ async function gg()
 		gobj[0]+=Number(gdqd_paint.paintFactories[0].totalLiquidityUSD)
 		gobj[1]+=Number(gdqd_paint.paintDayDatas[0].dailyVolumeUSD)
 		gobj[2]+=Number(gdqd_paint.paintFactories[0].totalVolumeUSD)
-		gobj[3]+=Number(gdqd_paint.paintFactories[0].txCount)
+		gobj[3]+=Number(gdqd_paint.paintFactories[0].totalTransactions)
 		ref_os()
 	}
 	gdqr_paint.send(JSON.stringify({query:gdq_paint}))
