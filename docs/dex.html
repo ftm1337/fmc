@@ -73,7 +73,7 @@ td:first-child,td:nth-last-child(2){font-family: inherit}
 /*td:nth-child(4),td:nth-child(5),th:nth-child(4),th:nth-child(5){display:none}*/
 td:last-child{text-align:center}
 td{font-size: 1.25em;}
-th{font-size:1.25em;padding: 0 5px;text-align:center}
+th{font-size:1.25em;padding: 12px 5px;text-align:center}
 td:nth-last-child(2){font-size: 1em}
 * {
   scrollbar-width: thick;
@@ -115,7 +115,7 @@ td:nth-child(5),td:nth-child(9),th:nth-child(5),th:nth-child(9){display:none}</s
 <br>
 <div align="center" class="pgb2">
 	<div align="center" class="pgb2s">Overall DEX Liquidity<br>$<span id="os_l" style="font-size:2em">0</span></div>
-	<div align="center" class="pgb2s">Today's USD Velocity<br>$<span id="os_v" style="font-size:2em">0</span></div>
+	<div align="center" class="pgb2s">Current USD Velocity<br>$<span id="os_v" style="font-size:2em">0</span>/sec.</div>
 	<div align="center" class="pgb2s">Net Money Exchanged<br>$<span id="os_e" style="font-size:2em">0</span></div>
 	<div align="center" class="pgb2s">Total No. of Trades<br>$<span id="os_t" style="font-size:2em">0</span></div>
 </div>
@@ -422,7 +422,7 @@ td:nth-child(5),td:nth-child(9),th:nth-child(5),th:nth-child(9){display:none}</s
 <br>
 <br>
 <h5 align="center" id="disclaimer"><b><u>Disclaimer & Notice</u></b><br>
-All information presented here is only for aesthetic uses and posesses no validity to settle any claims. It is also non-exhaustive and prone to error. Advertisements are not endorsements.	 <strike>Currently it does not update automatically.</strike> This dashboard is ultra-real time - It means that the data on this page has zero latency, unlike CMC or CG which have 1-10 minutes old data. FTM.guru and FMC.guru are trying to keep up with the <b>Fantom Fast</b> motto. <i>A much deserved shoutout to all developers on F.O., ftmscan.com, defiLllama and rpc.ftm.tools for their benign Services!</i> All presented numbers are denoted in FTM by default."Most Liquid" coloumn refers to the pair with highest WFTM-Liquidity.<br>We encourage you to report inconsistencies, ask business queries, request listing or start an ad campaign at one of our community channels:<br>
+All information presented here is only for aesthetic uses and posesses no validity to settle any claims. It is also non-exhaustive and prone to error. Advertisements are not endorsements. This dashboard is ultra-real time - It means that the data on this page has zero latency, unlike CMC or CG which have 1-10 minutes old data. FTM.guru and FMC.guru are trying to keep up with the <b>Fantom Fast</b> motto. <i>A much deserved shoutout to all developers on F.O., ftmscan.com, defiLllama, thegraph and rpc.ftm.tools for their benign Services!</i>A "0" represents anomalities in data and are masked to remove pollution.<br>We encourage you to report inconsistencies, ask business queries, request listing or start an ad campaign at one of our community channels:<br>
 <b><a href="https://t.me/FTM1337" target="_blank">Telegram</a> or <a href="https://discord.gg/QpyfMarNrV" target="_blank">Discord.</a></b><!--
 Our Address: 0x921Ed37f62CBe4d86D38b720EF4a4a44B24a1C5D--></h5>
 <br>
@@ -596,6 +596,7 @@ async function gp()
 		if(di[i][0]=="Soul"){await F.methods.totalPairs().call((e,r)=>{$("d_"+di[i][0].toLowerCase()).getElementsByTagName("td")[1].innerHTML=Number(r).toLocaleString()})}
 		else{await F.methods.allPairsLength().call((e,r)=>{$("d_"+di[i][0].toLowerCase()).getElementsByTagName("td")[1].innerHTML=Number(r).toLocaleString()})}
 	}
+	sortit(2);sortit(2);sortit(6);sortit(6);
 }
 
 ab=
@@ -1109,7 +1110,7 @@ async function gg()
 function ref_os()
 {
 	$("os_l").innerHTML = Number(Number(gobj[0]).toFixed(0)).toLocaleString()
-	$("os_v").innerHTML = Number(Number(gobj[1]).toFixed(0)).toLocaleString()
+	$("os_v").innerHTML = Number(Number(gobj[0]/((Date.now()%86400000)/1000)).toFixed(0)).toLocaleString();
 	$("os_e").innerHTML = Number(Number(gobj[2]).toFixed(0)).toLocaleString()
 	$("os_t").innerHTML = Number(Number(gobj[3]).toFixed(0)).toLocaleString()
 }
