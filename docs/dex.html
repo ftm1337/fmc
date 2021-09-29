@@ -48,6 +48,25 @@ option{cursor:pointer}
 	clip-path: polygon(calc(100% - 40px) 0%, 0 0, 0 100%, 95% 100%, 95% 50%);
 	margin-top:15px
 }
+.pgb2s{
+	min-width: 200px;
+	margin: auto;
+	background: rgba(0,255,255,0.1);
+	border: 2px double aqua;
+	border-right: none;
+	border-top: none;
+	border-bottom: none;
+	padding: 10px 15px 10px 0px;
+	clip-path: polygon(100% 0%, 0 0, 0 100%, 100% 100%, 90% 50%);
+	margin-top:15px
+}
+.pgb2s:nth-of-type(2n){
+
+	border:none;
+	border-right: 2px double aqua;
+	border-top: none;
+	border-bottom: none;
+	clip-path: polygon(100% 0%, 0% 0%, 10% 50%, 0% 100%, 100% 1000%);}
 td{padding:2px 5px;text-align:right;}
 td{font-family: mono}
 td:first-child,td:nth-last-child(2){font-family: inherit}
@@ -76,8 +95,11 @@ td:nth-last-child(2){font-size: 1em}
 	.lowerbar{display: grid;grid-template-columns: auto auto auto auto;text-align:center}
 	.hhr{width: 555px}
 	.pgb{display: grid;grid-template-columns: auto auto auto}
+	.pgb2{display: grid;grid-template-columns: auto auto}
+	.pgb2s{min-width: 40vw;}
 	td{padding: 10px}
-}</style>
+}
+td:nth-child(5),td:nth-child(9){display:none}</style>
 </head>
 <body>
 
@@ -92,13 +114,12 @@ td:nth-last-child(2){font-size: 1em}
 </div>
 <br>
 <br>
-<div align="center" class="pgb">
-	<div align="center" class="pgbs"><a href="index.html">FantomMarketCap Index</a></div>
-	<div align="center" class="pgbs"><a href="dex.html">List of All DEX at Fantom</a></div>
-	<div align="center" class="pgbs"><a href="xdao.html">CyberSwap Analytics</a></div>
-	<div align="center" class="pgbs"><a hre f="index.html">Liquidity Explorer</a></div>
-	<div align="center" class="pgbs"><a hre f="dex.html">List of Top Protocols</a></div>
-	<div align="center" class="pgbs"><a hre f="xdao.html">List of Top Farms</a></div>
+<br>
+<div align="center" class="pgb2">
+	<div align="center" class="pgb2s">Overall DEX Liquidity<br>$<span id="os_l" style="font-size:2em">0</span></div>
+	<div align="center" class="pgb2s">Today's USD Velocity<br>$<span id="os_v" style="font-size:2em">0</span></div>
+	<div align="center" class="pgb2s">Net Money Exchanged<br>$<span id="os_e" style="font-size:2em">0</span></div>
+	<div align="center" class="pgb2s">Total No. of Trades<br>$<span id="os_t" style="font-size:2em">0</span></div>
 </div>
 <br>
 <br>
@@ -110,12 +131,12 @@ td:nth-last-child(2){font-size: 1em}
 			<tr>
 			<th onclick="sortit(0)">D.E.X.⇅</th>
 			<th onclick="sortit(1)">Pools⇅</th>
-			<th onclick="sortit(2)">V.Locked⇅</th>
-			<th onclick="sortit(3)">Total LP⇅</th>
+			<th onclick="sortit(2)">T.V.Locked⇅</th>
+			<th onclick="sortit(3)">T.Liquidity⇅</th>
 			<th onclick="sortit(4)">Age⇅</th>
-			<th onclick="sortit(5)">24h Vol.⇅</th>
-			<th onclick="sortit(6)">All Vol.⇅</th>
-			<th onclick="sortit(7)">All Txn.⇅</th>
+			<th onclick="sortit(5)">Vol. Today⇅</th>
+			<th onclick="sortit(6)">All Time Vol.⇅</th>
+			<th onclick="sortit(7)">Total Txns.⇅</th>
 			<th onclick="sortit(8)">Users⇅</th>
 			<th onclick="sortit(9)">Trading Interface</th>
 			<th>Links</th>
@@ -391,6 +412,16 @@ td:nth-last-child(2){font-size: 1em}
 <br>
 <div align="center" style="margin:0;padding:0"><u>Legend:</u><br>*Bridged ⁕Native ★Featured<br>💱DEX-UI 🌐Website 🚜Farm<br>🎮Discord ✈Telegram 🐦Twitter<br>🐙Github 🔎Explorer</div>
 
+<br>
+<br>
+<div align="center" class="pgb">
+	<div align="center" class="pgbs"><a href="index.html">FantomMarketCap Index</a></div>
+	<div align="center" class="pgbs"><a href="dex.html">List of All DEX at Fantom</a></div>
+	<div align="center" class="pgbs"><a href="xdao.html">CyberSwap Analytics</a></div>
+	<div align="center" class="pgbs"><a hre f="index.html">Liquidity Explorer</a></div>
+	<div align="center" class="pgbs"><a hre f="dex.html">List of Top Protocols</a></div>
+	<div align="center" class="pgbs"><a hre f="xdao.html">List of Top Farms</a></div>
+</div>
 <br>
 <br>
 <h5 align="center" id="disclaimer"><b><u>Disclaimer & Notice</u></b><br>
@@ -705,6 +736,8 @@ function po (di)
 date_id = Date.now();
 date_id = date_id/1000 - (date_id/1000)%1;
 date_id = date_id/86400 - (date_id/86400)%1;
+//gobj = {"liq":0,"dv":0,"tv":0,"tt":0}
+gobj=[0,0,0,0];
 async function gg()
 {
 	gdq_wraith =
@@ -732,6 +765,11 @@ async function gg()
 		$("d_wraith").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_wraith.wraithSwapDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
 		$("d_wraith").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_wraith.wraithFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
 		$("d_wraith").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_wraith.wraithFactories[0].totalTransactions).toFixed(0)).toLocaleString()
+		gobj[0]+=Number(gdqd_wraith.wraithFactories[0].totalLiquidityUSD)
+		gobj[1]+=Number(gdqd_wraith.wraithSwapDayDatas[0].dailyVolumeUSD)
+		gobj[2]+=Number(gdqd_wraith.wraithFactories[0].totalVolumeUSD)
+		gobj[3]+=Number(gdqd_wraith.wraithFactories[0].totalTransactions)
+		ref_os()
 	}
 	gdqr_wraith.send(JSON.stringify({query:gdq_wraith}))
 
@@ -760,6 +798,11 @@ async function gg()
 		$("d_zoo").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_zoo.uniswapDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
 		$("d_zoo").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_zoo.uniswapFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
 		$("d_zoo").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_zoo.uniswapFactories[0].txCount).toFixed(0)).toLocaleString()
+		gobj[0]+=Number(gdqd_zoo.uniswapFactories[0].totalLiquidityUSD)
+		gobj[1]+=Number(gdqd_zoo.uniswapDayDatas[0].dailyVolumeUSD)
+		gobj[2]+=Number(gdqd_zoo.uniswapFactories[0].totalVolumeUSD)
+		gobj[3]+=Number(gdqd_zoo.uniswapFactories[0].txCount)
+		ref_os()
 	}
 	gdqr_zoo.send(JSON.stringify({query:gdq_zoo}))
 
@@ -785,6 +828,11 @@ async function gg()
 		$("d_sushi").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_sushi.factories[0].volumeUSD).toFixed(0)).toLocaleString()
 		$("d_sushi").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_sushi.factories[0].txCount).toFixed(0)).toLocaleString()
 		$("d_sushi").getElementsByTagName("td")[8].innerHTML=Number(Number(gdqd_sushi.factories[0].userCount).toFixed(0)).toLocaleString()
+		gobj[0]+=Number(gdqd_sushi.factories[0].liquidityUSD)
+		gobj[1]+=Number(gdqd_sushi.dayDatas[0].volumeUSD)
+		gobj[2]+=Number(gdqd_sushi.factories[0].volumeUSD)
+		gobj[3]+=Number(gdqd_sushi.factories[0].txCount)
+		ref_os()
 	}
 	gdqr_sushi.send(JSON.stringify({query:gdq_sushi}))
 
@@ -813,6 +861,11 @@ async function gg()
 		$("d_spooky").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_spooky.uniswapDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
 		$("d_spooky").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_spooky.uniswapFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
 		$("d_spooky").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_spooky.uniswapFactories[0].txCount).toFixed(0)).toLocaleString()
+		gobj[0]+=Number(gdqd_spooky.uniswapFactories[0].totalLiquidityUSD)
+		gobj[1]+=Number(gdqd_spooky.uniswapDayDatas[0].dailyVolumeUSD)
+		gobj[2]+=Number(gdqd_spooky.uniswapFactories[0].totalVolumeUSD)
+		gobj[3]+=Number(gdqd_spooky.uniswapFactories[0].txCount)
+		ref_os()
 	}
 	gdqr_spooky.send(JSON.stringify({query:gdq_spooky}))
 
@@ -841,8 +894,213 @@ async function gg()
 		$("d_spirit").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_spirit.spiritswapDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
 		$("d_spirit").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_spirit.spiritswapFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
 		$("d_spirit").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_spirit.spiritswapFactories[0].txCount).toFixed(0)).toLocaleString()
+		gobj[0]+=Number(gdqd_spirit.spiritswapFactories[0].totalLiquidityUSD)
+		gobj[1]+=Number(gdqd_spirit.spiritswapDayDatas[0].dailyVolumeUSD)
+		gobj[2]+=Number(gdqd_spirit.spiritswapFactories[0].totalVolumeUSD)
+		gobj[3]+=Number(gdqd_spirit.spiritswapFactories[0].txCount)
+		ref_os()
 	}
 	gdqr_spirit.send(JSON.stringify({query:gdq_spirit}))
+
+	gdq_paint =
+		`query {
+  		paintFactories(first:1) {
+    		id
+    		totalVolumeUSD    totalVolumeFTM  untrackedVolumeUSD
+    		totalLiquidityUSD    totalLiquidityFTM
+    		totalPairs    totalTransactions
+  		}
+
+  		paintDayDatas(where:{id: ${date_id}}){
+    		id  date
+    		dailyVolumeUSD	dailyVolumeFTM	dailyVolumeUntracked
+    		totalVolumeUSD	totalVolumeFTM
+    		totalLiquidityUSD	totalLiquidityFTM
+    		totalTransactions
+			}
+		}`
+	gdqr_paint = new XMLHttpRequest();
+	gdqr_paint.open("POST","https://api.thegraph.com/subgraphs/name/paint-swap-finance/exchange",true);
+	gdqr_paint.onload=function(){
+		gdqd_paint=JSON.parse(this.response).data;
+		$("d_paint").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_paint.paintFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
+		$("d_paint").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_paint.paintDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_paint").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_paint.paintFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_paint").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_paint.paintFactories[0].totalTransactions).toFixed(0)).toLocaleString()
+		gobj[0]+=Number(gdqd_paint.paintFactories[0].totalLiquidityUSD)
+		gobj[1]+=Number(gdqd_paint.paintDayDatas[0].dailyVolumeUSD)
+		gobj[2]+=Number(gdqd_paint.paintFactories[0].totalVolumeUSD)
+		gobj[3]+=Number(gdqd_paint.paintFactories[0].txCount)
+		ref_os()
+	}
+	gdqr_paint.send(JSON.stringify({query:gdq_paint}))
+
+	gdq_waka =
+		`query {
+  		wakaSwapFactories(first:1) {
+    		id
+    		totalVolumeUSD    totalVolumeETH  untrackedVolumeUSD
+    		totalLiquidityUSD    totalLiquidityETH
+    		pairCount    txCount
+  		}
+
+  		wakaSwapDayDatas(where:{id: ${date_id}}){
+    		id  date
+    		dailyVolumeUSD	dailyVolumeETH	dailyVolumeUntracked
+    		totalVolumeUSD	totalVolumeETH
+    		totalLiquidityUSD	totalLiquidityETH
+    		txCount
+			}
+		}`
+	gdqr_waka = new XMLHttpRequest();
+	gdqr_waka.open("POST","https://api.thegraph.com/subgraphs/name/waka-finance/waka-graph",true);
+	gdqr_waka.onload=function(){
+		gdqd_waka=JSON.parse(this.response).data;
+		$("d_waka").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_waka.wakaSwapFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
+		$("d_waka").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_waka.wakaSwapDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_waka").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_waka.wakaSwapFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_waka").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_waka.wakaSwapFactories[0].txCount).toFixed(0)).toLocaleString()
+		gobj[0]+=Number(gdqd_waka.wakaSwapFactories[0].totalLiquidityUSD)
+		gobj[1]+=Number(gdqd_waka.wakaSwapDayDatas[0].dailyVolumeUSD)
+		gobj[2]+=Number(gdqd_waka.wakaSwapFactories[0].totalVolumeUSD)
+		gobj[3]+=Number(gdqd_waka.wakaSwapFactories[0].txCount)
+		ref_os()
+	}
+	gdqr_waka.send(JSON.stringify({query:gdq_waka}))
+
+	gdq_elk =
+		`query {
+  		elkFactories(first:1) {
+    		id
+    		totalVolumeUSD    totalVolumeETH  untrackedVolumeUSD
+    		totalLiquidityUSD    totalLiquidityETH
+    		pairCount    txCount
+  		}
+
+  		elkDayDatas(where:{id: ${date_id}}){
+    		id  date
+    		dailyVolumeUSD	dailyVolumeETH	dailyVolumeUntracked
+    		totalVolumeUSD	totalVolumeETH
+    		totalLiquidityUSD	totalLiquidityETH
+    		txCount
+			}
+		}`
+	gdqr_elk = new XMLHttpRequest();
+	gdqr_elk.open("POST","https://api.thegraph.com/subgraphs/name/elkfinance/elkdex-ftm",true);
+	gdqr_elk.onload=function(){
+		gdqd_elk=JSON.parse(this.response).data;
+		$("d_elk").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_elk.elkFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
+		$("d_elk").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_elk.elkDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_elk").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_elk.elkFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_elk").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_elk.elkFactories[0].txCount).toFixed(0)).toLocaleString()
+		gobj[0]+=Number(gdqd_elk.elkFactories[0].totalLiquidityUSD)
+		gobj[1]+=Number(gdqd_elk.elkDayDatas[0].dailyVolumeUSD)
+		gobj[2]+=Number(gdqd_elk.elkFactories[0].totalVolumeUSD)
+		gobj[3]+=Number(gdqd_elk.elkFactories[0].txCount)
+		ref_os()
+	}
+	gdqr_elk.send(JSON.stringify({query:gdq_elk}))
+
+	gdq_nipple =
+		`query {
+  			uniswapFactories(first: 1) {
+    			id
+    			pairCount	txCount
+    			totalVolumeUSD    totalVolumeFTM	untrackedVolumeUSD
+    			totalLiquidityUSD	totalLiquidityFTM
+    			txCount
+  			}
+  			uniswapDayDatas(where:{id: ${date_id}}) {
+    			id	date
+    			txCount
+    			dailyVolumeUSD	dailyVolumeFTM	dailyVolumeUntracked
+    			totalVolumeUSD	totalVolumeFTM
+    			totalLiquidityUSD	totalLiquidityFTM
+  			}
+		}`
+	gdqr_nipple = new XMLHttpRequest();
+	gdqr_nipple.open("POST","https://api.thegraph.com/subgraphs/name/nipple-labs/nipplelabs",true);
+	gdqr_nipple.onload=function(){
+		gdqd_nipple=JSON.parse(this.response).data;
+		$("d_nipple").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_nipple.uniswapFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
+		$("d_nipple").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_nipple.uniswapDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_nipple").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_nipple.uniswapFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_nipple").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_nipple.uniswapFactories[0].txCount).toFixed(0)).toLocaleString()
+		gobj[0]+=Number(gdqd_nipple.uniswapFactories[0].totalLiquidityUSD)
+		gobj[1]+=Number(gdqd_nipple.uniswapDayDatas[0].dailyVolumeUSD)
+		gobj[2]+=Number(gdqd_nipple.uniswapFactories[0].totalVolumeUSD)
+		gobj[3]+=Number(gdqd_nipple.uniswapFactories[0].txCount)
+		ref_os()
+	}
+	gdqr_nipple.send(JSON.stringify({query:gdq_nipple}))
+
+	gdq_shiba =
+		`query {
+  			uniswapFactories(first: 1) {
+    			id
+    			pairCount	txCount
+    			totalVolumeUSD    totalVolumeFTM	untrackedVolumeUSD
+    			totalLiquidityUSD	totalLiquidityFTM
+    			txCount
+  			}
+  			uniswapDayDatas(where:{id: ${date_id}}) {
+    			id	date
+    			txCount
+    			dailyVolumeUSD	dailyVolumeFTM	dailyVolumeUntracked
+    			totalVolumeUSD	totalVolumeFTM
+    			totalLiquidityUSD	totalLiquidityFTM
+  			}
+		}`
+	gdqr_shiba = new XMLHttpRequest();
+	gdqr_shiba.open("POST","https://api.thegraph.com/subgraphs/name/shiba-fantom/exchange",true);
+	gdqr_shiba.onload=function(){
+		gdqd_shiba=JSON.parse(this.response).data;
+		$("d_shiba").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_shiba.uniswapFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
+		$("d_shiba").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_shiba.uniswapDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_shiba").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_shiba.uniswapFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_shiba").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_shiba.uniswapFactories[0].txCount).toFixed(0)).toLocaleString()
+		gobj[0]+=Number(gdqd_shiba.uniswapFactories[0].totalLiquidityUSD)
+		gobj[1]+=Number(gdqd_shiba.uniswapDayDatas[0].dailyVolumeUSD)
+		gobj[2]+=Number(gdqd_shiba.uniswapFactories[0].totalVolumeUSD)
+		gobj[3]+=Number(gdqd_shiba.uniswapFactories[0].txCount)
+		ref_os()
+	}
+	gdqr_shiba.send(JSON.stringify({query:gdq_shiba}))
+
+	gdq_jet =
+		`query {
+  			uniswapFactories(first: 1) {
+    			id
+    			pairCount	txCount
+    			totalVolumeUSD    totalVolumeETH	untrackedVolumeUSD
+    			totalLiquidityUSD	totalLiquidityETH
+    			txCount
+  			}
+  			uniswapDayDatas(where:{id: ${date_id}}) {
+    			id	date
+    			txCount
+    			dailyVolumeUSD	dailyVolumeETH	dailyVolumeUntracked
+    			totalVolumeUSD	totalVolumeETH
+    			totalLiquidityUSD	totalLiquidityETH
+  			}
+		}`
+	gdqr_jet = new XMLHttpRequest();
+	gdqr_jet.open("POST","https://api.thegraph.com/subgraphs/name/smartcookie0501/jetswap-subgraph-fantom",true);
+	gdqr_jet.onload=function(){
+		gdqd_jet=JSON.parse(this.response).data;
+		$("d_jet").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_jet.uniswapFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
+		$("d_jet").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_jet.uniswapDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_jet").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_jet.uniswapFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_jet").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_jet.uniswapFactories[0].txCount).toFixed(0)).toLocaleString()
+		gobj[0]+=Number(gdqd_jet.uniswapFactories[0].totalLiquidityUSD)
+		gobj[1]+=Number(gdqd_jet.uniswapDayDatas[0].dailyVolumeUSD)
+		gobj[2]+=Number(gdqd_jet.uniswapFactories[0].totalVolumeUSD)
+		gobj[3]+=Number(gdqd_jet.uniswapFactories[0].txCount)
+		ref_os()
+
+		ref_os()
+	}
+	gdqr_jet.send(JSON.stringify({query:gdq_jet}))
 
 
 	/*
@@ -850,6 +1108,13 @@ async function gg()
 
 	*/
 
+}
+function ref_os()
+{
+	$("os_l").innerHTML = Number(Number(gobj[0]).toFixed(0)).toLocaleString()
+	$("os_v").innerHTML = Number(Number(gobj[1]).toFixed(0)).toLocaleString()
+	$("os_e").innerHTML = Number(Number(gobj[2]).toFixed(0)).toLocaleString()
+	$("os_t").innerHTML = Number(Number(gobj[3]).toFixed(0)).toLocaleString()
 }
 
 
