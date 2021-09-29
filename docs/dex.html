@@ -5,24 +5,20 @@
 <title>FantomMarketCap - DEX List | FMC.guru : Fantom Opera Cryptocurrency Tokens Price and Market Capitalization</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" href="../img/ftm1337.jpg" />
-<style>
-html{background:radial-gradient(circle at center, #127, #122, #100);color:#e3e9f2;font-family:helvetica nueve, helvetica, robotica, ubuntu, roboto, sans-serif;background-attachment: fixed;}
+<style>html{background:radial-gradient(circle at center, #127, #122, #100);color:#e3e9f2;font-family:helvetica nueve, helvetica, robotica, ubuntu, roboto, sans-serif;background-attachment: fixed;}
 .toprow{display:grid;grid-template-columns:max-content auto max-content}
 .topfind{text-align:center;min-width:80%}
 .stage{overflow-x:auto}
-th{min-width:max-content;min-width: -moz-max-content}
-td{min-width:max-content;min-width: -moz-max-content;padding:2px 5px;text-align:right}
+table:hover td:first-child,table:hover th:first-child{position: sticky;left:0;background:rgba(17,27,27,0.75);}
+tr:hover td{background: aqua !important;color:#020611;}
+td,th{min-width:max-content;min-width: -moz-max-content}
 td:first-child{text-align: left}
-td:nth-child(2),td:nth-child(3){text-align: left}
 td:not(td:first-child){font-family: monospace;font-size:1em}
-td:nth-child(1),td:nth-child(2){font-size: 1.25em}
-tr:hover{background: aqua;color:#020611;}
 thead tr:hover{background: aqua;color:#020611}
 pre{margin:0}
 a{color:white;text-decoration-line:none}
 hr{box-shadow: rgba(0,255,255,0.2) 0px 0px 10px 10px;background: #090919;border-radius: 15px;border:aqua 2px solid;}
 table{border-collapse:collapse;overflow:hidden}
-tr{line-height:1.2em}
 h5 a{color: aqua}
 #spadi{width:100%}
 option{cursor:pointer}
@@ -52,18 +48,36 @@ option{cursor:pointer}
 	clip-path: polygon(calc(100% - 40px) 0%, 0 0, 0 100%, 95% 100%, 95% 50%);
 	margin-top:15px
 }
-td:nth-child(4),td:nth-child(5),th:nth-child(4),th:nth-child(5){display:none}
-td:nth-child(2),td:nth-child(3),td:nth-child(3),td:nth-child(4),td:nth-child(6){font-family: mono;text-align: right}
+td{padding:2px 5px;text-align:right;}
+td{font-family: mono}
+td:first-child,td:nth-last-child(2){font-family: inherit}
+/*td:nth-child(4),td:nth-child(5),th:nth-child(4),th:nth-child(5){display:none}*/
 td:last-child{text-align:center}
+td{font-size: 1.25em;}
+th{font-size:1.25em;padding: 0 5px;text-align:center}
+td:nth-last-child(2){font-size: 1em}
+* {
+  scrollbar-width: thick;
+  scrollbar-color: #07f #147;
+}
+*::-webkit-scrollbar {
+  width: 20px;
+}
+*::-webkit-scrollbar-track {
+  background: #147;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #07f;
+  border-radius: 20px;
+  border: 3px solid #147;
+}
 @media(min-width:641px){
 	#spadi{width:80%}
 	.lowerbar{display: grid;grid-template-columns: auto auto auto auto;text-align:center}
 	.hhr{width: 555px}
 	.pgb{display: grid;grid-template-columns: auto auto auto}
-  td{font-size: 1em;padding: 10px}
-	td:nth-child(1),td:nth-child(2){font-size: 1.25em}
-}
-</style>
+	td{padding: 10px}
+}</style>
 </head>
 <body>
 
@@ -96,17 +110,25 @@ td:last-child{text-align:center}
 			<tr>
 			<th onclick="sortit(0)">D.E.X.⇅</th>
 			<th onclick="sortit(1)">Pools⇅</th>
-			<th onclick="sortit(2)">Locked Assets ($)</th>
-			<th onclick="sortit(3)">Total Liquidity ($)</th>
-			<th onclick="sortit(4)">Age</th>
-			<th onclick="sortit(5)">Trading Interface</th>
+			<th onclick="sortit(2)">V.Locked⇅</th>
+			<th onclick="sortit(3)">Total LP⇅</th>
+			<th onclick="sortit(4)">Age⇅</th>
+			<th onclick="sortit(5)">24h Vol.⇅</th>
+			<th onclick="sortit(6)">All Vol.⇅</th>
+			<th onclick="sortit(7)">All Txn.⇅</th>
+			<th onclick="sortit(8)">Users⇅</th>
+			<th onclick="sortit(9)">Trading Interface</th>
 			<th>Links</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr class="" id="d_curve">
 				<td>Curve</td>
-				<td>3</td>
+				<td>4</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
@@ -115,6 +137,10 @@ td:last-child{text-align:center}
 			</tr>
 			<tr class="" id="d_spooky">
 				<td>Spooky</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
@@ -128,11 +154,19 @@ td:last-child{text-align:center}
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
 				<td>spiritswap.finance</td>
 				<td><span><a href="https://dex.zoocoin.cash" target="_blank">💱</a><a href="https://ftm.guru" target="_blank">🌐</a><a href="https://ftm.guru" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_sushi">
 				<td>Sushi</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
@@ -146,11 +180,19 @@ td:last-child{text-align:center}
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
 				<td>ftm.hyperjump.app</td>
 				<td><span><a href="https://ftm.hyperjump.app/" target="_blank">💱</a><a href="https://ftm-info.hyperjump.app/" target="_blank">📊</a><a href="https://ftm.hyperjump.app/" target="_blank">🌐</a><a href="https://hyperjump.fi" target="_blank">🚜</a><a href="" target="_blank">🎮</a>🐦🐙</span></td>
 			</tr>
 			<tr class="" id="d_zoo">
 				<td>Zoo</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
@@ -164,11 +206,19 @@ td:last-child{text-align:center}
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
 				<td>paintswap.finance</td>
 				<td><span><a href="https://paintswap.finance" target="_blank">💱</a><a href="https://info.paintswap.finance" target="_blank">📊</a><a href="https://paintswap.finance" target="_blank">🌐</a><a href="https://paintswap.finance" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_waka">
 				<td>Waka</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
@@ -182,11 +232,19 @@ td:last-child{text-align:center}
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
 				<td>app.elk.finance</td>
 				<td><span><a href="https://app.elk.finance" target="_blank">💱</a><a href="https://ftm-info.elk.finance" target="_blank">📊</a><a href="https://elk.finance" target="_blank">🌐</a><a href="https://app.elk.finance" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_opera">
 				<td>Opera</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
@@ -200,11 +258,19 @@ td:last-child{text-align:center}
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
 				<td>swap.fbomb.finance</td>
 				<td><span><a href="https://swap.fbomb.finance" target="_blank">💱</a><a href="https://fbomb.finance" target="_blank">📊</a><a href="https://fbomb.finance" target="_blank">🌐</a><a href="https://fbomb.finance" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_shiba">
 				<td>Shiba</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
@@ -218,11 +284,19 @@ td:last-child{text-align:center}
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
 				<td>swap.thexdao.com</td>
 				<td><span><a href="https://swap.thexdao.com" target="_blank">💱</a><a href="https://fmc.guru/xdao" target="_blank">📊</a><a href="https://thexdao.org" target="_blank">🌐</a><a href="https://thexdao.com/#/farms" target="_blank">🚜</a><a href="https://t.me/thexfoundationdiscussion" target="_blank">✈</a></span></td>
 			</tr>
 			<tr class="" id="d_totem">
 				<td>Totem</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
@@ -236,11 +310,19 @@ td:last-child{text-align:center}
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
 				<td>nipplelabs.finance</td>
 				<td><span><a href="https://exchange.nipplelabs.finance" target="_blank">💱</a><a href="https://nipplelabs.com" target="_blank">🌐</a><a href="https://discord.com/invite/6ChQmPb3as" target="_blank">🎮</a><a href="https://t.me/nipplelabs" target="_blank">✈</a><a href="https://twitter.com/nipplelabs" target="_blank">🐦</a><a href="https://nipplelabs.finance/farms" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_soul">
 				<td>Soul</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
@@ -254,11 +336,19 @@ td:last-child{text-align:center}
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
 				<td>wraithswap.finance</td>
 				<td><span><a href="https://wraithswap.finance" target="_blank">💱</a><a href="https://wraithswap.finance" target="_blank">🌐</a><a href="https://discord.com/invite/" target="_blank">🎮</a><a href="https://t.me/fantomsyf" target="_blank">✈</a><a href="https://twitter.com/" target="_blank">🐦</a><a href="https://fields.wraithswap.finance" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_empire">
 				<td>Empire</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
@@ -272,11 +362,19 @@ td:last-child{text-align:center}
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
 				<td>nuggetswap.finance</td>
 				<td><span><a href="https://nuggetswap.finance" target="_blank">💱</a><a href="https://nuggetswap.finance" target="_blank">🌐</a><a href="https://discord.com/invite/" target="_blank">🎮</a><a href="https://t.me/nuggetswap" target="_blank">✈</a><a href="https://twitter.com/" target="_blank">🐦</a><a href="https://" target="_blank">🚜</a></span></td>
 			</tr>
 			<tr class="" id="d_jet">
-				<td>JetSwap</td>
+				<td>Jet</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
@@ -420,7 +518,21 @@ function basics()
 	copsca()
 	gp()
 	tc()
+	gg()
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 di=
@@ -453,8 +565,8 @@ async function gp()
 	{
 		if(i==0){continue}
 		F=new web3.eth.Contract(ab,di[i][2]);
-		if(di[i][0]=="Soul"){await F.methods.totalPairs().call((e,r)=>{$("d_"+di[i][0].toLowerCase()).getElementsByTagName("td")[1].innerHTML=r})}
-		else{await F.methods.allPairsLength().call((e,r)=>{$("d_"+di[i][0].toLowerCase()).getElementsByTagName("td")[1].innerHTML=r})}
+		if(di[i][0]=="Soul"){await F.methods.totalPairs().call((e,r)=>{$("d_"+di[i][0].toLowerCase()).getElementsByTagName("td")[1].innerHTML=Number(r).toLocaleString()})}
+		else{await F.methods.allPairsLength().call((e,r)=>{$("d_"+di[i][0].toLowerCase()).getElementsByTagName("td")[1].innerHTML=Number(r).toLocaleString()})}
 	}
 }
 
@@ -517,7 +629,7 @@ function copsca()
 	rs=$("maintable").getElementsByTagName("tbody")[0].getElementsByTagName("tr");
 	for(i=0;i< rs.length;i++)
 	{
-		sc=rs[i].getElementsByTagName("td")[4];
+		sc=rs[i].getElementsByTagName("td")[Object.keys(rs[i].getElementsByTagName("td")).length-2];
 		sc.setAttribute("onClick","copsc(this)");
 		sc.style.cursor="copy";
 	}
@@ -590,6 +702,156 @@ function po (di)
 		if (di.slug ==  "shiba-fantom" ){		$v("d_shiba").innerHTML=v;}
 		if (di.slug ==  "soulswap" ){			$v("d_soul").innerHTML=v;}
 }
+date_id = Date.now();
+date_id = date_id/1000 - (date_id/1000)%1;
+date_id = date_id/86400 - (date_id/86400)%1;
+async function gg()
+{
+	gdq_wraith =
+		`query {
+  		wraithFactories(first:1) {
+    		id
+    		totalVolumeUSD    totalVolumeFTM  untrackedVolumeUSD
+    		totalLiquidityUSD    totalLiquidityFTM
+    		totalTransactions    totalPairs
+  		}
+
+  		wraithSwapDayDatas(where:{id:${date_id}}){
+    		id  date
+    		dailyVolumeFTM	dailyVolumeUSD	dailyVolumeUntracked
+    		totalVolumeUSD	totalVolumeFTM
+    		totalLiquidityUSD	totalLiquidityFTM
+    		totalTransactions
+			}
+		}`
+	gdqr_wraith = new XMLHttpRequest();
+	gdqr_wraith.open("POST","https://api.thegraph.com/subgraphs/name/sy-finance/wraithswap",true);
+	gdqr_wraith.onload=function(){
+		gdqd_wraith=JSON.parse(this.response).data;
+		$("d_wraith").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_wraith.wraithFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
+		$("d_wraith").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_wraith.wraithSwapDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_wraith").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_wraith.wraithFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_wraith").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_wraith.wraithFactories[0].totalTransactions).toFixed(0)).toLocaleString()
+	}
+	gdqr_wraith.send(JSON.stringify({query:gdq_wraith}))
+
+	gdq_zoo =
+		`query {
+  			uniswapFactories(first: 1) {
+    			id
+    			pairCount	txCount
+    			totalVolumeUSD    totalVolumeETH	untrackedVolumeUSD
+    			totalLiquidityUSD	totalLiquidityETH
+    			txCount
+  			}
+  			uniswapDayDatas(where:{id: ${date_id}}) {
+    			id	date
+    			txCount
+    			dailyVolumeUSD	dailyVolumeETH	dailyVolumeUntracked
+    			totalVolumeUSD	totalVolumeETH
+    			totalLiquidityUSD	totalLiquidityETH
+  			}
+		}`
+	gdqr_zoo = new XMLHttpRequest();
+	gdqr_zoo.open("POST","https://api.thegraph.com/subgraphs/name/ruvlol/graph-n",true);
+	gdqr_zoo.onload=function(){
+		gdqd_zoo=JSON.parse(this.response).data;
+		$("d_zoo").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_zoo.uniswapFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
+		$("d_zoo").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_zoo.uniswapDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_zoo").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_zoo.uniswapFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_zoo").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_zoo.uniswapFactories[0].txCount).toFixed(0)).toLocaleString()
+	}
+	gdqr_zoo.send(JSON.stringify({query:gdq_zoo}))
+
+	gdq_sushi =
+		`query {
+  			factories(first:1){
+    			id	pairCount	userCount	txCount	tokenCount
+    			volumeUSD	volumeETH	untrackedVolumeUSD
+    			liquidityUSD	liquidityETH
+  			}
+  			dayDatas(where:{id: ${date_id}}){
+    			id	date	txCount
+    			volumeUSD	volumeUSD	untrackedVolume
+    			liquidityETH	liquidityUSD
+  			}
+		}`
+	gdqr_sushi = new XMLHttpRequest();
+	gdqr_sushi.open("POST","https://api.thegraph.com/subgraphs/name/sushiswap/fantom-exchange",true);
+	gdqr_sushi.onload=function(){
+		gdqd_sushi=JSON.parse(this.response).data;
+		$("d_sushi").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_sushi.factories[0].liquidityUSD).toFixed(0)).toLocaleString()
+		$("d_sushi").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_sushi.dayDatas[0].volumeUSD).toFixed(0)).toLocaleString()
+		$("d_sushi").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_sushi.factories[0].volumeUSD).toFixed(0)).toLocaleString()
+		$("d_sushi").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_sushi.factories[0].txCount).toFixed(0)).toLocaleString()
+		$("d_sushi").getElementsByTagName("td")[8].innerHTML=Number(Number(gdqd_sushi.factories[0].userCount).toFixed(0)).toLocaleString()
+	}
+	gdqr_sushi.send(JSON.stringify({query:gdq_sushi}))
+
+	gdq_spooky =
+		`query {
+  			uniswapFactories(first: 1) {
+    			id
+    			pairCount	txCount
+    			totalVolumeUSD    totalVolumeETH	untrackedVolumeUSD
+    			totalLiquidityUSD	totalLiquidityETH
+    			txCount
+  			}
+  			uniswapDayDatas(where:{id: ${date_id}}) {
+    			id	date
+    			txCount
+    			dailyVolumeUSD	dailyVolumeETH	dailyVolumeUntracked
+    			totalVolumeUSD	totalVolumeETH
+    			totalLiquidityUSD	totalLiquidityETH
+  			}
+		}`
+	gdqr_spooky = new XMLHttpRequest();
+	gdqr_spooky.open("POST","https://api.thegraph.com/subgraphs/name/eerieeight/spooky-swap-exchange",true);
+	gdqr_spooky.onload=function(){
+		gdqd_spooky=JSON.parse(this.response).data;
+		$("d_spooky").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_spooky.uniswapFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
+		$("d_spooky").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_spooky.uniswapDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_spooky").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_spooky.uniswapFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_spooky").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_spooky.uniswapFactories[0].txCount).toFixed(0)).toLocaleString()
+	}
+	gdqr_spooky.send(JSON.stringify({query:gdq_spooky}))
+
+	gdq_spirit =
+		`query {
+  		spiritswapFactories(first:1) {
+    		id
+    		totalVolumeUSD    totalVolumeFTM  untrackedVolumeUSD
+    		totalLiquidityUSD    totalLiquidityFTM
+    		txCount    pairCount
+  		}
+
+  		spiritswapDayDatas(where:{id: ${date_id}}){
+    		id  date
+    		dailyVolumeUSD	dailyVolumeFTM	dailyVolumeUntracked
+    		totalVolumeUSD	totalVolumeFTM
+    		totalLiquidityUSD	totalLiquidityFTM
+    		txCount	maxStored
+			}
+		}`
+	gdqr_spirit = new XMLHttpRequest();
+	gdqr_spirit.open("POST","https://api.thegraph.com/subgraphs/name/evele/spirit-swap-subgraph-dev-v2",true);
+	gdqr_spirit.onload=function(){
+		gdqd_spirit=JSON.parse(this.response).data;
+		$("d_spirit").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_spirit.spiritswapFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
+		$("d_spirit").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_spirit.spiritswapDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_spirit").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_spirit.spiritswapFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_spirit").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_spirit.spiritswapFactories[0].txCount).toFixed(0)).toLocaleString()
+	}
+	gdqr_spirit.send(JSON.stringify({query:gdq_spirit}))
+
+
+	/*
+
+
+	*/
+
+}
+
 
 </script><!--
 <script defer type="text/javascript" async="true">
