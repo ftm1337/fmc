@@ -161,7 +161,7 @@ th:last-child{text-align:left}
 			</thead>
 			<tbody>
 			<!--
-			keeper, hegic, api3, yel, mensa, kek, just, orion
+			keeper, hegic, api3, yel, kek, just, orion
 			mensa, syf, totem, bboo, mars, sfi, vest, est, kif, rip, 0xmr, vision, soul, ftmo, start, dis, mod, morph, woo, treeb
 			ckey_3d2df33e49c146249119f506dfd
 			-->
@@ -254,7 +254,7 @@ th:last-child{text-align:left}
 					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
 					<td><span>Leverage</span> <span> Farming</span> <span> Natives</span> <span> Yields</span> <span> Borrowing </span> <span>Lending</span> <span>Staking</span></td>
 				</tr>
-				<tr class="sca new farming natives staking" id="tr_0x05848B832E872d9eDd84AC5718D58f21fD9c9649">
+				<tr class="sca dega new farming natives staking" id="tr_0x05848B832E872d9eDd84AC5718D58f21fD9c9649">
 					<td>⁕</td>
 					<td>STEAK</td>
 					<td>SteakToken</td>
@@ -748,6 +748,19 @@ th:last-child{text-align:left}
 					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
 					<td><span>AMM</span> <span> Bridged</span> <span> DEX</span> <span> Farming</span> <span> StableSwap</span> <span> Yields</span></td>
 				</tr>
+				<tr class="sca bridged tools charts id="tr_0x627524d78b4fc840c887ffec90563c7a42b671fd">
+					<td>*</td>
+					<td>KEK</td>
+					<td>Cryptokek</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x627524d78b4fc840c887ffec90563c7a42b671fd</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span> <span>Tools</span> <span>Charts</span></td>
+				</tr>
 				<tr class="sca bridged lending" id="tr_0x657a1861c15a3ded9af0b6799a195a249ebdcbc6">
 					<td>*</td>
 					<td>CREAM</td>
@@ -1120,7 +1133,7 @@ tokes=[
   "0x05848B832E872d9eDd84AC5718D58f21fD9c9649",  //STEAK
   "0x7eC94C4327dC757601B4273cD67014d7760Be97E",  //GRIM
   "0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b",  //ATRI
-
+  "0x627524d78b4fc840c887ffec90563c7a42b671fd",  //KEK
 ]
 /*
 //GENERATION
@@ -1245,10 +1258,9 @@ dexid=
 
 
 
-
 */
 pairs=[
-  "0x50576ed9d94cf934bc32abf76e08ec6ddcd54bf0",  //ELITE
+  "0xEA035A13B64cB49D85E2f0a2736c9604CB21599C",  //ELITE
   "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83",  //WFTM
   "0x2b4c76d0dc16be1c31d4c1dc53bf9b45987fc75c",  //USDC 1
   "0x5965e53aa80a0bcf1cd6dbdd72e6a9b2aa047410",  //USDT 1
@@ -1302,6 +1314,7 @@ pairs=[
   "0xD10CC1b46D806D6ac803AF367Da489dEA5EE76FA",  //STEAK 1
   "0x2c18c39622b90318B0124eCFd6d4aC81efcC51db",  //GRIM 1
   "0x2ccc88B9EcbB477f68158187f616cFEcB2276641",  //ATRI 2
+  "0xf3582dbaebb4287b462f00d308911621a960a5fd",  //KEK 1
 ]
 function brr()
 {
@@ -2021,7 +2034,7 @@ function brr()
 			AC51R=new web3.eth.Contract(ab1,pairs[51])
         	AC51R.methods.getReserves().call((e,r3)=>
         	{
-            	painter(51,r1,r2,r3);
+            	painter(51,r1,r2,(new Array(r3[1],r3[0])));
         	})
     	})
 	})
@@ -2048,6 +2061,19 @@ function brr()
         	AC53R.methods.getReserves().call((e,r3)=>
         	{
             	painter(53,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC54=new web3.eth.Contract(ab1,tokes[54]);
+	AC54.methods.decimals().call((e,r1)=>
+	{
+    	AC54.methods.totalSupply().call((e,r2)=>
+    	{
+			AC54R=new web3.eth.Contract(ab1,pairs[54])
+        	AC54R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(54,r1,r2,r3);
         	})
     	})
 	})
