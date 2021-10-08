@@ -1117,7 +1117,7 @@ async function gg()
 	}
 	gdqr_jet.send(JSON.stringify({query:gdq_jet}))
 
-
+/*
 	gdq_cyber =
 		`query {
   		xdaoFactories(first:1) {
@@ -1150,6 +1150,48 @@ async function gg()
 		ref_os()
 	}
 	gdqr_cyber.send(JSON.stringify({query:gdq_cyber}))
+
+
+*/
+
+	fetch('https://api.studio.thegraph.com/query/7564/xdaoexchange/1.1.2', {
+  	method: 'POST',
+  	body: JSON.stringify({
+    	query: `query {
+  			xdaoFactories(first:1) {
+    			id
+    			totalVolumeUSD    totalVolumeFTM  untrackedVolumeUSD
+    			totalLiquidityUSD    totalLiquidityFTM
+    			txCount    pairCount
+  			}
+
+  			xdaoDayDatas(where:{id:18897}){
+    			id  date
+    			dailyVolumeFTM	dailyVolumeUSD	dailyVolumeUntracked
+    			totalVolumeUSD	totalVolumeFTM
+    			totalLiquidityUSD	totalLiquidityFTM
+    			txCount
+				}
+			}`,
+    	variables: {
+    	}
+  	}),
+  	headers: {
+      	'content-type': 'application/json'
+  	}
+	}).then(async (data) => {
+    	// Console log our return data
+    	var gdqd_cyber=(await data.json()).data;
+		$("d_cyber").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_cyber.xdaoFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
+		$("d_cyber").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_cyber.xdaoDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_cyber").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_cyber.xdaoFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_cyber").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_cyber.xdaoFactories[0].txCount).toFixed(0)).toLocaleString()
+		gobj[0]+=Number(gdqd_cyber.xdaoFactories[0].totalLiquidityUSD)
+		gobj[1]+=Number(gdqd_cyber.xdaoDayDatas[0].dailyVolumeUSD)
+		gobj[2]+=Number(gdqd_cyber.xdaoFactories[0].totalVolumeUSD)
+		gobj[3]+=Number(gdqd_cyber.xdaoFactories[0].txCount)
+	});
+
 	/*
 
 
