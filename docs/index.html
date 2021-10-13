@@ -109,6 +109,7 @@ th:last-child{text-align:left}
 		<br>
 		<div id="tags">
 			<div onclick="togfil('sca')">Show All</div>
+			<div onclick="togfil(this.innerHTML)">Adult</div>
 			<div onclick="togfil(this.innerHTML)">Algorithmic</div>
 			<div onclick="togfil(this.innerHTML)">AMM</div>
 			<div onclick="togfil(this.innerHTML)">Borrowing</div>
@@ -161,8 +162,8 @@ th:last-child{text-align:left}
 			</thead>
 			<tbody>
 			<!--
-			keeper, hegic, api3, yel, kek, just, orion
-			mensa, syf, totem, bboo, mars, sfi, vest, est, kif, rip, 0xmr, vision, soul, ftmo, start, dis, mod, morph, woo, treeb
+			KEEPER, HEGIC, API3, YEL, KEK, JUST, ORION
+			MENSA, SYF, TOTEM, BBOO, MARS, SFI, VEST, EST, KIF, RIP, 0XMR, VISION, SOUL, FTMO, START, DIS, MOD, MORPH, WOO, TREEB
 			ckey_3d2df33e49c146249119f506dfd
 			-->
 				<tr class="sca farming gambling natives staking yields tools" id="tr_0xf43Cc235E686d7BC513F53Fbffb61F760c3a1882">
@@ -409,6 +410,19 @@ th:last-child{text-align:left}
 					<td><pre>0x10b620b2dbac4faa7d7ffd71da486f5d44cd86f9</pre></td>
 					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
 					<td><span>Farming</span> <span> Natives</span> <span> Yields</span></td>
+				</tr>
+				<tr class="sca adult" id="tr_0x37C045bE4641328DFEB625f1Dde610D061613497">
+					<td>⁕</td>
+					<td>JUST</td>
+					<td>JustYours</td>
+					<td>?</td>
+					<td>0</td>
+					<td>1</td>
+					<td>69</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x37C045bE4641328DFEB625f1Dde610D061613497</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Adult</span> <span> Natives</span></td>
 				</tr>
 				<tr class="sca amm dex farming natives staking" id="tr_0xbc2451aad349b6b43fd05f4f0cc327f8a6bca2d4">
 					<td>⁕</td>
@@ -707,7 +721,7 @@ th:last-child{text-align:left}
 					<td><span>🌐🎮✈🐦🐙</span></td>
 					<td><pre>0x82f8cb20c14f134fe6ebf7ac3b903b2117aafa62</pre></td>
 					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
-					<td><span>Bridged</span> <span> Stablecoins</span></td>
+					<td><span>Bridged</span> <span>Algorithmic</span> <span>Seigniorage</span></td>
 				</tr>
 				<tr class="sca bridged stablecoins" id="tr_0xaf319e5789945197e365e7f7fbfc56b130523b33">
 					<td>*</td>
@@ -720,7 +734,7 @@ th:last-child{text-align:left}
 					<td><span>🌐🎮✈🐦🐙</span></td>
 					<td><pre>0xaf319e5789945197e365e7f7fbfc56b130523b33</pre></td>
 					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
-					<td><span>Bridged</span> <span> Stablecoins</span></td>
+					<td><span>Bridged</span> <span>Algorithmic</span> <span> Stablecoins</span></td>
 				</tr>
 				<tr class="sca bridged stablecoins" id="tr_0x049d68029688eabf473097a2fc38ef61633a3c7a">
 					<td>*</td>
@@ -1134,6 +1148,7 @@ tokes=[
   "0x7eC94C4327dC757601B4273cD67014d7760Be97E",  //GRIM
   "0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b",  //ATRI
   "0x627524d78b4fc840c887ffec90563c7a42b671fd",  //KEK
+  "0x37C045bE4641328DFEB625f1Dde610D061613497",  //JUST
 ]
 /*
 //GENERATION
@@ -1315,6 +1330,7 @@ pairs=[
   "0x2c18c39622b90318B0124eCFd6d4aC81efcC51db",  //GRIM 1
   "0x2ccc88B9EcbB477f68158187f616cFEcB2276641",  //ATRI 2
   "0xf3582dbaebb4287b462f00d308911621a960a5fd",  //KEK 1
+  "0xf3582dbaebb4287b462f00d308911621a960a5fd",  //JUST 2
 ]
 function brr()
 {
@@ -2074,6 +2090,19 @@ function brr()
         	AC54R.methods.getReserves().call((e,r3)=>
         	{
             	painter(54,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC55=new web3.eth.Contract(ab1,tokes[55]);
+	AC55.methods.decimals().call((e,r1)=>
+	{
+    	AC55.methods.totalSupply().call((e,r2)=>
+    	{
+			AC55R=new web3.eth.Contract(ab1,pairs[55])
+        	AC55R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(55,r1,r2,r3);
         	})
     	})
 	})
