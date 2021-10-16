@@ -142,7 +142,7 @@ td:nth-child(5),td:nth-child(9),th:nth-child(5),th:nth-child(9){display:none}</s
 		<tbody>
 			<tr class="" id="d_curve">
 				<td>Curve</td>
-				<td>4</td>
+				<td>14</td>
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
@@ -412,6 +412,19 @@ td:nth-child(5),td:nth-child(9),th:nth-child(5),th:nth-child(9){display:none}</s
 				<td>0</td>
 				<td>firebird.finance</td>
 				<td><span><a href="https://firebird.finance" target="_blank">💱</a><a href="https://firebird.finance" target="_blank">🌐</a><a href="https://discord.com/invite/" target="_blank">🎮</a><a href="https://t.me/jetfuelfinance" target="_blank">✈</a><a href="https://firebird.finance" target="_blank">📊</a><a href="https://firebird.finance/vaults" target="_blank">🚜</a></span></td>
+			</tr>
+			<tr class="" id="d_beethoven">
+				<td>Beethoven</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>app.beethovenx.io</td>
+				<td><span><a href="https://app.beethovenx.io" target="_blank">💱</a><a href="https://app.beethovenx.io" target="_blank">🌐</a><a href="https://discord.com/invite/" target="_blank">🎮</a><a href="https://t.me/" target="_blank">✈</a><a href="https://app.beethovenx.io" target="_blank">📊</a><a href="https://app.beethovenx.io" target="_blank">🚜</a></span></td>
 			</tr>
 		</tbody>
 	</table>
@@ -735,18 +748,20 @@ function po (di)
 		Number((di.chainTvls.Fantom).toFixed(0));
 
 //		console.log(di.slug)
+		console.log(di.slug,di)
 
-		if (di.slug ==  "curve" ){				$v("d_curve").innerHTML=v;}
-		if (di.slug ==  "sushiswap" ){			$v("d_sushi").innerHTML=v;}
-		if (di.slug ==  "spookyswap" ){			$v("d_spooky").innerHTML=v;}
-		if (di.slug ==  "spiritswap" ){			$v("d_spirit").innerHTML=v;}
-		if (di.slug ==  "hyperswap" ){			$v("d_hyper").innerHTML=v;}
-		if (di.slug ==  "waka-finance" ){		$v("d_waka").innerHTML=v;}
-		if (di.slug ==  "elk" ){				$v("d_elk").innerHTML=v;}
-		if (di.slug ==  "paint-swap" ){			$v("d_paint").innerHTML=v;}
-		if (di.slug ==  "zoocoin" ){			$v("d_zoo").innerHTML=v;}
-		if (di.slug ==  "shiba-fantom" ){		$v("d_shiba").innerHTML=v;}
-		if (di.slug ==  "soulswap" ){			$v("d_soul").innerHTML=v;}
+		if (di.slug ==  "curve" ){			$v("d_curve").innerHTML=v;}
+		if (di.slug ==  "sushiswap" ){		$v("d_sushi").innerHTML=v;}
+		if (di.slug ==  "spookyswap" ){		$v("d_spooky").innerHTML=v;}
+		if (di.slug ==  "spiritswap" ){		$v("d_spirit").innerHTML=v;}
+		if (di.slug ==  "hyperswap" ){		$v("d_hyper").innerHTML=v;}
+		if (di.slug ==  "waka-finance" ){	$v("d_waka").innerHTML=v;}
+		if (di.slug ==  "elk" ){			$v("d_elk").innerHTML=v;}
+		if (di.slug ==  "paint-swap" ){		$v("d_paint").innerHTML=v;}
+		if (di.slug ==  "zoocoin" ){		$v("d_zoo").innerHTML=v;}
+		if (di.slug ==  "shiba-fantom" ){	$v("d_shiba").innerHTML=v;}
+		if (di.slug ==  "soulswap" ){		$v("d_soul").innerHTML=v;}
+		if (di.slug ==  "beethoven-x" ){	$v("d_beethoven").innerHTML=v;}
 }
 date_id = Date.now();
 date_id = date_id/1000 - (date_id/1000)%1;
@@ -1192,10 +1207,80 @@ async function gg()
 		gobj[3]+=Number(gdqd_cyber.xdaoFactories[0].txCount)
 	});
 
+
+
+
+	gdq_beethoven =
+		`query {
+  balancers(first:1){
+    totalLiquidity
+    #pools
+    poolCount
+    totalSwapVolume
+    totalSwapFee
+    id
+  }
+}`
+	gdqr_beethoven = new XMLHttpRequest();
+	gdqr_beethoven.open("POST","https://graph-node.beets-ftm-node.com/subgraphs/name/beethovenx",true);
+	gdqr_beethoven.onload=function(){
+		gdqd_beethoven=JSON.parse(this.response).data.balancers[0];
+		$("d_beethoven").getElementsByTagName("td")[1].innerHTML=Number(Number(gdqd_beethoven.poolCount).toFixed(0)).toLocaleString()
+		$("d_beethoven").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_beethoven.totalLiquidity).toFixed(0)).toLocaleString()
+		$("d_beethoven").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_beethoven.totalSwapVolume).toFixed(0)).toLocaleString()
+		gobj[0]+=Number(gdqd_beethoven.totalLiquidity)
+		//gobj[1]+=Number(gdqd_beethoven.uniswapDayDatas[0].dailyVolumeUSD)
+		gobj[2]+=Number(gdqd_beethoven.totalSwapVolume)
+		//gobj[3]+=Number(gdqd_beethoven.uniswapFactories[0].txCount)
+		ref_os()
+	}
+	gdqr_beethoven.send(JSON.stringify({query:gdq_beethoven}))
+
+
+
+
+
+
+
 	/*
 
 
+	gdq_shiba =
+		`query {
+  			uniswapFactories(first: 1) {
+    			id
+    			pairCount	txCount
+    			totalVolumeUSD    totalVolumeFTM	untrackedVolumeUSD
+    			totalLiquidityUSD	totalLiquidityFTM
+    			txCount
+  			}
+  			uniswapDayDatas(where:{id: ${date_id}}) {
+    			id	date
+    			txCount
+    			dailyVolumeUSD	dailyVolumeFTM	dailyVolumeUntracked
+    			totalVolumeUSD	totalVolumeFTM
+    			totalLiquidityUSD	totalLiquidityFTM
+  			}
+		}`
+	gdqr_shiba = new XMLHttpRequest();
+	gdqr_shiba.open("POST","https://api.thegraph.com/subgraphs/name/shiba-fantom/exchange",true);
+	gdqr_shiba.onload=function(){
+		gdqd_shiba=JSON.parse(this.response).data;
+		$("d_shiba").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_shiba.uniswapFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
+		$("d_shiba").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_shiba.uniswapDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_shiba").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_shiba.uniswapFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_shiba").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_shiba.uniswapFactories[0].txCount).toFixed(0)).toLocaleString()
+		gobj[0]+=Number(gdqd_shiba.uniswapFactories[0].totalLiquidityUSD)
+		gobj[1]+=Number(gdqd_shiba.uniswapDayDatas[0].dailyVolumeUSD)
+		gobj[2]+=Number(gdqd_shiba.uniswapFactories[0].totalVolumeUSD)
+		gobj[3]+=Number(gdqd_shiba.uniswapFactories[0].txCount)
+		ref_os()
+	}
+	gdqr_shiba.send(JSON.stringify({query:gdq_shiba}))
+
+
 	*/
+
 
 }
 function ref_os()
