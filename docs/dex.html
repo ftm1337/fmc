@@ -664,10 +664,6 @@ di=
 
 Froyo
 	"Frozen.yogurt.finance FUSDT/USDC/DAI" (3FROYO) [USDC-DAI-fUSDT]
-	LPT =
-	DEX = 0x83E5f18Da720119fF363cF63417628eB0e9fd523
-
-	"Frozen.yogurt.finance FUSDT/USDC/DAI" (3FROYO) [USDC-DAI-fUSDT]
 	LPT = 0x4f85Bbf3B0265DCEd4Ec72ebD0358ccCf190F1B3
 	DEX = 0x83E5f18Da720119fF363cF63417628eB0e9fd523
 
@@ -677,8 +673,8 @@ Iron
 	DEX	= 0x952BDA8A83c3D5F398a686bb4e8C6DD90072d523
 */
 
-froyoi = [{"stateMutability":"view","type":"function","name":"balances","inputs":[{"name":"arg0","type":"uint256"}],"outputs":[{"name":"","type":"uint256"}],"gas":1917}]
-froyo_1 = "0x83E5f18Da720119fF363cF63417628eB0e9fd523"
+froyoi = [{"stateMutability":"view","type":"function","name":"balances","inputs":[{"name":"arg0","type":"uint256"}],"outputs":[{"name":"","type":"uint256"}],"gas":1917}];
+froyo_1 = "0x83E5f18Da720119fF363cF63417628eB0e9fd523";
 
 async function gp()
 {
@@ -976,11 +972,11 @@ async function gg()
     		dailyVolumeUSD	dailyVolumeFTM	dailyVolumeUntracked
     		totalVolumeUSD	totalVolumeFTM
     		totalLiquidityUSD	totalLiquidityFTM
-    		txCount	maxStored
+    		txCount
 			}
 		}`
 	gdqr_spirit = new XMLHttpRequest();
-	gdqr_spirit.open("POST","https://api.thegraph.com/subgraphs/name/evele/spirit-swap-subgraph-dev-v2",true);
+	gdqr_spirit.open("POST","https://api.thegraph.com/subgraphs/name/layer3org/spiritswap-analytics",true);
 	gdqr_spirit.onload=function(){
 		gdqd_spirit=JSON.parse(this.response).data;
 		$("d_spirit").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_spirit.spiritswapFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
@@ -1366,7 +1362,7 @@ async function gg()
 		froyo.methods.balances(1).call(),
 		froyo.methods.balances(2).call(),
 	])
-	froyo_tl = froyo_l[0]/1e6 + froyo_l[0]/1e18 + froyo_l[0]/1e6;
+	froyo_tl = froyo_l[0]/1e6 + froyo_l[1]/1e18 + froyo_l[2]/1e6;
 	$("d_froyo").getElementsByTagName("td")[3].innerHTML=Number(Number(froyo_tl).toFixed(0)).toLocaleString()
 	gobj[0]+=froyo_tl;
 	ref_os();
