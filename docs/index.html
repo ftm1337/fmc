@@ -2,34 +2,41 @@
 <head>
 <meta name="description" content="FMC.guru (FantomMarketCap) by FTM.guru : Fantom Opera blockchain token prices, markets, DEX listings, Market Cap, Live Trading Data">
 <meta name="keywords" content="Fantom Opera, FTM, Decentralized Finance, ELITE, 1337, defi, farming, FTM1337">
-<title>FantomMarketCap - DEX List | FMC.guru : Fantom Opera Cryptocurrency Tokens Price and Market Capitalization</title>
+<title>FantomMarketCap | FMC.guru : Fantom Opera Cryptocurrency Tokens Price and Market Capitalization</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" href="../img/ftm1337.jpg" />
-<style>html{background:radial-gradient(circle at center, #127, #122, #100);color:#e3e9f2;font-family:helvetica nueve, helvetica, robotica, ubuntu, roboto, sans-serif;background-attachment: fixed;}
+<link rel="shortcut icon" href="img/FMC.svg" />
+<style>
+html{background:radial-gradient(circle at top, #127, #122, #100);color:#e3e9f2;font-family:helvetica nueve, helvetica, robotica, ubuntu, roboto, sans-serif}
 .toprow{display:grid;grid-template-columns:max-content auto max-content}
 .topfind{text-align:center;min-width:80%}
 .stage{overflow-x:auto}
-table:hover td:first-child,table:hover th:first-child{position: sticky;left:0;background:rgba(17,27,27,0.75);}
+th{min-width:max-content;min-width: -moz-max-content}
+td{min-width:max-content;min-width: -moz-max-content;padding:2px 5px;text-align:right}
+td:last-child{text-align: left}
+td:first-child{text-align: center}
+td:nth-child(2),td:nth-child(3){text-align: left}
+td:nth-child(4),td:nth-child(5),td:nth-child(6),td:nth-child(7){font-family: monospace;font-size:1.2em}
+table:hover td:nth-child(2),table:hover th:nth-child(2){position: sticky;left:0;background:rgba(17,27,27,0.75);}
 tr:hover td{background: aqua !important;color:#020611;}
-td,th{min-width:max-content;min-width: -moz-max-content}
-td:first-child{text-align: left}
-td:not(td:first-child){font-family: monospace;font-size:1em}
 thead tr:hover{background: aqua;color:#020611}
 pre{margin:0}
 a{color:white;text-decoration-line:none}
 hr{box-shadow: rgba(0,255,255,0.2) 0px 0px 10px 10px;background: #090919;border-radius: 15px;border:aqua 2px solid;}
 table{border-collapse:collapse;overflow:hidden}
+tr{line-height:1.2em}
 h5 a{color: aqua}
+td:nth-child(9):hover{color: blue}
 #spadi{width:100%}
 option{cursor:pointer}
-#tags div{border: 4px #e3e9f2 dotted;color:aqua;width: max-content;float: right;background: rgba(0,255,255,.25);border-radius: 10px;padding:0 2px;margin:4px;padding:4px}
-#tags div:hover{border: 4px dashed;cursor: alias ;color:aliceblue}
-#usdftm2{border: 4px dashed;color:#020611;background: rgba(255,255,255,1);border-radius: 10px;padding:0 2px;margin:4px;padding:4px}
-#usdftm2:hover{border: 4px dotted;cursor: alias }
-#degmod{border: 4px dashed;color:#020611;background: rgba(255,127,127,1);border-radius: 10px;padding:0 2px;margin:4px;padding:4px}
-#degmod:hover{border: 4px dotted;cursor: alias ;}
+#tags div{border: 1px #e3e9f2 dashed;color:aqua;width: max-content;float: left;background: rgba(0,255,255,.25);border-radius: 10px;padding:0 2px;margin:4px;padding:4px}
+#tags div:hover{border: 1px solid;cursor: alias ;color:aliceblue}
+#usdftm2{border: 1px dashed #000;color:#020611;background: rgba(255,255,255,1);border-radius: 10px;padding:0 2px;margin:4px;padding:4px}
+#usdftm2:hover{border: 1px solid white;cursor: alias ;background: #9f9;}
+#degmod{border: 1px dashed white;color:#020611;background: rgba(255,127,127,1);border-radius: 10px;padding:0 2px;margin:4px;padding:4px}
+#degmod:hover{border: 1px solid white;background: rgba(255,0,0,0.8);color: white;cursor: alias ;}
+tr td:nth-child(9):hover{font-weight: bolder;text-decoration: 3px blue wavy underline blink;}
 .statcounter{font-size: 0}
-#spadfi{width:100%}
+#spadi{width:100%}
 #maintable{width:max-content}
 .lowercat {text-align: left;padding:10px}
 .lowercat a{text-decoration-line: none}
@@ -48,33 +55,11 @@ option{cursor:pointer}
 	clip-path: polygon(calc(100% - 40px) 0%, 0 0, 0 100%, 95% 100%, 95% 50%);
 	margin-top:15px
 }
-.pgb2s{
-	min-width: 200px;
-	margin: auto;
-	background: rgba(0,255,255,0.1);
-	border: 2px double aqua;
-	border-right: none;
-	border-top: none;
-	border-bottom: none;
-	padding: 10px 15px 10px 0px;
-	clip-path: polygon(100% 0%, 0 0, 0 100%, 100% 100%, 90% 50%);
-	margin-top:15px
-}
-.pgb2s:nth-of-type(2n){
-
-	border:none;
-	border-right: 2px double aqua;
-	border-top: none;
-	border-bottom: none;
-	clip-path: polygon(100% 0%, 0% 0%, 10% 50%, 0% 100%, 100% 1000%);}
-td{padding:2px 5px;text-align:right;}
-td{font-family: mono}
-td:first-child,td:nth-last-child(2){font-family: inherit}
-/*td:nth-child(4),td:nth-child(5),th:nth-child(4),th:nth-child(5){display:none}*/
-td:last-child{text-align:center}
-td{font-size: 1.25em;}
-th{font-size:1.25em;padding: 12px 5px;text-align:center}
-td:nth-last-child(2){font-size: 1em}
+.dega{font-size:0}
+.dega:hover{color:white;background: rgba(255,0,0,0.5) !important;}
+td:last-child span{background: rgba(0,255,255,.25);color:aqua;border-radius: 50px;padding:0 2px}
+tr:hover td:last-child span{background: darkmagenta;color:white;border-radius: 50px;padding:0 4px}
+th:last-child{text-align:left}
 * {
   scrollbar-width: thick;
   scrollbar-color: #07f #147;
@@ -95,512 +80,987 @@ td:nth-last-child(2){font-size: 1em}
 	.lowerbar{display: grid;grid-template-columns: auto auto auto auto;text-align:center}
 	.hhr{width: 555px}
 	.pgb{display: grid;grid-template-columns: auto auto auto}
-	.pgb2{display: grid;grid-template-columns: auto auto}
-	.pgb2s{min-width: 40vw;}
-	td{padding: 10px}
 }
-td:nth-child(5),td:nth-child(9),th:nth-child(5),th:nth-child(9){display:none}</style>
+</style>
 </head>
 <body>
+	<div class="toprow" style="font-weight:bolder">
+		<div><a href="index.html"><img style="position:relative;top:2px" src="img/FMC.svg" width="16px"> FantomMarketCap</a></div>
+		<div></div>
+		<div>By <a href="https://ftm.guru">FTM.guru</a></div>
+	</div>
+	<h1 align="center"><img style="position:relative;top:16px" src="img/FMC.svg" width="64px"> FMC.guru</h1>
+	<h4 align="center">Discover the best of Fantom Opera with FantomMarketCap on FMC.guru!</h4>
+	<br>
+	<div align="center" style="font-size:2em">
+		Global Market Cap<br><span id="tmc">0</span>
+		<span id="tmcunit">FTM</span>
+	</div>
+	<br>
+	<div style="font-size:1.25em" align="center">54 Tokens @
+	<a href="dex">19 Exchanges</a></div>
+	<br>
+	<br>
+	<div align="center">
+		Browse tokens by Category and Sort using metrics such as price, supply or market capitalization even within categories!<br>
+	</div>
+	<div align="center">
+		<!--<input class="topfind" placeholder="Find Gems">-->
+		<br>
+		<div id="tags">
+			<div onclick="togfil('sca')">Show All</div>
+			<div onclick="togfil(this.innerHTML)">Adult</div>
+			<div onclick="togfil(this.innerHTML)">Algorithmic</div>
+			<div onclick="togfil(this.innerHTML)">AMM</div>
+			<div onclick="togfil(this.innerHTML)">Borrowing</div>
+			<div onclick="togfil(this.innerHTML)">Bridged</div>
+			<div onclick="togfil(this.innerHTML)">Bridges</div>
+			<div onclick="togfil(this.innerHTML)">CEX</div>
+			<!--<div onclick="togfil(this.innerHTML)">Charts</div>-->
+			<div onclick="togfil(this.innerHTML)">DAO</div>
+			<div onclick="togfil(this.innerHTML)">DEX</div>
+			<div onclick="togfil(this.innerHTML)">Farming</div>
+			<div onclick="togfil(this.innerHTML)">Gambling</div>
+			<div onclick="togfil(this.innerHTML)">Launchpad</div>
+			<div onclick="togfil(this.innerHTML)">Lending</div>
+			<div onclick="togfil(this.innerHTML)">Leverage</div>
+			<div onclick="togfil(this.innerHTML)">Natives</div>
+			<div onclick="togfil(this.innerHTML)">Memes</div>
+			<div onclick="togfil(this.innerHTML)">NEW</div>
+			<div onclick="togfil(this.innerHTML)">NFTs</div>
+			<div onclick="togfil(this.innerHTML)">Oracles</div>
+			<div onclick="togfil(this.innerHTML)">Privacy</div>
+			<div onclick="togfil(this.innerHTML)">Seigniorage</div>
+			<div onclick="togfil(this.innerHTML)">Stablecoins</div>
+			<div onclick="togfil(this.innerHTML)">StableSwap</div>
+			<div onclick="togfil(this.innerHTML)">Staking</div>
+			<div onclick="togfil(this.innerHTML)">Tools</div>
+			<div onclick="togfil(this.innerHTML)">Vaults</div>
+			<div onclick="togfil(this.innerHTML)">Yields</div>
+		</div>
+	<!--<button id="degmod" onclick="">Degen-Zone : Off</button>-->
+	<button id="degmod" onclick="degmod()">High Risk : OFF</button>
+	<button id="usdftm2" onclick="usdftm2()">Currency : FTM</button>
+	</div>
+	<br>
+	<div class="stage" align="center">
+		<table id="maintable" class="centerstage">
+			<thead>
+				<tr>
+				<th onclick="sortit(0)">N⇅</th>
+				<th onclick="sortit(1)">Ticker⇅</th>
+				<th onclick="sortit(2)">Asset⇅</th>
+				<th onclick="sortit(3)">Market Cap⇅</th>
+				<th onclick="sortit(4)">Price⇅</th>
+				<th onclick="sortit(5)">Most Liquid⇅</th>
+				<th onclick="sortit(6)">Supply⇅</th>
+				<th>Links</th>
+				<th onclick="sortit(8)">Address⇅</th>
+				<th>Analytics</th>
+				<th>Labels</th>
+				</tr>
+			</thead>
+			<tbody>
+			<!--
+			KEEPER, HEGIC, API3, YEL, KEK, JUST, ORION
+			MENSA, SYF, TOTEM, BBOO, MARS, SFI, VEST, EST, KIF, RIP, 0XMR, VISION, SOUL, FTMO, START, DIS, MOD, MORPH, WOO, TREEB
+			ckey_3d2df33e49c146249119f506dfd
+			-->
+				<tr class="sca farming gambling natives staking yields tools" id="tr_0xf43Cc235E686d7BC513F53Fbffb61F760c3a1882">
+					<td>★</td>
+					<td>ELITE</td>
+					<td>ftm.guru</td>
+					<td>98,765</td>
+					<td>420</td>
+					<td>8,888</td>
+					<td>251</td>
+					<td><span><a href="https://ftm.guru" target="_blank">🌐</a><a href="https://discord.gg/EvyDPxPb" target="_blank">🎮</a><a href="https://t.me/FTM1337" target="_blank">✈</a>🐦🐙</span></td>
+					<td><pre>0xf43Cc235E686d7BC513F53Fbffb61F760c3a1882</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Natives</span> <span>Farming</span> <span>Yields</span> <span>Tools</span></td>
+				</tr>
+				<tr class="sca natives yields" id="tr_0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83">
+					<td>★</td>
+					<td>WFTM</td>
+					<td>Wrapped Fantom</td>
+					<td>?</td>
+					<td>1</td>
+					<td>249,788</td>
+					<td>?</td>
+					<td><span><a href="https://fantom.foundation" target="_blank">🌐</a>🎮✈🐦🐙</span></td>
+					<td><pre>0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Coins</span> <span>Natives</span></td>
+				</tr>
+				<tr class="sca amm dex natives nfts tools" id="tr_0x09e145a1d53c0045f41aeef25d8ff982ae74dd56">
+					<td>⁕</td>
+					<td>ZOO</td>
+					<td>Zoocoin</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>69,788</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x09e145a1d53c0045f41aeef25d8ff982ae74dd56</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>AMM</span> <span> DEX</span> <span> Natives</span> <span> NFTs</span> <span> Tools</span></td>
+				</tr>
+				<tr class="sca amm dex farming natives staking" id="tr_0xf61ccde1d4bb76ced1daa9d4c429cca83022b08b">
+					<td>⁕</td>
+					<td>WAKA</td>
+					<td>Waka Finance</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span><a href="https://waka.finance" target="_blank">🌐</a><a href="" target="_blank">🎮</a><a >✈</a><a >🐦</a><a >🐙</a></span></td>
+					<td><pre>0xf61ccde1d4bb76ced1daa9d4c429cca83022b08b</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Algorithmic</span> <span>Farming</span> <span>Natives</span> <span>Stablecoins</span> <span>Staking</span></td>
+				</tr>
+				<tr class="sca algorithmic farming natives seigniorage staking" id="tr_0x4cdf39285d7ca8eb3f090fda0c069ba5f4145b37">
+					<td>⁕</td>
+					<td>TSHARE</td>
+					<td>Tomb Shares</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span><a href="https://tomb.finance" target="_blank">🌐</a><a href="https://discord.com/invite/E3sekCDCdq" target="_blank">🎮</a><a href="https://t.me/tombFinance" target="_blank">✈</a><a href="https://twitter.com/tombFinance" target="_blank">🐦</a><a target="_blank">🐙</a></span></td>
+					<td><pre>0x4cdf39285d7ca8eb3f090fda0c069ba5f4145b37</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Algorithmic</span> <span>Farming</span> <span>Natives</span> <span>Seigniorage</span> <span>Staking</span></td>
+				</tr>
+				<tr class="sca algorithmic farming natives seigniorage stablecoins staking" id="tr_0x6c021ae822bea943b2e66552bde1d2696a53fbb7">
+					<td>⁕</td>
+					<td>TOMB</td>
+					<td>Tomb Finance</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>				<td>?</td>
+					<td><span><a href="https://tomb.finance" target="_blank">🌐</a><a href="https://discord.com/invite/E3sekCDCdq" target="_blank">🎮</a><a href="https://t.me/tombFinance" target="_blank">✈</a><a href="https://twitter.com/tombFinance" target="_blank">🐦</a><a target="_blank">🐙</a></span></td>
+					<td><pre>0x6c021ae822bea943b2e66552bde1d2696a53fbb7</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Algorithmic</span> <span>Farming</span> <span>Natives</span> <span>Seigniorage</span> <span>Staking</span></td>
+				</tr>
+				<tr class="sca new leverage farming natives yield borrowing lending staking" id="tr_0xc5e2b037d30a390e62180970b3aa4e91868764cd">
+					<td>⁕</td>
+					<td>TAROT</td>
+					<td>Tarot</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>				<td>?</td>
+					<td><span><a href="https://tarot.finance" target="_blank">🌐</a><a href="https://discord.com/invite/" target="_blank">🎮</a><a href="https://t.me/" target="_blank">✈</a><a href="https://twitter.com/" target="_blank">🐦</a><a target="_blank">🐙</a></span></td>
+					<td><pre>0xc5e2b037d30a390e62180970b3aa4e91868764cd</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Leverage</span> <span> Farming</span> <span> Natives</span> <span> Yields</span> <span> Borrowing </span> <span>Lending</span> <span>Staking</span></td>
+				</tr>
+				<tr class="sca dega new farming natives staking" id="tr_0x05848B832E872d9eDd84AC5718D58f21fD9c9649">
+					<td>⁕</td>
+					<td>STEAK</td>
+					<td>SteakToken</td>
+					<td>?</td>
+					<td>6.789</td>
+					<td>?</td>
+					<td>69,788</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x05848B832E872d9eDd84AC5718D58f21fD9c9649</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span> Farming</span> <span> Natives</span> <span> Staking</span></td>
+				</tr>
+				<tr class="sca amm dex farming natives staking" id="tr_0x841fad6eae12c286d1fd18d1d525dffa75c7effe">
+					<td>⁕</td>
+					<td>BOO</td>
+					<td>SpookySwap Token</td>
+					<td>?</td>
+					<td>6.789</td>
+					<td>?</td>
+					<td>69,788</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x841fad6eae12c286d1fd18d1d525dffa75c7effe</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>AMM</span> <span> DEX</span> <span> Farming</span> <span> Natives</span> <span> Staking</span></td>
+				</tr>
+				<tr class="sca amm dex farming natives staking" id="tr_0x5cc61a78f164885776aa610fb0fe1257df78e59b">
+					<td>⁕</td>
+					<td>SPIRIT</td>
+					<td>SpiritSwap Token</td>
+					<td>?</td>
+					<td>6.789</td>
+					<td>?</td>
+					<td>69,788</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x5cc61a78f164885776aa610fb0fe1257df78e59b</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>AMM</span> <span> DEX</span> <span> Farming</span> <span> Natives</span> <span> Staking</span></td>
+				</tr>
+				<tr class="sca amm dex farming natives staking" id="tr_0xbf4906762C38F50bC7Be0A11BB452C944f6C72E1">
+					<td>⁕</td>
+					<td>SHRAP</td>
+					<td>Shrapnel</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span><a href="https://fbomb.finance" target="_blank">🌐</a><a href="" target="_blank">🎮</a><a href="https://t.me/operafbomb" target="_blank">✈</a><a href="" target="_blank">🐦</a><a href="" target="_blank">🐙</a></span></td>
+					<td><pre>0xbf4906762C38F50bC7Be0A11BB452C944f6C72E1</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>AMM</span> <span> DEX</span> <span> Natives</span> <span> Staking</span> <span> Farming</span></td>
+				</tr>
+				<tr class=" sca amm dex farming memes natives staking" id="tr_0x9Ba3e4F84a34DF4e08C112e1a0FF148b81655615">
+					<td>⁕</td>
+					<td>Shiba</td>
+					<td>Shiba</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span><a href="https://shibafantom.finance" target="_blank">🌐</a><a href="" target="_blank">🎮</a><a href="https://t.me/shibafantom" target="_blank">✈</a><a href="https://twitter.com/shibafantom" target="_blank">🐦</a><a href="" target="_blank">🐙</a></span></td>
+					<td><pre>0x9Ba3e4F84a34DF4e08C112e1a0FF148b81655615</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>AMM</span> <span> DEX</span> <span> Natives</span> <span> Farming</span></td>
+				</tr>
+				<tr class=" sca new farming privacy natives staking" id="tr_0x3a3841f5fa9f2c283ea567d5aeea3af022dd2262">
+					<td>⁕</td>
+					<td>SHADE</td>
+					<td>Shade</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span><a href="https://shade.cash" target="_blank">🌐</a><a href="" target="_blank">🎮</a><a href="https://t.me/" target="_blank">✈</a><a href="https://twitter.com/" target="_blank">🐦</a><a href="" target="_blank">🐙</a></span></td>
+					<td><pre>0x3a3841f5fa9f2c283ea567d5aeea3af022dd2262</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Privacy</span> <span> Natives</span> <span> Farming</span></td>
+				</tr>
+				<tr class=" sca launchpad staking" id="tr_0x34d33dc8ac6f1650d94a7e9a972b47044217600b">
+					<td>⁕</td>
+					<td>SMART</td>
+					<td>Presale.money</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x34d33dc8ac6f1650d94a7e9a972b47044217600b</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Launchpad</span> <span> Staking</span></td>
+				</tr>
+				<tr class="sca farming staking lending borrowing yield" id="tr_0xe0654C8e6fd4D733349ac7E09f6f23DA256bF475">
+					<td>⁕</td>
+					<td>SCREAM</td>
+					<td>Scream</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0xe0654C8e6fd4D733349ac7E09f6f23DA256bF475</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Launchpad</span> <span> Borrowing</span> <span> Farming</span> <span> Lending</span> <span> Staking</span> <span> Yields</span></td>
+				</tr>
+				<tr class=" sca amm dex farming natives staking" id="tr_0x85dec8c4b2680793661bca91a8f129607571863d">
+					<td>⁕</td>
+					<td>BRUSH</td>
+					<td>PaintSwap</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span><a href="https://paintswap.finance" target="_blank">🌐</a><a href="https://discord.gg/3fVYdk9ugv" target="_blank">🎮</a><a href="https://t.me/PaintSwapFinance" target="_blank">✈</a><a href="https://twitter.com/paint_swap" target="_blank">🐦</a><a href="https://github.com/paintswap" target="_blank">🐙</a></span></td>
+					<td><pre>0x85dec8c4b2680793661bca91a8f129607571863d</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>AMM</span> <span> DEX</span> <span> Farming</span> <span> Natives</span> <span> Staking</span></td>
+				</tr>
+				<tr class="sca dega amm dex farming natives staking" id="tr_0xed940c1db02a8e7dc2e6748aff3aab165b59c7e3">
+					<td>⁕</td>
+					<td>OPERA</td>
+					<td>OperaSwap</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span><a href="https://operaswap.finance" target="_blank">🌐</a><a >🎮</a><a href="https://t.me/operaswapfinance" target="_blank">✈</a><a href="https://twitter.com/operaswap" target="_blank">🐦</a><a>🐙</a></span></td>
+					<td><pre>0xed940c1db02a8e7dc2e6748aff3aab165b59c7e3</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>AMM</span> <span> DEX</span> <span> Farming</span> <span> Natives</span> <span> Staking</span></td>
+				</tr>
+				<tr class="sca farming natives yields" id="tr_0xf6129f6705b826dbafaa26e03aad9dd20b9235c6">
+					<td>⁕</td>
+					<td>ICE</td>
+					<td>Popsicle Finance</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0xf6129f6705b826dbafaa26e03aad9dd20b9235c6</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Farming</span> <span> Natives</span> <span> Yields</span></td>
+				</tr>
+				<tr class="sca farming natives yields" id="tr_0x10b620b2dbac4faa7d7ffd71da486f5d44cd86f9">
+					<td>⁕</td>
+					<td>LQDR</td>
+					<td>Liquid Driver</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x10b620b2dbac4faa7d7ffd71da486f5d44cd86f9</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Farming</span> <span> Natives</span> <span> Yields</span></td>
+				</tr>
+				<tr class="sca adult" id="tr_0x37C045bE4641328DFEB625f1Dde610D061613497">
+					<td>⁕</td>
+					<td>JUST</td>
+					<td>JustYours</td>
+					<td>?</td>
+					<td>0</td>
+					<td>1</td>
+					<td>69</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x37C045bE4641328DFEB625f1Dde610D061613497</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Adult</span> <span> Natives</span></td>
+				</tr>
+				<tr class="sca amm dex farming natives staking" id="tr_0xbc2451aad349b6b43fd05f4f0cc327f8a6bca2d4">
+					<td>⁕</td>
+					<td>AURORA</td>
+					<td>HyperAurora</td>
+					<td>?</td>
+					<td>0.259</td>
+					<td>1,234,567</td>
+					<td>69,788</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0xbc2451aad349b6b43fd05f4f0cc327f8a6bca2d4</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>AMM</span> <span> DEX</span> <span> Farming</span> <span> Natives</span> <span> Staking</span></td>
+				</tr>
+				<tr class="sca new yields farming natives staking vaults" id="tr_0x7eC94C4327dC757601B4273cD67014d7760Be97E">
+					<td>⁕</td>
+					<td>GRIM</td>
+					<td>GrimToken</td>
+					<td>?</td>
+					<td>0</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x7eC94C4327dC757601B4273cD67014d7760Be97E</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Vaults</span> <span> Yields</span> <span> Farming</span> <span> Natives</span> <span> Staking</span></td>
+				</tr>
+				<tr class="sca natives stablecoins" id="tr_0xad84341756bf337f5a0164515b1f6f993d194e1f">
+					<td>⁕</td>
+					<td>FUSD</td>
+					<td>Fantom USD</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0xad84341756bf337f5a0164515b1f6f993d194e1f</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Natives</span> <span> Stablecoins</span></td>
+				</tr>
+				<tr class="sca dega natives farming" id="tr_0xeb86b05cfee3e48db9a44275701ed099462c8ba0">
+					<td>⁕</td>
+					<td>FRANK</td>
+					<td>Frankenstein Finance</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0xeb86b05cfee3e48db9a44275701ed099462c8ba0</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Farming</span> <span> Natives</span></td>
+				</tr>
+				<tr class="sca amm dex farming natives staking" id="tr_0xe1c8f3d529bea8e3fa1fac5b416335a2f998ee1c">
+					<td>⁕</td>
+					<td>ELK</td>
+					<td>Elk Finance</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span><a href="https://elk.finance" target="_blank">🌐</a><a href="" target="_blank">🎮</a><a href="https://t.me/ElkFinance" target="_blank">✈</a><a href="" target="_blank">🐦</a><a href="" target="_blank">🐙</a></span></td>
+					<td><pre>0xe1c8f3d529bea8e3fa1fac5b416335a2f998ee1c</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>AMM</span> <span> DEX</span> <span> Natives</span> <span> Farming</span></td>
+				</tr>
+				<tr class=" sca amm dex farming gambling natives staking" id="tr_0x8503eb4A136bDBeB323E37Aa6e0FA0C772228378">
+					<td>⁕</td>
+					<td>BOMB</td>
+					<td>Bomb</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span><a href="https://fbomb.finance" target="_blank">🌐</a><a href="" target="_blank">🎮</a><a href="https://t.me/operafbomb" target="_blank">✈</a><a href="" target="_blank">🐦</a><a href="" target="_blank">🐙</a></span></td>
+					<td><pre>0x8503eb4A136bDBeB323E37Aa6e0FA0C772228378</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>AMM</span> <span> DEX</span> <span> Farming</span> <span> Gambling</span> <span> Natives</span> <span> Staking</span></td>
+				</tr>
+				<tr class=" sca new farming gaming" id="tr_0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b">
+					<td>⁕</td>
+					<td>ATRI</td>
+					<td>Atari</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span><a href="https://" target="_blank">🌐</a><a href="" target="_blank">🎮</a><a href="https://t.me/" target="_blank">✈</a><a href="" target="_blank">🐦</a><a href="" target="_blank">🐙</a></span></td>
+					<td><pre>0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>AMM</span> <span> DEX</span> <span> Farming</span> <span> Gambling</span> <span> Natives</span> <span> Staking</span></td>
+				</tr>
+				<tr class="sca borrowing farming natives stablecoins yields" id="tr_0x41e3df7f716ab5af28c1497b354d79342923196a">
+					<td>⁕</td>
+					<td>aUSD</td>
+					<td>Aquarius USD</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>69,788</td>
+					<td><span><a href="https://aquarius.fi" target="_blank">🌐</a>🎮<a href="https://t.me/aquariusfi" target="_blank">✈</a><a href="https://twitter.com/Aquarius_Fi" target="_blank">🐦</a>🐙</span></td>
+					<td><pre>0x41e3df7f716ab5af28c1497b354d79342923196a</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Borrowing</span> <span> Farming</span> <span> Natives</span> <span> Stablecoins</span> <span> Yields</span></td>
+				</tr>
+				<tr class="sca borrowing farming natives yields" id="tr_0x0f7adb77b6334b9b5a3c4f78aaa073ea1d915bf6">
+					<td>⁕</td>
+					<td>AQU</td>
+					<td>Aquarius</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>69,788</td>
+					<td><span><a href="https://aquarius.fi" target="_blank">🌐</a>🎮<a href="https://t.me/aquariusfi" target="_blank">✈</a><a href="https://twitter.com/Aquarius_Fi" target="_blank">🐦</a>🐙</span></td>
+					<td><pre>0x0f7adb77b6334b9b5a3c4f78aaa073ea1d915bf6</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Borrowing</span> <span> Farming</span> <span> Natives</span> <span> Yields</span></td>
+				</tr>
+				<tr class="sca bridged yields" id="tr_0x29b0da86e484e1c0029b56e817912d778ac0ec69">
+					<td>*</td>
+					<td>YFI</td>
+					<td>yearn.finance</td>
+					<td>?</td>
+					<td>247,247</td>
+					<td>169,788</td>
+					<td>9.876</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x29b0da86e484e1c0029b56e817912d778ac0ec69</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span> <span> Yields</span></td>
+				</tr>
+				<tr class="sca bridged coins" id="tr_0x74b23882a30290451a17c44f4f05243b6b58c76d">
+					<td>*</td>
+					<td>WETH</td>
+					<td>Wrapped Ether</td>
+					<td>?</td>
+					<td>6,789</td>
+					<td>?</td>
+					<td>788</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x74b23882a30290451a17c44f4f05243b6b58c76d</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span> <span> Coins</span></td>
+				</tr>
+				<tr class="sca bridged yields" id="tr_0xd0660cd418a64a1d44e9214ad8e459324d8157f1">
+					<td>*</td>
+					<td>WOOFY</td>
+					<td>Wrapped YFI</td>
+					<td>480,999</td>
+					<td>247,247</td>
+					<td>169,788</td>
+					<td>9876</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0xd0660cd418a64a1d44e9214ad8e459324d8157f1</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span> <span> Yields</span></td>
+				</tr>
+				<tr class="sca bridged coins" id="tr_0x321162cd933e2be498cd2267a90534a804051b11">
+					<td>*</td>
+					<td>WBTC</td>
+					<td>Wrapped Bitcoin</td>
+					<td>?</td>
+					<td>43210</td>
+					<td>?</td>
+					<td>88</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x321162cd933e2be498cd2267a90534a804051b11</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span> <span> Coins</span></td>
+				</tr>
+				<tr class="sca bridged stablecoins" id="tr_0x04068da6c83afcfa0e13ba15a6696662335d5b75">
+					<td>*</td>
+					<td>USDC</td>
+					<td>USD Coin</td>
+					<td>?</td>
+					<td>0.2789</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x04068da6c83afcfa0e13ba15a6696662335d5b75</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span> <span> Stablecoins</span></td>
+				</tr>
+				<tr class="sca bridged dex orderbook" id="tr_0x2130d2a1e51112D349cCF78D2a1EE65843ba36e0">
+					<td>*</td>
+					<td>UNIDX</td>
+					<td>UniDex</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x2130d2a1e51112D349cCF78D2a1EE65843ba36e0</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span> <span> Dex</span> <span> OrderBook</span></td>
+				</tr>
+				<tr class="sca bridged synthetics" id="tr_0x56ee926bd8c72b2d5fa1af4d9e4cbb515a1e3adc">
+					<td>*</td>
+					<td>SNX</td>
+					<td>Synthetix Token</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>69,788</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x56ee926bd8c72b2d5fa1af4d9e4cbb515a1e3adc</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span> <span> Synthetics</span></td>
+				</tr>
+				<tr class="sca amm bridged dex farming staking" id="tr_0xae75a438b2e0cb8bb01ec1e1e376de11d44477cc">
+					<td>*</td>
+					<td>SUSHI</td>
+					<td>Sushi</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0xae75a438b2e0cb8bb01ec1e1e376de11d44477cc</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span> <span> AMM</span> <span> DEX</span> <span> Farming</span> <span> Staking</span></td>
+				</tr>
+				<tr class="sca new bridged index" id="tr_0xa71353Bb71DdA105D383B02fc2dD172C4D39eF8B">
+					<td>*</td>
+					<td>RAI</td>
+					<td>Rai Reflex Index</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span><a href="https://reflexer.finance">🌐</a>🎮✈🐦🐙</span></td>
+					<td><pre>0xa71353Bb71DdA105D383B02fc2dD172C4D39eF8B</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span> <span> Index</span></td>
+				</tr>
+				<tr class="sca new bridged farming staking Vaults Yields" id="tr_0xbFaf328Fe059c53D936876141f38089df0D1503D">
+					<td>*</td>
+					<td>MM</td>
+					<td>Mushrooms Finance</td>
+					<td>?</td>
+					<td>0.2789</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span><a href="https://mushrooms.finance/" target="_blank">🌐</a>🎮✈🐦🐙</span></td>
+					<td><pre>0xbFaf328Fe059c53D936876141f38089df0D1503D</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span> <span> Farming</span> <span> Staking</span> <span> Vaults</span> <span> Yields</span></td>
+				</tr>
+				<tr class="sca bridged stablecoins" id="tr_0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e">
+					<td>*</td>
+					<td>DAI</td>
+					<td>Multi-Collateral Dai</td>
+					<td>?</td>
+					<td>0.2789</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span> <span> Stablecoins</span></td>
+				</tr>
+				<tr class="sca bridged yield farming stablecoins" id="tr_0x82f0B8B456c1A451378467398982d4834b6829c1">
+					<td>*</td>
+					<td>MIM</td>
+					<td>Magic Internet Money</td>
+					<td>?</td>
+					<td>0</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x82f0B8B456c1A451378467398982d4834b6829c1</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span> <span> Farming</span> <span> Stablecoins</span> <span> Yields</span></td>
+				</tr>
+				<tr class="sca bridged" id="tr_0xC1Be9a4D5D45BeeACAE296a7BD5fADBfc14602C4">
+					<td>*</td>
+					<td>GTON</td>
+					<td>Graviton</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0xC1Be9a4D5D45BeeACAE296a7BD5fADBfc14602C4</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span></td>
+				</tr>
+				<tr class="sca bridged stablecoins" id="tr_0x82f8cb20c14f134fe6ebf7ac3b903b2117aafa62">
+					<td>*</td>
+					<td>FXS</td>
+					<td>Frax Share</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x82f8cb20c14f134fe6ebf7ac3b903b2117aafa62</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span> <span>Algorithmic</span> <span>Seigniorage</span></td>
+				</tr>
+				<tr class="sca bridged stablecoins" id="tr_0xaf319e5789945197e365e7f7fbfc56b130523b33">
+					<td>*</td>
+					<td>FRAX</td>
+					<td>Frax</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0xaf319e5789945197e365e7f7fbfc56b130523b33</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span> <span>Algorithmic</span> <span> Stablecoins</span></td>
+				</tr>
+				<tr class="sca bridged stablecoins" id="tr_0x049d68029688eabf473097a2fc38ef61633a3c7a">
+					<td>*</td>
+					<td>USDT</td>
+					<td>Frapped USDT</td>
+					<td>?</td>
+					<td>2.7</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x049d68029688eabf473097a2fc38ef61633a3c7a</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span> <span> Stablecoins</span></td>
+				</tr>
+				<tr class="sca amm bridged dex farming stableswap yields" id="tr_0x1e4f97b9f9f913c46f1632781732927b9019c68b">
+					<td>*</td>
+					<td>CRV</td>
+					<td>Curve DAO</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x1e4f97b9f9f913c46f1632781732927b9019c68b</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>AMM</span> <span> Bridged</span> <span> DEX</span> <span> Farming</span> <span> StableSwap</span> <span> Yields</span></td>
+				</tr>
+				<tr class="sca new bridged tools charts" id="tr_0x627524d78b4fc840c887ffec90563c7a42b671fd">
+					<td>*</td>
+					<td>KEK</td>
+					<td>Cryptokek</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x627524d78b4fc840c887ffec90563c7a42b671fd</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span> <span>Tools</span> <span>Charts</span></td>
+				</tr>
+				<tr class="sca bridged lending" id="tr_0x657a1861c15a3ded9af0b6799a195a249ebdcbc6">
+					<td>*</td>
+					<td>CREAM</td>
+					<td>Cream Finance</td>
+					<td>3,693,693</td>
+					<td>369</td>
+					<td>1,024,666</td>
+					<td>10,324</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x657a1861c15a3ded9af0b6799a195a249ebdcbc6</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span> <span> Lending</span></td>
+				</tr>
+				<tr class="sca bridged oracles" id="tr_0xb01e8419d842beebf1b70a7b5f7142abbaf7159d">
+					<td>*</td>
+					<td>COVER</td>
+					<td>Cover Protocol</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>69,788</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0xb01e8419d842beebf1b70a7b5f7142abbaf7159d</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span> <span> Oracles</span></td>
+				</tr>
+				<tr class="sca bridged oracles" id="tr_0xb3654dc3d10ea7645f8319668e8f54d2574fbdc8">
+					<td>*</td>
+					<td>LINK</td>
+					<td>Chainlink</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>69,788</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0xb3654dc3d10ea7645f8319668e8f54d2574fbdc8</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span> <span> Oracles</span></td>
+				</tr>
+				<tr class="sca bridged cex coins" id="tr_0xd67de0e0a0fd7b15dc8348bb9be742f3c5850454">
+					<td>*</td>
+					<td>BNB</td>
+					<td>Binance Coin</td>
+					<td>?</td>
+					<td>346.789</td>
+					<td>?</td>
+					<td>691,788</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0xd67de0e0a0fd7b15dc8348bb9be742f3c5850454</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span> <span> CEX</span> <span> Coins</span></td>
+				</tr>
+				<tr class="sca farming staking yield" id="tr_0xd6070ae98b8069de6B494332d1A1a81B6179D960">
+					<td>*</td>
+					<td>BIFI</td>
+					<td>Beefy.finance</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0xd6070ae98b8069de6B494332d1A1a81B6179D960</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span> <span> Farming</span> <span> Staking</span> <span> Yields</span></td>
+				</tr>
+				<tr class="sca bridged oracles" id="tr_0x46e7628e8b4350b2716ab470ee0ba1fa9e76c6c5">
+					<td>*</td>
+					<td>BAND</td>
+					<td>Band Protocol</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>69,788</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x46e7628e8b4350b2716ab470ee0ba1fa9e76c6c5</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span> <span> Oracles</span></td>
+				</tr>
+				<tr class="sca bridged dao" id="tr_0x753fbc5800a8c8e3fb6dc6415810d627a387dfc9">
+					<td>*</td>
+					<td>BADGER</td>
+					<td>Badger DAO</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>69,788</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x753fbc5800a8c8e3fb6dc6415810d627a387dfc9</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span> <span> DAO</span></td>
+				</tr>
+				<tr class="sca bridged bridges" id="tr_0xddcb3ffd12750b45d32e084887fdf1aabab34239">
+					<td>*</td>
+					<td>ANY</td>
+					<td>Anycoin</td>
+					<td>?</td>
+					<td>?</td>
+					<td>?</td>
+					<td>69,788</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0xddcb3ffd12750b45d32e084887fdf1aabab34239</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span> <span> Bridges</span></td>
+				</tr>
+				<tr class="sca bridged lending yields" id="tr_0x6a07a792ab2965c72a5b8088d3a069a7ac3a993b">
+					<td>*</td>
+					<td>AAVE</td>
+					<td>Aave</td>
+					<td>8,480,999</td>
+					<td>1,729</td>
+					<td>?</td>
+					<td>4,043</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x6a07a792ab2965c72a5b8088d3a069a7ac3a993b</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Bridged</span> <span>Lending Yields</span></td>
+				</tr><!--
+				<tr class="sca" id="tr_0x04068da6c83afcfa0e13ba15a6696662335d5b75">
+					<td>⁕</td>
+					<td>BIFI</td>
+					<td>beefy.finance</td>
+					<td>?</td>
+					<td>8,999</td>
+					<td>?</td>
+					<td>69,788</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x1234567890123456789012345678901234567890</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Farming Staking Vaults Yields</span></td>
+				</tr>
+				--><!--
+				<tr class="sca" id="tr_0x04068da6c83afcfa0e13ba15a6696662335d5b75">
+					<td>⁕</td>
+					<td>ORI</td>
+					<td>HyperOrillium</td>
+					<td>?</td>
+					<td>0.279</td>
+					<td>?</td>
+					<td>69,788</td>
+					<td><span>🌐🎮✈🐦🐙</span></td>
+					<td><pre>0x1234567890123456789012345678901234567890</pre></td>
+					<td><span>😼👻🍣🛩🎨🦎👾🦌🔎</span></td>
+					<td><span>Farming</span></td>
+				</tr>
+				-->
+			</tbody>
+		</table>
+	</div>
+	<!--<div align="center"><br><b>1 2 3 4 5 … 6 7 8 9 10</b></div>-->
+	<br>
+	<div align="center" style="margin:0;padding:0">
+		<u>Legend:</u>*Bridged ⁕Native ★Featured 🌐Website 🎮Discord ✈Telegram 🐦Twitter 🐙Github 🔎Explorer 😼SpookySwap 👻SpiritSwap 🍣SushiSwap 🛩HyperJump 🎨PaintSwap 🦎ZooDEX <span class="wakka">👾</span>Waka 🦌Elk
+	</div>
+	<br>
+	<br>
+	<div align="center" class="pgb">
+		<div align="center" class="pgbs"><a href="index.html"><b>FantomMarketCap Index</b></a></div>
+		<div align="center" class="pgbs"><a href="dex.html"><b>List of All DEX at Fantom</b></a></div>
+		<div align="center" class="pgbs"><a href="defi.html"><b>🔜Most-used Protocols</b></a></div>
+		<div align="center" class="pgbs"><a href="xdao.html"><b>CyberSwap Analytics</b></a></div>
+		<div align="center" class="pgbs"><a href="https://ftm.guru/pair.html" target="_blank"><b>Liquidity Explorer</b></a></div>
+		<div align="center" class="pgbs"><a href="https://ftm.guru/fantomscan.html" target="_blank""><i>ftm.guru's</i> <b>FantomScan™</b></a></div>
+		<div align="center" class="pgbs"><a href="https://ftm.guru/apelist.html" target="_blank""><i>ftm.guru's</i> <b>Ape-List™</b></a></div>
+		<div align="center" class="pgbs"><a hre f="xdao.html"><b>🔜Best-selling NFTs</b></a></div>
+		<div align="center" class="pgbs"><a hre f="xdao.html"><b>🔜List of Top Farms</b></a></div>
+	</div>
+	<br>
+	<br>
+	<div align="center" id="spadd" style="">
+		<font id="spadf" size="2" style="text-align:center">(Sponsored Ad)</font>
+		<br>
+		<i><a href="https://t.me/FTM1337">Please Telegram us for queries.</a></i>
+		<br>
+		<a id="spada" href="" target="_blank">
+			<img id="spadi" src="" width="80%"></img><br>
+		</a>
+	</div>
 
-<div class="toprow" style="font-weight:bolder">
-	<div><a href="index.html"><img style="position:relative;top:2px" src="img/FMC.svg" width="16px"> FantomMarketCap</a></div>
-	<div></div>
-	<div>By <a href="https://ftm.guru">FTM.guru</a></div>
-</div>
-<h1 align="center"><img style="position:relative;top:16px" src="img/FMC.svg" width="64px"> FMC.guru<br><span id="tmc"></span> <span id="tmcunit"></span></h1>
-<div align="center">
-<h4>Discover the best DEXes of Fantom Opera with FantomMarketCap on FMC.guru!</h4>
-</div>
-<br>
-<div align="center" class="pgb2">
-	<div align="center" class="pgb2s"><b>Overall DEX Liquidity</b><br>$<span id="os_l" style="font-size:2em">0</span></div>
-	<div align="center" class="pgb2s"><b>Current USD Velocity</b><br>$<span id="os_v" style="font-size:2em">0</span>/sec.</div>
-	<div align="center" class="pgb2s"><b>Net Money Exchanged</b><br>$<span id="os_e" style="font-size:2em">0</span></div>
-	<div align="center" class="pgb2s"><b>Total No. of Trades</b><br><span id="os_t" style="font-size:2em">0</span></div>
-</div>
-<br>
-<h2 align="center">List of All Top DEX on Fantom</h2>
-<br>
-<div class="stage" align="center">
-	<table id="maintable" class="centerstage">
-		<thead>
-			<tr>
-			<th onclick="sortit(0)">D.E.X.⇅</th>
-			<th onclick="sortit(1)">Pools⇅</th>
-			<th onclick="sortit(2)">T.V.Locked⇅</th>
-			<th onclick="sortit(3)">T.Liquidity⇅</th>
-			<th onclick="sortit(4)">Age⇅</th>
-			<th onclick="sortit(5)">Vol. Today⇅</th>
-			<th onclick="sortit(6)">All Time Vol.⇅</th>
-			<th onclick="sortit(7)">Total Txns.⇅</th>
-			<th onclick="sortit(8)">Users⇅</th>
-			<th onclick="sortit(9)">Trading Interface</th>
-			<th>Links</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class="" id="d_sushi">
-				<td>Sushi</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>app.sushi.com</td>
-				<td><span><a href="https://app.sushi.com" target="_blank">💱</a><a href="https://analytics-ftm.sushi.com" target="_blank">📊</a><a href="https://sushi.com" target="_blank">🌐</a><a href="https://ftm.guru" target="_blank">🚜</a></span></td>
-			</tr>
-			<tr class="" id="d_curve">
-				<td>Curve</td>
-				<td>14</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>curve.finance</td>
-				<td><span><a href="https://ftm.curve.fi" target="_blank">💱</a><a href="https://ftm.curve.fi" target="_blank">🌐</a><a href="https://ftm.curve.fi" target="_blank">🚜</a></span></td>
-			</tr>
-			<tr class="" id="d_curve">
-				<td>Curve</td>
-				<td>14</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>curve.finance</td>
-				<td><span><a href="https://ftm.curve.fi" target="_blank">💱</a><a href="https://ftm.curve.fi" target="_blank">🌐</a><a href="https://ftm.curve.fi" target="_blank">🚜</a></span></td>
-			</tr>
-			<tr class="" id="d_froyo">
-				<td>Froyo</td>
-				<td>1</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>frozenyogurt.finance</td>
-				<td><span><a href="https://frozenyogurt.finance" target="_blank">💱</a><a href="https://frozenyogurt.finance" target="_blank">🌐</a><a href="https://frozenyogurt.finance/vest" target="_blank">🚜</a></span></td>
-			</tr>
-			<tr class="" id="d_spooky">
-				<td>Spooky</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>spookyswap.finance</td>
-				<td><span><a href="https://dex.zoocoin.cash" target="_blank">💱</a><a href="https://ftm.guru" target="_blank">🌐</a><a href="https://ftm.guru" target="_blank">🚜</a></span></td>
-			</tr>
-			<tr class="" id="d_spirit">
-				<td>Spirit</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>spiritswap.finance</td>
-				<td><span><a href="https://dex.zoocoin.cash" target="_blank">💱</a><a href="https://ftm.guru" target="_blank">🌐</a><a href="https://ftm.guru" target="_blank">🚜</a></span></td>
-			</tr>
-			<tr class="" id="d_hyper">
-				<td>Hyper</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>ftm.hyperjump.app</td>
-				<td><span><a href="https://ftm.hyperjump.app/" target="_blank">💱</a><a href="https://ftm-info.hyperjump.app/" target="_blank">📊</a><a href="https://ftm.hyperjump.app/" target="_blank">🌐</a><a href="https://hyperjump.fi" target="_blank">🚜</a><a href="" target="_blank">🎮</a>🐦🐙</span></td>
-			</tr>
-			<tr class="" id="d_zoo">
-				<td>Zoo</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>dex.zoocoin.cash</td>
-				<td><span><a href="https://dex.zoocoin.cash" target="_blank">💱</a><a href="https://chart.zoocoin.cash" target="_blank">📊</a><a href="https://zoocoin.cash" target="_blank">🌐</a><a href="https://dex.zoocoin.cash/farms" target="_blank">🚜</a><a href="" target="_blank">🎮</a><a href="https://t.me/jointhezoo" target="_blank">✈</a>🐦🐙</span></td>
-			</tr>
-			<tr class="" id="d_paint">
-				<td>Paint</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>paintswap.finance</td>
-				<td><span><a href="https://paintswap.finance" target="_blank">💱</a><a href="https://info.paintswap.finance" target="_blank">📊</a><a href="https://paintswap.finance" target="_blank">🌐</a><a href="https://paintswap.finance" target="_blank">🚜</a></span></td>
-			</tr>
-			<tr class="" id="d_waka">
-				<td>Waka</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>waka.finance</td>
-				<td><span><a href="https://waka.finance" target="_blank">💱</a><a href="https://info.waka.finance" target="_blank">📊</a><a href="https://waka.finance" target="_blank">🌐</a><a href="https://waka.finance" target="_blank">🚜</a></span></td>
-			</tr>
-			<tr class="" id="d_elk">
-				<td>Elk</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>app.elk.finance</td>
-				<td><span><a href="https://app.elk.finance" target="_blank">💱</a><a href="https://ftm-info.elk.finance" target="_blank">📊</a><a href="https://elk.finance" target="_blank">🌐</a><a href="https://app.elk.finance" target="_blank">🚜</a></span></td>
-			</tr>
-			<tr class="" id="d_opera">
-				<td>Opera</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>operaswap.finance</td>
-				<td><span><a href="https://operaswap.finance" target="_blank">💱</a><a href="https://operaswap.finance" target="_blank">🌐</a><a href="https://operaswap.finance" target="_blank">🚜</a></span></td>
-			</tr>
-			<tr class="" id="d_fbomb">
-				<td>fBomb</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>swap.fbomb.finance</td>
-				<td><span><a href="https://swap.fbomb.finance" target="_blank">💱</a><a href="https://fbomb.finance" target="_blank">📊</a><a href="https://fbomb.finance" target="_blank">🌐</a><a href="https://fbomb.finance" target="_blank">🚜</a></span></td>
-			</tr>
-			<tr class="" id="d_shiba">
-				<td>Shiba</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>shibafantom.finance</td>
-				<td><span><a href="https://swap.shibafantom.finance" target="_blank">💱</a><a href="https://info.shibafantom.finance" target="_blank">📊</a><a href="https://shibafantom.com" target="_blank">🌐</a><a href="https://swap.shibafantom.finance" target="_blank">🚜</a></span></td>
-			</tr>
-			<tr class="" id="d_cyber">
-				<td>Cyber</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>swap.thexdao.com</td>
-				<td><span><a href="https://swap.thexdao.com" target="_blank">💱</a><a href="https://fmc.guru/xdao" target="_blank">📊</a><a href="https://thexdao.org" target="_blank">🌐</a><a href="https://thexdao.com/#/farms" target="_blank">🚜</a><a href="https://t.me/thexfoundationdiscussion" target="_blank">✈</a></span></td>
-			</tr>
-			<tr class="" id="d_totem">
-				<td>Totem</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>totemfinance.app</td>
-				<td><span><a href="https://totemswap.me" target="_blank">💱</a><a href="https://totemfinance.app" target="_blank">🌐</a><a href="https://totemfinance.app/pools" target="_blank">🚜</a><a href="https://discord.gg/Kaim0zoKH1" target="_blank">🎮</a><a href="https://t.me/totemfinance" target="_blank">✈</a></span></td>
-			</tr>
-			<tr class="" id="d_nipple">
-				<td>NipdEx</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>nipplelabs.finance</td>
-				<td><span><a href="https://exchange.nipplelabs.finance" target="_blank">💱</a><a href="https://nipplelabs.com" target="_blank">🌐</a><a href="https://discord.com/invite/6ChQmPb3as" target="_blank">🎮</a><a href="https://t.me/nipplelabs" target="_blank">✈</a><a href="https://twitter.com/nipplelabs" target="_blank">🐦</a><a href="https://nipplelabs.finance/farms" target="_blank">🚜</a></span></td>
-			</tr>
-			<tr class="" id="d_soul">
-				<td>Soul</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>soulswap.finance</td>
-				<td><span><a href="https://exchange.soulswap.finance" target="_blank">💱</a><a href="https://soulswap.finance" target="_blank">🌐</a><a href="https://discord.gg/SkHxPyHy" target="_blank">🎮</a><a href="https://t.me/soulswapdefi" target="_blank">✈</a><a href="https://twitter.com/soulswapfinance" target="_blank">🐦</a><!--<a href="https://soulswap.finance/farms" target="_blank">🚜</a>--></span></td>
-			</tr>
-			<tr class="" id="d_wraith">
-				<td>Wraith</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>wraithswap.finance</td>
-				<td><span><a href="https://wraithswap.finance" target="_blank">💱</a><a href="https://wraithswap.finance" target="_blank">🌐</a><a href="https://t.me/fantomsyf" target="_blank">✈</a><a href="https://fields.wraithswap.finance" target="_blank">🚜</a></span></td>
-			</tr>
-			<tr class="" id="d_empire">
-				<td>Empire</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>ftm.empiredex.org</td>
-				<td><span><a href="https://ftm.empiredex.org" target="_blank">💱</a><a href="https://ftm.empiredex.org" target="_blank">🌐</a><a href="https://discord.com/invite/" target="_blank">🎮</a><a href="https://t.me/" target="_blank">✈</a><a href="https://twitter.com/" target="_blank">🐦</a><a href="https://ftm.empiredex.org" target="_blank">🚜</a></span></td>
-			</tr>
-			<tr class="" id="d_nugget">
-				<td>Nugget</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>nuggetswap.finance</td>
-				<td><span><a href="https://nuggetswap.finance" target="_blank">💱</a><a href="https://nuggetswap.finance" target="_blank">🌐</a><a href="https://discord.com/invite/" target="_blank">🎮</a><a href="https://t.me/nuggetswap" target="_blank">✈</a><a href="https://twitter.com/" target="_blank">🐦</a><a href="https://" target="_blank">🚜</a></span></td>
-			</tr>
-			<tr class="" id="d_jet">
-				<td>Jet</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>jetswap.finance</td>
-				<td><span><a href="https://jetswap.finance" target="_blank">💱</a><a href="https://jetfuel.finance" target="_blank">🌐</a><a href="https://discord.com/invite/" target="_blank">🎮</a><a href="https://t.me/jetfuelfinance" target="_blank">✈</a><a href="https://fantom-info.jetswap.finance" target="_blank">📊</a><a href="https://jetfuel.finance/vaults" target="_blank">🚜</a></span></td>
-			</tr>
-			<tr class="" id="d_firebird">
-				<td>Firebird</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>firebird.finance</td>
-				<td><span><a href="https://firebird.finance" target="_blank">💱</a><a href="https://firebird.finance" target="_blank">🌐</a><a href="https://discord.com/invite/" target="_blank">🎮</a><a href="https://t.me/jetfuelfinance" target="_blank">✈</a><a href="https://firebird.finance" target="_blank">📊</a><a href="https://firebird.finance/vaults" target="_blank">🚜</a></span></td>
-			</tr>
-			<tr class="" id="d_beethoven">
-				<td>Beethoven</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>app.beethovenx.io</td>
-				<td><span><a href="https://app.beethovenx.io" target="_blank">💱</a><a href="https://app.beethovenx.io" target="_blank">🌐</a><a href="https://discord.com/invite/" target="_blank">🎮</a><a href="https://t.me/" target="_blank">✈</a><a href="https://app.beethovenx.io" target="_blank">📊</a><a href="https://app.beethovenx.io" target="_blank">🚜</a></span></td>
-			</tr>
-			<tr class="" id="d_iron">
-				<td>Iron</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>iron.finance</td>
-				<td><span><a href="https://app.iron.finance/swap" target="_blank">💱</a><a href="https://app.iron.finance" target="_blank">🌐</a><a href="https://discord.com/invite/RtA37hgGrK" target="_blank">🎮</a><a href="https://app.iron.finance/stablecoin/charts" target="_blank">📊</a><a href="https://app.iron.finance/pools" target="_blank">🚜</a><a href="https://twitter.com/IronFinance" target="_blank">🐦</a></span></td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-<!--<div align="center"><br><b>1 2 3 4 5 … 6 7 8 9 10</b></div>-->
-<br>
-<br>
-<br>
-<div align="center" style="margin:0;padding:0"><u>Legend:</u><br>💱DEX-UI 🚜Farm<br>📊Analytics 🌐Website<br>🎮Discord ✈Telegram 🐦Twitter<br>🐙Github 🔎Explorer</div>
-
-<br>
-<br>
-<div align="center" class="pgb">
-	<div align="center" class="pgbs"><a href="index.html"><b>FantomMarketCap Index</b></a></div>
-	<div align="center" class="pgbs"><a href="dex.html"><b>List of All DEX at Fantom</b></a></div>
-	<div align="center" class="pgbs"><a href="defi.html"><b>🔜Most-used Protocols</b></a></div>
-	<div align="center" class="pgbs"><a href="xdao.html"><b>CyberSwap Analytics</b></a></div>
-	<div align="center" class="pgbs"><a href="https://ftm.guru/pair.html" target="_blank"><b>Liquidity Explorer</b></a></div>
-	<div align="center" class="pgbs"><a href="https://ftm.guru/fantomscan.html" target="_blank""><i>ftm.guru's</i> <b>FantomScan™</b></a></div>
-	<div align="center" class="pgbs"><a href="https://ftm.guru/apelist.html" target="_blank""><i>ftm.guru's</i> <b>Ape-List™</b></a></div>
-	<div align="center" class="pgbs"><a hre f="xdao.html"><b>🔜Best-selling NFTs</b></a></div>
-	<div align="center" class="pgbs"><a hre f="xdao.html"><b>🔜List of Top Farms</b></a></div>
-</div>
-<br>
-<br>
-<h5 align="center" id="disclaimer"><b><u>Disclaimer & Notice</u></b><br>
-All information presented here is only for aesthetic uses and posesses no validity to settle any claims. It is also non-exhaustive and prone to error. Advertisements are not endorsements. This dashboard is ultra-real time - It means that the data on this page has zero latency, unlike CMC or CG which have 1-10 minutes old data. FTM.guru and FMC.guru are trying to keep up with the <b>Fantom Fast</b> motto. <i>A much deserved shoutout to all developers on F.O., ftmscan.com, defiLllama, thegraph and rpc.ftm.tools for their benign Services!</i>A "0" represents anomalities in data and are masked to remove pollution.<br>We encourage you to report inconsistencies, ask business queries, request listing or start an ad campaign at one of our community channels:<br>
-<b><a href="https://t.me/FTM1337" target="_blank">Telegram</a> or <a href="https://discord.gg/QpyfMarNrV" target="_blank">Discord.</a></b><!--
-Our Address: 0x921Ed37f62CBe4d86D38b720EF4a4a44B24a1C5D--></h5>
-<br>
-<br>
-<div align="center" id="spadd" style="">
-<font id="spadf" size="2" style="text-align:center">(Sponsored Ad)</font>
-<br>
-<i><a href="https://t.me/FTM1337">Please Telegram us for queries.</a></i>
-<br>
-<a id="spada" href="" target="_blank">
-<img id="spadi" src="" width="80%"></img><br>
-</a>
-</div>
-
-<br><br>
-<hr class="hhr">
-<br><br>
-<div class="lowerbar" align="center">
-	<div align="left" class="lowercat">
-		<span>Ecosystem</span><br>
-		<a href="https://fmc.guru" target="_blank">FantomMarketCap</a><br>
-		<a href="https://ftm.guru" target="_blank">FTM1337</a><br>
-		<a href="https://kcc.guru" target="_blank">Kucino Casino</a><br>
+	<br>
+	<br>
+	<h5 align="center" id="disclaimer">
+		<b><u>Disclaimer & Notice</u></b><br>
+		All information presented here is only for aesthetic uses and posesses no validity to settle any claims. It is also non-exhaustive and prone to error. Advertisements are not endorsements. This dashboard is ultra-real time - It means that the data on this page has zero latency, unlike CMC or CG which have 1-10 minutes old data. FTM.guru and FMC.guru are trying to keep up with the <b>Fantom Fast</b> motto. <i>A much deserved shoutout to all developers on F.O., ftmscan.com, defiLllama and rpc.ftm.tools for their benign Services!</i> All presented numbers are denoted in FTM by default."Most Liquid" coloumn refers to the pair with highest WFTM-Liquidity. "Supply" is Total Supply by default, unless a we have been informed explicitly of the circulation math. Due to this reason, most tokens have "Market Cap" that is full-diluted.<br>We encourage you to report inconsistencies, ask business queries, request listing or start an ad campaign at one of our community channels:<br>
+		<b><a href="https://t.me/FTM1337" target="_blank">Telegram</a> or <a href="https://discord.gg/QpyfMarNrV" target="_blank">Discord.</a></b><!--
+		Our Address: 0x921Ed37f62CBe4d86D38b720EF4a4a44B24a1C5D-->
+	</h5>
+	<br><br>
+	<hr class="hhr">
+	<br><br>
+	<div class="lowerbar" align="center">
+		<div align="left" class="lowercat">
+			<span>Ecosystem</span><br>
+			<a href="https://fmc.guru" target="_blank">FantomMarketCap</a><br>
+			<a href="https://ftm.guru" target="_blank">FTM1337</a><br>
+			<a href="https://kcc.guru" target="_blank">Kucino Casino</a><br>
+		</div>
+		<div align="left" class="lowercat">
+			<span>Farming</span><br>
+			<a href="https://ftm.guru/yieldstate.html">🔱 YieldState</a><br>
+			<a href="https://ftm.guru/LF">👽 LITE Farmlands</a><br>
+			<a href="https://vfat.tools/fantom/guru">🧑‍🌾 vfat.tools</a>
+		</div>
+		<div class="lowercat">
+			<span><a href="https://kcc.guru/casino.html">Casino & Games</a></span><br>
+			<a href="https://kcc.guru/jackpot_1.html">KCS CoinToss</a><br>
+			<a href="https://kcc.guru/jackpot_1.html">2-player Jackpot</a><br>
+			<a href="https://kcc.guru/instalotto.html">🎟 instaLOTTO</a><br>
+			<a href="https://ftm.guru/casino.html">Casino on Opera</a>
+		</div>
+		<div class="lowercat">
+			<span><a href="https://kcc.guru/dashboard.html">Dashboard</a></span><br>
+			<a href="https://kcc.guru/claimkcs.html">Claim KCS Earnings</a><br>
+			<a href="https://kcc.guru/markets.html">Market Statistics</a><br>
+			<a href="https://kcc.guru/balancesheet.html">Balance Sheet</a><br>
+		</div>
+		<div align="left" class="lowercat">
+			<span>Our Dapps</span><br>
+			<a href="https://ftm.guru/degam.html">✨ FTM CASINO</a><br>
+			<a href="https://ftm.guru/degam.html">🎰 KCS Kucino</a><br>
+			<a href="https://ftm.guru/approver.html">✅ Approver</a><br>
+			<a href="https://ftm.guru/airdrop.html">Airdrop-Tool</a><br>
+		</div>
+		<div align="left" class="lowercat">
+			<span>Chain Tools</span><br>
+			<a href="https://ftm.guru/pair.html">DEX-Explorer</a><br>
+			<a href="https://ftm.guru/fantomscan.html">🔍 FantomScan</a><br>
+			<a href="https://kcc.guru/kscan" target="_blank">🔎 kscan</a><br>
+			<a href="https://ftm.guru/apelist.html">Ape-List</a><br>
+		</div>
+		<div align="left" class="lowercat">
+			<span>Opera Utilities</span><br>
+			<a href="https://ftm.guru/elite.html">ELITE Analytics</a><br>
+			<a href="https://t.me/FTM1337/12497" target="_blank">🤖 GambleBot Telegram</a><br>
+			<a href="https://ftm.guru/index.html">🗳 Elite-Gems Voting</a>
+		</div>
+		<div class="lowercat">
+			<span>$KUCINO</span><br>
+			<a target="_blank" href="https://swap.kudex.finance/#/swap?outputCurrency=0x4c9fa6297d3413fbbe7ba935e14022d0e5a39dc7">Trade at Kudex</a><br>
+			<a target="_blank" href="https://explorer.kcc.io/token/0x4c9fa6297d3413fbbe7ba935e14022d0e5a39dc7">KCC Explorer</a><br>
+			<a target="_blank" href="https://t.me/kccguru">Chart at Poocoin</a><br>
+			<a target="_blank" href="https://testnet.bscscan.com/address/0x4c9fa6297d3413fbbe7ba935e14022d0e5a39dc7#code">View Source</a>
+		</div>
+		<div class="lowercat">
+			<span>Resources</span><br>
+			<a target="_blank" href="https://kcc.guru/roadmap">Kucino Roadmap</a><br>
+			<a target="_blank" href="https://kcc.guru/roadmap">KUCINO Tokenimcs</a><br>
+			<a target="_blank" href="https://ftmscan.com/address/0x74bfb7e94bef5767f5f6ace2d0df73a224adb689">385 ELITE ETL</a><br>
+			<a target="_blank" href="https://kudex.finance/locker">KCS Liquidity Lock</a><br>
+			<a target="_blank" href="https://kudex.finance/locker">70% KUCINO ETL</a><br>
+			<a target="_blank" href="docs">📚 Documentation</a><br>
+		</div>
+		<div class="lowercat">
+			<span>Telegrams</span><br>
+			<a target="_blank" href="https://t.me/ftm1337">FantomOpera#1337</a><br>
+			<a target="_blank" href="https://t.me/ftmguru">Announcements</a><br>
+			<a target="_blank" href="https://t.me/kucino">Kucino Group</a><br>
+			<a target="_blank" href="https://t.me/kccguru">KCC.guru Channel</a><br>
+			<a target="_blank" href="https://t.me/kccguru">FMC New Listings</a><br>
+		</div>
+		<div class="lowercat">
+			<span>Social & Media</span><br>
+			<a target="_blank" href="https://medium.com/@ftm1337">Medium Journal</a><br>
+			<a target="_blank" href="https://discord.gg/QpyfMarNrV">Discord Server</a><br>
+			<a target="_blank" href="https://twitter.com/kccGuru">Kucino Twitter</a><br>
+			<a target="_blank" href="mailto:ftm1337@protonmail.com">Official Mail</a><br>
+			<a target="_blank" href="https://twitter.com/ftm1337">FTM1337 Twitter</a><br>
+		</div>
+		<div class="lowercat">
+			<a href="https://ftm.guru/index.html"><b style="font-size:2em"><code>FTM.guru</code></b></a><br>
+			<a href="https://fmc.guru/index.html"><b style="font-size:2em"><code>FMC.guru</code></b></a><br>
+			<a href="https://kcc.guru/index.html"><b style="font-size:2em"><code>KCC.guru</code></b></a>
+		</div>
+		<div class="lowercat">
+		</div>
 	</div>
-	<div align="left" class="lowercat">
-		<span>Farming</span><br>
-		<a href="https://ftm.guru/yieldstate.html">🔱 YieldState</a><br>
-		<a href="https://ftm.guru/LF">👽 LITE Farmlands</a><br>
-		<a href="https://vfat.tools/fantom/guru">🧑‍🌾 vfat.tools</a>
-	</div>
-	<div class="lowercat">
-		<span><a href="https://kcc.guru/casino.html">Casino & Games</a></span><br>
-		<a href="https://kcc.guru/jackpot_1.html">2-player Jackpot</a><br>
-		<a href="https://kcc.guru/instalotto.html">instaLOTTO</a><br>
-		<a href="https://kcc.guru/21hrlotto.html">🎟 21-hour LOTTO</a>
-	</div>
-	<div class="lowercat">
-		<span><a href="https://kcc.guru/dashboard.html">Dashboard</a></span><br>
-		<a href="https://kcc.guru/claimkcs.html">Claim KCS Earnings</a><br>
-		<a href="https://kcc.guru/markets.html">Market Statistics</a><br>
-		<a href="https://kcc.guru/balancesheet.html">Balance Sheet</a><br>
-	</div>
-	<div align="left" class="lowercat">
-		<span>Our Dapps</span><br>
-		<a href="https://ftm.guru/degam.html">✨ FTM CASINO</a><br>
-		<a href="https://ftm.guru/degam.html">🎰 KCS Kucino</a><br>
-		<a href="https://ftm.guru/approver.html">✅ Approver</a><br>
-		<a href="https://ftm.guru/airdrop.html">Airdrop-Tool</a><br>
-	</div>
-	<div align="left" class="lowercat">
-		<span>Chain Tools</span><br>
-		<a href="https://ftm.guru/pair.html">DEX-Explorer</a><br>
-		<a href="https://ftm.guru/fantomscan.html">🔍 FantomScan</a><br>
-		<a href="https://kcc.guru/kscan" target="_blank">🔎 kscan</a><br>
-		<a href="https://ftm.guru/apelist.html">Ape-List</a><br>
-	</div>
-	<div align="left" class="lowercat">
-		<span>Opera Utilities</span><br>
-		<a href="https://ftm.guru/elite.html">ELITE Analytics</a><br>
-		<a href="https://t.me/FTM1337/12497" target="_blank">🤖 GambleBot Telegram</a><br>
-		<a href="https://ftm.guru/index.html">🗳 Elite-Gems Voting</a>
-	</div>
-	<div class="lowercat">
-		<span>$KUCINO</span><br>
-		<a target="_blank" href="https://swap.kudex.finance/#/swap?outputCurrency=0x4c9fa6297d3413fbbe7ba935e14022d0e5a39dc7">Trade at Kudex</a><br>
-		<a target="_blank" href="https://explorer.kcc.io/token/0x4c9fa6297d3413fbbe7ba935e14022d0e5a39dc7">KCC Explorer</a><br>
-		<a target="_blank" href="https://t.me/kccguru">Chart at Poocoin</a><br>
-		<a target="_blank" href="https://testnet.bscscan.com/address/0x4c9fa6297d3413fbbe7ba935e14022d0e5a39dc7#code">View Source</a>
-	</div>
-	<div class="lowercat">
-		<span>Resources</span><br>
-		<a target="_blank" href="https://kcc.guru/roadmap">Kucino Roadmap</a><br>
-		<a target="_blank" href="https://kcc.guru/roadmap">KUCINO Tokenimcs</a><br>
-		<a target="_blank" href="https://ftmscan.com/address/0x74bfb7e94bef5767f5f6ace2d0df73a224adb689">385 ELITE ETL</a><br>
-		<a target="_blank" href="https://kudex.finance/locker">KCS Liquidity Lock</a><br>
-		<a target="_blank" href="https://kudex.finance/locker">70% KUCINO ETL</a><br>
-		<a target="_blank" href="docs">📚 Documentation</a><br>
-	</div>
-	<div class="lowercat">
-		<span>Telegrams</span><br>
-		<a target="_blank" href="https://t.me/ftm1337">FantomOpera#1337</a><br>
-		<a target="_blank" href="https://t.me/ftmguru">Announcements</a><br>
-		<a target="_blank" href="https://t.me/kucino">Kucino Group</a><br>
-		<a target="_blank" href="https://t.me/kccguru">KCC.guru Channel</a><br>
-		<a target="_blank" href="https://t.me/kccguru">FMC New Listings</a><br>
-	</div>
-	<div class="lowercat">
-		<span>Social & Media</span><br>
-		<a target="_blank" href="https://medium.com/@ftm1337">Medium Journal</a><br>
-		<a target="_blank" href="https://discord.gg/QpyfMarNrV">Discord Server</a><br>
-		<a target="_blank" href="https://twitter.com/kccGuru">Kucino Twitter</a><br>
-		<a target="_blank" href="mailto:ftm1337@protonmail.com">Official Mail</a><br>
-	</div>
-	<div class="lowercat">
-		<a href="https://ftm.guru/index.html"><b style="font-size:2em"><code>FTM.guru</code></b></a><br>
-		<a href="https://fmc.guru/index.html"><b style="font-size:2em"><code>FMC.guru</code></b></a><br>
-		<a href="https://kcc.guru/index.html"><b style="font-size:2em"><code>KCC.guru</code></b></a>
-	</div>
-	<div class="lowercat">
-	</div>
-</div>
 </body>
-<!--<script src="d1.js">
-</script>-->
 <script src="web3.min.js">
 </script>
 <script>
 o={}
 aa=$("maintable").getElementsByTagName("tbody")[0].getElementsByTagName("tr");
-
+for ( i = 0 ; i < aa.length ; i++ )
+{
+	AC=aa[i].getElementsByTagName("td")[8].getElementsByTagName("pre")[0].innerHTML;
+	o[AC]={"s":"","d":"","ts":"","mc":"","_r0":"","_r1":""}
+}
 window.addEventListener('load',function()
 {
 	if(window.ethereum&&Number(window.ethereum.chainId==250)){web3 = new Web3(web3.currentProvider);}
@@ -610,90 +1070,1129 @@ window.addEventListener('load',function()
 function $(_) {return document.getElementById(_);}
 function basics()
 {
+
+	fillLinks()
+	//findTS();
+	//manpaint()
+	brr()
+	chopsca()
 	//advertise()
-	copsca()
-	gp()
-	tc()
-	gg()
+	sortit(3)
 }
+function fillLinks()
+{
+	aa=$("maintable").getElementsByTagName("tbody")[0].getElementsByTagName("tr");
+	for ( i = 0 ; i < aa.length ; i++ )
+	{
+		CA=aa[i].getElementsByTagName("td")[8].getElementsByTagName("pre")[0].innerHTML;
+		aa[i].getElementsByTagName("td")[9].children[0].innerHTML=`<a href="https://ftmscan.com/token/${CA}" target="_blank">🔎</a><a href="https://info.spookyswap.finance/#/token/${CA}" target="_blank">😼</a><a href="https://info.spiritswap.finance/#/token/${CA}" target="_blank">👻</a><a href="https://analytics-ftm.sushi.com/tokens/${CA}" target="_blank">🍣</a><a href="https://ftm-info.hyperjump.fi/#/token/${CA}" target="_blank">🛩</a><a href="https://info.paintswap.finance/#/token/${CA}" target="_blank">🎨</a><a >🦎</a><a href="https://info.waka.finance/#/token/${CA}"style="" target="_blank">👾</a><a href="https://ftm-info.elk.finance/#/token/${CA}"style="" target="_blank">🦌</a>`;
+	}
+}
+fiu=1;
+
+degdismod="0";
+degdismodbg="rgba(255,127,63,0)";
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-di=
-[
-	["Curve",	"0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506",	"0xc35DADB65012eC5796536bD9864eD8773aBc74C4",	1616111666],
-	["Spooky",	"0xF491e7B69E4244ad4002BC14e878a34207E38c29",	"0x152eE697f2E276fA89E96742e9bB9aB1F2E61bE3",	1616111666],
-	["Spirit",	"0x16327E3FbDaCA3bcF7E38F5Af2599D2DDc33aE52",	"0xEF45d134b73241eDa7703fa787148D9C9F4950b0",	1616111666],
-	["Sushi",	"0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506",	"0xc35DADB65012eC5796536bD9864eD8773aBc74C4",	1616111666],
-	["Hyper",	"0x53c153a0df7E050BbEFbb70eE9632061f12795fB",	"0x991152411A7B5A14A8CF0cDDE8439435328070dF",	1616111666],
-	["Paint",	"0xfD000ddCEa75a2E23059881c3589F6425bFf1AbB",	"0x733A9D1585f2d14c77b49d39BC7d7dd14CdA4aa5",	1616111666],
-	["Zoo", 	"0x40b12a3E261416fF0035586ff96e23c2894560f2",	"0x6178C3B21F7cA1adD84c16AD35452c85a85F5df4",	1616111666],
-	["Waka",	"0x7b17021fcb7bc888641dc3bedfed3734fcaf2c87",	"0xB2435253C71FcA27bE41206EB2793E44e1Df6b6D",	1616111666],
-	["Elk", 	"0x4D2cf285a519261F30b4d9c2c344Baf260d65Fa2",	"0x7Ba73c99e6f01a37f3e33854c8F544BbbadD3420",	1616111666],
-	["Opera",	"0xe372753f66644a1197ab85ff529ed02995ed2d6c",	"0x8ebB6B4eD61b6b2eA663569D0Be3F7b33a481178",	1616111666],
-	["fBomb",	"0xb9799De71100e20aC1cdbCc63C69ddA2D0D81710",	"0xD9473A05b2edf4f614593bA5D1dBd3021d8e0Ebe",	1616111666],
-	["Shiba",	"0xB6f7b3d8CD9dBf30805C0dd79809dace5603Ce6A",	"0xeAcC845E4db0aB59A326513347a37ed4E999aBD8",	1616111666],
-	["Cyber",	"0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506",	"0xcB9eA67A5eB76D22688BF21D6689c435D4e25077",	1616111666],
-	["Totem",	"0xE1D3c87EA897B9AA03FA49332e398c4e95a9A769",	"0xd60FaDE08c25b76b2DbdeaF42f0C4D68236A1079",	1616111666],
-	["Nipple",	"0xB5ab49A8127FFf2Fc3084D5323b1Ad83890E5Bb4",	"0x41A75C3d6CDe54170e6a67d8D61752cc8Abb0275",	1616111666],
-	["Soul",	"0x6b3d631B87FE27aF29efeC61d2ab8CE4d621cCBF",	"0x1120e150dA9def6Fe930f4fEDeD18ef57c0CA7eF",	1616111666],
-	["Wraith",	"0x8C9E059a729C17fB294cd782eB66Df3871D29173",	"0xCC738D2fDE18fe66773b84c8E6C869aB233766D1",	1616111666],
-	["Empire",	"0xdADaae6cDFE4FA3c35d54811087b3bC3Cd60F348",	"0x06530550A48F990360DFD642d2132354A144F31d",	1616111666],
-	["Nugget",	"0x6a3459091e3e425E324ad666f1EBC92d22B19422",	"0x598F046E61598CCedA9d76598e848DA0AC48B103",	1631513046],
-	["Jet",		"0x845E76A8691423fbc4ECb8Dd77556Cb61c09eE25",	"0xf6488205957f0b4497053d6422F49e27944eE3Dd",	1631513046],
-	["Firebird","0xe0C38b2a8D09aAD53f1C67734B9A95E43d5981c0",	"0xc7A50FE12C864963Ea5A5E0858a0E7Abe5b875c4",	1631513046],
-
+tokes=[
+  "0xf43Cc235E686d7BC513F53Fbffb61F760c3a1882",  //ELITE
+  "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83",  //WFTM
+  "0x04068da6c83afcfa0e13ba15a6696662335d5b75",  //USDC
+  "0x049d68029688eabf473097a2fc38ef61633a3c7a",  //USDT
+  "0xad84341756bf337f5a0164515b1f6f993d194e1f",  //FUSD
+  "0xaf319e5789945197e365e7f7fbfc56b130523b33",  //FRAX
+  "0x82f8cb20c14f134fe6ebf7ac3b903b2117aafa62",  //FXS
+  "0x321162cd933e2be498cd2267a90534a804051b11",  //WBTC
+  "0x841fad6eae12c286d1fd18d1d525dffa75c7effe",  //BOO
+  "0xd67de0e0a0fd7b15dc8348bb9be742f3c5850454",  //BNB
+  "0x29b0da86e484e1c0029b56e817912d778ac0ec69",  //YFI
+  "0xae75a438b2e0cb8bb01ec1e1e376de11d44477cc",  //SUSHI
+  "0x5cc61a78f164885776aa610fb0fe1257df78e59b",  //SPIRIT
+  "0xd0660cd418a64a1d44e9214ad8e459324d8157f1",  //WOOFY
+  "0x74b23882a30290451a17c44f4f05243b6b58c76d",  //WETH
+  "0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e",  //DAI
+  "0x09e145a1d53c0045f41aeef25d8ff982ae74dd56",  //ZOO
+  "0xddcb3ffd12750b45d32e084887fdf1aabab34239",  //ANY
+  "0x6a07a792ab2965c72a5b8088d3a069a7ac3a993b",  //AAVE
+  "0xb3654dc3d10ea7645f8319668e8f54d2574fbdc8",  //LINK
+  "0x56ee926bd8c72b2d5fa1af4d9e4cbb515a1e3adc",  //SNX
+  "0x1e4f97b9f9f913c46f1632781732927b9019c68b",  //CRV
+  "0x657a1861c15a3ded9af0b6799a195a249ebdcbc6",  //CREAM
+  "0x753fbc5800a8c8e3fb6dc6415810d627a387dfc9",  //BADGER
+  "0x46e7628e8b4350b2716ab470ee0ba1fa9e76c6c5",  //BAND
+  "0xb01e8419d842beebf1b70a7b5f7142abbaf7159d",  //COVER
+  "0xbc2451aad349b6b43fd05f4f0cc327f8a6bca2d4",  //AURORA
+  "0x10b620b2dbac4faa7d7ffd71da486f5d44cd86f9",  //LQDR
+  "0xf6129f6705b826dbafaa26e03aad9dd20b9235c6",  //ICE
+  "0xeb86b05cfee3e48db9a44275701ed099462c8ba0",  //FRANK
+  "0x85dec8c4b2680793661bca91a8f129607571863d",  //BRUSH
+  "0x0f7adb77b6334b9b5a3c4f78aaa073ea1d915bf6",  //AQU
+  "0x41e3df7f716ab5af28c1497b354d79342923196a",  //aUSD
+  "0xf61ccde1d4bb76ced1daa9d4c429cca83022b08b",  //WAKA
+  "0xe1c8f3d529bea8e3fa1fac5b416335a2f998ee1c",  //ELK
+  "0xed940c1db02a8e7dc2e6748aff3aab165b59c7e3",  //OPERA
+  "0x4cdf39285d7ca8eb3f090fda0c069ba5f4145b37",  //TSHARE
+  "0x6c021ae822bea943b2e66552bde1d2696a53fbb7",  //TOMB
+  "0x34d33dc8ac6f1650d94a7e9a972b47044217600b",  //SMART
+  "0x8503eb4A136bDBeB323E37Aa6e0FA0C772228378",  //BOMB
+  "0xbf4906762C38F50bC7Be0A11BB452C944f6C72E1",  //SHRAP
+  "0x9Ba3e4F84a34DF4e08C112e1a0FF148b81655615",  //SHIBA
+  "0x82f0B8B456c1A451378467398982d4834b6829c1",  //MIM
+  "0x2130d2a1e51112D349cCF78D2a1EE65843ba36e0",  //UNIDX
+  "0xe0654C8e6fd4D733349ac7E09f6f23DA256bF475",  //SCREAM
+  "0xC1Be9a4D5D45BeeACAE296a7BD5fADBfc14602C4",  //GTON
+  "0xd6070ae98b8069de6B494332d1A1a81B6179D960",  //BIFI
+  "0xa71353Bb71DdA105D383B02fc2dD172C4D39eF8B",  //RAI
+  "0xc5e2b037d30a390e62180970b3aa4e91868764cd",  //TAROT
+  "0x3a3841f5fa9f2c283ea567d5aeea3af022dd2262",  //SHADE
+  "0xbFaf328Fe059c53D936876141f38089df0D1503D",  //MM
+  "0x05848B832E872d9eDd84AC5718D58f21fD9c9649",  //STEAK
+  "0x7eC94C4327dC757601B4273cD67014d7760Be97E",  //GRIM
+  "0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b",  //ATRI
+  "0x627524d78b4fc840c887ffec90563c7a42b671fd",  //KEK
+  "0x37C045bE4641328DFEB625f1Dde610D061613497",  //JUST
 ]
 /*
+//GENERATION
+AC1=new web3.eth.Contract(ab1,tokes[9]);
+AC1.methods.decimals().call((e,r1)=>
+{
+    o[tokes[9]]["d"]=Number(r1);
+    AC1.methods.totalSupply().call((e,r2)=>
+    {
+        o[tokes[9]]["s"]=Number(r2);
+		AC1R=new web3.eth.Contract(ab1,pairs[9])
+        AC1R.methods.getReserves().call((e,r3)=>
+        {
+            o[tokes[9]]["d"]=Number(r1);
+            o[tokes[9]]["s"]=Number(r2);
+            o[tokes[9]]["mc"]=Number(r3[0]);
+            o[tokes[9]]["ts"]=Number(r3[1]);
+			//console.log(o[tokes[9]])
+            rtd=$("maintable").getElementsByTagName("tbody")[0].getElementsByTagName("tr")[9].getElementsByTagName("td");
+			rtd[3].innerHTML=o[tokes[9]]["mc"]/o[tokes[9]]["ts"]*o[tokes[9]]["s"]/10**o[tokes[9]]["d"]///MC
+			rtd[3].innerHTML=o[tokes[9]]["mc"]/o[tokes[9]]["ts"]///AP
+			rtd[3].innerHTML=o[tokes[9]]["s"]/10**o[tokes[9]]["d"]//TS
+        })
+    })
+})
 
-	["Beethoven","?",	"?",	"?"],
-	["Froyo","?",	"?",	"?"],
+//GENERATOR
 
+AC${i}=new web3.eth.Contract(ab1,tokes[i]);
+AC${i}.methods.decimals().call((e,r1)=>
+{
+    o[tokes[i]]["d"]=Number(r1);
+    AC1.methods.totalSupply().call((e,r2)=>
+    {
+        o[tokes[i]]["s"]=Number(r2);
+		AC1R=new web3.eth.Contract(ab1,pairs[i])
+        AC1R.methods.getReserves().call((e,r3)=>
+        {
+            painter(i,r1,r2,r3);
+        })
+    })
+})
 
-Froyo
-	"Frozen.yogurt.finance FUSDT/USDC/DAI" (3FROYO) [USDC-DAI-fUSDT]
-	LPT =
-	DEX = 0x83E5f18Da720119fF363cF63417628eB0e9fd523
-
-	"Frozen.yogurt.finance FUSDT/USDC/DAI" (3FROYO) [USDC-DAI-fUSDT]
-	LPT = 0x4f85Bbf3B0265DCEd4Ec72ebD0358ccCf190F1B3
-	DEX = 0x83E5f18Da720119fF363cF63417628eB0e9fd523
-
-Iron
-	"IronSwap 3USD" (IS3USD) [USDC-DAI-fUSDT]
-	LPT = 0xc143a1500ca4a471eE9cc70B9AC0C739576F84bb
-	DEX	= 0x952BDA8A83c3D5F398a686bb4e8C6DD90072d523
 */
 
-froyoi = [{"stateMutability":"view","type":"function","name":"balances","inputs":[{"name":"arg0","type":"uint256"}],"outputs":[{"name":"","type":"uint256"}],"gas":1917}]
-froyo_1 = "0x83E5f18Da720119fF363cF63417628eB0e9fd523"
 
-async function gp()
+function painter(i,r1,r2,r3)
 {
-	for(i=0;i< di.length;i++)
-	{
-		if(i==0){continue}
-		F=new web3.eth.Contract(ab,di[i][2]);
-		if(di[i][0]=="Soul"){await F.methods.totalPairs().call((e,r)=>{$("d_"+di[i][0].toLowerCase()).getElementsByTagName("td")[1].innerHTML=Number(r).toLocaleString()})}
-		else{await F.methods.allPairsLength().call((e,r)=>{$("d_"+di[i][0].toLowerCase()).getElementsByTagName("td")[1].innerHTML=Number(r).toLocaleString()})}
-	}
-	sortit(2);sortit(2);sortit(6);sortit(6);
+
+    o[tokes[i]]["d"]=Number(r1);
+    o[tokes[i]]["s"]=Number(r2);
+    o[tokes[i]]["_r0"]=Number(r3[0]);
+    o[tokes[i]]["_r1"]=Number(r3[1]);
+    o[tokes[i]]["ap"]=(Number(r3[0])/1e18)/(Number(r3[1])/10**Number(r1));
+    o[tokes[i]]["ts"]=o[tokes[i]]["s"]/10**o[tokes[i]]["d"]
+    o[tokes[i]]["mc"]=o[tokes[i]]["ts"]*o[tokes[i]]["ap"]
+
+	//console.log(o[tokes[i]])
+	//rtd=$("maintable").getElementsByTagName("tbody")[0].getElementsByTagName("tr")[i].getElementsByTagName("td");
+	rtd=$("tr_"+tokes[i]).getElementsByTagName("td");
+	rtd[3].innerHTML=(Number((o[tokes[i]]["mc"]).toFixed(0))).toLocaleString()
+	rtd[4].innerHTML=(Number(o[tokes[i]]["ap"]).toFixed(4))
+	rtd[5].innerHTML=(Number((o[tokes[i]]["_r0"]/1e18).toFixed(0))).toLocaleString()
+	rtd[6].innerHTML=(Number((o[tokes[i]]["ts"]).toFixed(0))).toLocaleString()
+
+	$("tmc").innerHTML=Number((Number(($("tmc").innerHTML).replace(/ |\$|,|%/g,''))+o[tokes[i]]["mc"]).toFixed(0)).toLocaleString();
 }
 
-ab=
-[{"inputs":[],"name":"allPairsLength","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalPairs","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}]
+/*
+
+//CHIEF GEN
+st="";
+for(i=2;i< 31;i++){st+=(
+	`
+	AC${i}=new web3.eth.Contract(ab1,tokes[${i}]);
+	AC${i}.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[${i}]]["d"]=Number(r1);
+    	AC${i}.methods.totalSupply().call((e,r2)=>
+    	{
+        	o[tokes[i]]["s"]=Number(r2);
+			AC${i}R=new web3.eth.Contract(ab1,pairs[${i}])
+        	AC${i}R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(${i},r1,r2,r3);
+        	})
+    	})
+	})
+	`
+)}*/
+
+
+/*
+
+dexid=
+[
+	{1:"Spooky"},
+	{2:"Spirit"},
+	{3:"Sushi"},
+	{4:"Hyper"},
+	{5:"Paint"},
+	{6:"Zoo"},
+	{7:"Waka"},
+	{8:"Elk"},
+	{9:"Opera"},
+	{10:"Bomb"},
+	{11:"Shiba"},
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+pairs=[
+  "0xEA035A13B64cB49D85E2f0a2736c9604CB21599C",  //ELITE
+  "0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83",  //WFTM
+  "0x2b4c76d0dc16be1c31d4c1dc53bf9b45987fc75c",  //USDC 1
+  "0x5965e53aa80a0bcf1cd6dbdd72e6a9b2aa047410",  //USDT 1
+  "0xbaf1b2fd16f7294ca158b3f1065e5f27f9c72b61",  //FUSD 2
+  "0x0ec0e1629e776272fa3e55548d4a656be0eedcf4",  //FRAX 2
+  "0x2789c73e03157d167bcabca1e09aa61b79196074",  //FXS 2
+  "0x279b2c897737a50405ed2091694f225d83f2d3ba",  //WBTC 2
+  "0xec7178f4c41f346b2721907f5cf7628e388a7a58",  //BOO 1
+  "0x74fe5ddc4c27f91a1898ccd5ac62dfeb2d3df726",  //BNB 2
+  "0x4fc38a2735c7da1d71ccabf6dec235a7da4ec52c",  //YFI 2
+  "0xf84e313b36e86315af7a06ff26c8b20e9eb443c3",  //SUSHI 1
+  "0x30748322b6e34545dbe0788c421886aeb5297789",  //SPIRIT 2
+  "0xfd0ab56b83130ce8f2b7a4f4d4532dee495c0794",  //WOOFY 1
+  "0x3d0bd54c48c2c433ea6fed609cc3d5fb7a77622b",  //WETH 3
+  "0xe120ffbda0d14f3bb6d6053e90e63c572a66a428",  //DAI 1
+  "0xDF18DD2631f02D930071DF7d6FF89bbc3718C62F",  //ZOO 2
+  "0x5c021d9cfad40aafc57786b409a9ce571de375b4",  //ANY 1
+  "0xebf374bb21d83cf010cc7363918776adf6ff2bf6",  //AAVE 1
+  "0x89d9bc2f2d091cfbfc31e333d6dc555ddbc2fd29",  //LINK 1
+  "0x06d173628be105fe81f1c82c9979ba79ebcafcb7",  //SNX 1
+  "0x374c8acb146407ef0ae8f82baafcf8f4ec1708cf",  //CRV 2
+  "0xb77b223490e1f5951ec79a8d09db9eab2adcb934",  //CREAM 1
+  "0x1c94665fd3ecfa969feda7ed01e35522e6982022",  //BADGER 1
+  "0x91b39d5584e2a7dc829f696235742cc293f2e8cf",  //BAND 1
+  "0x5dc7848bf215f1d99f2af3d2bf78fcdf238ee34b",  //COVER 1
+  "0x483d07bc99cdd1df66f64ae0a769a70725c46fa4",  //AURORA 4
+  "0xfa7ca6e6d17368e0a1fa9c75f2ebe5a8d7be9fc6",  //LQDR 3
+  "0x84311ecc54d7553378c067282940b0fdfb913675",  //ICE 3
+  "0x20935601f940a4428a4271b85a46a8bf99158c2e",  //FRANK 2
+  "0x452590b8aa292b963a9d0f2b5e71bc7c927859b3",	 //BRUSH 5
+  "0x7b63e44749884f33cb688f4870dd44dec1195a9b",	 //AQU 3
+  "0x97bc7fb4f3d3f7749a7a3a0953974dcd1af89713",	 //aUSD 3
+  "0x696885e9581bd33ee9877bd8750ddda65381ff01",	 //WAKA 7
+  "0xa69409ecb11bab2f443f204e6bb55cbaffca4b58",	 //ELK 8
+  "0x31c782f4f7bdabc2f1ac02da1782ea6107c4cfcf",	 //OPERA 9
+  "0x4733bc45ef91cf7ccecaeedb794727075fb209f2",	 //TSHARE 1
+  "0x2a651563c9d3af67ae0388a5c8f89b867038089e",	 //TOMB 1
+  "0x2fad3fcfc99b9d25b182b3ed5a8e30ef70ba7da5",  //SMART 1
+  "0x8264f247E4571e2879A05D5d2115C26406c0bC2b",  //BOMB 10
+  "0xE69b45BE6260634de4e432F66179ce47EE846800",  //SHRAP 10
+  "0xD7199dc9F406444808930F72701E8ed9F18c4767",  //SHIBA 11
+  "0xB32b31DfAfbD53E310390F641C7119b5B9Ea0488",  //MIM 2
+  "0x38655f2e859960f3Cc10848777982faBA3451Ec7",  //UNIDX 2
+  "0x30872e4fc4edbFD7a352bFC2463eb4fAe9C09086",  //SCREAM 1
+  "0x25F5B3840D414a21c4Fc46D21699e54d48F75FDD",  //GTON 2
+  "0x1656728af3a14e1319F030Dc147fAbf6f627059e",  //BIFI 1
+  "0x414F9DC80bFe3966d4D30878fd4CE9cAC3cE63c4",  //RAI 2
+  "0x11d90ea9d16e1ee5879b299a819f6d618816d70f",  //TAROT 1
+  "0x20aa395f3bcc4dc44a94215d129650533b3da0b3",  //SHADE 1
+  "0x971D049B7BDE4ca9192A461708eBB54C8EBC0843",  //MM 2
+  "0xD10CC1b46D806D6ac803AF367Da489dEA5EE76FA",  //STEAK 1
+  "0x2c18c39622b90318B0124eCFd6d4aC81efcC51db",  //GRIM 1
+  "0x2ccc88B9EcbB477f68158187f616cFEcB2276641",  //ATRI 2
+  "0xf3582dbaebb4287b462f00d308911621a960a5fd",  //KEK 1
+  "0x0133660D0578Bf9D085033Ea753a27F5Aa2b9de1",  //JUST 2
+]
+function brr()
+{
+
+//ELITE
+	//AC0=new web3.eth.Contract(ab1,tokes[0]);
+	//AC0.methods.decimals().call((e,r1)=>
+	//{
+    //	AC0.methods.totalSupply().call((e,r2)=>
+    //	{
+			AC0R=new web3.eth.Contract(ab1,pairs[0])
+        	AC0R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(0,"18","250000000000000000000",r3);
+        	})
+    //	})
+	//})
+//WFTM
+	AC1=new web3.eth.Contract(ab1,tokes[1]);
+	AC1.methods.decimals().call((e,r1)=>
+	{
+    	AC1.methods.totalSupply().call((e,r2)=>
+    	{
+			//AC1R=new web3.eth.Contract(ab1,pairs[1])
+        	//AC1R.methods.getReserves().call((e,r3)=>
+        	//{
+            //	painter(1,r1,r2,r3);
+            painter(1,r1,r2,[r2,r2])
+        	//})
+    	})
+	})
+//USDC
+	AC2=new web3.eth.Contract(ab1,tokes[2]);
+	AC2.methods.decimals().call((e,r1)=>
+	{
+    	AC2.methods.totalSupply().call((e,r2)=>
+    	{
+			AC2R=new web3.eth.Contract(ab1,pairs[2])
+        	AC2R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(2,r1,r2,(new Array(r3[1],r3[0])));
+            	fiu=r3[0]*1e12/r3[1];
+        	})
+    	})
+	})
+
+	AC3=new web3.eth.Contract(ab1,tokes[3]);
+	AC3.methods.decimals().call((e,r1)=>
+	{
+    	AC3.methods.totalSupply().call((e,r2)=>
+    	{
+			AC3R=new web3.eth.Contract(ab1,pairs[3])
+        	AC3R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(3,r1,r2,(new Array(r3[1],r3[0])));
+        	})
+    	})
+	})
+
+	AC4=new web3.eth.Contract(ab1,tokes[4]);
+	AC4.methods.decimals().call((e,r1)=>
+	{
+    	AC4.methods.totalSupply().call((e,r2)=>
+    	{
+			AC4R=new web3.eth.Contract(ab1,pairs[4])
+        	AC4R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(4,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC5=new web3.eth.Contract(ab1,tokes[5]);
+	AC5.methods.decimals().call((e,r1)=>
+	{
+    	AC5.methods.totalSupply().call((e,r2)=>
+    	{
+			AC5R=new web3.eth.Contract(ab1,pairs[5])
+        	AC5R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(5,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC6=new web3.eth.Contract(ab1,tokes[6]);
+	AC6.methods.decimals().call((e,r1)=>
+	{
+    	AC6.methods.totalSupply().call((e,r2)=>
+    	{
+			AC6R=new web3.eth.Contract(ab1,pairs[6])
+        	AC6R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(6,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC7=new web3.eth.Contract(ab1,tokes[7]);
+	AC7.methods.decimals().call((e,r1)=>
+	{
+    	AC7.methods.totalSupply().call((e,r2)=>
+    	{
+			AC7R=new web3.eth.Contract(ab1,pairs[7])
+        	AC7R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(7,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC8=new web3.eth.Contract(ab1,tokes[8]);
+	AC8.methods.decimals().call((e,r1)=>
+	{
+    	AC8.methods.totalSupply().call((e,r2)=>
+    	{
+			AC8R=new web3.eth.Contract(ab1,pairs[8])
+        	AC8R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(8,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC9=new web3.eth.Contract(ab1,tokes[9]);
+	AC9.methods.decimals().call((e,r1)=>
+	{
+    	AC9.methods.totalSupply().call((e,r2)=>
+    	{
+			AC9R=new web3.eth.Contract(ab1,pairs[9])
+        	AC9R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(9,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC10=new web3.eth.Contract(ab1,tokes[10]);
+	AC10.methods.decimals().call((e,r1)=>
+	{
+    	AC10.methods.totalSupply().call((e,r2)=>
+    	{
+			AC10R=new web3.eth.Contract(ab1,pairs[10])
+        	AC10R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(10,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC11=new web3.eth.Contract(ab1,tokes[11]);
+	AC11.methods.decimals().call((e,r1)=>
+	{
+    	AC11.methods.totalSupply().call((e,r2)=>
+    	{
+			AC11R=new web3.eth.Contract(ab1,pairs[11])
+        	AC11R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(11,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC12=new web3.eth.Contract(ab1,tokes[12]);
+	AC12.methods.decimals().call((e,r1)=>
+	{
+    	AC12.methods.totalSupply().call((e,r2)=>
+    	{
+			AC12R=new web3.eth.Contract(ab1,pairs[12])
+        	AC12R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(12,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC13=new web3.eth.Contract(ab1,tokes[13]);
+	AC13.methods.decimals().call((e,r1)=>
+	{
+    	AC13.methods.totalSupply().call((e,r2)=>
+    	{
+			AC13R=new web3.eth.Contract(ab1,pairs[13])
+        	AC13R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(13,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC14=new web3.eth.Contract(ab1,tokes[14]);
+	AC14.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[14]]["d"]=Number(r1);
+    	AC14.methods.totalSupply().call((e,r2)=>
+    	{
+			AC14R=new web3.eth.Contract(ab1,pairs[14])
+        	AC14R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(14,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC15=new web3.eth.Contract(ab1,tokes[15]);
+	AC15.methods.decimals().call((e,r1)=>
+	{
+    	AC15.methods.totalSupply().call((e,r2)=>
+    	{
+			AC15R=new web3.eth.Contract(ab1,pairs[15])
+        	AC15R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(15,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC16=new web3.eth.Contract(ab1,tokes[16]);
+	AC16.methods.decimals().call((e,r1)=>
+	{
+    	AC16.methods.totalSupply().call((e,r2)=>
+    	{
+			AC16R=new web3.eth.Contract(ab1,pairs[16])
+        	AC16R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(16,r1,r2,(new Array(r3[1],r3[0])));
+        	})
+    	})
+	})
+
+	AC17=new web3.eth.Contract(ab1,tokes[17]);
+	AC17.methods.decimals().call((e,r1)=>
+	{
+    	AC17.methods.totalSupply().call((e,r2)=>
+    	{
+			AC17R=new web3.eth.Contract(ab1,pairs[17])
+        	AC17R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(17,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC18=new web3.eth.Contract(ab1,tokes[18]);
+	AC18.methods.decimals().call((e,r1)=>
+	{
+    	AC18.methods.totalSupply().call((e,r2)=>
+    	{
+			AC18R=new web3.eth.Contract(ab1,pairs[18])
+        	AC18R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(18,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC19=new web3.eth.Contract(ab1,tokes[19]);
+	AC19.methods.decimals().call((e,r1)=>
+	{
+    	o[tokes[19]]["d"]=Number(r1);
+    	AC19.methods.totalSupply().call((e,r2)=>
+    	{
+			AC19R=new web3.eth.Contract(ab1,pairs[19])
+        	AC19R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(19,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC20=new web3.eth.Contract(ab1,tokes[20]);
+	AC20.methods.decimals().call((e,r1)=>
+	{
+    	AC20.methods.totalSupply().call((e,r2)=>
+    	{
+			AC20R=new web3.eth.Contract(ab1,pairs[20])
+        	AC20R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(20,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC21=new web3.eth.Contract(ab1,tokes[21]);
+	AC21.methods.decimals().call((e,r1)=>
+	{
+    	AC21.methods.totalSupply().call((e,r2)=>
+    	{
+			AC21R=new web3.eth.Contract(ab1,pairs[21])
+        	AC21R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(21,r1,r2,(new Array(r3[1],r3[0])));
+        	})
+    	})
+	})
+
+	AC22=new web3.eth.Contract(ab1,tokes[22]);
+	AC22.methods.decimals().call((e,r1)=>
+	{
+    	AC22.methods.totalSupply().call((e,r2)=>
+    	{
+			AC22R=new web3.eth.Contract(ab1,pairs[22])
+        	AC22R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(22,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC23=new web3.eth.Contract(ab1,tokes[23]);
+	AC23.methods.decimals().call((e,r1)=>
+	{
+    	AC23.methods.totalSupply().call((e,r2)=>
+    	{
+			AC23R=new web3.eth.Contract(ab1,pairs[23])
+        	AC23R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(23,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC24=new web3.eth.Contract(ab1,tokes[24]);
+	AC24.methods.decimals().call((e,r1)=>
+	{
+    	AC24.methods.totalSupply().call((e,r2)=>
+    	{
+			AC24R=new web3.eth.Contract(ab1,pairs[24])
+        	AC24R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(24,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC25=new web3.eth.Contract(ab1,tokes[25]);
+	AC25.methods.decimals().call((e,r1)=>
+	{
+    	AC25.methods.totalSupply().call((e,r2)=>
+    	{
+			AC25R=new web3.eth.Contract(ab1,pairs[25])
+        	AC25R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(25,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC26=new web3.eth.Contract(ab1,tokes[26]);
+	AC26.methods.decimals().call((e,r1)=>
+	{
+    	AC26.methods.totalSupply().call((e,r2)=>
+    	{
+			AC26R=new web3.eth.Contract(ab1,pairs[26])
+        	AC26R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(26,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC27=new web3.eth.Contract(ab1,tokes[27]);
+	AC27.methods.decimals().call((e,r1)=>
+	{
+    	AC27.methods.totalSupply().call((e,r2)=>
+    	{
+			AC27R=new web3.eth.Contract(ab1,pairs[27])
+        	AC27R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(27,r1,r2,(new Array(r3[1],r3[0])));
+        	})
+    	})
+	})
+
+	AC28=new web3.eth.Contract(ab1,tokes[28]);
+	AC28.methods.decimals().call((e,r1)=>
+	{
+    	AC28.methods.totalSupply().call((e,r2)=>
+    	{
+			AC28R=new web3.eth.Contract(ab1,pairs[28])
+        	AC28R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(28,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC29=new web3.eth.Contract(ab1,tokes[29]);
+	AC29.methods.decimals().call((e,r1)=>
+	{
+    	AC29.methods.totalSupply().call((e,r2)=>
+    	{
+			AC29R=new web3.eth.Contract(ab1,pairs[29])
+        	AC29R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(29,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC30=new web3.eth.Contract(ab1,tokes[30]);
+	AC30.methods.decimals().call((e,r1)=>
+	{
+    	AC30.methods.totalSupply().call((e,r2)=>
+    	{
+			AC30R=new web3.eth.Contract(ab1,pairs[30])
+        	AC30R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(30,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC31=new web3.eth.Contract(ab1,tokes[31]);
+	AC31.methods.decimals().call((e,r1)=>
+	{
+    	AC31.methods.totalSupply().call((e,r2)=>
+    	{
+			AC31R=new web3.eth.Contract(ab1,pairs[31])
+        	AC31R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(31,r1,r2,(new Array(r3[1],r3[0])));
+        	})
+    	})
+	})
+
+	AC32=new web3.eth.Contract(ab1,tokes[32]);
+	AC32.methods.decimals().call((e,r1)=>
+	{
+    	AC32.methods.totalSupply().call((e,r2)=>
+    	{
+			AC32R=new web3.eth.Contract(ab1,pairs[32])
+        	AC32R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(32,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC33=new web3.eth.Contract(ab1,tokes[33]);
+	AC33.methods.decimals().call((e,r1)=>
+	{
+    	AC33.methods.totalSupply().call((e,r2)=>
+    	{
+			AC33R=new web3.eth.Contract(ab1,pairs[33])
+        	AC33R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(33,r1,r2,r3);
+        	})
+    	})
+	})
+//ELK
+	AC34=new web3.eth.Contract(ab1,tokes[34]);
+	AC34.methods.decimals().call((e,r1)=>
+	{
+    	AC34.methods.totalSupply().call((e,r2)=>
+    	{
+			AC34R=new web3.eth.Contract(ab1,pairs[34])
+        	AC34R.methods.getReserves().call((e,r3)=>
+        	{
+            	AC34.methods.balanceOf("0xF13f5b3a3Dbd2E705Ddecb875b74953B9e1520b8").call((e,r2cse1)=>
+            	{
+            		AC34.methods.balanceOf("0x36076f9afbf33227307aD784B4e81023f77f221f").call((e,r2cse2)=>
+            		{
+            			painter(34,r1,Number(r2)-Number(r2cse1)-Number(r2cse2),r3);
+            		})
+            	})
+        	})
+    	})
+	})
+
+	AC35=new web3.eth.Contract(ab1,tokes[35]);
+	AC35.methods.decimals().call((e,r1)=>
+	{
+    	AC35.methods.totalSupply().call((e,r2)=>
+    	{
+			AC35R=new web3.eth.Contract(ab1,pairs[35])
+        	AC35R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(35,r1,r2,r3);
+        	})
+    	})
+	})
+
+//TSHARE
+	AC36=new web3.eth.Contract(ab1,tokes[36]);
+	AC36.methods.decimals().call((e,r1)=>
+	{
+    	AC36.methods.totalSupply().call((e,r2)=>
+    	{
+			AC36R=new web3.eth.Contract(ab1,pairs[36])
+        	AC36R.methods.getReserves().call((e,r3)=>
+        	{
+            	AC36.methods.balanceOf("0xcc0a87f7e7c693042a9cc703661f5060c80acb43").call((e,r2cs)=>
+            	{
+            		painter(36,r1,Number(r2)-Number(r2cs),r3);
+            	})
+        	})
+    	})
+	})
+//TOMB
+	AC37=new web3.eth.Contract(ab1,tokes[37]);
+	AC37.methods.decimals().call((e,r1)=>
+	{
+    	AC37.methods.totalSupply().call((e,r2)=>
+    	{
+			AC37R=new web3.eth.Contract(ab1,pairs[37])
+        	AC37R.methods.getReserves().call((e,r3)=>
+        	{
+            	AC37.methods.balanceOf("0xa7b16703470055881e7ee093e9b0bf537f29cd4d").call((e,r2cs)=>
+            	{
+            		painter(37,r1,Number(r2)-Number(r2cs),r3);
+            	})
+        	})
+    	})
+	})
+
+	AC38=new web3.eth.Contract(ab1,tokes[38]);
+	AC38.methods.decimals().call((e,r1)=>
+	{
+    	AC38.methods.totalSupply().call((e,r2)=>
+    	{
+			AC38R=new web3.eth.Contract(ab1,pairs[38])
+        	AC38R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(38,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC39=new web3.eth.Contract(ab1,tokes[39]);
+	AC39.methods.decimals().call((e,r1)=>
+	{
+    	AC39.methods.totalSupply().call((e,r2)=>
+    	{
+			AC39R=new web3.eth.Contract(ab1,pairs[39])
+        	AC39R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(39,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC40=new web3.eth.Contract(ab1,tokes[40]);
+	AC40.methods.decimals().call((e,r1)=>
+	{
+    	AC40.methods.totalSupply().call((e,r2)=>
+    	{
+			AC40R=new web3.eth.Contract(ab1,pairs[40])
+        	AC40R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(40,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC41=new web3.eth.Contract(ab1,tokes[41]);
+	AC41.methods.decimals().call((e,r1)=>
+	{
+    	AC41.methods.totalSupply().call((e,r2)=>
+    	{
+			AC41R=new web3.eth.Contract(ab1,pairs[41])
+        	AC41R.methods.getReserves().call((e,r3)=>
+        	{
+            	AC41.methods.balanceOf("0x000000000000000000000000000000000000dEaD").call((e,r2cse1)=>
+            	{
+            		AC41.methods.balanceOf("0x8e02CbB65C929778E88020Afe44ae7454154f484").call((e,r2cse2)=>
+            		{
+            			painter(41,r1,Number(r2)-Number(r2cse1)-Number(r2cse2),r3);
+            		})
+            	})
+        	})
+    	})
+	})
+
+	AC42=new web3.eth.Contract(ab1,tokes[42]);
+	AC42.methods.decimals().call((e,r1)=>
+	{
+    	AC42.methods.totalSupply().call((e,r2)=>
+    	{
+			AC42R=new web3.eth.Contract(ab1,pairs[42])
+        	AC42R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(42,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC43=new web3.eth.Contract(ab1,tokes[43]);
+	AC43.methods.decimals().call((e,r1)=>
+	{
+    	AC43.methods.totalSupply().call((e,r2)=>
+    	{
+			AC43R=new web3.eth.Contract(ab1,pairs[43])
+        	AC43R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(43,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC44=new web3.eth.Contract(ab1,tokes[44]);
+	AC44.methods.decimals().call((e,r1)=>
+	{
+    	AC44.methods.totalSupply().call((e,r2)=>
+    	{
+			AC44R=new web3.eth.Contract(ab1,pairs[44])
+        	AC44R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(44,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC45=new web3.eth.Contract(ab1,tokes[45]);
+	AC45.methods.decimals().call((e,r1)=>
+	{
+    	AC45.methods.totalSupply().call((e,r2)=>
+    	{
+			AC45R=new web3.eth.Contract(ab1,pairs[45])
+        	AC45R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(45,r1,r2,r3);
+        	})
+    	})
+	})
+//GTON
+	AC46=new web3.eth.Contract(ab1,tokes[46]);
+	AC46.methods.decimals().call((e,r1)=>
+	{
+    	AC46.methods.totalSupply().call((e,r2)=>
+    	{
+			AC46R=new web3.eth.Contract(ab1,pairs[46])
+        	AC46R.methods.getReserves().call((e,r3)=>
+        	{
+            	AC46.methods.balanceOf("0x5B1C102A6d849F9cfe2B1369AffDd57f5678B91d").call((e,r2cs)=>
+            	{
+            		painter(46,r1,Number(r2)-Number(r2cs),r3);
+            	})
+        	})
+    	})
+	})
+
+	AC47=new web3.eth.Contract(ab1,tokes[47]);
+	AC47.methods.decimals().call((e,r1)=>
+	{
+    	AC47.methods.totalSupply().call((e,r2)=>
+    	{
+			AC47R=new web3.eth.Contract(ab1,pairs[47])
+        	AC47R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(47,r1,r2,r3);
+        	})
+    	})
+	})
+
+/*
+	AC47=new web3.eth.Contract(ab1,tokes[47]);
+	AC47.methods.decimals().call((e,r1)=>
+	{
+    	fetch("https://info.tarot.to/api/circulating-supply")
+    	.then(function (fcs) {return fcs.text();})
+    	.then(function(r2)
+    	{
+			AC47R=new web3.eth.Contract(ab1,pairs[47])
+        	AC47R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(47,r1,r2,r3);
+        	})
+    	})
+	})
+*/
+
+	AC48=new web3.eth.Contract(ab1,tokes[48]);
+	AC48.methods.decimals().call((e,r1)=>
+	{
+    	AC48.methods.totalSupply().call((e,r2)=>
+    	{
+			AC48R=new web3.eth.Contract(ab1,pairs[48])
+        	AC48R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(48,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC49=new web3.eth.Contract(ab1,tokes[49]);
+	AC49.methods.decimals().call((e,r1)=>
+	{
+    	AC49.methods.totalSupply().call((e,r2)=>
+    	{
+			AC49R=new web3.eth.Contract(ab1,pairs[49])
+        	AC49R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(49,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC50=new web3.eth.Contract(ab1,tokes[50]);
+	AC50.methods.decimals().call((e,r1)=>
+	{
+    	AC50.methods.totalSupply().call((e,r2)=>
+    	{
+			AC50R=new web3.eth.Contract(ab1,pairs[50])
+        	AC50R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(50,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC51=new web3.eth.Contract(ab1,tokes[51]);
+	AC51.methods.decimals().call((e,r1)=>
+	{
+    	AC51.methods.totalSupply().call((e,r2)=>
+    	{
+			AC51R=new web3.eth.Contract(ab1,pairs[51])
+        	AC51R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(51,r1,r2,(new Array(r3[1],r3[0])));
+        	})
+    	})
+	})
+
+	AC52=new web3.eth.Contract(ab1,tokes[52]);
+	AC52.methods.decimals().call((e,r1)=>
+	{
+    	AC52.methods.totalSupply().call((e,r2)=>
+    	{
+			AC52R=new web3.eth.Contract(ab1,pairs[52])
+        	AC52R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(52,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC53=new web3.eth.Contract(ab1,tokes[53]);
+	AC53.methods.decimals().call((e,r1)=>
+	{
+    	AC53.methods.totalSupply().call((e,r2)=>
+    	{
+			AC53R=new web3.eth.Contract(ab1,pairs[53])
+        	AC53R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(53,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC54=new web3.eth.Contract(ab1,tokes[54]);
+	AC54.methods.decimals().call((e,r1)=>
+	{
+    	AC54.methods.totalSupply().call((e,r2)=>
+    	{
+			AC54R=new web3.eth.Contract(ab1,pairs[54])
+        	AC54R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(54,r1,r2,r3);
+        	})
+    	})
+	})
+
+	AC55=new web3.eth.Contract(ab1,tokes[55]);
+	AC55.methods.decimals().call((e,r1)=>
+	{
+    	AC55.methods.totalSupply().call((e,r2)=>
+    	{
+			AC55R=new web3.eth.Contract(ab1,pairs[55])
+        	AC55R.methods.getReserves().call((e,r3)=>
+        	{
+            	painter(55,r1,r2,r3);
+        	})
+    	})
+	})
+
+
+
+
+}
+
+ab1=[
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "decimals",
+		"outputs": [
+			{
+				"internalType": "uint8",
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getReserves",
+		"outputs": [
+			{
+				"internalType": "uint112",
+				"name": "_reserve0",
+				"type": "uint112"
+			},
+			{
+				"internalType": "uint112",
+				"name": "_reserve1",
+				"type": "uint112"
+			},
+			{
+				"internalType": "uint32",
+				"name": "_blockTimestampLast",
+				"type": "uint32"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "balanceOf",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "totalSupply",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}]
+
 function fornum(n,d)
 {
 	_n=(Number(n)/10**Number(d));
@@ -707,6 +2206,7 @@ function fornum(n,d)
 	else if(_n>1){n_=(_n/1e1).toFixed(2)+""}
 	return(n_);
 }
+brr();
 
 function sortit(n) {
   var t, r, z, i, x, y, v, b, c = 0;
@@ -716,7 +2216,7 @@ function sortit(n) {
   while (z) {
     z = false;
     r = t.rows;
-    for (i = 1; i < (r.length - 1); i++) {
+    for (i = 2; i < (r.length - 1); i++) {
       v = false;
       x = (r[i].getElementsByTagName("TD")[n].innerHTML).replace(/,| |\.|\$|%/g,'');
       if(isFinite(x)){x=Number(x)}else{x=x.toLowerCase()}
@@ -746,13 +2246,26 @@ function sortit(n) {
     }
   }
 }
-function copsca()
+function degmod()
+{
+	degdismod=degdismod=="0"?"1em":"0";
+	degdismodbg=degdismodbg=="rgba(255,127,63,0)"?"rgba(255,127,63,0.25)":"rgba(255,127,63,0)";
+	$("degmod").innerHTML=$("degmod").innerHTML=="High Risk : OFF"?"High Risk : ON":"High Risk : OFF";
+	alldeg = document.getElementsByClassName("dega");
+	for(i=0;i< alldeg.length;i++)
+	{
+		alldeg[i].style.fontSize=degdismod;
+		alldeg[i].style.background=degdismodbg;
+	}
+}
+function chopsca()
 {
 	rs=$("maintable").getElementsByTagName("tbody")[0].getElementsByTagName("tr");
 	for(i=0;i< rs.length;i++)
 	{
-		sc=rs[i].getElementsByTagName("td")[Object.keys(rs[i].getElementsByTagName("td")).length-2];
+		sc=rs[i].getElementsByTagName("td")[8].getElementsByTagName("pre")[0];
 		sc.setAttribute("onClick","copsc(this)");
+		sc.innerHTML=(sc.innerHTML).substr(0,6)+"…"+(sc.innerHTML).substr(38);
 		sc.style.cursor="copy";
 	}
 }
@@ -760,10 +2273,58 @@ function copsc(el)
 {
 	var inp =document.createElement('input');
 	document.body.appendChild(inp)
-	inp.value ="https://"+el.innerText;
+	inp.value =el.parentElement.parentElement.id.substr(3)
 	inp.select();
 	document.execCommand('copy',false);
 	inp.remove();
+}
+function togfil(e)
+{
+	e=e.replace(/ |\$|,|%/g,'').toLowerCase();
+	ae=document.getElementsByClassName(e);
+	ee=document.getElementsByClassName("sca");
+	for(i=0;i< ee.length;i++){ee[i].id=="tr_0xf43Cc235E686d7BC513F53Fbffb61F760c3a1882"?1337:ee[i].hidden=true}
+	for(i=0;i< ae.length;i++){ae[i].hidden=false}
+	se=$("tags").children;
+	for(i=0;i< se.length;i++)
+	{
+		s=se[i].style;
+		if(!(se[i].innerHTML.replace(/ |\$|,|%/g,'').toLowerCase()==e)&&!(se[i].innerHTML=="Show All"))
+			{s.color="aqua";s.background="rgba(0,255,255,0.25)";s.border="1px #e3e9f2 dotted"}
+		else
+			{s.color="#020611";s.background="aqua";s.border="1px #e3e9f2 ridge"}
+	}
+}
+function usdftm2()
+{
+	if(!(fiu==1))
+	{
+		ee=document.getElementsByClassName("sca");
+		if($("usdftm2").innerHTML=="Currency : FTM")
+		{
+			for(i=0;i< ee.length;i++)
+			{
+				ee[i].children[3].innerHTML=Number((Number((ee[i].children[3].innerHTML).replace(/ |\$|,|%/g,''))*fiu).toFixed(0)).toLocaleString()
+				ee[i].children[4].innerHTML=((Number((ee[i].children[4].innerHTML).replace(/ |\$|,|%/g,''))*fiu).toFixed(4))
+				ee[i].children[5].innerHTML=Number((Number((ee[i].children[5].innerHTML).replace(/ |\$|,|%/g,''))*fiu).toFixed(0)).toLocaleString()
+			}
+		$("tmc").innerHTML=Number((Number(($("tmc").innerHTML).replace(/ |\$|,|%/g,''))*fiu).toFixed(0)).toLocaleString()
+		$("tmcunit").innerHTML="USD";
+		$("usdftm2").innerHTML="Currency : USD";
+		}
+		else if($("usdftm2").innerHTML=="Currency : USD")
+		{
+			for(i=0;i< ee.length;i++)
+			{
+				ee[i].children[3].innerHTML=Number((Number((ee[i].children[3].innerHTML).replace(/ |\$|,|%/g,''))/fiu).toFixed(0)).toLocaleString()
+				ee[i].children[4].innerHTML=((Number((ee[i].children[4].innerHTML).replace(/ |\$|,|%/g,''))/fiu).toFixed(4))
+				ee[i].children[5].innerHTML=Number((Number((ee[i].children[5].innerHTML).replace(/ |\$|,|%/g,''))/fiu).toFixed(0)).toLocaleString()
+			}
+		$("tmc").innerHTML=Number((Number(($("tmc").innerHTML).replace(/ |\$|,|%/g,''))/fiu).toFixed(0)).toLocaleString()
+		$("tmcunit").innerHTML="FTM";
+		$("usdftm2").innerHTML="Currency : FTM";
+		}
+	}
 }
 var adi=1;
 function advertise()
@@ -786,602 +2347,7 @@ function ads()
 	}
 	console.log(Date.now())
 }
-
-async function tc()
-{
-//	pt(d1)
-	fetch("https://api.llama.fi/protocols").then(d1=>{return d1.json()}).then(d2d=>{pt(d2d)})
-}
-function pt(d)
-{
-	//console.log(d);
-	for(j=0;j< d.length;j++)
-		{
-			if(d[j].chains.indexOf("Fantom")>=0){po(d[j])}
-		}
-}
-function $v(_){return $(_).getElementsByTagName("td")[2]}
-function po (di)
-{
-	v=typeof di.chainTvls.Fantom == "undefined"?
-		Number(di.tvl.toFixed(0)).toLocaleString():
-		Number(di.chainTvls.Fantom.toFixed(0)).toLocaleString();
-	V=typeof di.chainTvls.Fantom == "undefined"?
-		Number((di.tvl).toFixed(0)) :
-		Number((di.chainTvls.Fantom).toFixed(0));
-
-//		console.log(di.slug)
-//		console.log(di.slug,di)
-
-		if (di.slug ==  "curve" ){			$v("d_curve").innerHTML=v;}
-		if (di.slug ==  "sushiswap" ){		$v("d_sushi").innerHTML=v;}
-		if (di.slug ==  "spookyswap" ){		$v("d_spooky").innerHTML=v;}
-		if (di.slug ==  "spiritswap" ){		$v("d_spirit").innerHTML=v;}
-		if (di.slug ==  "hyperswap" ){		$v("d_hyper").innerHTML=v;}
-		if (di.slug ==  "waka-finance" ){	$v("d_waka").innerHTML=v;}
-		if (di.slug ==  "elk" ){			$v("d_elk").innerHTML=v;}
-		if (di.slug ==  "paint-swap" ){		$v("d_paint").innerHTML=v;}
-		if (di.slug ==  "zoocoin" ){		$v("d_zoo").innerHTML=v;}
-		if (di.slug ==  "shiba-fantom" ){	$v("d_shiba").innerHTML=v;}
-		if (di.slug ==  "soulswap" ){		$v("d_soul").innerHTML=v;}
-		if (di.slug ==  "beethoven-x" ){	$v("d_beethoven").innerHTML=v;}
-}
-date_id = Date.now();
-date_id = date_id/1000 - (date_id/1000)%1;
-date_id = date_id/86400 - (date_id/86400)%1;
-//gobj = {"liq":0,"dv":0,"tv":0,"tt":0}
-gobj=[0,0,0,0];
-async function gg()
-{
-	gdq_wraith =
-		`query {
-  		wraithFactories(first:1) {
-    		id
-    		totalVolumeUSD    totalVolumeFTM  untrackedVolumeUSD
-    		totalLiquidityUSD    totalLiquidityFTM
-    		totalTransactions    totalPairs
-  		}
-
-  		wraithSwapDayDatas(where:{id:${date_id}}){
-    		id  date
-    		dailyVolumeFTM	dailyVolumeUSD	dailyVolumeUntracked
-    		totalVolumeUSD	totalVolumeFTM
-    		totalLiquidityUSD	totalLiquidityFTM
-    		totalTransactions
-			}
-		}`
-	gdqr_wraith = new XMLHttpRequest();
-	gdqr_wraith.open("POST","https://api.thegraph.com/subgraphs/name/sy-finance/wraithswap",true);
-	gdqr_wraith.onload=function(){
-		gdqd_wraith=JSON.parse(this.response).data;
-		$("d_wraith").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_wraith.wraithFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
-		$("d_wraith").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_wraith.wraithSwapDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_wraith").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_wraith.wraithFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_wraith").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_wraith.wraithFactories[0].totalTransactions).toFixed(0)).toLocaleString()
-		gobj[0]+=Number(gdqd_wraith.wraithFactories[0].totalLiquidityUSD)
-		gobj[1]+=Number(gdqd_wraith.wraithSwapDayDatas[0].dailyVolumeUSD)
-		gobj[2]+=Number(gdqd_wraith.wraithFactories[0].totalVolumeUSD)
-		gobj[3]+=Number(gdqd_wraith.wraithFactories[0].totalTransactions)
-		ref_os()
-	}
-	gdqr_wraith.send(JSON.stringify({query:gdq_wraith}))
-
-	gdq_zoo =
-		`query {
-  			uniswapFactories(first: 1) {
-    			id
-    			pairCount	txCount
-    			totalVolumeUSD    totalVolumeETH	untrackedVolumeUSD
-    			totalLiquidityUSD	totalLiquidityETH
-    			txCount
-  			}
-  			uniswapDayDatas(where:{id: ${date_id}}) {
-    			id	date
-    			txCount
-    			dailyVolumeUSD	dailyVolumeETH	dailyVolumeUntracked
-    			totalVolumeUSD	totalVolumeETH
-    			totalLiquidityUSD	totalLiquidityETH
-  			}
-		}`
-	gdqr_zoo = new XMLHttpRequest();
-	gdqr_zoo.open("POST","https://api.thegraph.com/subgraphs/name/ruvlol/graph-n",true);
-	gdqr_zoo.onload=function(){
-		gdqd_zoo=JSON.parse(this.response).data;
-		$("d_zoo").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_zoo.uniswapFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
-		$("d_zoo").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_zoo.uniswapDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_zoo").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_zoo.uniswapFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_zoo").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_zoo.uniswapFactories[0].txCount).toFixed(0)).toLocaleString()
-		gobj[0]+=Number(gdqd_zoo.uniswapFactories[0].totalLiquidityUSD)
-		gobj[1]+=Number(gdqd_zoo.uniswapDayDatas[0].dailyVolumeUSD)
-		gobj[2]+=Number(gdqd_zoo.uniswapFactories[0].totalVolumeUSD)
-		gobj[3]+=Number(gdqd_zoo.uniswapFactories[0].txCount)
-		ref_os()
-	}
-	gdqr_zoo.send(JSON.stringify({query:gdq_zoo}))
-
-	gdq_sushi =
-		`query {
-  			factories(first:1){
-    			id	pairCount	userCount	txCount	tokenCount
-    			volumeUSD	volumeETH	untrackedVolumeUSD
-    			liquidityUSD	liquidityETH
-  			}
-  			dayDatas(where:{id: ${date_id}}){
-    			id	date	txCount
-    			volumeUSD	volumeUSD	untrackedVolume
-    			liquidityETH	liquidityUSD
-  			}
-		}`
-	gdqr_sushi = new XMLHttpRequest();
-	gdqr_sushi.open("POST","https://api.thegraph.com/subgraphs/name/sushiswap/fantom-exchange",true);
-	gdqr_sushi.onload=function(){
-		gdqd_sushi=JSON.parse(this.response).data;
-		$("d_sushi").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_sushi.factories[0].liquidityUSD).toFixed(0)).toLocaleString()
-		$("d_sushi").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_sushi.dayDatas[0].volumeUSD).toFixed(0)).toLocaleString()
-		$("d_sushi").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_sushi.factories[0].volumeUSD).toFixed(0)).toLocaleString()
-		$("d_sushi").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_sushi.factories[0].txCount).toFixed(0)).toLocaleString()
-		$("d_sushi").getElementsByTagName("td")[8].innerHTML=Number(Number(gdqd_sushi.factories[0].userCount).toFixed(0)).toLocaleString()
-		gobj[0]+=Number(gdqd_sushi.factories[0].liquidityUSD)
-		gobj[1]+=Number(gdqd_sushi.dayDatas[0].volumeUSD)
-		gobj[2]+=Number(gdqd_sushi.factories[0].volumeUSD)
-		gobj[3]+=Number(gdqd_sushi.factories[0].txCount)
-		ref_os()
-	}
-	gdqr_sushi.send(JSON.stringify({query:gdq_sushi}))
-
-	gdq_spooky =
-		`query {
-  			uniswapFactories(first: 1) {
-    			id
-    			pairCount	txCount
-    			totalVolumeUSD    totalVolumeETH	untrackedVolumeUSD
-    			totalLiquidityUSD	totalLiquidityETH
-    			txCount
-  			}
-  			uniswapDayDatas(where:{id: ${date_id}}) {
-    			id	date
-    			txCount
-    			dailyVolumeUSD	dailyVolumeETH	dailyVolumeUntracked
-    			totalVolumeUSD	totalVolumeETH
-    			totalLiquidityUSD	totalLiquidityETH
-  			}
-		}`
-	gdqr_spooky = new XMLHttpRequest();
-	gdqr_spooky.open("POST","https://api.thegraph.com/subgraphs/name/eerieeight/spooky-swap-exchange",true);
-	gdqr_spooky.onload=function(){
-		gdqd_spooky=JSON.parse(this.response).data;
-		$("d_spooky").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_spooky.uniswapFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
-		$("d_spooky").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_spooky.uniswapDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_spooky").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_spooky.uniswapFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_spooky").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_spooky.uniswapFactories[0].txCount).toFixed(0)).toLocaleString()
-		gobj[0]+=Number(gdqd_spooky.uniswapFactories[0].totalLiquidityUSD)
-		gobj[1]+=Number(gdqd_spooky.uniswapDayDatas[0].dailyVolumeUSD)
-		gobj[2]+=Number(gdqd_spooky.uniswapFactories[0].totalVolumeUSD)
-		gobj[3]+=Number(gdqd_spooky.uniswapFactories[0].txCount)
-		ref_os()
-	}
-	gdqr_spooky.send(JSON.stringify({query:gdq_spooky}))
-
-	gdq_spirit =
-		`query {
-  		spiritswapFactories(first:1) {
-    		id
-    		totalVolumeUSD    totalVolumeFTM  untrackedVolumeUSD
-    		totalLiquidityUSD    totalLiquidityFTM
-    		txCount    pairCount
-  		}
-
-  		spiritswapDayDatas(where:{id: ${date_id}}){
-    		id  date
-    		dailyVolumeUSD	dailyVolumeFTM	dailyVolumeUntracked
-    		totalVolumeUSD	totalVolumeFTM
-    		totalLiquidityUSD	totalLiquidityFTM
-    		txCount	maxStored
-			}
-		}`
-	gdqr_spirit = new XMLHttpRequest();
-	gdqr_spirit.open("POST","https://api.thegraph.com/subgraphs/name/evele/spirit-swap-subgraph-dev-v2",true);
-	gdqr_spirit.onload=function(){
-		gdqd_spirit=JSON.parse(this.response).data;
-		$("d_spirit").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_spirit.spiritswapFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
-		$("d_spirit").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_spirit.spiritswapDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_spirit").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_spirit.spiritswapFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_spirit").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_spirit.spiritswapFactories[0].txCount).toFixed(0)).toLocaleString()
-		gobj[0]+=Number(gdqd_spirit.spiritswapFactories[0].totalLiquidityUSD)
-		gobj[1]+=Number(gdqd_spirit.spiritswapDayDatas[0].dailyVolumeUSD)
-		gobj[2]+=Number(gdqd_spirit.spiritswapFactories[0].totalVolumeUSD)
-		gobj[3]+=Number(gdqd_spirit.spiritswapFactories[0].txCount)
-		ref_os()
-	}
-	gdqr_spirit.send(JSON.stringify({query:gdq_spirit}))
-
-	gdq_paint =
-		`query {
-  		paintFactories(first:1) {
-    		id
-    		totalVolumeUSD    totalVolumeFTM  untrackedVolumeUSD
-    		totalLiquidityUSD    totalLiquidityFTM
-    		totalPairs    totalTransactions
-  		}
-
-  		paintDayDatas(where:{id: ${date_id}}){
-    		id  date
-    		dailyVolumeUSD	dailyVolumeFTM	dailyVolumeUntracked
-    		totalVolumeUSD	totalVolumeFTM
-    		totalLiquidityUSD	totalLiquidityFTM
-    		totalTransactions
-			}
-		}`
-	gdqr_paint = new XMLHttpRequest();
-	gdqr_paint.open("POST","https://api.thegraph.com/subgraphs/name/paint-swap-finance/exchange",true);
-	gdqr_paint.onload=function(){
-		gdqd_paint=JSON.parse(this.response).data;
-		$("d_paint").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_paint.paintFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
-		$("d_paint").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_paint.paintDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_paint").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_paint.paintFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_paint").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_paint.paintFactories[0].totalTransactions).toFixed(0)).toLocaleString()
-		gobj[0]+=Number(gdqd_paint.paintFactories[0].totalLiquidityUSD)
-		gobj[1]+=Number(gdqd_paint.paintDayDatas[0].dailyVolumeUSD)
-		gobj[2]+=Number(gdqd_paint.paintFactories[0].totalVolumeUSD)
-		gobj[3]+=Number(gdqd_paint.paintFactories[0].totalTransactions)
-		ref_os()
-	}
-	gdqr_paint.send(JSON.stringify({query:gdq_paint}))
-
-	gdq_waka =
-		`query {
-  		wakaSwapFactories(first:1) {
-    		id
-    		totalVolumeUSD    totalVolumeETH  untrackedVolumeUSD
-    		totalLiquidityUSD    totalLiquidityETH
-    		pairCount    txCount
-  		}
-
-  		wakaSwapDayDatas(where:{id: ${date_id}}){
-    		id  date
-    		dailyVolumeUSD	dailyVolumeETH	dailyVolumeUntracked
-    		totalVolumeUSD	totalVolumeETH
-    		totalLiquidityUSD	totalLiquidityETH
-    		txCount
-			}
-		}`
-	gdqr_waka = new XMLHttpRequest();
-	gdqr_waka.open("POST","https://api.thegraph.com/subgraphs/name/waka-finance/waka-graph",true);
-	gdqr_waka.onload=function(){
-		gdqd_waka=JSON.parse(this.response).data;
-		$("d_waka").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_waka.wakaSwapFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
-		$("d_waka").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_waka.wakaSwapDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_waka").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_waka.wakaSwapFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_waka").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_waka.wakaSwapFactories[0].txCount).toFixed(0)).toLocaleString()
-		gobj[0]+=Number(gdqd_waka.wakaSwapFactories[0].totalLiquidityUSD)
-		gobj[1]+=Number(gdqd_waka.wakaSwapDayDatas[0].dailyVolumeUSD)
-		gobj[2]+=Number(gdqd_waka.wakaSwapFactories[0].totalVolumeUSD)
-		gobj[3]+=Number(gdqd_waka.wakaSwapFactories[0].txCount)
-		ref_os()
-	}
-	gdqr_waka.send(JSON.stringify({query:gdq_waka}))
-
-	gdq_elk =
-		`query {
-  		elkFactories(first:1) {
-    		id
-    		totalVolumeUSD    totalVolumeETH  untrackedVolumeUSD
-    		totalLiquidityUSD    totalLiquidityETH
-    		pairCount    txCount
-  		}
-
-  		elkDayDatas(where:{id: ${date_id}}){
-    		id  date
-    		dailyVolumeUSD	dailyVolumeETH	dailyVolumeUntracked
-    		totalVolumeUSD	totalVolumeETH
-    		totalLiquidityUSD	totalLiquidityETH
-    		txCount
-			}
-		}`
-	gdqr_elk = new XMLHttpRequest();
-	gdqr_elk.open("POST","https://api.thegraph.com/subgraphs/name/elkfinance/elkdex-ftm",true);
-	gdqr_elk.onload=function(){
-		gdqd_elk=JSON.parse(this.response).data;
-		$("d_elk").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_elk.elkFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
-		$("d_elk").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_elk.elkDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_elk").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_elk.elkFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_elk").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_elk.elkFactories[0].txCount).toFixed(0)).toLocaleString()
-		gobj[0]+=Number(gdqd_elk.elkFactories[0].totalLiquidityUSD)
-		gobj[1]+=Number(gdqd_elk.elkDayDatas[0].dailyVolumeUSD)
-		gobj[2]+=Number(gdqd_elk.elkFactories[0].totalVolumeUSD)
-		gobj[3]+=Number(gdqd_elk.elkFactories[0].txCount)
-		ref_os()
-	}
-	gdqr_elk.send(JSON.stringify({query:gdq_elk}))
-
-	gdq_nipple =
-		`query {
-  			uniswapFactories(first: 1) {
-    			id
-    			pairCount	txCount
-    			totalVolumeUSD    totalVolumeFTM	untrackedVolumeUSD
-    			totalLiquidityUSD	totalLiquidityFTM
-    			txCount
-  			}
-  			uniswapDayDatas(where:{id: ${date_id}}) {
-    			id	date
-    			txCount
-    			dailyVolumeUSD	dailyVolumeFTM	dailyVolumeUntracked
-    			totalVolumeUSD	totalVolumeFTM
-    			totalLiquidityUSD	totalLiquidityFTM
-  			}
-		}`
-	gdqr_nipple = new XMLHttpRequest();
-	gdqr_nipple.open("POST","https://api.thegraph.com/subgraphs/name/nipple-labs/nipplelabs",true);
-	gdqr_nipple.onload=function(){
-		gdqd_nipple=JSON.parse(this.response).data;
-		$("d_nipple").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_nipple.uniswapFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
-		$("d_nipple").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_nipple.uniswapDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_nipple").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_nipple.uniswapFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_nipple").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_nipple.uniswapFactories[0].txCount).toFixed(0)).toLocaleString()
-		gobj[0]+=Number(gdqd_nipple.uniswapFactories[0].totalLiquidityUSD)
-		gobj[1]+=Number(gdqd_nipple.uniswapDayDatas[0].dailyVolumeUSD)
-		gobj[2]+=Number(gdqd_nipple.uniswapFactories[0].totalVolumeUSD)
-		gobj[3]+=Number(gdqd_nipple.uniswapFactories[0].txCount)
-		ref_os()
-	}
-	gdqr_nipple.send(JSON.stringify({query:gdq_nipple}))
-
-	gdq_shiba =
-		`query {
-  			uniswapFactories(first: 1) {
-    			id
-    			pairCount	txCount
-    			totalVolumeUSD    totalVolumeFTM	untrackedVolumeUSD
-    			totalLiquidityUSD	totalLiquidityFTM
-    			txCount
-  			}
-  			uniswapDayDatas(where:{id: ${date_id}}) {
-    			id	date
-    			txCount
-    			dailyVolumeUSD	dailyVolumeFTM	dailyVolumeUntracked
-    			totalVolumeUSD	totalVolumeFTM
-    			totalLiquidityUSD	totalLiquidityFTM
-  			}
-		}`
-	gdqr_shiba = new XMLHttpRequest();
-	gdqr_shiba.open("POST","https://api.thegraph.com/subgraphs/name/shiba-fantom/exchange",true);
-	gdqr_shiba.onload=function(){
-		gdqd_shiba=JSON.parse(this.response).data;
-		$("d_shiba").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_shiba.uniswapFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
-		$("d_shiba").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_shiba.uniswapDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_shiba").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_shiba.uniswapFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_shiba").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_shiba.uniswapFactories[0].txCount).toFixed(0)).toLocaleString()
-		gobj[0]+=Number(gdqd_shiba.uniswapFactories[0].totalLiquidityUSD)
-		gobj[1]+=Number(gdqd_shiba.uniswapDayDatas[0].dailyVolumeUSD)
-		gobj[2]+=Number(gdqd_shiba.uniswapFactories[0].totalVolumeUSD)
-		gobj[3]+=Number(gdqd_shiba.uniswapFactories[0].txCount)
-		ref_os()
-	}
-	gdqr_shiba.send(JSON.stringify({query:gdq_shiba}))
-
-	gdq_jet =
-		`query {
-  			uniswapFactories(first: 1) {
-    			id
-    			pairCount	txCount
-    			totalVolumeUSD    totalVolumeETH	untrackedVolumeUSD
-    			totalLiquidityUSD	totalLiquidityETH
-    			txCount
-  			}
-  			uniswapDayDatas(where:{id: ${date_id}}) {
-    			id	date
-    			txCount
-    			dailyVolumeUSD	dailyVolumeETH	dailyVolumeUntracked
-    			totalVolumeUSD	totalVolumeETH
-    			totalLiquidityUSD	totalLiquidityETH
-  			}
-		}`
-	gdqr_jet = new XMLHttpRequest();
-	gdqr_jet.open("POST","https://api.thegraph.com/subgraphs/name/smartcookie0501/jetswap-subgraph-fantom",true);
-	gdqr_jet.onload=function(){
-		gdqd_jet=JSON.parse(this.response).data;
-		$("d_jet").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_jet.uniswapFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
-		$("d_jet").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_jet.uniswapDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_jet").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_jet.uniswapFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_jet").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_jet.uniswapFactories[0].txCount).toFixed(0)).toLocaleString()
-		gobj[0]+=Number(gdqd_jet.uniswapFactories[0].totalLiquidityUSD)
-		gobj[1]+=Number(gdqd_jet.uniswapDayDatas[0].dailyVolumeUSD)
-		gobj[2]+=Number(gdqd_jet.uniswapFactories[0].totalVolumeUSD)
-		gobj[3]+=Number(gdqd_jet.uniswapFactories[0].txCount)
-		ref_os()
-
-		ref_os()
-	}
-	gdqr_jet.send(JSON.stringify({query:gdq_jet}))
-
-/*
-	gdq_cyber =
-		`query {
-  		xdaoFactories(first:1) {
-    		id
-    		totalVolumeUSD    totalVolumeFTM  untrackedVolumeUSD
-    		totalLiquidityUSD    totalLiquidityFTM
-    		txCount    pairCount
-  		}
-
-  		xdaoDayDatas(where:{id:18897}){
-    		id  date
-    		dailyVolumeFTM	dailyVolumeUSD	dailyVolumeUntracked
-    		totalVolumeUSD	totalVolumeFTM
-    		totalLiquidityUSD	totalLiquidityFTM
-    		txCount
-			}
-		}`
-	gdqr_cyber = new XMLHttpRequest();
-	gdqr_cyber.open("POST","https://api.studio.thegraph.com/query/7564/xdaoexchange/1.1.2",true);
-	gdqr_cyber.onload=function(){
-		gdqd_cyber=JSON.parse(this.response).data;
-		$("d_cyber").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_cyber.xdaoFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
-		$("d_cyber").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_cyber.xdaoDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_cyber").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_cyber.xdaoFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_cyber").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_cyber.xdaoFactories[0].txCount).toFixed(0)).toLocaleString()
-		gobj[0]+=Number(gdqd_cyber.xdaoFactories[0].totalLiquidityUSD)
-		gobj[1]+=Number(gdqd_cyber.xdaoSwapDayDatas[0].dailyVolumeUSD)
-		gobj[2]+=Number(gdqd_cyber.xdaoFactories[0].totalVolumeUSD)
-		gobj[3]+=Number(gdqd_cyber.xdaoFactories[0].txCount)
-		ref_os()
-	}
-	gdqr_cyber.send(JSON.stringify({query:gdq_cyber}))
-
-
-*/
-
-	fetch('https://api.studio.thegraph.com/query/7564/xdaoexchange/1.1.2', {
-  	method: 'POST',
-  	body: JSON.stringify({
-    	query: `query {
-  			xdaoFactories(first:1) {
-    			id
-    			totalVolumeUSD    totalVolumeFTM  untrackedVolumeUSD
-    			totalLiquidityUSD    totalLiquidityFTM
-    			txCount    pairCount
-  			}
-
-  			xdaoDayDatas(where:{id:18897}){
-    			id  date
-    			dailyVolumeFTM	dailyVolumeUSD	dailyVolumeUntracked
-    			totalVolumeUSD	totalVolumeFTM
-    			totalLiquidityUSD	totalLiquidityFTM
-    			txCount
-				}
-			}`,
-    	variables: {
-    	}
-  	}),
-  	headers: {
-      	'content-type': 'application/json'
-  	}
-	}).then(async (data) => {
-    	// Console log our return data
-    	var gdqd_cyber=(await data.json()).data;
-		$("d_cyber").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_cyber.xdaoFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
-		$("d_cyber").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_cyber.xdaoDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_cyber").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_cyber.xdaoFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_cyber").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_cyber.xdaoFactories[0].txCount).toFixed(0)).toLocaleString()
-		gobj[0]+=Number(gdqd_cyber.xdaoFactories[0].totalLiquidityUSD)
-		gobj[1]+=Number(gdqd_cyber.xdaoDayDatas[0].dailyVolumeUSD)
-		gobj[2]+=Number(gdqd_cyber.xdaoFactories[0].totalVolumeUSD)
-		gobj[3]+=Number(gdqd_cyber.xdaoFactories[0].txCount)
-	});
-
-
-
-
-	gdq_beethoven =
-		`query {
-  balancers(first:1){
-    totalLiquidity
-    #pools
-    poolCount
-    totalSwapVolume
-    totalSwapFee
-    id
-  }
-}`
-	gdqr_beethoven = new XMLHttpRequest();
-	gdqr_beethoven.open("POST","https://graph-node.beets-ftm-node.com/subgraphs/name/beethovenx",true);
-	gdqr_beethoven.onload=function(){
-		gdqd_beethoven=JSON.parse(this.response).data.balancers[0];
-		$("d_beethoven").getElementsByTagName("td")[1].innerHTML=Number(Number(gdqd_beethoven.poolCount).toFixed(0)).toLocaleString()
-		$("d_beethoven").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_beethoven.totalLiquidity).toFixed(0)).toLocaleString()
-		$("d_beethoven").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_beethoven.totalSwapVolume).toFixed(0)).toLocaleString()
-		gobj[0]+=Number(gdqd_beethoven.totalLiquidity)
-		//gobj[1]+=Number(gdqd_beethoven.uniswapDayDatas[0].dailyVolumeUSD)
-		gobj[2]+=Number(gdqd_beethoven.totalSwapVolume)
-		//gobj[3]+=Number(gdqd_beethoven.uniswapFactories[0].txCount)
-		ref_os()
-	}
-	gdqr_beethoven.send(JSON.stringify({query:gdq_beethoven}))
-
-
-
-
-
-
-
-	/*
-
-
-	gdq_shiba =
-		`query {
-  			uniswapFactories(first: 1) {
-    			id
-    			pairCount	txCount
-    			totalVolumeUSD    totalVolumeFTM	untrackedVolumeUSD
-    			totalLiquidityUSD	totalLiquidityFTM
-    			txCount
-  			}
-  			uniswapDayDatas(where:{id: ${date_id}}) {
-    			id	date
-    			txCount
-    			dailyVolumeUSD	dailyVolumeFTM	dailyVolumeUntracked
-    			totalVolumeUSD	totalVolumeFTM
-    			totalLiquidityUSD	totalLiquidityFTM
-  			}
-		}`
-	gdqr_shiba = new XMLHttpRequest();
-	gdqr_shiba.open("POST","https://api.thegraph.com/subgraphs/name/shiba-fantom/exchange",true);
-	gdqr_shiba.onload=function(){
-		gdqd_shiba=JSON.parse(this.response).data;
-		$("d_shiba").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_shiba.uniswapFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
-		$("d_shiba").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_shiba.uniswapDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_shiba").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_shiba.uniswapFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_shiba").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_shiba.uniswapFactories[0].txCount).toFixed(0)).toLocaleString()
-		gobj[0]+=Number(gdqd_shiba.uniswapFactories[0].totalLiquidityUSD)
-		gobj[1]+=Number(gdqd_shiba.uniswapDayDatas[0].dailyVolumeUSD)
-		gobj[2]+=Number(gdqd_shiba.uniswapFactories[0].totalVolumeUSD)
-		gobj[3]+=Number(gdqd_shiba.uniswapFactories[0].txCount)
-		ref_os()
-	}
-	gdqr_shiba.send(JSON.stringify({query:gdq_shiba}))
-
-	*/
-
-
-
-	// IRON
-	fetch("https://api-v2.iron.finance/tvl?chainId=250")
-		.then(m=>{return (m.json())})
-		.then(d=>
-		{
-			$("d_iron").getElementsByTagName("td")[3].innerHTML=Number((Number(d["total"])/1e18).toFixed(0)).toLocaleString()
-			gobj[0]+=Number(d["total"])/1e18;
-			ref_os()
-		})
-
-/**********************
-	// KEEP AT LAST
-	// CONTAINS AWAIT
-**********************/
-	// FROYO
-	froyo = new web3.eth.Contract(froyoi,froyo_1);
-	froyo_l = await Promise.all([
-		froyo.methods.balances(0).call(),
-		froyo.methods.balances(1).call(),
-		froyo.methods.balances(2).call(),
-	])
-	froyo_tl = froyo_l[0]/1e6 + froyo_l[0]/1e18 + froyo_l[0]/1e6;
-	$("d_froyo").getElementsByTagName("td")[3].innerHTML=Number(Number(froyo_tl).toFixed(0)).toLocaleString()
-	gobj[0]+=froyo_tl;
-	ref_os();
-
-}
-function ref_os()
-{
-	$("os_l").innerHTML = Number(Number(gobj[0]).toFixed(0)).toLocaleString()
-	$("os_v").innerHTML = Number(Number(gobj[0]/((Date.now()%86400000)/1000)).toFixed(0)).toLocaleString();
-	$("os_e").innerHTML = Number(Number(gobj[2]).toFixed(0)).toLocaleString()
-	$("os_t").innerHTML = Number(Number(gobj[3]).toFixed(0)).toLocaleString()
-}
-
-
-</script><!--
+</script>
 <script defer type="text/javascript" async="true">
 var sc_project=12548358;
 var sc_invisible=0;
@@ -1390,5 +2356,5 @@ var sc_remove_link=1;
 var scJsHost = "https://";
 document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
 "statcounter.com/counter/counter.js'></"+"script>");
-</script>-->
+</script>
 </html>
