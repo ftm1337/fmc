@@ -465,6 +465,32 @@ td:nth-child(5),td:nth-child(9),th:nth-child(5),th:nth-child(9){display:none}</s
 				<td>iron.finance</td>
 				<td><span><a href="https://app.iron.finance/swap" target="_blank">💱</a><a href="https://app.iron.finance" target="_blank">🌐</a><a href="https://discord.com/invite/RtA37hgGrK" target="_blank">🎮</a><a href="https://app.iron.finance/stablecoin/charts" target="_blank">📊</a><a href="https://app.iron.finance/pools" target="_blank">🚜</a><a href="https://twitter.com/IronFinance" target="_blank">🐦</a></span></td>
 			</tr>
+			<tr class="" id="d_yoshi">
+				<td>Yoshi</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>Yoshi.exchange</td>
+				<td><span><a href="https://Yoshi.exchange" target="_blank">💱</a><!--<a href="https://app.iron.finance" target="_blank">🌐</a><a href="https://discord.com/invite/RtA37hgGrK" target="_blank">🎮</a><a href="https://app.iron.finance/stablecoin/charts" target="_blank">📊</a><a href="https://app.iron.finance/pools" target="_blank">🚜</a><a href="https://twitter.com/IronFinance" target="_blank">🐦</a>--></span></td>
+			</tr>
+			<tr class="" id="d_dmm">
+				<td>Kyber-DMM</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>dmm.exchange</td>
+				<td><span><a href="https://dmm.exchange/#/swap" target="_blank">💱</a><a href="https://dmm.exchange" target="_blank">🌐</a><a href="https://discord.com/invite/NB3vc8J9uv" target="_blank">🎮</a><a href="https://fantom-info.dmm.exchange" target="_blank">📊</a><a href="https://dmm.exchange/#/farms" target="_blank">🚜</a><a href="https://twitter.com/KyberNetwork" target="_blank">🐦</a></span></td>
+			</tr>
 		</tbody>
 	</table>
 </div>
@@ -654,6 +680,8 @@ di=
 	["Nugget",	"0x6a3459091e3e425E324ad666f1EBC92d22B19422",	"0x598F046E61598CCedA9d76598e848DA0AC48B103",	1631513046],
 	["Jet",		"0x845E76A8691423fbc4ECb8Dd77556Cb61c09eE25",	"0xf6488205957f0b4497053d6422F49e27944eE3Dd",	1631513046],
 	["Firebird","0xe0C38b2a8D09aAD53f1C67734B9A95E43d5981c0",	"0xc7A50FE12C864963Ea5A5E0858a0E7Abe5b875c4",	1631513046],
+	["Yoshi",	"??????????????????????????????????????????",	"0xc5bC174CB6382FbAB17771d05e6a918441deCeea",	1631513046],
+	["DMM",		"??????????????????????????????????????????",	"0x10908C875D865C66f271F5d3949848971c9595C9",	1631513046],
 
 ]
 /*
@@ -673,6 +701,19 @@ Iron
 	DEX	= 0x952BDA8A83c3D5F398a686bb4e8C6DD90072d523
 */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 froyoi = [{"stateMutability":"view","type":"function","name":"balances","inputs":[{"name":"arg0","type":"uint256"}],"outputs":[{"name":"","type":"uint256"}],"gas":1917}];
 froyo_1 = "0x83E5f18Da720119fF363cF63417628eB0e9fd523";
 
@@ -682,14 +723,23 @@ async function gp()
 	{
 		if(i==0){continue}
 		F=new web3.eth.Contract(ab,di[i][2]);
-		if(di[i][0]=="Soul"){await F.methods.totalPairs().call((e,r)=>{$("d_"+di[i][0].toLowerCase()).getElementsByTagName("td")[1].innerHTML=Number(r).toLocaleString()})}
-		else{await F.methods.allPairsLength().call((e,r)=>{$("d_"+di[i][0].toLowerCase()).getElementsByTagName("td")[1].innerHTML=Number(r).toLocaleString()})}
+		if(di[i][0]=="Soul")
+			{await F.methods.totalPairs().call((e,r)=>{$("d_"+di[i][0].toLowerCase()).getElementsByTagName("td")[1].innerHTML=Number(r).toLocaleString()})}
+		else if(di[i][0]=="DMM")
+			{await F.methods.allPoolsLength().call((e,r)=>{$("d_"+di[i][0].toLowerCase()).getElementsByTagName("td")[1].innerHTML=Number(r).toLocaleString()})}
+		else
+			{await F.methods.allPairsLength().call((e,r)=>{$("d_"+di[i][0].toLowerCase()).getElementsByTagName("td")[1].innerHTML=Number(r).toLocaleString()})}
 	}
 	sortit(2);sortit(2);sortit(6);sortit(6);
 }
 
 ab=
-[{"inputs":[],"name":"allPairsLength","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalPairs","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}]
+[
+	{"inputs":[],"name":"allPoolsLength","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},
+	{"inputs":[],"name":"allPairsLength","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},
+	{"inputs":[],"name":"totalPairs","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}
+]
+
 function fornum(n,d)
 {
 	_n=(Number(n)/10**Number(d));
