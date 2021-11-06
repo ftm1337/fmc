@@ -166,19 +166,6 @@ td:nth-child(5),td:nth-child(9),th:nth-child(5),th:nth-child(9){display:none}</s
 				<td>curve.finance</td>
 				<td><span><a href="https://ftm.curve.fi" target="_blank">💱</a><a href="https://ftm.curve.fi" target="_blank">🌐</a><a href="https://ftm.curve.fi" target="_blank">🚜</a></span></td>
 			</tr>
-			<tr class="" id="d_curve">
-				<td>Curve</td>
-				<td>14</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-				<td>curve.finance</td>
-				<td><span><a href="https://ftm.curve.fi" target="_blank">💱</a><a href="https://ftm.curve.fi" target="_blank">🌐</a><a href="https://ftm.curve.fi" target="_blank">🚜</a></span></td>
-			</tr>
 			<tr class="" id="d_froyo">
 				<td>Froyo</td>
 				<td>1</td>
@@ -361,6 +348,19 @@ td:nth-child(5),td:nth-child(9),th:nth-child(5),th:nth-child(9){display:none}</s
 				<td>nipplelabs.finance</td>
 				<td><span><a href="https://exchange.nipplelabs.finance" target="_blank">💱</a><a href="https://nipplelabs.com" target="_blank">🌐</a><a href="https://discord.com/invite/6ChQmPb3as" target="_blank">🎮</a><a href="https://t.me/nipplelabs" target="_blank">✈</a><a href="https://twitter.com/nipplelabs" target="_blank">🐦</a><a href="https://nipplelabs.finance/farms" target="_blank">🚜</a></span></td>
 			</tr>
+			<tr class="" id="d_steaksamm">
+				<td>Steak-sAMM</td>
+				<td>1</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>stakesteak.app</td>
+				<td><span><a href="https://ftmscan.com/address/0xa0828eE559110b041DEdbf10Ae0cf42274251de1" target="_blank">💱</a><a href="https://stakesteak.app" target="_blank">🌐</a><a href="https://stakesteak.app" target="_blank">🚜</a></span></td>
+			</tr>
 			<tr class="" id="d_soul">
 				<td>Soul</td>
 				<td>0</td>
@@ -454,7 +454,7 @@ td:nth-child(5),td:nth-child(9),th:nth-child(5),th:nth-child(9){display:none}</s
 			</tr>
 			<tr class="" id="d_iron">
 				<td>Iron</td>
-				<td>0</td>
+				<td>1</td>
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
@@ -681,13 +681,12 @@ di=
 	["Jet",		"0x845E76A8691423fbc4ECb8Dd77556Cb61c09eE25",	"0xf6488205957f0b4497053d6422F49e27944eE3Dd",	1631513046],
 	["Firebird","0xe0C38b2a8D09aAD53f1C67734B9A95E43d5981c0",	"0xc7A50FE12C864963Ea5A5E0858a0E7Abe5b875c4",	1631513046],
 	["Yoshi",	"??????????????????????????????????????????",	"0xc5bC174CB6382FbAB17771d05e6a918441deCeea",	1631513046],
-	["DMM",		"??????????????????????????????????????????",	"0x10908C875D865C66f271F5d3949848971c9595C9",	1631513046],
+	["DMM",		"0x5d5A5a0a465129848c2549669e12cDC2f8DE039A",	"0x78df70615ffc8066cc0887917f2Cd72092C86409",	1631513046],
 
 ]
 /*
 
-	["Beethoven","?",	"?",	"?"],
-	["Froyo","?",	"?",	"?"],
+					[[ STABLE-SWAPS ]]
 
 
 Froyo
@@ -699,8 +698,19 @@ Iron
 	"IronSwap 3USD" (IS3USD) [USDC-DAI-fUSDT]
 	LPT = 0xc143a1500ca4a471eE9cc70B9AC0C739576F84bb
 	DEX	= 0x952BDA8A83c3D5F398a686bb4e8C6DD90072d523
+
+Stable AMM - Steak
+	[USDC-FUSD]
+	LPT + DEX = 0xa0828eE559110b041DEdbf10Ae0cf42274251de1
+
+
+Dictionary
+
+
 */
 
+FUSD = "0xAd84341756Bf337f5a0164515b1f6F993D194E1f";
+USDC = "0x04068DA6C83AFCFA0e13ba15A6696662335D5B75";
 
 
 
@@ -712,10 +722,15 @@ Iron
 
 
 
-
-
-froyoi = [{"stateMutability":"view","type":"function","name":"balances","inputs":[{"name":"arg0","type":"uint256"}],"outputs":[{"name":"","type":"uint256"}],"gas":1917}];
 froyo_1 = "0x83E5f18Da720119fF363cF63417628eB0e9fd523";
+froyoi = [{"stateMutability":"view","type":"function","name":"balances","inputs":[{"name":"arg0","type":"uint256"}],"outputs":[{"name":"","type":"uint256"}],"gas":1917}];
+
+steak_1	= "0xa0828eE559110b041DEdbf10Ae0cf42274251de1";
+FUSD_USDC_PAIR = "0x679449a920087828776aeEF4074549410D5c8065";
+steaki = [{"inputs":[],"name":"reserve0","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"reserve1","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}]
+
+
+
 
 async function gp()
 {
@@ -730,14 +745,60 @@ async function gp()
 		else
 			{await F.methods.allPairsLength().call((e,r)=>{$("d_"+di[i][0].toLowerCase()).getElementsByTagName("td")[1].innerHTML=Number(r).toLocaleString()})}
 	}
-	sortit(2);sortit(2);sortit(6);sortit(6);
+	sortit(6);sortit(6);
 }
 
 ab=
 [
 	{"inputs":[],"name":"allPoolsLength","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},
 	{"inputs":[],"name":"allPairsLength","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},
-	{"inputs":[],"name":"totalPairs","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}
+	{"inputs":[],"name":"totalPairs","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getReserves",
+		"outputs": [
+			{
+				"internalType": "uint112",
+				"name": "_reserve0",
+				"type": "uint112"
+			},
+			{
+				"internalType": "uint112",
+				"name": "_reserve1",
+				"type": "uint112"
+			},
+			{
+				"internalType": "uint32",
+				"name": "_blockTimestampLast",
+				"type": "uint32"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "balanceOf",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
 ]
 
 function fornum(n,d)
@@ -1323,7 +1384,7 @@ async function gg()
 		`query {
   balancers(first:1){
     totalLiquidity
-    #pools
+    totalSwapCount
     poolCount
     totalSwapVolume
     totalSwapFee
@@ -1331,16 +1392,19 @@ async function gg()
   }
 }`
 	gdqr_beethoven = new XMLHttpRequest();
-	gdqr_beethoven.open("POST","https://graph-node.beets-ftm-node.com/subgraphs/name/beethovenx",true);
+	//old:
+	//gdqr_beethoven.open("POST","https://graph-node.beets-ftm-node.com/subgraphs/name/beethovenx",true);
+	gdqr_beethoven.open("POST","https://graph-node.beets-ftm-node.com/subgraphs/name/beethovenx-v4",true);
 	gdqr_beethoven.onload=function(){
 		gdqd_beethoven=JSON.parse(this.response).data.balancers[0];
 		$("d_beethoven").getElementsByTagName("td")[1].innerHTML=Number(Number(gdqd_beethoven.poolCount).toFixed(0)).toLocaleString()
 		$("d_beethoven").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_beethoven.totalLiquidity).toFixed(0)).toLocaleString()
 		$("d_beethoven").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_beethoven.totalSwapVolume).toFixed(0)).toLocaleString()
+		$("d_beethoven").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_beethoven.totalSwapCount).toFixed(0)).toLocaleString()
 		gobj[0]+=Number(gdqd_beethoven.totalLiquidity)
 		//gobj[1]+=Number(gdqd_beethoven.uniswapDayDatas[0].dailyVolumeUSD)
 		gobj[2]+=Number(gdqd_beethoven.totalSwapVolume)
-		//gobj[3]+=Number(gdqd_beethoven.uniswapFactories[0].txCount)
+		gobj[3]+=Number(gdqd_beethoven.totalSwapCount)
 		ref_os()
 	}
 	gdqr_beethoven.send(JSON.stringify({query:gdq_beethoven}))
@@ -1391,6 +1455,57 @@ async function gg()
 
 
 
+	gdq_dmm =
+		`query {
+  		dmmFactories(first:1) {
+    		id
+    		totalVolumeUSD    totalVolumeETH  untrackedVolumeUSD
+    		totalFeeUSD	untrackedFeeUSD totalProtocolFeeUSD
+    		totalLiquidityUSD    totalLiquidityETH
+    		txCount    pairCount	poolCount
+  		}
+
+  		dmmDayDatas(where:{id: ${date_id}}) {
+    		id  date
+    		dailyVolumeETH	dailyVolumeUSD	dailyVolumeUntracked
+    		totalVolumeUSD	totalVolumeETH
+    		totalLiquidityUSD	totalLiquidityETH
+    		txCount
+			}
+		}`
+	gdqr_dmm = new XMLHttpRequest();
+	gdqr_dmm.open("POST","https://api.thegraph.com/subgraphs/name/dynamic-amm/dmm-exchange-ftm",true);
+	gdqr_dmm.onload=function(){
+		gdqd_dmm=JSON.parse(this.response).data;
+		$("d_dmm").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_dmm.dmmFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
+		$("d_dmm").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_dmm.dmmDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_dmm").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_dmm.dmmFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_dmm").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_dmm.dmmFactories[0].txCount).toFixed(0)).toLocaleString()
+		gobj[0]+=Number(gdqd_dmm.dmmFactories[0].totalLiquidityUSD)
+		gobj[1]+=Number(gdqd_dmm.dmmDayDatas[0].dailyVolumeUSD)
+		gobj[2]+=Number(gdqd_dmm.dmmFactories[0].totalVolumeUSD)
+		gobj[3]+=Number(gdqd_dmm.dmmFactories[0].txCount)
+		ref_os()
+	}
+	gdqr_dmm.send(JSON.stringify({query:gdq_dmm}))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	// IRON
 	fetch("https://api-v2.iron.finance/tvl?chainId=250")
 		.then(m=>{return (m.json())})
@@ -1401,21 +1516,47 @@ async function gg()
 			ref_os()
 		})
 
+
+
+
 /**********************
 	// KEEP AT LAST
 	// CONTAINS AWAIT
 **********************/
+/**********************
+	// Don't worry
+	// Don't await
+**********************/
+
+
+
 	// FROYO
 	froyo = new web3.eth.Contract(froyoi,froyo_1);
-	froyo_l = await Promise.all([
+	Promise.all([
 		froyo.methods.balances(0).call(),
 		froyo.methods.balances(1).call(),
 		froyo.methods.balances(2).call(),
-	])
-	froyo_tl = froyo_l[0]/1e6 + froyo_l[1]/1e18 + froyo_l[2]/1e6;
-	$("d_froyo").getElementsByTagName("td")[3].innerHTML=Number(Number(froyo_tl).toFixed(0)).toLocaleString()
-	gobj[0]+=froyo_tl;
-	ref_os();
+	]).then(froyo_l=>{
+		froyo_tl = froyo_l[0]/1e6 + froyo_l[1]/1e18 + froyo_l[2]/1e6;
+		$("d_froyo").getElementsByTagName("td")[3].innerHTML=Number(Number(froyo_tl).toFixed(0)).toLocaleString()
+		gobj[0]+=froyo_tl;
+		ref_os();
+	})
+
+	// Steak-sAMM
+	usdc = new web3.eth.Contract(ab,USDC);
+	fusd = new web3.eth.Contract(ab,FUSD);
+	fusd_usdc_pair = new web3.eth.Contract(ab,FUSD_USDC_PAIR);
+	Promise.all([
+		usdc.methods.balanceOf(steak_1).call(),
+		fusd.methods.balanceOf(steak_1).call(),
+		fusd_usdc_pair.methods.getReserves().call()
+	]).then(steak_l=>{
+		steak_tl = steak_l[0]/1e6 + (steak_l[1]/1e18) * ((Number(steak_l[2][0])/1e6)/(Number(steak_l[2][1])/1e18));
+		$("d_steaksamm").getElementsByTagName("td")[3].innerHTML=Number(Number(steak_tl).toFixed(0)).toLocaleString()
+		gobj[0]+=steak_tl;
+		ref_os();
+	})
 
 }
 function ref_os()
