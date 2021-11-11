@@ -504,6 +504,19 @@ td:nth-child(5),td:nth-child(9),th:nth-child(5),th:nth-child(9){display:none}</s
 				<td>dmm.exchange</td>
 				<td><span><a href="https://dmm.exchange/#/swap" target="_blank">💱</a><a href="https://dmm.exchange" target="_blank">🌐</a><a href="https://discord.com/invite/NB3vc8J9uv" target="_blank">🎮</a><a href="https://fantom-info.dmm.exchange" target="_blank">📊</a><a href="https://dmm.exchange/#/farms" target="_blank">🚜</a><a href="https://twitter.com/KyberNetwork" target="_blank">🐦</a></span></td>
 			</tr>
+			<tr class="" id="d_dfyn">
+				<td>Dfyn</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>dfyn</td>
+				<td><!--<span><a href="https://dmm.exchange/#/swap" target="_blank">💱</a><a href="https://dmm.exchange" target="_blank">🌐</a><a href="https://discord.com/invite/NB3vc8J9uv" target="_blank">🎮</a><a href="https://fantom-info.dmm.exchange" target="_blank">📊</a><a href="https://dmm.exchange/#/farms" target="_blank">🚜</a><a href="https://twitter.com/KyberNetwork" target="_blank">🐦</a></span>--></td>
+			</tr>
 		</tbody>
 	</table>
 </div>
@@ -729,41 +742,6 @@ Dictionary
 
 
 
-USDC = "0x04068DA6C83AFCFA0e13ba15A6696662335D5B75";
-usdc = new web3.eth.Contract(ab,USDC);
-
-FUSD = "0xAd84341756Bf337f5a0164515b1f6F993D194E1f";
-fusd = new web3.eth.Contract(ab,FUSD);
-
-DAI  = "0x8D11eC38a3EB5E956B052f67Da8Bdc9bef8Abf3E";
-dai  = new web3.eth.Contract(ab,DAI);
-
-USDT  = "0x049d68029688eAbF473097a2fC38ef61633A3C7A";
-usdt  = new web3.eth.Contract(ab,USDT);
-
-NUSD  = "0xED2a7edd7413021d440b09D654f3b87712abAB66";
-nusd  = new web3.eth.Contract(ab,NUSD);
-
-MIM  = "0x82f0B8B456c1A451378467398982d4834b6829c1";
-mim  = new web3.eth.Contract(ab,MIM);
-
-
-
-
-
-
-
-froyo_1 = "0x83E5f18Da720119fF363cF63417628eB0e9fd523";
-froyoi = [{"stateMutability":"view","type":"function","name":"balances","inputs":[{"name":"arg0","type":"uint256"}],"outputs":[{"name":"","type":"uint256"}]}];
-
-steak_1	= "0xa0828eE559110b041DEdbf10Ae0cf42274251de1";
-FUSD_USDC_PAIR = "0x679449a920087828776aeEF4074549410D5c8065";
-steaki = [{"inputs":[],"name":"reserve0","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"reserve1","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}]
-
-synapse_1 = "0x83E5f18Da720119fF363cF63417628eB0e9fd523";
-synapsei = [{"stateMutability":"view","type":"function","name":"getTokenBalance","inputs":[{"name":"arg0","type":"uint256"}],"outputs":[{"name":"","type":"uint256"}]}];
-
-
 
 
 async function gp()
@@ -779,6 +757,10 @@ async function gp()
 		else
 			{await F.methods.allPairsLength().call((e,r)=>{$("d_"+di[i][0].toLowerCase()).getElementsByTagName("td")[1].innerHTML=Number(r).toLocaleString()})}
 	}
+	sortit(2);sortit(2);
+	;console.log("tvlsort");
+	sortit(3);sortit(3);
+	;console.log("invsort");
 	sortit(6);sortit(6);
 }
 
@@ -927,11 +909,11 @@ function ads()
 	}
 	console.log(Date.now())
 }
-
+ldata={}
 async function tc()
 {
 //	pt(d1)
-	fetch("https://api.llama.fi/protocols").then(d1=>{return d1.json()}).then(d2d=>{pt(d2d)})
+	fetch("https://api.llama.fi/protocols").then(d1=>{return d1.json()}).then(d2d=>{pt(d2d);ldata=d2d})
 }
 function pt(d)
 {
@@ -954,7 +936,7 @@ function po (di)
 //		console.log(di.slug)
 //		console.log(di.slug,di)
 
-		if (di.slug ==  "curve" ){			$v("d_curve").innerHTML=v;}
+		if (di.slug ==  "curve" ){			$v("d_curve").innerHTML=v;$v("d_curve").nextElementSibling.innerHTML=v;}
 		if (di.slug ==  "sushiswap" ){		$v("d_sushi").innerHTML=v;}
 		if (di.slug ==  "spookyswap" ){		$v("d_spooky").innerHTML=v;}
 		if (di.slug ==  "spiritswap" ){		$v("d_spirit").innerHTML=v;}
@@ -966,6 +948,9 @@ function po (di)
 		if (di.slug ==  "shiba-fantom" ){	$v("d_shiba").innerHTML=v;}
 		if (di.slug ==  "soulswap" ){		$v("d_soul").innerHTML=v;}
 		if (di.slug ==  "beethoven-x" ){	$v("d_beethoven").innerHTML=v;}
+		if (di.slug ==  "synapse" ){		$v("d_synapse").innerHTML=v;}
+		if (di.slug ==  "empire-dex" ){		$v("d_empire").innerHTML=v;}
+		if (di.slug ==  "dfyn-network" ){	$v("d_dfyn").innerHTML=v;}
 }
 date_id = Date.now();
 date_id = date_id/1000 - (date_id/1000)%1;
@@ -1526,12 +1511,50 @@ async function gg()
 
 
 
+//https://api.thegraph.com/subgraphs/name/zikyfranky/empire-exchange
+//https://api.thegraph.com/subgraphs/name/ss-sonic/fantom-v4
 
 
 
 
 
 
+
+
+
+USDC = "0x04068DA6C83AFCFA0e13ba15A6696662335D5B75";
+usdc = new web3.eth.Contract(ab,USDC);
+
+FUSD = "0xAd84341756Bf337f5a0164515b1f6F993D194E1f";
+fusd = new web3.eth.Contract(ab,FUSD);
+
+DAI  = "0x8D11eC38a3EB5E956B052f67Da8Bdc9bef8Abf3E";
+dai  = new web3.eth.Contract(ab,DAI);
+
+USDT = "0x049d68029688eAbF473097a2fC38ef61633A3C7A";
+usdt = new web3.eth.Contract(ab,USDT);
+
+NUSD  = "0xED2a7edd7413021d440b09D654f3b87712abAB66";
+nusd  = new web3.eth.Contract(ab,NUSD);
+
+MIM   = "0x82f0B8B456c1A451378467398982d4834b6829c1";
+mim   = new web3.eth.Contract(ab,MIM);
+
+
+
+
+
+
+
+froyo_1 = "0x83E5f18Da720119fF363cF63417628eB0e9fd523";
+froyoi = [{"stateMutability":"view","type":"function","name":"balances","inputs":[{"name":"arg0","type":"uint256"}],"outputs":[{"name":"","type":"uint256"}]}];
+
+steak_1	= "0xa0828eE559110b041DEdbf10Ae0cf42274251de1";
+FUSD_USDC_PAIR = "0x679449a920087828776aeEF4074549410D5c8065";
+steaki = [{"inputs":[],"name":"reserve0","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"reserve1","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}]
+
+synapse_1 = "0x2913E812Cf0dcCA30FB28E6Cac3d2DCFF4497688";
+synapsei = [{"stateMutability":"view","type":"function","name":"getTokenBalance","inputs":[{"name":"arg0","type":"uint256"}],"outputs":[{"name":"","type":"uint256"}]}];
 
 
 
@@ -1566,7 +1589,7 @@ async function gg()
 
 	// FROYO
 	Promise.all([
-		fusdt.methods.balanceOf(froyo_1).call(),
+		fusd.methods.balanceOf(froyo_1).call(),
 		dai.methods.balanceOf(froyo_1).call(),
 		usdc.methods.balanceOf(froyo_1).call()
 	]).then(froyo_l=>{
@@ -1604,6 +1627,7 @@ async function gg()
 		gobj[0]+=steak_tl;
 		ref_os();
 	})
+
 
 }
 function ref_os()
