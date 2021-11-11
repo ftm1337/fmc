@@ -744,6 +744,10 @@ async function gp()
 		else
 			{await F.methods.allPairsLength().call((e,r)=>{$("d_"+di[i][0].toLowerCase()).getElementsByTagName("td")[1].innerHTML=Number(r).toLocaleString()})}
 	}
+	sortit(2);sortit(2);
+	;console.log("tvlsort");
+	sortit(3);sortit(3);
+	;console.log("invsort");
 	sortit(6);sortit(6);
 }
 
@@ -919,7 +923,7 @@ function po (di)
 //		console.log(di.slug)
 //		console.log(di.slug,di)
 
-		if (di.slug ==  "curve" ){			$v("d_curve").innerHTML=v;}
+		if (di.slug ==  "curve" ){			$v("d_curve").innerHTML=v;$v("d_curve").nextElementSibling.innerHTML=v;}
 		if (di.slug ==  "sushiswap" ){		$v("d_sushi").innerHTML=v;}
 		if (di.slug ==  "spookyswap" ){		$v("d_spooky").innerHTML=v;}
 		if (di.slug ==  "spiritswap" ){		$v("d_spirit").innerHTML=v;}
