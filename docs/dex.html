@@ -361,6 +361,19 @@ td:nth-child(5),td:nth-child(9),th:nth-child(5),th:nth-child(9){display:none}</s
 				<td>stakesteak.app</td>
 				<td><span><a href="https://ftmscan.com/address/0xa0828eE559110b041DEdbf10Ae0cf42274251de1" target="_blank">💱</a><a href="https://stakesteak.app" target="_blank">🌐</a><a href="https://stakesteak.app" target="_blank">🚜</a></span></td>
 			</tr>
+			<tr class="" id="d_synapse">
+				<td>Synapse</td>
+				<td>1</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>synapseprotocol.com</td>
+				<td><span><a href="https://synapseprotocol.com/swap" target="_blank">💱</a><a href="https://synapseprotocol.com" target="_blank">🌐</a><a href="https://synapseprotocol.com/stake" target="_blank">🚜</a></span></td>
+			</tr>
 			<tr class="" id="d_soul">
 				<td>Soul</td>
 				<td>0</td>
@@ -694,6 +707,10 @@ Froyo
 	LPT = 0x4f85Bbf3B0265DCEd4Ec72ebD0358ccCf190F1B3
 	DEX = 0x83E5f18Da720119fF363cF63417628eB0e9fd523
 
+Synapse
+	""
+	LPT =
+	DEX = "0x2913E812Cf0dcCA30FB28E6Cac3d2DCFF4497688"
 Iron
 	"IronSwap 3USD" (IS3USD) [USDC-DAI-fUSDT]
 	LPT = 0xc143a1500ca4a471eE9cc70B9AC0C739576F84bb
@@ -709,12 +726,26 @@ Dictionary
 
 */
 
-FUSD = "0xAd84341756Bf337f5a0164515b1f6F993D194E1f";
+
+
+
 USDC = "0x04068DA6C83AFCFA0e13ba15A6696662335D5B75";
+usdc = new web3.eth.Contract(ab,USDC);
 
+FUSD = "0xAd84341756Bf337f5a0164515b1f6F993D194E1f";
+fusd = new web3.eth.Contract(ab,FUSD);
 
+DAI  = "0x8D11eC38a3EB5E956B052f67Da8Bdc9bef8Abf3E";
+dai  = new web3.eth.Contract(ab,DAI);
 
+USDT  = "0x049d68029688eAbF473097a2fC38ef61633A3C7A";
+usdt  = new web3.eth.Contract(ab,USDT);
 
+NUSD  = "0xED2a7edd7413021d440b09D654f3b87712abAB66";
+nusd  = new web3.eth.Contract(ab,NUSD);
+
+MIM  = "0x82f0B8B456c1A451378467398982d4834b6829c1";
+mim  = new web3.eth.Contract(ab,MIM);
 
 
 
@@ -723,11 +754,14 @@ USDC = "0x04068DA6C83AFCFA0e13ba15A6696662335D5B75";
 
 
 froyo_1 = "0x83E5f18Da720119fF363cF63417628eB0e9fd523";
-froyoi = [{"stateMutability":"view","type":"function","name":"balances","inputs":[{"name":"arg0","type":"uint256"}],"outputs":[{"name":"","type":"uint256"}],"gas":1917}];
+froyoi = [{"stateMutability":"view","type":"function","name":"balances","inputs":[{"name":"arg0","type":"uint256"}],"outputs":[{"name":"","type":"uint256"}]}];
 
 steak_1	= "0xa0828eE559110b041DEdbf10Ae0cf42274251de1";
 FUSD_USDC_PAIR = "0x679449a920087828776aeEF4074549410D5c8065";
 steaki = [{"inputs":[],"name":"reserve0","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"reserve1","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}]
+
+synapse_1 = "0x83E5f18Da720119fF363cF63417628eB0e9fd523";
+synapsei = [{"stateMutability":"view","type":"function","name":"getTokenBalance","inputs":[{"name":"arg0","type":"uint256"}],"outputs":[{"name":"","type":"uint256"}]}];
 
 
 
@@ -1531,28 +1565,41 @@ async function gg()
 
 
 	// FROYO
-	froyo = new web3.eth.Contract(froyoi,froyo_1);
 	Promise.all([
-		froyo.methods.balances(0).call(),
-		froyo.methods.balances(1).call(),
-		froyo.methods.balances(2).call(),
+		fusdt.methods.balanceOf(froyo_1).call(),
+		dai.methods.balanceOf(froyo_1).call(),
+		usdc.methods.balanceOf(froyo_1).call()
 	]).then(froyo_l=>{
-		froyo_tl = froyo_l[0]/1e6 + froyo_l[1]/1e18 + froyo_l[2]/1e6;
+		froyo_tl = (froyo_l[0]/1e6) + (froyo_l[1]/1e18) +  (froyo_l[2]/1e6)
 		$("d_froyo").getElementsByTagName("td")[3].innerHTML=Number(Number(froyo_tl).toFixed(0)).toLocaleString()
 		gobj[0]+=froyo_tl;
 		ref_os();
 	})
 
+	// SYNAPSE
+	Promise.all([
+		nusd.methods.balanceOf(synapse_1).call(),
+		mim.methods.balanceOf(synapse_1).call(),
+		usdc.methods.balanceOf(synapse_1).call(),
+		usdt.methods.balanceOf(synapse_1).call()
+	]).then(synapse_l=>{
+		synapse_tl = (synapse_l[0]/1e18) + (synapse_l[1]/1e18) + (synapse_l[2]/1e6) + (synapse_l[3]/1e6);
+		$("d_synapse").getElementsByTagName("td")[3].innerHTML=Number(Number(synapse_tl).toFixed(0)).toLocaleString()
+		gobj[0]+=synapse_tl;
+		ref_os();
+	})
+
+
+
+
 	// Steak-sAMM
-	usdc = new web3.eth.Contract(ab,USDC);
-	fusd = new web3.eth.Contract(ab,FUSD);
 	fusd_usdc_pair = new web3.eth.Contract(ab,FUSD_USDC_PAIR);
 	Promise.all([
 		usdc.methods.balanceOf(steak_1).call(),
 		fusd.methods.balanceOf(steak_1).call(),
 		fusd_usdc_pair.methods.getReserves().call()
 	]).then(steak_l=>{
-		steak_tl = steak_l[0]/1e6 + (steak_l[1]/1e18) * ((Number(steak_l[2][0])/1e6)/(Number(steak_l[2][1])/1e18));
+		steak_tl = (steak_l[0]/1e6) + (steak_l[1]/1e18) * ((Number(steak_l[2][0])/1e6)/(Number(steak_l[2][1])/1e18));
 		$("d_steaksamm").getElementsByTagName("td")[3].innerHTML=Number(Number(steak_tl).toFixed(0)).toLocaleString()
 		gobj[0]+=steak_tl;
 		ref_os();
