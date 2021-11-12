@@ -504,6 +504,32 @@ td:nth-child(5),td:nth-child(9),th:nth-child(5),th:nth-child(9){display:none}</s
 				<td>dmm.exchange</td>
 				<td><span><a href="https://dmm.exchange/#/swap" target="_blank">💱</a><a href="https://dmm.exchange" target="_blank">🌐</a><a href="https://discord.com/invite/NB3vc8J9uv" target="_blank">🎮</a><a href="https://fantom-info.dmm.exchange" target="_blank">📊</a><a href="https://dmm.exchange/#/farms" target="_blank">🚜</a><a href="https://twitter.com/KyberNetwork" target="_blank">🐦</a></span></td>
 			</tr>
+			<tr class="" id="d_dfyn">
+				<td>Dfyn</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>dfyn</td>
+				<td><!--<span><a href="https://dmm.exchange/#/swap" target="_blank">💱</a><a href="https://dmm.exchange" target="_blank">🌐</a><a href="https://discord.com/invite/NB3vc8J9uv" target="_blank">🎮</a><a href="https://fantom-info.dmm.exchange" target="_blank">📊</a><a href="https://dmm.exchange/#/farms" target="_blank">🚜</a><a href="https://twitter.com/KyberNetwork" target="_blank">🐦</a></span>--></td>
+			</tr>
+			<tr class="" id="d_morpheus">
+				<td>Morpheus</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>morpheusswap.app</td>
+				<td><!--<span><a href="https://dmm.exchange/#/swap" target="_blank">💱</a><a href="https://dmm.exchange" target="_blank">🌐</a><a href="https://discord.com/invite/NB3vc8J9uv" target="_blank">🎮</a><a href="https://fantom-info.dmm.exchange" target="_blank">📊</a><a href="https://dmm.exchange/#/farms" target="_blank">🚜</a><a href="https://twitter.com/KyberNetwork" target="_blank">🐦</a></span>--></td>
+			</tr>
 		</tbody>
 	</table>
 </div>
@@ -695,6 +721,7 @@ di=
 	["Firebird","0xe0C38b2a8D09aAD53f1C67734B9A95E43d5981c0",	"0xc7A50FE12C864963Ea5A5E0858a0E7Abe5b875c4",	1631513046],
 	["Yoshi",	"??????????????????????????????????????????",	"0xc5bC174CB6382FbAB17771d05e6a918441deCeea",	1631513046],
 	["DMM",		"0x5d5A5a0a465129848c2549669e12cDC2f8DE039A",	"0x78df70615ffc8066cc0887917f2Cd72092C86409",	1631513046],
+	["Morpheus",		"0x8aC868293D97761A1fED6d4A01E9FF17C5594Aa3",	"0x9C454510848906FDDc846607E4baa27Ca999FBB6",	1631513046],
 
 ]
 /*
@@ -896,11 +923,11 @@ function ads()
 	}
 	console.log(Date.now())
 }
-
+ldata={}
 async function tc()
 {
 //	pt(d1)
-	fetch("https://api.llama.fi/protocols").then(d1=>{return d1.json()}).then(d2d=>{pt(d2d)})
+	fetch("https://api.llama.fi/protocols").then(d1=>{return d1.json()}).then(d2d=>{pt(d2d);ldata=d2d})
 }
 function pt(d)
 {
@@ -935,6 +962,10 @@ function po (di)
 		if (di.slug ==  "shiba-fantom" ){	$v("d_shiba").innerHTML=v;}
 		if (di.slug ==  "soulswap" ){		$v("d_soul").innerHTML=v;}
 		if (di.slug ==  "beethoven-x" ){	$v("d_beethoven").innerHTML=v;}
+		if (di.slug ==  "synapse" ){		$v("d_synapse").innerHTML=v;}
+		if (di.slug ==  "empire-dex" ){		$v("d_empire").innerHTML=v;}
+		if (di.slug ==  "dfyn-network" ){	$v("d_dfyn").innerHTML=v;}
+		if (di.slug ==  "morpheus-swap" ){	$v("d_morpheus").innerHTML=v;}
 }
 date_id = Date.now();
 date_id = date_id/1000 - (date_id/1000)%1;
@@ -1495,6 +1526,9 @@ async function gg()
 
 
 
+//https://api.thegraph.com/subgraphs/name/zikyfranky/empire-exchange
+//https://api.thegraph.com/subgraphs/name/ss-sonic/fantom-v4
+
 
 
 
@@ -1570,7 +1604,7 @@ synapsei = [{"stateMutability":"view","type":"function","name":"getTokenBalance"
 
 	// FROYO
 	Promise.all([
-		fusd.methods.balanceOf(froyo_1).call(),
+		usdt.methods.balanceOf(froyo_1).call(),
 		dai.methods.balanceOf(froyo_1).call(),
 		usdc.methods.balanceOf(froyo_1).call()
 	]).then(froyo_l=>{
