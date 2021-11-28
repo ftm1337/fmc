@@ -4,7 +4,7 @@
 <meta name="keywords" content="Fantom Opera, FTM, Decentralized Finance, ELITE, 1337, defi, farming, FTM1337">
 <title>FantomMarketCap - DEX List | FMC.guru : Fantom Opera Cryptocurrency Tokens Price and Market Capitalization</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" href="../img/ftm1337.jpg" />
+<link rel="shortcut icon" href="https://ftm.guru/img/64.png" />
 <style>html{background:radial-gradient(circle at center, #127, #122, #100);color:#e3e9f2;font-family:helvetica nueve, helvetica, robotica, ubuntu, roboto, sans-serif;background-attachment: fixed;}
 .toprow{display:grid;grid-template-columns:max-content auto max-content}
 .topfind{text-align:center;min-width:80%}
@@ -515,7 +515,7 @@ td:nth-child(5),td:nth-child(9),th:nth-child(5),th:nth-child(9){display:none}</s
 				<td>0</td>
 				<td>0</td>
 				<td>dfyn</td>
-				<td><!--<span><a href="https://dmm.exchange/#/swap" target="_blank">💱</a><a href="https://dmm.exchange" target="_blank">🌐</a><a href="https://discord.com/invite/NB3vc8J9uv" target="_blank">🎮</a><a href="https://fantom-info.dmm.exchange" target="_blank">📊</a><a href="https://dmm.exchange/#/farms" target="_blank">🚜</a><a href="https://twitter.com/KyberNetwork" target="_blank">🐦</a></span>--></td>
+				<td><span><a href="https://dfyn.network" target="_blank">💱</a><a href="https://dfyn.network" target="_blank">🌐</a><a href="https://discord.com/invite/" target="_blank">🎮</a><a href="https://info.dfyn.network" target="_blank">📊</a><a href="https://dfyn.network" target="_blank">🚜</a><a href="https://twitter.com/" target="_blank">🐦</a></span></td>
 			</tr>
 			<tr class="" id="d_morpheus">
 				<td>Morpheus</td>
@@ -528,7 +528,7 @@ td:nth-child(5),td:nth-child(9),th:nth-child(5),th:nth-child(9){display:none}</s
 				<td>0</td>
 				<td>0</td>
 				<td>morpheusswap.app</td>
-				<td><!--<span><a href="https://dmm.exchange/#/swap" target="_blank">💱</a><a href="https://dmm.exchange" target="_blank">🌐</a><a href="https://discord.com/invite/NB3vc8J9uv" target="_blank">🎮</a><a href="https://fantom-info.dmm.exchange" target="_blank">📊</a><a href="https://dmm.exchange/#/farms" target="_blank">🚜</a><a href="https://twitter.com/KyberNetwork" target="_blank">🐦</a></span>--></td>
+				<td><span><a href="https://morpheusswap.finance" target="_blank">💱</a><a href="https://morpheusswap.finance" target="_blank">🌐</a><a href="https://discord.com/invite/" target="_blank">🎮</a><a href="https://info.morpheusswap.app" target="_blank">📊</a><a href="https://morpheusswap.finance/#/farms" target="_blank">🚜</a><a href="https://twitter.com/" target="_blank">🐦</a></span></td>
 			</tr>
 			<tr class="" id="d_vampire">
 				<td>Vampire</td>
@@ -786,11 +786,8 @@ async function gp()
 		else
 			{await F.methods.allPairsLength().call((e,r)=>{$("d_"+di[i][0].toLowerCase()).getElementsByTagName("td")[1].innerHTML=Number(r).toLocaleString()})}
 	}
-	sortit(2);sortit(2);
-	;console.log("tvlsort");
 	sortit(3);sortit(3);
-	;console.log("invsort");
-	sortit(6);sortit(6);
+	;console.log("liqsort");
 }
 
 ab=
@@ -981,6 +978,11 @@ function po (di)
 		if (di.slug ==  "empire-dex" ){		$v("d_empire").innerHTML=v;}
 		if (di.slug ==  "dfyn-network" ){	$v("d_dfyn").innerHTML=v;}
 		if (di.slug ==  "morpheus-swap" ){	$v("d_morpheus").innerHTML=v;}
+		if (di.slug ==  "yoshi-exchange" ){	$v("d_yoshi").innerHTML=v;}
+		if (di.slug ==  "iron-exchange" ){	$v("d_iron").innerHTML=v;}
+		if (di.slug ==  "empiredex" ){		$v("d_empire").innerHTML=v;}
+		if (di.slug ==  "stakesteak" ){		$v("d_steaksamm").innerHTML=v;}
+		if (di.slug ==  "vampireswap" ){	$v("d_vampire").innerHTML=v;}
 }
 date_id = Date.now();
 date_id = date_id/1000 - (date_id/1000)%1;
@@ -1618,9 +1620,42 @@ async function gg()
 	gdqr_dfyn.send(JSON.stringify({query:gdq_dfyn}))
 
 
-//https://api.thegraph.com/subgraphs/name/zikyfranky/empire-exchange
-//https://api.thegraph.com/subgraphs/name/ss-sonic/fantom-v4
 
+
+	gdq_morpheus =
+		`query {
+  			pancakeFactories(first: 1) {
+    			id
+    			totalPairs	totalTransactions
+    			totalVolumeUSD    totalVolumeBNB	untrackedVolumeUSD
+    			totalLiquidityUSD	totalLiquidityBNB
+  			}
+  			pancakeDayDatas#(where:{id: ${date_id}})
+  {
+    			id	date
+    			totalTransactions
+    			dailyVolumeUSD	dailyVolumeBNB	dailyVolumeUntracked
+    			totalVolumeUSD	totalVolumeBNB
+    			totalLiquidityUSD	totalLiquidityBNB
+  			}
+		}`
+
+
+	gdqr_morpheus = new XMLHttpRequest();
+	gdqr_morpheus.open("POST","https://api.thegraph.com/subgraphs/name/daedboi/morpheus-swap",true);
+	gdqr_morpheus.onload=function(){
+		gdqd_morpheus=JSON.parse(this.response).data;
+		$("d_morpheus").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_morpheus.pancakeFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
+		$("d_morpheus").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_morpheus.pancakeDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_morpheus").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_morpheus.pancakeFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_morpheus").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_morpheus.pancakeFactories[0].totalTransactions).toFixed(0)).toLocaleString()
+		gobj[0]+=Number(gdqd_morpheus.pancakeFactories[0].totalLiquidityUSD)
+		gobj[1]+=Number(gdqd_morpheus.pancakeDayDatas[0].dailyVolumeUSD)
+		gobj[2]+=Number(gdqd_morpheus.pancakeFactories[0].totalVolumeUSD)
+		gobj[3]+=Number(gdqd_morpheus.pancakeFactories[0].totalTransactions)
+		ref_os()
+	}
+	gdqr_morpheus.send(JSON.stringify({query:gdq_morpheus}))
 
 
 
