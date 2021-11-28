@@ -530,6 +530,19 @@ td:nth-child(5),td:nth-child(9),th:nth-child(5),th:nth-child(9){display:none}</s
 				<td>morpheusswap.app</td>
 				<td><!--<span><a href="https://dmm.exchange/#/swap" target="_blank">💱</a><a href="https://dmm.exchange" target="_blank">🌐</a><a href="https://discord.com/invite/NB3vc8J9uv" target="_blank">🎮</a><a href="https://fantom-info.dmm.exchange" target="_blank">📊</a><a href="https://dmm.exchange/#/farms" target="_blank">🚜</a><a href="https://twitter.com/KyberNetwork" target="_blank">🐦</a></span>--></td>
 			</tr>
+			<tr class="" id="d_vampire">
+				<td>Vampire</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>vampireswap.org</td>
+				<td><span><a href="https://vampireswap.org/exchange" target="_blank">💱</a><a href="https://vampireswap.org" target="_blank">🌐</a><a href="https://discord.gg/yYMUA3FSF6" target="_blank">🎮</a><a href="https://analytics.vampireswap.org" target="_blank">📊</a><a href="https://vampireswap.org/vaults" target="_blank">🚜</a><a href="https://vampireswap.org/farm" target="_blank">🚜</a><a href="https://twitter.com/vampireswap" target="_blank">🐦</a></span>--></td>
+			</tr>
 		</tbody>
 	</table>
 </div>
@@ -721,7 +734,9 @@ di=
 	["Firebird","0xe0C38b2a8D09aAD53f1C67734B9A95E43d5981c0",	"0xc7A50FE12C864963Ea5A5E0858a0E7Abe5b875c4",	1631513046],
 	["Yoshi",	"??????????????????????????????????????????",	"0xc5bC174CB6382FbAB17771d05e6a918441deCeea",	1631513046],
 	["DMM",		"0x5d5A5a0a465129848c2549669e12cDC2f8DE039A",	"0x78df70615ffc8066cc0887917f2Cd72092C86409",	1631513046],
-	["Morpheus",		"0x8aC868293D97761A1fED6d4A01E9FF17C5594Aa3",	"0x9C454510848906FDDc846607E4baa27Ca999FBB6",	1631513046],
+	["Dfyn",	"0x2724B9497b2cF3325C6BE3ea430b3cec34B5Ef2d",	"0xd9820a17053d6314B20642E465a84Bf01a3D64f5",	1631513046],
+	["Morpheus","0x8aC868293D97761A1fED6d4A01E9FF17C5594Aa3",	"0x9C454510848906FDDc846607E4baa27Ca999FBB6",	1631513046],
+	["Vampire",	"0x9AdE9Bda74a12022cC82C27Ce24C4296397b18d5",	"0xdF0A0a62995ae821d7a5cF88C4112c395fc41358",	1631513046],
 
 ]
 /*
@@ -1524,6 +1539,83 @@ async function gg()
 	gdqr_dmm.send(JSON.stringify({query:gdq_dmm}))
 
 
+
+
+
+
+	gdq_empire =
+		`query {
+  			uniswapFactories(first: 1) {
+    			id
+    			pairCount	txCount
+    			totalVolumeUSD    totalVolumeETH	untrackedVolumeUSD
+    			totalLiquidityUSD	totalLiquidityETH
+    			txCount
+  			}
+  			uniswapDayDatas(where:{id: ${date_id}}) {
+    			id	date
+    			txCount
+    			dailyVolumeUSD	dailyVolumeETH	dailyVolumeUntracked
+    			totalVolumeUSD	totalVolumeETH
+    			totalLiquidityUSD	totalLiquidityETH
+  			}
+		}`
+
+
+	gdqr_empire = new XMLHttpRequest();
+	gdqr_empire.open("POST","https://api.thegraph.com/subgraphs/name/zikyfranky/empire-exchange",true);
+	gdqr_empire.onload=function(){
+		gdqd_empire=JSON.parse(this.response).data;
+		$("d_empire").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_empire.uniswapFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
+		$("d_empire").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_empire.uniswapDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_empire").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_empire.uniswapFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_empire").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_empire.uniswapFactories[0].txCount).toFixed(0)).toLocaleString()
+		gobj[0]+=Number(gdqd_empire.uniswapFactories[0].totalLiquidityUSD)
+		gobj[1]+=Number(gdqd_empire.uniswapDayDatas[0].dailyVolumeUSD)
+		gobj[2]+=Number(gdqd_empire.uniswapFactories[0].totalVolumeUSD)
+		gobj[3]+=Number(gdqd_empire.uniswapFactories[0].txCount)
+		ref_os()
+	}
+	gdqr_empire.send(JSON.stringify({query:gdq_empire}))
+
+
+
+
+
+	gdq_dfyn =
+		`query {
+  			uniswapFactories(first: 1) {
+    			id
+    			pairCount	txCount
+    			totalVolumeUSD    totalVolumeETH	untrackedVolumeUSD
+    			totalLiquidityUSD	totalLiquidityETH
+    			txCount
+  			}
+  			uniswapDayDatas(where:{id: ${date_id}}) {
+    			id	date
+    			txCount
+    			dailyVolumeUSD	dailyVolumeETH	dailyVolumeUntracked
+    			totalVolumeUSD	totalVolumeETH
+    			totalLiquidityUSD	totalLiquidityETH
+  			}
+		}`
+
+
+	gdqr_dfyn = new XMLHttpRequest();
+	gdqr_dfyn.open("POST","https://api.thegraph.com/subgraphs/name/ss-sonic/fantom-v4",true);
+	gdqr_dfyn.onload=function(){
+		gdqd_dfyn=JSON.parse(this.response).data;
+		$("d_dfyn").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_dfyn.uniswapFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
+		$("d_dfyn").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_dfyn.uniswapDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_dfyn").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_dfyn.uniswapFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_dfyn").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_dfyn.uniswapFactories[0].txCount).toFixed(0)).toLocaleString()
+		gobj[0]+=Number(gdqd_dfyn.uniswapFactories[0].totalLiquidityUSD)
+		gobj[1]+=Number(gdqd_dfyn.uniswapDayDatas[0].dailyVolumeUSD)
+		gobj[2]+=Number(gdqd_dfyn.uniswapFactories[0].totalVolumeUSD)
+		gobj[3]+=Number(gdqd_dfyn.uniswapFactories[0].txCount)
+		ref_os()
+	}
+	gdqr_dfyn.send(JSON.stringify({query:gdq_dfyn}))
 
 
 //https://api.thegraph.com/subgraphs/name/zikyfranky/empire-exchange
