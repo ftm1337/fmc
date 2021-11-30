@@ -1630,7 +1630,7 @@ async function gg()
     			totalVolumeUSD    totalVolumeBNB	untrackedVolumeUSD
     			totalLiquidityUSD	totalLiquidityBNB
   			}
-  			pancakeDayDatas#(where:{id: ${date_id}})
+  			pancakeDayDatas(where:{id: ${date_id}})
   {
     			id	date
     			totalTransactions
@@ -1660,7 +1660,7 @@ async function gg()
 
 
 
-	gdq_morpheus =
+	gdq_firebird =
 		`query {
   			exchanges(first: 1) {
     			id
@@ -1669,7 +1669,7 @@ async function gg()
     			totalLiquidity
     			totalSwapFee	totalProtocolFee	protocolFee
   			}
-  			exchangeDayDatas#(where:{id: ${date_id}})
+  			exchangeDayDatas(where:{id: "${date_id}-1"})
   {
     			id	date	exchangeID {
     			  id
@@ -1687,13 +1687,13 @@ async function gg()
 	gdqr_firebird.open("POST","https://api.thegraph.com/subgraphs/name/firebirdgraph/fantom-exchange",true);
 	gdqr_firebird.onload=function(){
 		gdqd_firebird=JSON.parse(this.response).data;
-		$("d_firebird").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_firebird.exchanges[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
+		$("d_firebird").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_firebird.exchanges[0].totalLiquidity).toFixed(0)).toLocaleString()
 		$("d_firebird").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_firebird.exchangeDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
-		$("d_firebird").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_firebird.exchanges[0].totalVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_firebird").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_firebird.exchanges[0].totalSwapVolume).toFixed(0)).toLocaleString()
 		$("d_firebird").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_firebird.exchanges[0].txCount).toFixed(0)).toLocaleString()
-		gobj[0]+=Number(gdqd_firebird.exchanges[0].totalLiquidityUSD)
+		gobj[0]+=Number(gdqd_firebird.exchanges[0].totalLiquidity)
 		gobj[1]+=Number(gdqd_firebird.exchangeDayDatas[0].dailyVolumeUSD)
-		gobj[2]+=Number(gdqd_firebird.exchanges[0].totalVolumeUSD)
+		gobj[2]+=Number(gdqd_firebird.exchanges[0].totalSwapVolume)
 		gobj[3]+=Number(gdqd_firebird.exchanges[0].txCount)
 		ref_os()
 	}
