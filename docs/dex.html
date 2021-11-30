@@ -4,7 +4,7 @@
 <meta name="keywords" content="Fantom Opera, FTM, Decentralized Finance, ELITE, 1337, defi, farming, FTM1337">
 <title>FantomMarketCap - DEX List | FMC.guru : Fantom Opera Cryptocurrency Tokens Price and Market Capitalization</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" href="../img/ftm1337.jpg" />
+<link rel="shortcut icon" href="https://ftm.guru/img/64.png" />
 <style>html{background:radial-gradient(circle at center, #127, #122, #100);color:#e3e9f2;font-family:helvetica nueve, helvetica, robotica, ubuntu, roboto, sans-serif;background-attachment: fixed;}
 .toprow{display:grid;grid-template-columns:max-content auto max-content}
 .topfind{text-align:center;min-width:80%}
@@ -515,7 +515,33 @@ td:nth-child(5),td:nth-child(9),th:nth-child(5),th:nth-child(9){display:none}</s
 				<td>0</td>
 				<td>0</td>
 				<td>dfyn</td>
-				<td><!--<span><a href="https://dmm.exchange/#/swap" target="_blank">💱</a><a href="https://dmm.exchange" target="_blank">🌐</a><a href="https://discord.com/invite/NB3vc8J9uv" target="_blank">🎮</a><a href="https://fantom-info.dmm.exchange" target="_blank">📊</a><a href="https://dmm.exchange/#/farms" target="_blank">🚜</a><a href="https://twitter.com/KyberNetwork" target="_blank">🐦</a></span>--></td>
+				<td><span><a href="https://dfyn.network" target="_blank">💱</a><a href="https://dfyn.network" target="_blank">🌐</a><a href="https://discord.com/invite/" target="_blank">🎮</a><a href="https://info.dfyn.network" target="_blank">📊</a><a href="https://dfyn.network" target="_blank">🚜</a><a href="https://twitter.com/" target="_blank">🐦</a></span></td>
+			</tr>
+			<tr class="" id="d_morpheus">
+				<td>Morpheus</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>morpheusswap.app</td>
+				<td><span><a href="https://morpheusswap.finance" target="_blank">💱</a><a href="https://morpheusswap.finance" target="_blank">🌐</a><a href="https://discord.com/invite/" target="_blank">🎮</a><a href="https://info.morpheusswap.app" target="_blank">📊</a><a href="https://morpheusswap.finance/#/farms" target="_blank">🚜</a><a href="https://twitter.com/" target="_blank">🐦</a></span></td>
+			</tr>
+			<tr class="" id="d_vampire">
+				<td>Vampire</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>0</td>
+				<td>vampireswap.org</td>
+				<td><span><a href="https://vampireswap.org/exchange" target="_blank">💱</a><a href="https://vampireswap.org" target="_blank">🌐</a><a href="https://discord.gg/yYMUA3FSF6" target="_blank">🎮</a><a href="https://analytics.vampireswap.org" target="_blank">📊</a><a href="https://vampireswap.org/vaults" target="_blank">🚜</a><a href="https://vampireswap.org/farm" target="_blank">🚜</a><a href="https://twitter.com/vampireswap" target="_blank">🐦</a></span>--></td>
 			</tr>
 		</tbody>
 	</table>
@@ -708,6 +734,9 @@ di=
 	["Firebird","0xe0C38b2a8D09aAD53f1C67734B9A95E43d5981c0",	"0xc7A50FE12C864963Ea5A5E0858a0E7Abe5b875c4",	1631513046],
 	["Yoshi",	"??????????????????????????????????????????",	"0xc5bC174CB6382FbAB17771d05e6a918441deCeea",	1631513046],
 	["DMM",		"0x5d5A5a0a465129848c2549669e12cDC2f8DE039A",	"0x78df70615ffc8066cc0887917f2Cd72092C86409",	1631513046],
+	["Dfyn",	"0x2724B9497b2cF3325C6BE3ea430b3cec34B5Ef2d",	"0xd9820a17053d6314B20642E465a84Bf01a3D64f5",	1631513046],
+	["Morpheus","0x8aC868293D97761A1fED6d4A01E9FF17C5594Aa3",	"0x9C454510848906FDDc846607E4baa27Ca999FBB6",	1631513046],
+	["Vampire",	"0x9AdE9Bda74a12022cC82C27Ce24C4296397b18d5",	"0xdF0A0a62995ae821d7a5cF88C4112c395fc41358",	1631513046],
 
 ]
 /*
@@ -757,11 +786,8 @@ async function gp()
 		else
 			{await F.methods.allPairsLength().call((e,r)=>{$("d_"+di[i][0].toLowerCase()).getElementsByTagName("td")[1].innerHTML=Number(r).toLocaleString()})}
 	}
-	sortit(2);sortit(2);
-	;console.log("tvlsort");
 	sortit(3);sortit(3);
-	;console.log("invsort");
-	sortit(6);sortit(6);
+	;console.log("liqsort");
 }
 
 ab=
@@ -936,7 +962,7 @@ function po (di)
 //		console.log(di.slug)
 //		console.log(di.slug,di)
 
-		if (di.slug ==  "curve" ){			$v("d_curve").innerHTML=v;$v("d_curve").nextElementSibling.innerHTML=v;}
+		if (di.slug ==  "curve" ){			$v("d_curve").innerHTML=v;$v("d_curve").nextElementSibling.innerHTML=v;gobj[0]+=v;}
 		if (di.slug ==  "sushiswap" ){		$v("d_sushi").innerHTML=v;}
 		if (di.slug ==  "spookyswap" ){		$v("d_spooky").innerHTML=v;}
 		if (di.slug ==  "spiritswap" ){		$v("d_spirit").innerHTML=v;}
@@ -951,6 +977,12 @@ function po (di)
 		if (di.slug ==  "synapse" ){		$v("d_synapse").innerHTML=v;}
 		if (di.slug ==  "empire-dex" ){		$v("d_empire").innerHTML=v;}
 		if (di.slug ==  "dfyn-network" ){	$v("d_dfyn").innerHTML=v;}
+		if (di.slug ==  "morpheus-swap" ){	$v("d_morpheus").innerHTML=v;}
+		if (di.slug ==  "yoshi-exchange" ){	$v("d_yoshi").innerHTML=v;}
+		if (di.slug ==  "iron-exchange" ){	$v("d_iron").innerHTML=v;}
+		if (di.slug ==  "empiredex" ){		$v("d_empire").innerHTML=v;}
+		if (di.slug ==  "stakesteak" ){		$v("d_steaksamm").innerHTML=v;}
+		if (di.slug ==  "vampireswap" ){	$v("d_vampire").innerHTML=v;}
 }
 date_id = Date.now();
 date_id = date_id/1000 - (date_id/1000)%1;
@@ -1511,9 +1543,161 @@ async function gg()
 
 
 
-//https://api.thegraph.com/subgraphs/name/zikyfranky/empire-exchange
-//https://api.thegraph.com/subgraphs/name/ss-sonic/fantom-v4
 
+
+	gdq_empire =
+		`query {
+  			uniswapFactories(first: 1) {
+    			id
+    			pairCount	txCount
+    			totalVolumeUSD    totalVolumeETH	untrackedVolumeUSD
+    			totalLiquidityUSD	totalLiquidityETH
+    			txCount
+  			}
+  			uniswapDayDatas(where:{id: ${date_id}}) {
+    			id	date
+    			txCount
+    			dailyVolumeUSD	dailyVolumeETH	dailyVolumeUntracked
+    			totalVolumeUSD	totalVolumeETH
+    			totalLiquidityUSD	totalLiquidityETH
+  			}
+		}`
+
+
+	gdqr_empire = new XMLHttpRequest();
+	gdqr_empire.open("POST","https://api.thegraph.com/subgraphs/name/zikyfranky/empire-exchange",true);
+	gdqr_empire.onload=function(){
+		gdqd_empire=JSON.parse(this.response).data;
+		$("d_empire").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_empire.uniswapFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
+		$("d_empire").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_empire.uniswapDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_empire").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_empire.uniswapFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_empire").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_empire.uniswapFactories[0].txCount).toFixed(0)).toLocaleString()
+		gobj[0]+=Number(gdqd_empire.uniswapFactories[0].totalLiquidityUSD)
+		gobj[1]+=Number(gdqd_empire.uniswapDayDatas[0].dailyVolumeUSD)
+		gobj[2]+=Number(gdqd_empire.uniswapFactories[0].totalVolumeUSD)
+		gobj[3]+=Number(gdqd_empire.uniswapFactories[0].txCount)
+		ref_os()
+	}
+	gdqr_empire.send(JSON.stringify({query:gdq_empire}))
+
+
+
+
+
+	gdq_dfyn =
+		`query {
+  			uniswapFactories(first: 1) {
+    			id
+    			pairCount	txCount
+    			totalVolumeUSD    totalVolumeETH	untrackedVolumeUSD
+    			totalLiquidityUSD	totalLiquidityETH
+    			txCount
+  			}
+  			uniswapDayDatas(where:{id: ${date_id}}) {
+    			id	date
+    			txCount
+    			dailyVolumeUSD	dailyVolumeETH	dailyVolumeUntracked
+    			totalVolumeUSD	totalVolumeETH
+    			totalLiquidityUSD	totalLiquidityETH
+  			}
+		}`
+
+
+	gdqr_dfyn = new XMLHttpRequest();
+	gdqr_dfyn.open("POST","https://api.thegraph.com/subgraphs/name/ss-sonic/fantom-v4",true);
+	gdqr_dfyn.onload=function(){
+		gdqd_dfyn=JSON.parse(this.response).data;
+		$("d_dfyn").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_dfyn.uniswapFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
+		$("d_dfyn").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_dfyn.uniswapDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_dfyn").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_dfyn.uniswapFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_dfyn").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_dfyn.uniswapFactories[0].txCount).toFixed(0)).toLocaleString()
+		gobj[0]+=Number(gdqd_dfyn.uniswapFactories[0].totalLiquidityUSD)
+		gobj[1]+=Number(gdqd_dfyn.uniswapDayDatas[0].dailyVolumeUSD)
+		gobj[2]+=Number(gdqd_dfyn.uniswapFactories[0].totalVolumeUSD)
+		gobj[3]+=Number(gdqd_dfyn.uniswapFactories[0].txCount)
+		ref_os()
+	}
+	gdqr_dfyn.send(JSON.stringify({query:gdq_dfyn}))
+
+
+
+
+	gdq_morpheus =
+		`query {
+  			pancakeFactories(first: 1) {
+    			id
+    			totalPairs	totalTransactions
+    			totalVolumeUSD    totalVolumeBNB	untrackedVolumeUSD
+    			totalLiquidityUSD	totalLiquidityBNB
+  			}
+  			pancakeDayDatas(where:{id: ${date_id}})
+  {
+    			id	date
+    			totalTransactions
+    			dailyVolumeUSD	dailyVolumeBNB	dailyVolumeUntracked
+    			totalVolumeUSD	totalVolumeBNB
+    			totalLiquidityUSD	totalLiquidityBNB
+  			}
+		}`
+
+
+	gdqr_morpheus = new XMLHttpRequest();
+	gdqr_morpheus.open("POST","https://api.thegraph.com/subgraphs/name/daedboi/morpheus-swap",true);
+	gdqr_morpheus.onload=function(){
+		gdqd_morpheus=JSON.parse(this.response).data;
+		$("d_morpheus").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_morpheus.pancakeFactories[0].totalLiquidityUSD).toFixed(0)).toLocaleString()
+		$("d_morpheus").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_morpheus.pancakeDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_morpheus").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_morpheus.pancakeFactories[0].totalVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_morpheus").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_morpheus.pancakeFactories[0].totalTransactions).toFixed(0)).toLocaleString()
+		gobj[0]+=Number(gdqd_morpheus.pancakeFactories[0].totalLiquidityUSD)
+		gobj[1]+=Number(gdqd_morpheus.pancakeDayDatas[0].dailyVolumeUSD)
+		gobj[2]+=Number(gdqd_morpheus.pancakeFactories[0].totalVolumeUSD)
+		gobj[3]+=Number(gdqd_morpheus.pancakeFactories[0].totalTransactions)
+		ref_os()
+	}
+	gdqr_morpheus.send(JSON.stringify({query:gdq_morpheus}))
+
+
+
+
+	gdq_firebird =
+		`query {
+  			exchanges(first: 1) {
+    			id
+    			poolCount	txCount
+    			totalSwapVolume
+    			totalLiquidity
+    			totalSwapFee	totalProtocolFee	protocolFee
+  			}
+  			exchangeDayDatas(where:{id: "${date_id}-1"})
+  {
+    			id	date	exchangeID {
+    			  id
+    			}
+    			txCount
+    			dailyVolumeUSD
+    			totalVolumeUSD
+    			totalLiquidityUSD
+    			dailyFeeUSD	dailyProtocolFeeUSD	totalFeeUSD
+  			}
+		}`
+
+
+	gdqr_firebird = new XMLHttpRequest();
+	gdqr_firebird.open("POST","https://api.thegraph.com/subgraphs/name/firebirdgraph/fantom-exchange",true);
+	gdqr_firebird.onload=function(){
+		gdqd_firebird=JSON.parse(this.response).data;
+		$("d_firebird").getElementsByTagName("td")[3].innerHTML=Number(Number(gdqd_firebird.exchanges[0].totalLiquidity).toFixed(0)).toLocaleString()
+		$("d_firebird").getElementsByTagName("td")[5].innerHTML=Number(Number(gdqd_firebird.exchangeDayDatas[0].dailyVolumeUSD).toFixed(0)).toLocaleString()
+		$("d_firebird").getElementsByTagName("td")[6].innerHTML=Number(Number(gdqd_firebird.exchanges[0].totalSwapVolume).toFixed(0)).toLocaleString()
+		$("d_firebird").getElementsByTagName("td")[7].innerHTML=Number(Number(gdqd_firebird.exchanges[0].txCount).toFixed(0)).toLocaleString()
+		gobj[0]+=Number(gdqd_firebird.exchanges[0].totalLiquidity)
+		gobj[1]+=Number(gdqd_firebird.exchangeDayDatas[0].dailyVolumeUSD)
+		gobj[2]+=Number(gdqd_firebird.exchanges[0].totalSwapVolume)
+		gobj[3]+=Number(gdqd_firebird.exchanges[0].txCount)
+		ref_os()
+	}
+	gdqr_firebird.send(JSON.stringify({query:gdq_firebird}))
 
 
 
@@ -1589,7 +1773,7 @@ synapsei = [{"stateMutability":"view","type":"function","name":"getTokenBalance"
 
 	// FROYO
 	Promise.all([
-		fusd.methods.balanceOf(froyo_1).call(),
+		usdt.methods.balanceOf(froyo_1).call(),
 		dai.methods.balanceOf(froyo_1).call(),
 		usdc.methods.balanceOf(froyo_1).call()
 	]).then(froyo_l=>{
